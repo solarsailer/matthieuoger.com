@@ -1,0 +1,4 @@
+solarsailer.github.io
+=====================
+
+Thoughts.
