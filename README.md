@@ -1,4 +1,3 @@
-solarsailer.github.io
-=====================
+# solar sailer
 
 Thoughts.
