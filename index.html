@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>solar sailer — by Matthieu Oger</title>
-</head>
-<body>
-	<p>Hello, world!</p>
-</body>
-</html>
+---
+layout: default
+title: solar sailer — by Matthieu Oger
+---
+
+{% for post in site.posts %}
+  <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+{% endfor %}
