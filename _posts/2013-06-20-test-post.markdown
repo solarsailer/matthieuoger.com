@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Test post"
+date:   2013-06-20 19:23:52
+categories: first
+---
+
+Bla bla bla.
+
+A link : [Damien mayance blog][dmayance].
+
+This is a sentence with `some code` inside and styles : **bold**, _italic or *italic*.
+
+A quote :
+
+> Nunc malesuada, tellus in aliquet convallis, nulla sem consequat ante, ut eleifend tellus quam nec metus. Aenean consectetur eros pellentesque pellentesque iaculis. Nulla adipiscing vel neque in facilisis. Donec feugiat nisi et ullamcorper commodo. In hac habitasse platea dictumst. Curabitur eget feugiat nisi. Integer porta tristique enim eget molestie.
+
+And we can add some code :
+
+{% highlight javascript %}
+  function test() {
+    console.log('some code');
+  }
+{% endhighlight %}
+
+[dmayance]: http://dmayance.com/

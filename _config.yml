@@ -1,2 +1,3 @@
 name: solar sailer
 pygments: true
+exclude: ['_sources', '_raws']
