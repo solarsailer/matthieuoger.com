@@ -1,0 +1,29 @@
+@charset "utf-8";
+/**
+ * solarsailer — by Matthieu Oger
+ */
+
+// -------------------------------------------------------
+// Mixins
+// -------------------------------------------------------
+
+@mixin desk-max-size {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+@mixin transition ($transition, $duration, $function: ease) {
+  // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+  -webkit-transition: $transition $duration $function;
+  -moz-transition: $transition $duration $function;
+  -ms-transition: $transition $duration $function;
+  -o-transition: $transition $duration $function;
+  transition: $transition $duration $function;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &.placeholder { @content }
+}

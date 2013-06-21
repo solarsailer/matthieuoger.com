@@ -9,7 +9,7 @@ Bla bla bla.
 
 A link : [Damien mayance blog][dmayance].
 
-This is a sentence with `some code` inside and styles : **bold**, _italic or *italic*.
+This is a sentence with `some code` inside and styles : **bold**, _italic_ or *italic*.
 
 A quote :
 

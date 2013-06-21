@@ -1,0 +1,146 @@
+@charset "utf-8";
+/**
+ * solarsailer — by Matthieu Oger
+ *
+ * -------------------------
+ * link: solarsailer.net
+ * rss: solarsailer.net/rss
+ * feed: @solarsailerfeed
+ * contact: @yiashen
+ * -------------------------
+ *
+ * Everything is handmade, except the Entypo icons and the Open Sans font.
+ *
+ * The rules must follow a strict order :
+ * - display
+ * - position
+ * - margin/padding
+ * - width/height
+ * - background/border
+ * - color/font/text/letter
+ * - transition
+ * - media queries
+ */
+
+@import "mixins";
+
+// -------------------------------------------------------
+// Global
+// -------------------------------------------------------
+
+// Breakpoints
+// See :
+
+// Palm (0 <-> 480)
+$palm-end: 480px;
+
+// Lap (481 <-> 1023)
+$lap-start:481px;
+$lap-end: 1023px;
+
+// Desk (1024 <-> ∞)
+$desk-start: 1024px;
+
+// Colors
+$text-color: #333;
+$brand-color: #9bd145;
+$light-grey: #c2c3d1;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: url("/static/images/background.png") #ededed;
+
+  color: $text-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+}
+
+.page {
+  margin: 10px 20px;
+}
+
+// -------------------------------------------------------
+// Components
+// -------------------------------------------------------
+
+@mixin desk-behavior {
+  // Set the max-width & center when at desk size
+  @media only screen and (min-width: $desk-start) {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+
+// page-header
+
+.page-header {
+  height: 200px;
+
+  @include desk-behavior;
+}
+
+// site-title
+
+.site-title__main,
+.site-title__current {
+  margin: 0;
+}
+
+.site-title__main {
+  font-size: 2.5em;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.site-title__current {
+  color: $light-grey;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.site-nav {
+  list-style: none;
+  padding: 0;
+
+  font-size: 1.1em;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  li {
+    display: inline;
+    height: 40px;
+    padding: 0 15px;
+
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width:$lap-start) {
+  .site-nav {
+    margin: 0;
+    //text-align: right;
+
+    li {
+      display: block;
+      padding: 2px 0;
+    }
+  }
+}
+
+
+// page-footer
+
+.page-footer {
+  margin-top: 100px;
+
+  color: darken($light-grey, 20%);
+  font-size: 0.9em;
+
+  @include desk-behavior;
+}
