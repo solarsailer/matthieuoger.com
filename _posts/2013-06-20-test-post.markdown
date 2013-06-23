@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Test post"
-date:   2013-06-20 19:23:52
-categories: first
+date:   2012-12-11 19:23:52
 ---
 
 Bla bla bla.
@@ -18,9 +17,19 @@ A quote :
 And we can add some code :
 
 {% highlight javascript %}
-  function test() {
-    console.log('some code');
-  }
+function test() {
+  console.log('some code');
+}
+
+window.onload = function () {
+  test();
+}
 {% endhighlight %}
 
 [dmayance]: http://dmayance.com/
+
+Nunc malesuada, tellus in aliquet convallis, nulla sem consequat ante, ut eleifend tellus quam nec metus. Aenean consectetur eros pellentesque pellentesque iaculis. Nulla adipiscing vel neque in facilisis. Donec feugiat nisi et ullamcorper commodo. In hac habitasse platea dictumst. Curabitur eget feugiat nisi. Integer porta tristique enim eget molestie.
+
+![test cat](http://placekitten.com/g/800/400)
+
+Nunc malesuada, tellus in aliquet convallis, nulla sem consequat ante, ut eleifend tellus quam nec metus. Aenean consectetur eros pellentesque pellentesque iaculis. Nulla adipiscing vel neque in facilisis. Donec feugiat nisi et ullamcorper commodo. In hac habitasse platea dictumst. Curabitur eget feugiat nisi. Integer porta tristique enim eget molestie.

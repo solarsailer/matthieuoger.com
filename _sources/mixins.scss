@@ -7,11 +7,6 @@
 // Mixins
 // -------------------------------------------------------
 
-@mixin desk-max-size {
-  margin: 0 auto;
-  max-width: 1000px;
-}
-
 @mixin transition ($transition, $duration, $function: ease) {
   // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
   -webkit-transition: $transition $duration $function;

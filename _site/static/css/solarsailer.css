@@ -36,7 +36,8 @@ body {
   margin: 10px 20px; }
 
 .page-header {
-  height: 200px; }
+  position: relative;
+  height: 150px; }
   @media only screen and (min-width: 1024px) {
     .page-header {
       margin: 0 auto;
@@ -49,33 +50,150 @@ body {
 .site-title__main {
   font-size: 2.5em; }
   .site-title__main a {
-    color: black;
+    color: #333333;
     text-decoration: none; }
 
 .site-title__current {
-  color: #c2c3d1;
+  color: #a5a6bb;
   font-size: 1em;
   font-style: italic;
   font-weight: normal; }
 
 .site-nav {
-  list-style: none;
+  position: absolute;
+  margin: 10px 0;
   padding: 0;
-  font-size: 1.1em;
-  text-align: center;
-  letter-spacing: 0.05em; }
-  .site-nav li {
-    display: inline;
-    height: 40px;
-    padding: 0 15px;
-    cursor: pointer; }
+  top: 0;
+  right: 0;
+  list-style: none; }
 
-@media only screen and (min-width: 481px) {
-  .site-nav {
-    margin: 0; }
-    .site-nav li {
-      display: block;
-      padding: 2px 0; } }
+.site-nav__icon {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  cursor: pointer; }
+
+.site-nav__icon.about {
+  background-image: url("/static/images/icon-about@2x.png"); }
+
+.site-nav__icon.work {
+  background-image: url("/static/images/icon-search@2x.png"); }
+
+.site-nav__icon.twitter {
+  background-image: url("/static/images/icon-twitter@2x.png"); }
+
+.article {
+  margin-bottom: 70px; }
+
+.article__title,
+.article__infos {
+  margin: 0; }
+
+.article__title a {
+  border-bottom: 1px solid transparent;
+  color: #98c73d;
+  text-decoration: none;
+  -webkit-transition: border-color 0.5s ease;
+  -moz-transition: border-color 0.5s ease;
+  -ms-transition: border-color 0.5s ease;
+  -o-transition: border-color 0.5s ease;
+  transition: border-color 0.5s ease; }
+  .article__title a:hover {
+    border-bottom: 1px solid #add265; }
+
+.article__infos {
+  color: #c2c3d1;
+  font-size: 0.8em;
+  font-weight: normal; }
+  @media only screen and (max-width: 1023px) {
+    .article__infos {
+      margin-top: 4px; } }
+
+.article__text
+blockquote {
+  position: relative;
+  margin: 16px 0;
+  padding: 0 30px;
+  color: #686868;
+  font-style: italic; }
+  .article__text
+  blockquote:before, .article__text
+  blockquote:after {
+    position: absolute;
+    font-family: Georgia, serif;
+    font-size: 1.8em; }
+  .article__text
+  blockquote:before {
+    content: "«";
+    left: 0; }
+  .article__text
+  blockquote:after {
+    content: "»";
+    right: 0;
+    bottom: 0; }
+
+.article__text ul, .article__text ol {
+  padding: 0; }
+  .article__text ul li, .article__text ol li {
+    margin-left: 40px; }
+
+.article__text a {
+  color: #7ba22f; }
+  .article__text a:hover {
+    color: #5d7b23; }
+  .article__text a:active, .article__text a:focus {
+    color: #98c73d; }
+
+.article__text
+img {
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+  border: 1px solid #d5d5d5; }
+
+.article__text
+.highlight {
+  /* Full page size (unlimited + remove margins) */
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 16px 20px;
+  overflow: auto;
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  font-family: Menlo , Monaco , "Andale Mono" , "Lucida Console" , "Courier New" , monospace !important;
+  font-size: 0.95em; }
+
+@media only screen and (min-width: 1024px) {
+  .article__title,
+  .article__infos {
+    display: inline-block;
+    vertical-align: baseline; }
+
+  .article__title {
+    padding-right: 10px; }
+
+  /* Limit the size on large device */ }
+@media only screen and (min-width: 1024px) and (min-width: 1024px) {
+  .article__header {
+    margin: 0 auto;
+    max-width: 1000px; } }
+
+@media only screen and (min-width: 1024px) and (min-width: 1024px) {
+  .article__text > p,
+  .article__text > blockquote,
+  .article__text > ul,
+  .article__text > ol {
+    margin: 16px auto;
+    max-width: 1000px; } }
+
+@media only screen and (min-width: 1024px) and (min-width: 1024px) {
+  .article__text .highlight pre {
+    margin: 0 auto;
+    max-width: 1000px; } }
+
 .page-footer {
   margin-top: 100px;
   color: #888aa5;
