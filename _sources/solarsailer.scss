@@ -41,11 +41,19 @@ $lap-end: 1023px;
 // Desk (1024 <-> ∞)
 $desk-start: 1024px;
 
+// ---------------------
 // Colors
+// ---------------------
+
 $text-color: #333;
 $brand-color: #98c73d;
 $light-grey: #c2c3d1;
 
+// ---------------------
+// Root
+// ---------------------
+
+// Basic typography and background
 body {
   margin: 0;
   padding: 0;
@@ -57,15 +65,18 @@ body {
   font-size: 100%;
 }
 
+// Global margin
 .page {
   margin: 10px 20px;
 }
 
+// Change the selection to white on green
 .page *::-moz-selection {
   background: $brand-color;
   color: white;
 }
 
+// Change the selection to white on green
 .page *::selection {
   background: $brand-color;
   color: white;
@@ -75,6 +86,7 @@ body {
 // Components
 // -------------------------------------------------------
 
+// This mixin simply add a max-width and center the content
 @mixin desk-behavior($top-margin: 0) {
   // Set the max-width & center when at desk size
   @media only screen and (min-width: $desk-start) {
@@ -83,8 +95,11 @@ body {
   }
 }
 
+// ---------------------
 // page-header
+// ---------------------
 
+// Position relative to position the twitter icon
 .page-header {
   position: relative;
   height: 150px;
@@ -92,6 +107,7 @@ body {
   @include desk-behavior;
 }
 
+// Icon container
 .page-header__nav {
   position: absolute;
   margin: 10px 0;
@@ -101,28 +117,34 @@ body {
   list-style: none;
 }
 
+// Icon link
 .page-header__nav a {
   display: block;
   text-indent: -9999px;
 
+  // Optimized for retina - the icon is 80x80 in reality
   width: 40px;
   height: 40px;
   background-size: 40px;
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 
+// Style the .twitter class with the correct icon
 .page-header__nav.twitter a {
   background-image: url("/static/images/icon-twitter@2x.png");
 }
 
+// ---------------------
 // site-title
+// ---------------------
 
+// Reset
 .site-title__main,
 .site-title__current {
   margin: 0;
 }
 
+// Bigger font and a neutral color for the home link
 .site-title__main {
   font-size: 2.5em;
 
@@ -132,6 +154,7 @@ body {
   }
 }
 
+// Subtitle - light grey and underline on hover
 .site-title__current {
   font-size: 1em;
   font-weight: normal;
@@ -147,20 +170,24 @@ body {
   }
 }
 
+// ---------------------
 // article
+// ---------------------
 
+// Separate each article by a 70px margin
 .article {
   margin-bottom: 70px;
 }
 
+// Reset article title
 .article__title,
 .article__infos {
   margin: 0;
 }
 
+// Style the title link with a transitionned border
 .article__title {
   a {
-
     border-bottom: 1px solid transparent;
 
     color: $brand-color;
@@ -185,6 +212,7 @@ body {
   }
 }
 
+// Blockquote styling - add a « before and a » after
 .article__text
   blockquote {
   position: relative;
@@ -214,6 +242,7 @@ body {
   }
 }
 
+// Lists
 .article__text {
   ul, ol {
     padding: 0;
@@ -224,6 +253,7 @@ body {
   }
 }
 
+// Links
 .article__text {
   a {
     color: darken($brand-color, 10%);
@@ -239,6 +269,7 @@ body {
   }
 }
 
+// Images
 .article__text
   img {
   display: block;
@@ -247,6 +278,7 @@ body {
   border: 1px solid #d5d5d5;
 }
 
+// Inline code
 .article__text {
   p
     code {
@@ -256,6 +288,7 @@ body {
   }
 }
 
+// Block code
 .article__text
   .highlight {
   /* Full page size (unlimited + remove margins) */
@@ -279,6 +312,7 @@ body {
   }
 }
 
+// Tweaks for desktop-sized window
 @media only screen and (min-width:$desk-start) {
 
   // Move the date to the right of title, instead of below
@@ -294,7 +328,11 @@ body {
     padding-right: 10px;
   }
 
-  /* Limit the size on large device */
+  /* Limit the size on large device
+   * We cannot simply set the size on the global div
+   * because we want to let the .highlight object takes
+   * the full size of the page.
+   */
 
   // For header
   .article__header
@@ -317,8 +355,11 @@ body {
   }
 }
 
+// ---------------------
 // page-footer
+// ---------------------
 
+// Light-grey
 .page-footer {
   margin-top: 100px;
 

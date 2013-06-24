@@ -65,8 +65,7 @@ body {
   width: 40px;
   height: 40px;
   background-size: 40px;
-  background-repeat: no-repeat;
-  cursor: pointer; }
+  background-repeat: no-repeat; }
 
 .page-header__nav.twitter a {
   background-image: url("/static/images/icon-twitter@2x.png"); }
@@ -189,7 +188,11 @@ code {
   .article__title {
     padding-right: 10px; }
 
-  /* Limit the size on large device */ }
+  /* Limit the size on large device
+   * We cannot simply set the size on the global div
+   * because we want to let the .highlight object takes
+   * the full size of the page.
+   */ }
 @media only screen and (min-width: 1024px) and (min-width: 1024px) {
   .article__header {
     margin: 0 auto;
