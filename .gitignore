@@ -14,3 +14,9 @@ Desktop.ini
 
 # Crap
 .DS_Store
+
+############
+## Jekyll
+############
+
+_site
