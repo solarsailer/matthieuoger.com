@@ -16,7 +16,7 @@ A quote :
 
 And we can add some code :
 
-{% highlight javascript %}
+```javascript
 function test() {
   console.log('some code');
 }
@@ -24,7 +24,7 @@ function test() {
 window.onload = function () {
   test();
 }
-{% endhighlight %}
+``
 
 [dmayance]: http://dmayance.com/
 
