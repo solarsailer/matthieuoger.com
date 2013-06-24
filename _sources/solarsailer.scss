@@ -82,6 +82,30 @@ body {
   @include desk-behavior;
 }
 
+.page-header__nav {
+  position: absolute;
+  margin: 10px 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  list-style: none;
+}
+
+.page-header__nav a {
+  display: block;
+  text-indent: -9999px;
+
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.page-header__nav.twitter a {
+  background-image: url("/static/images/icon-twitter@2x.png");
+}
+
 // site-title
 
 .site-title__main,
@@ -99,42 +123,18 @@ body {
 }
 
 .site-title__current {
-  color: darken($light-grey, 10%);
   font-size: 1em;
-  font-style: italic;
   font-weight: normal;
-}
+  font-style: italic;
 
-.site-nav {
-  position: absolute;
-  margin: 10px 0;
-  padding: 0;
-  top: 0;
-  right: 0;
-  list-style: none;
-}
+  a {
+    color: darken($light-grey, 10%);
+    text-decoration: none;
 
-.site-nav__icon {
-  display: inline-block;
-  text-indent: -9999px;
-
-  width: 40px;
-  height: 40px;
-  background-size: 40px;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.site-nav__icon.about {
-  background-image: url("/static/images/icon-about@2x.png");
-}
-
-.site-nav__icon.work {
-  background-image: url("/static/images/icon-search@2x.png");
-}
-
-.site-nav__icon.twitter {
-  background-image: url("/static/images/icon-twitter@2x.png");
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 // article
@@ -187,6 +187,7 @@ body {
   &:before,
   &:after {
     position: absolute;
+    color: #b9b9b9;
     font-family: Georgia, serif;
     font-size: 1.8em;
   }
@@ -236,6 +237,15 @@ body {
   border: 1px solid #d5d5d5;
 }
 
+.article__text {
+  p
+    code {
+    padding: 0 5px;
+    background-color: #d7d7d7;
+    font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", "Courier New", monospace !important;
+  }
+}
+
 .article__text
   .highlight {
   /* Full page size (unlimited + remove margins) */
@@ -248,14 +258,15 @@ body {
   background-color: #1d1f21;
   color: #c5c8c6;
 
-  font-family: Menlo
-             , Monaco
-             , "Andale Mono"
-             , "Lucida Console"
-             , "Courier New"
-             , monospace
-             !important;
-  font-size: 0.95em;
+  code {
+    font-family: Menlo
+               , Monaco
+               , "Andale Mono"
+               , "Lucida Console"
+               , "Courier New"
+               , monospace
+               !important;
+  }
 }
 
 @media only screen and (min-width:$desk-start) {
