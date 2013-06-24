@@ -11,5 +11,9 @@ show_drafts: nil
 # Permalink format (without day)
 permalink: /:categories/:year/:month/:title
 
+# Pagination
+paginate_path: 'page-:num'
+paginate: 20
+
 # Markdown formatter
 markdown: redcarpet

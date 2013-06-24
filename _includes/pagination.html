@@ -1,0 +1,27 @@
+<!-- start pagination -->
+<div class="pager">
+  <p>
+
+    <!-- start older -->
+    {% if paginator.next_page %}
+      <a href="/page-{{ paginator.next_page }}" class="pager__older">← Older</a>
+    {% endif %}
+    <!-- end older -->
+
+    <!-- start archives -->
+    <a href="/archives" title="Archives" class="pager__archives">Archives</a>
+    <!-- end archives -->
+
+    <!-- start newer -->
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a href="/" class="pager__newer">Newer →</a>
+      {% else %}
+        <a href="/page-{{ paginator.previous_page }}" class="pager__newer">Newer →</a>
+      {% endif %}
+    {% endif %}
+    <!-- end newer -->
+
+  </p>
+</div>
+<!-- end pagination -->
