@@ -24,7 +24,7 @@ function test() {
 window.onload = function () {
   test();
 }
-``
+```
 
 [dmayance]: http://dmayance.com/
 
