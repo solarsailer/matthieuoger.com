@@ -61,6 +61,16 @@ body {
   margin: 10px 20px;
 }
 
+.page *::-moz-selection {
+  background: $brand-color;
+  color: white;
+}
+
+.page *::selection {
+  background: $brand-color;
+  color: white;
+}
+
 // -------------------------------------------------------
 // Components
 // -------------------------------------------------------

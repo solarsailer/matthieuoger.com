@@ -35,6 +35,14 @@ body {
 .page {
   margin: 10px 20px; }
 
+.page *::-moz-selection {
+  background: #98c73d;
+  color: white; }
+
+.page *::selection {
+  background: #98c73d;
+  color: white; }
+
 .page-header {
   position: relative;
   height: 150px; }
