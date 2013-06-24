@@ -48,6 +48,13 @@ $desk-start: 1024px;
 $text-color: #333;
 $brand-color: #98c73d;
 $light-grey: #c2c3d1;
+$dark-grey: darken($light-grey, 20%);
+
+// ---------------------
+// Constants
+// ---------------------
+
+$MAX: 1000px;
 
 // ---------------------
 // Root
@@ -91,7 +98,7 @@ body {
   // Set the max-width & center when at desk size
   @media only screen and (min-width: $desk-start) {
     margin: $top-margin auto;
-    max-width: 1000px;
+    max-width: $MAX;
   }
 }
 
@@ -203,12 +210,36 @@ body {
 }
 
 .article__infos {
-  color: $light-grey;
+  color: darken($light-grey, 5%);
   font-size: 0.8em;
   font-weight: normal;
 
   @media only screen and (max-width:$lap-end) {
     margin-top: 4px;
+  }
+}
+
+// Titles
+.article__text {
+  h1, h2, h3 {
+    margin-top: 40px;
+  }
+
+  h1 {
+    border-bottom: 1px solid $dark-grey;
+    font-size: 1.1em;
+  }
+
+  h2 {
+    border-bottom: 1px dotted $dark-grey;
+    font-size: 1.1em;
+    font-weight: normal;
+  }
+
+  h3 {
+    color: $dark-grey;
+    font-size: 1.1em;
+    font-weight: normal;
   }
 }
 
@@ -346,7 +377,17 @@ body {
   .article__text > ul,
   .article__text > ol {
     // Set a 16px margin for top and bottom
-    @include desk-behavior(16px)
+    @include desk-behavior(16px);
+  }
+
+  .article__text {
+    > h1,
+    > h2,
+    > h3 {
+      max-width: $MAX;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   // For code
@@ -363,7 +404,7 @@ body {
 .page-footer {
   margin-top: 100px;
 
-  color: darken($light-grey, 20%);
+  color: $dark-grey;
   font-size: 0.9em;
 
   @include desk-behavior;

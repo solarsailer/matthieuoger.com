@@ -110,12 +110,26 @@ body {
     border-bottom: 1px solid #add265; }
 
 .article__infos {
-  color: #c2c3d1;
+  color: #b3b5c6;
   font-size: 0.8em;
   font-weight: normal; }
   @media only screen and (max-width: 1023px) {
     .article__infos {
       margin-top: 4px; } }
+
+.article__text h1, .article__text h2, .article__text h3 {
+  margin-top: 40px; }
+.article__text h1 {
+  border-bottom: 1px solid #888aa5;
+  font-size: 1.1em; }
+.article__text h2 {
+  border-bottom: 1px dotted #888aa5;
+  font-size: 1.1em;
+  font-weight: normal; }
+.article__text h3 {
+  color: #888aa5;
+  font-size: 1.1em;
+  font-weight: normal; }
 
 .article__text
 blockquote {
@@ -192,7 +206,13 @@ code {
    * We cannot simply set the size on the global div
    * because we want to let the .highlight object takes
    * the full size of the page.
-   */ }
+   */
+  .article__text > h1,
+  .article__text > h2,
+  .article__text > h3 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; } }
 @media only screen and (min-width: 1024px) and (min-width: 1024px) {
   .article__header {
     margin: 0 auto;
