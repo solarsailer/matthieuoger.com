@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Ceci est un test ffs ?
+title: "Ceci est un test ?"
+date:   2014-12-10 19:23:52
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis ipsum sit amet dapibus condimentum. Sed justo sem, interdum ac laoreet ut, cursus non arcu. Integer at nulla sit amet metus aliquam vulputate. Proin laoreet ornare libero nec adipiscing.
