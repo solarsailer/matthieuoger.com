@@ -97,17 +97,20 @@ body {
 .article__infos {
   margin: 0; }
 
-.article__title a {
-  border-bottom: 1px solid transparent;
-  color: #98c73d;
-  text-decoration: none;
-  -webkit-transition: border-color 0.5s ease;
-  -moz-transition: border-color 0.5s ease;
-  -ms-transition: border-color 0.5s ease;
-  -o-transition: border-color 0.5s ease;
-  transition: border-color 0.5s ease; }
-  .article__title a:hover {
-    border-bottom: 1px solid #add265; }
+.article__title {
+  font-size: 1.2em;
+  font-weight: normal; }
+  .article__title a {
+    border-bottom: 1px solid transparent;
+    color: #8ab635;
+    text-decoration: none;
+    -webkit-transition: border-color 0.5s ease;
+    -moz-transition: border-color 0.5s ease;
+    -ms-transition: border-color 0.5s ease;
+    -o-transition: border-color 0.5s ease;
+    transition: border-color 0.5s ease; }
+    .article__title a:hover {
+      border-bottom: 1px solid #a3cd51; }
 
 .article__infos {
   color: #b3b5c6;
@@ -161,9 +164,9 @@ blockquote {
     margin-left: 40px; }
 
 .article__text a {
-  color: #7ba22f; }
+  color: #8ab635; }
   .article__text a:hover {
-    color: #5d7b23; }
+    color: #7ba22f; }
   .article__text a:active, .article__text a:focus {
     color: #98c73d; }
 
@@ -256,6 +259,41 @@ code {
 
 .pager__newer {
   margin-left: 10%; }
+
+.archives {
+  list-style: none;
+  margin-bottom: 70px !important;
+  padding: 0; }
+  @media only screen and (min-width: 1024px) {
+    .archives {
+      margin: 0 auto;
+      max-width: 1000px; } }
+
+.archive {
+  margin-bottom: 30px; }
+
+.archive__date {
+  display: table-cell;
+  padding-right: 20px;
+  width: 45px;
+  color: #b3b5c6;
+  text-align: right;
+  vertical-align: top; }
+
+.archive__link {
+  display: table-cell;
+  font-size: 1.2em; }
+  .archive__link a {
+    border-bottom: 1px solid transparent;
+    color: #8ab635;
+    text-decoration: none;
+    -webkit-transition: border-color 0.5s ease;
+    -moz-transition: border-color 0.5s ease;
+    -ms-transition: border-color 0.5s ease;
+    -o-transition: border-color 0.5s ease;
+    transition: border-color 0.5s ease; }
+    .archive__link a:hover {
+      border-bottom: 1px solid #a3cd51; }
 
 .page-footer {
   margin-top: 100px;
