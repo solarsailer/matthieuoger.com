@@ -1,0 +1,53 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- main -->
+  <url>
+    <loc>http://solarsailer.net/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- about -->
+  <url>
+    <loc>http://solarsailer.net/about/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- archives -->
+  <url>
+    <loc>http://solarsailer.net/archives/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- rss -->
+  <url>
+    <loc>http://solarsailer.net/atom.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- posts -->
+  {% for post in site.posts %}
+    {% unless post.category == 'meta' %}
+
+    <url>
+      <loc>http://solarsailer.net{{ post.url }}/</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+
+    {% endunless %}
+  {% endfor %}
+
+</urlset>
