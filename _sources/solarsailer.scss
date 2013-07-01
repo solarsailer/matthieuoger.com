@@ -275,7 +275,7 @@ body {
   blockquote {
   position: relative;
   margin: 16px 0;
-  padding: 0 30px;
+  padding: 1px 60px;
 
   color: #686868;
   font-style: italic;
@@ -290,12 +290,12 @@ body {
 
   &:before {
     content: "«";
-    left: 0;
+    left: 30px;
   }
 
   &:after {
     content: "»";
-    right: 0;
+    right: 30px;
     bottom: 0;
   }
 }
@@ -361,6 +361,11 @@ body {
   }
 }
 
+.article__text
+  .twitter-tweet {
+  margin: 0 auto !important;
+}
+
 // Tweaks for desktop-sized window
 @media only screen and (min-width:$desk-start) {
 
@@ -392,11 +397,15 @@ body {
 
   // For direct paragraphes
   .article__text > p,
-  .article__text > blockquote,
   .article__text > ul,
   .article__text > ol {
     margin: 16px auto;
     max-width: $MAX;
+  }
+
+  .article__text > blockquote {
+    margin: 16px auto;
+    max-width: $MAX - 200px;
   }
 
   .article__text {
