@@ -3,7 +3,7 @@ layout: post
 title: The search for a Google Reader alternative
 ---
 
-_from [My Google Reader replacement setup](http://www.elezea.com/2013/06/google-reader-replacement/) :_
+[Rian van der Merwe, my Google Reader replacement setup](http://www.elezea.com/2013/06/google-reader-replacement/) :
 
 > But I do feel like I now know way too much about the RSS reader landscape than I every wanted to. Thanks, Google.
 
