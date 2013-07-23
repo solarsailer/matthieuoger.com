@@ -8,3 +8,4 @@ title: Current days science fiction
 > Microsoft struggles to get developers on its platforms with apps coming late or not at all, developers ship for Apple first and foremost and the platform with the most market share is, ostensibly, open-source.
 
 > You couldn’t have written this as science fiction in 1997. No one would have believed it.
+
