@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title }} — solar sailer</title>
+<title>{% unless page.url == '/index.html' %}{{ page.title }} — {% endunless %}solar sailer</title>
 
 <!-- misc -->
 <link rel="shortcut icon" href="/static/images/favicon.ico?v=0001" />
