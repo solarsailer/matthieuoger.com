@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quote — Changing the world
+title: Quote — "Changing the world."
 ---
 
 > Could "changing the world" be a contender the most trite, overused expression of 2013? Recent grads seem to have adopted it en masse as their personal tagline. It's a nice sentiment, but it hard not to roll your eyes when every 23 year old applies it to his mobile phone app with no users that he threw together in a couple weeks.
