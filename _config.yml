@@ -17,3 +17,6 @@ paginate: 20
 
 # Markdown formatter
 markdown: redcarpet
+
+redcarpet:
+  extensions: [footnotes]
