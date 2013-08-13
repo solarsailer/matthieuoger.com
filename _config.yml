@@ -5,7 +5,7 @@ pygments: true
 exclude: ['_sources', '_raws']
 
 # Publishing
-future: false
+#future: false
 show_drafts: nil
 
 # Permalink format (without day)
