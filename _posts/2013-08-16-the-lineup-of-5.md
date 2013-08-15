@@ -11,7 +11,7 @@ By releasing the 5C, Apple can get rid of the iPhone 4 and 4S once and for all. 
 
 We can infer (if the rumors are true) that Apple has now the production lines to release two new iPhones at the same time.
 
-This has a big impact : In the fall, all the iPhones sold are going to be capable of using **every** features of the last OS. It's huge. For example, iOS 7 AirDrop only works on the iPhone 5.<sup>[2](#fn:2)</sup>
+This has a big impact : In the fall, all the iPhones sold are going to be capable of using **every** features of the last OS. It's huge. For example, iOS 7 AirDrop only works on one current model : the iPhone 5.<sup>[2](#fn:2)</sup>
 
 It can put the iPhone way ahead of its competitors that struggle with OSes versions and hardware disparities.
 
