@@ -13,15 +13,17 @@ We can infer (if the rumors are true) that Apple has now the production lines to
 
 This has a big impact : In the fall, all the iPhones sold are going to be capable of using **every** features of the last OS. It's huge. For example, iOS 7 AirDrop only works on one current model : the iPhone 5.<sup>[2](#fn:2)</sup>
 
-It can put the iPhone way ahead of its competitors that struggle with OSes versions and hardware disparities.
+* It can put the iPhone way ahead of its competitors that struggle with OSes versions and hardware disparities.
 
-It will also unify the lineup around the new lightning connector and the 4 inches screen.
+* It will also unify the lineup around the new lightning connector and the 4 inches screen.
 
-It implies that the hardware and the software are going to evolve at the same pace.
+* It implies that the hardware and the software are going to evolve at the same pace.
 
 The story is the same with the iPads. I am almost certain that the iPad 2 will disappear this year, leaving only the new Mini and classic iPads available.
 
 The next year eventual iPhone five inches will fit perfectly in this new strategy : selling only renewed devices with state of the art hardware and software.
+
+**Update** : Related, "[It’s the Production Line, Stupid](http://furbo.org/2013/08/15/its-the-production-line-stupid/)".
 
 <sub><a id="fn:1" href="#fn:1">1.</a> Cheap **does not necessarily mean low quality**.</sub> 
 
