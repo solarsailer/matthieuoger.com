@@ -56,7 +56,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background: url("/static/images/background.png") #ededed;
+  background: url("/static/images/background.png") white;
 
   color: $text-color;
   font-family: 'Open Sans', sans-serif;
@@ -493,7 +493,7 @@ body {
   margin-top: 100px;
 
   color: $dark-grey;
-  font-size: 0.9em;
+  font-size: 1em;
 
   @media only screen and (min-width: $desk-start) {
     margin-left: auto;

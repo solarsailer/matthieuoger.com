@@ -27,7 +27,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("/static/images/background.png") #ededed;
+  background: url("/static/images/background.png") white;
   color: #333333;
   font-family: 'Open Sans', sans-serif;
   font-size: 100%; }
@@ -308,7 +308,7 @@ code {
 .page-footer {
   margin-top: 100px;
   color: #888aa5;
-  font-size: 0.9em; }
+  font-size: 1em; }
   @media only screen and (min-width: 700px) {
     .page-footer {
       margin-left: auto;
