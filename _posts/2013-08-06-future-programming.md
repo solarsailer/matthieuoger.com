@@ -3,7 +3,7 @@ layout: post
 title: The Future Of Programming
 ---
 
-I finally watched the latest Brett Victor's conference : [The Future Of Programming](https://vimeo.com/71278954). I highly recommend to check everything he have done. You will not loose your time.
+I finally watched the latest Brett Victor's conference : [The Future Of Programming](https://vimeo.com/71278954). I highly recommend to check everything he has done. You will not loose your time.
 
 One of the moments I liked the best is when Brett Victor is talking about smalltalk and its browser view. This idea, that is fairly old now, reminds me of some initiatives like [Brackets](http://brackets.io/) or [Light Table](http://www.lighttable.com/). These editors are still using text files to manage code, but they add inline code browsing or live feedback, amongst others. It is funny to see that we had to wait 40 years to see that happens.
 
