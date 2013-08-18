@@ -24,22 +24,18 @@
 
 @import "mixins";
 
+// ---------------------
+// Constants
+// ---------------------
+
+$MAX: 700px;
+
 // -------------------------------------------------------
 // Global
 // -------------------------------------------------------
 
-// Breakpoints
-// See :
-
-// Palm (0 <-> 480)
-$palm-end: 480px;
-
-// Lap (481 <-> 1023)
-$lap-start:481px;
-$lap-end: 1023px;
-
 // Desk (1024 <-> ∞)
-$desk-start: 1024px;
+$desk-start: $MAX;
 
 // ---------------------
 // Colors
@@ -50,11 +46,6 @@ $brand-color: #98c73d;
 $light-grey: #c2c3d1;
 $dark-grey: darken($light-grey, 20%);
 
-// ---------------------
-// Constants
-// ---------------------
-
-$MAX: 1000px;
 
 // ---------------------
 // Root
@@ -65,7 +56,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background: url("/static/images/background.png") #ededed;
+  background: url("/static/images/background.png") white;
 
   color: $text-color;
   font-family: 'Open Sans', sans-serif;
@@ -228,7 +219,7 @@ body {
 
 // Style the title link with a transitionned border
 .article__title {
-  font-size: 1.2em;
+  font-size: 1.6em;
   font-weight: normal;
 
   a {
@@ -238,12 +229,16 @@ body {
 
 .article__infos {
   color: darken($light-grey, 5%);
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: normal;
 
-  @media only screen and (max-width:$lap-end) {
+  @media only screen and (max-width:$desk-start) {
     margin-top: 4px;
   }
+}
+
+.article__text {
+  font-size: 1.1em;
 }
 
 // Titles
@@ -275,10 +270,10 @@ body {
   blockquote {
   position: relative;
   margin: 16px 0;
-  padding: 1px 60px;
+  padding: 1px 40px;
 
   color: #686868;
-  font-style: italic;
+  font-style: normal;
 
   &:before,
   &:after {
@@ -290,12 +285,12 @@ body {
 
   &:before {
     content: "«";
-    left: 30px;
+    left: 10px;
   }
 
   &:after {
     content: "»";
-    right: 30px;
+    right: 10px;
     bottom: 0;
   }
 }
@@ -498,7 +493,7 @@ body {
   margin-top: 100px;
 
   color: $dark-grey;
-  font-size: 0.9em;
+  font-size: 1em;
 
   @media only screen and (min-width: $desk-start) {
     margin-left: auto;
