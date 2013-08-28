@@ -17,6 +17,6 @@ This makes me wonder…
 
 Anyways, the chasm between Play (Google's Android) and Android is getting wider every day.
 
-**Update** : [John Moltz](http://verynicewebsite.net/2013/08/open-always-loses/) : 
+**Update** : I couldn't agree more with [John Moltz](http://verynicewebsite.net/2013/08/open-always-loses/)...
 
 > I think it’s kind of amusing how quickly the narrative has changed from “Yay, open!” to “I, for one, welcome our closed overlords.”
