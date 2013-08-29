@@ -3,6 +3,8 @@ layout: post
 title: Quote — Modern journalism
 ---
 
+ 
+
 <blockquote class="twitter-tweet">
 
 <p>
