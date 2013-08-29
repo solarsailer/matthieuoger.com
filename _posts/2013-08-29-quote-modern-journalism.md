@@ -2,7 +2,9 @@
 layout: post
 title: Quote — Modern journalism
 ---
- 
+
+This tweet could not describe my feelings better :
+
 <blockquote class="twitter-tweet">
 
 <p>
