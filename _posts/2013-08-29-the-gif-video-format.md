@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The gif “video format“
+title: The gif “video format”
 ---
 
 [HTML video still can't beat GIF](http://pornel.net/beat-gif-manifesto) :
