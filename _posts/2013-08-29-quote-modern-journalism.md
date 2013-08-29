@@ -3,7 +3,7 @@ layout: post
 title: Quote — Modern journalism
 ---
 
-This tweet could not better describe my feelings :
+This tweet could not better describe my feeling :
 
 <blockquote class="twitter-tweet">
 
