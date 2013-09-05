@@ -24,3 +24,11 @@ But hey, it's business, so it does not really matter if it's fair.
 The only hardware maker that has a sense of fashion is Apple (the iPhone is almost a “jewel” in its form after all). A watch needs to be elegant and refined. Samsung is probably incapable of doing that given its history of tasteless products.
 
 **n.b. 2** : The fun fact with watches is that ordinary, they are quite expensive. $300-400 for a “smart” watch that looks like a quality watch won't be that much for the targeted market.
+
+**Update** :
+
+<blockquote class="twitter-tweet">
+<p>
+<a href="https://twitter.com/solarsailerfeed">@solarsailerfeed</a> <a href="https://twitter.com/solarsailer">@solarsailer</a> The main trouble I see with smart watch is battery: people sleep with their watch, they won&#39;t plug it everyday</p>&mdash; Damien Mayance (@Valryon) 
+<a href="https://twitter.com/Valryon/statuses/375673429657022464">September 5, 2013</a>
+</blockquote>
