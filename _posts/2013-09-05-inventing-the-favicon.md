@@ -5,9 +5,7 @@ title: Inventing the favicon
 
 [Inventing Favicon.ico](http://ruthlessray.wordpress.com/2013/09/02/inventing-favicon-ico/) :
 
-> Bharat said, “this is good, right? Check it in?” And I said, “yeah, sure, how does it work?”
-
-> […]
+> Bharat said, “this is good, right? Check it in?” And I said, “yeah, sure, how does it work?”. […]
 
 > So there you go, the story of the invention of favicon.ico.
 
