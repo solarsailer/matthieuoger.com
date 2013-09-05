@@ -27,8 +27,5 @@ The only hardware maker that has a sense of fashion is Apple (the iPhone is almo
 
 **Update** :
 
-<blockquote class="twitter-tweet">
-<p>
-<a href="https://twitter.com/solarsailerfeed">@solarsailerfeed</a> <a href="https://twitter.com/solarsailer">@solarsailer</a> The main trouble I see with smart watch is battery: people sleep with their watch, they won&#39;t plug it everyday</p>&mdash; Damien Mayance (@Valryon) 
-<a href="https://twitter.com/Valryon/statuses/375673429657022464">September 5, 2013</a>
-</blockquote>
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/solarsailerfeed">@solarsailerfeed</a> <a href="https://twitter.com/solarsailer">@solarsailer</a> The main trouble I see with smart watch is battery: people sleep with their watch, they won&#39;t plug it everyday</p>&mdash; Damien Mayance (@Valryon) <a href="https://twitter.com/Valryon/statuses/375673429657022464">September 5, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
