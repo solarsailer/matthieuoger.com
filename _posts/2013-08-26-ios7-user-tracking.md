@@ -15,4 +15,4 @@ title: iOS 7 user tracking
 
 > If your apps use the MAC address to identify an iOS device, the system will return the same static value for all devices running iOS 7.
 
-It is a bad week for advertisers (see: [Google Play new policies](http://localhost:4000/2013/08/google-play-new-policies/)).
+It is a bad week for advertisers (see: [Google Play new policies](http://solarsailer.net/2013/08/google-play-new-policies/)).
