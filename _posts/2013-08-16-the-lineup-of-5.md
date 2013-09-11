@@ -25,6 +25,8 @@ The next year eventual iPhone five inches will fit perfectly in this new strateg
 
 **Update** : Related, "[It’s the Production Line, Stupid](http://furbo.org/2013/08/15/its-the-production-line-stupid/)".
 
+**Update 09/12/2013** : Guess I was wrong. The new lineup is made of an iPhone 5C, 5S and the old 4S.
+
 <sub><a id="fn:1" href="#fn:1">1.</a> Cheap **does not necessarily mean low quality**.</sub> 
 
 <sub><a id="fn:2" href="#fn:2">2.</a> I take AirDrop as an example because I think that this technology is going to be a decisive advantage for Apple. The fact that it is currently not available on every model is a pain. Hopefully, the new lineup will mitigate the problem a lot.</sub> 
