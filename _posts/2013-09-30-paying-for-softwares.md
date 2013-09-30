@@ -13,7 +13,7 @@ Recent events and the backlash [against Realmac with Clear for iOS 7](http://rea
 
 People don't understand that creating softwares — **truly** good softwares that sweat every detail — takes a lot of time and money. Ironically, even a lot of developers who work in big companies don't want to pay for softwares. 
 
-The mobile apps markets have made this situation even worse.
+The mobile apps markets have made this situation worse.
 
 I'm currently thinking back about the mobile market, especially for games. At a time, I thought that going mobile-only was the best shot today, but the more I think about it, the more I'm realizing that a platform like Steam (which also drives the prices to the bottom, alas) is more sustainable for a developer/company.
 
@@ -21,4 +21,4 @@ I'm currently thinking back about the mobile market, especially for games. At a 
 
 So what does that leave ? Freemium ? Unfortunately, freemium almost always goes with [bad apps or games that trick users to pay for more](https://itunes.apple.com/fr/app/candy-crush-saga/id553834731?mt=8).
 
-N.B. : To be clear, as a user, I'm happy to _pay less_. For almost everybody, a software or a game at 50-100$ is way too high. What I don't like is that we are now in a situation where  even one buck is too much. **One buck per app cannot sustain a one-person business.**
+N.B. : To be clear, as a user, I'm happy to _pay less_. For almost everybody, a software or a game at 50-100$ is way too high. What I don't like is that we are now in a situation where  even one buck for an app you use daily is too much. **One buck per app cannot sustain a one-person business.**
