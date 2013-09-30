@@ -21,4 +21,4 @@ I'm currently thinking back about the mobile market, especially for games. At a 
 
 So what does that leave ? Freemium ? Unfortunately, freemium almost always goes with [bad apps or games that trick users to pay for more](https://itunes.apple.com/fr/app/candy-crush-saga/id553834731?mt=8).
 
-N.B. : To be clear, as a user, I'm happy to _pay less_. For almost everybody, a software or a game at 50-100$ is way too high. What I don't like is that we are now in a situation where  even 1 buck is too much.
+N.B. : To be clear, as a user, I'm happy to _pay less_. For almost everybody, a software or a game at 50-100$ is way too high. What I don't like is that we are now in a situation where  even one buck is too much. **One buck per app cannot sustain a one-person business.**
