@@ -25,3 +25,8 @@ The only hardware maker that has a sense of fashion is Apple (the iPhone is almo
 
 N.B. 2 : The fun fact with watches is that ordinary, they are quite expensive. $300-400 for a “smart” watch that looks like a quality watch won't be that much for the targeted market.
 
+**Update on N.B. 2** :
+
+<blockquote class="twitter-tweet">
+<p>My watch is gold too. Thieves: grab that instead. You can buy a good few iPhones with the proceeds.</p>&mdash; Matt Gemmell (@mattgemmell) <a href="https://twitter.com/mattgemmell/statuses/385121349712490497">October 1, 2013</a>
+</blockquote>
