@@ -7,4 +7,4 @@ During the last weeks, we ([Damien](http://dmayance.com/) and I) have cooked a c
 
 We hope you will enjoy it.
 
-→ [You can read it here](http://pixelnest.io/2013/11/unity-2D-tutorial/).
+→ [You can read it here](http://pixelnest.io/tutorials/2d-game-unity/).
