@@ -1,0 +1,31 @@
+---
+layout: post
+title: How Netflix Reverse Engineered Hollywood
+---
+
+[Alexis Madrigal on Netflix classification](http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/) (emphasis mine):
+
+> […], we discovered that Netflix possesses not several hundred genres, or even several thousand, **but 76,897 unique ways to describe types of movies**.
+
+> […] 
+
+> Using large teams of people specially trained to watch movies, Netflix deconstructed Hollywood. They paid people to watch films and tag them with all kinds of metadata. This process is so sophisticated and precise that taggers receive a 36-page training document that teaches them how to rate movies on their sexually suggestive content, goriness, romance levels, and even narrative elements like plot conclusiveness.
+
+> […]
+
+> The Netflix Quantum Theory doc spelled out ways of tagging movie endings, the "social acceptability" of lead characters, and dozens of other facets of a movie. Many values are "scalar," that is to say, they go from 1 to 5. So, every movie gets a romance rating, not just the ones labeled "romantic" in the personalized genres. Every movie's ending is rated from happy to sad, passing through ambiguous. Every plot is tagged. Lead characters' jobs are tagged. Movie locations are tagged. Everything. Everyone. 
+
+> That's the data at the base of the pyramid. It is the basis for creating all the altgenres that I scraped. Netflix's engineers took the microtags and created a syntax for the genres, much of which we were able to reproduce in our generator. 
+
+This article completely blew my mind. Great journalism.
+
+The idea to tag any movie that much and create ultra-specific subgenres is so clever. Hell of a work too.
+
+<br />Concerning the _Perry Mason_ mystery, I found an interesting [explanation](http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/#comment-1184453715) in the comments (yep):
+
+> Actually, Alexis, I am baffled by your conclusion that the Perry Mason Mystery is a "ghost in the machine".
+
+> To me it seems obvious: there is a subgenre, "Understated Cerebral Mysteries with Ironclad Plots, Good Dialogue, Not Much Action or Romance, and on the Side of the Defense", that is popular with viewers yet *drastically* underpopulated. It's so drastically underpopulated that the show that's a best-fit for the category is *enormously* popular, much more popular than anyone realized.
+
+> Far from being a "bug", this is programming *platinum* for Netflix. If they're as smart as I think they are, this is the subgenre where they should be looking to make a TV series. The biggest problem will be finding a showrunner and scriptwriters who are able to go against so many of Hollywood's cliches and assumptions. They need to make something where what is visually interesting, striking, or exciting is unimportant, but where there are no holes in the plots. Very high degree of difficulty, and only profitable to Netflix, which makes money from its shows, not from the advertising.
+
