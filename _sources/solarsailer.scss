@@ -361,6 +361,88 @@ body {
   margin: 0 auto !important;
 }
 
+// Game
+.game {
+  $radius: 5px;
+
+  display: block;
+  position: relative;
+  margin-bottom: 10px !important;
+  max-width: 100%;
+  height: 150px;
+  border-radius: $radius;
+  // background-size:contain;
+  background-position: center;
+
+  opacity: 0.8;
+
+  @include transition(all, .4s);
+
+  span {
+    display: inline-block;
+    position: absolute;
+    left: 0; bottom: 0;
+
+    padding: 5px 10px;
+
+    width: 100%;
+    background: rgba($brand-color, 0.3);
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+
+    // opacity: 0.5;
+    color: white;
+    font-size: 1rem;
+
+    @include box-sizing(border-box);
+    @include transition(all, .4s);
+  }
+
+  &:hover {
+    opacity: 1;
+
+    span {
+      background: rgba($brand-color, 0.5);
+    }
+  }
+}
+
+.game--hld {
+  background-image: url('/static/images/games/hld-min.png');
+}
+
+.game--duelyst {
+  background-image: url('/static/images/games/duelyst-min.png');
+}
+
+.game--transistor {
+  background-image: url('/static/images/games/transistor-min.png');
+}
+
+.game--below {
+  background-image: url('/static/images/games/below-min.png')
+}
+
+.game--nitw {
+  background-image: url('/static/images/games/nitw-min.png');
+}
+
+.game--gp {
+  background-image: url('/static/images/games/gp-min.png');
+}
+
+.game--journey {
+  background-image: url('/static/images/games/journey-min.png');
+}
+
+.game--towerfall {
+  background-image: url('/static/images/games/towerfall-min.png');
+}
+
+.game--sg {
+  background-image: url('/static/images/games/sg-min.png');
+}
+
 // Tweaks for desktop-sized window
 @media only screen and (min-width:$desk-start) {
 
@@ -415,6 +497,12 @@ body {
 
   // For code
   .article__text .highlight pre {
+    margin: 0 auto;
+    max-width: $MAX;
+  }
+
+  // Game
+  .game {
     margin: 0 auto;
     max-width: $MAX;
   }
