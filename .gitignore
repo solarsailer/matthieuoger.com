@@ -16,6 +16,12 @@ Desktop.ini
 .DS_Store
 
 ############
+## SASS
+############
+
+.sass-cache/
+
+############
 ## Jekyll
 ############
 
