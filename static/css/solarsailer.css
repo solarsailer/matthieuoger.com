@@ -390,3 +390,6 @@ code {
       color: #3e3e3e; }
     .page-footer a:active, .page-footer a:focus {
       color: #c2c3d1; }
+
+.resume .resume__schools {
+  border: 1px solid black; }
