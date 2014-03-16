@@ -1,0 +1,26 @@
+/* Container */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* Title */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+/* List + paragraph */
+ul, ol, dl, p {
+  margin: 0;
+  padding: 0; }
+
+/* Misc */
+hgroup,
+dd,
+figure,
+pre,
+table,
+fieldset,
+hr {
+  margin: 0;
+  padding: 0; }
