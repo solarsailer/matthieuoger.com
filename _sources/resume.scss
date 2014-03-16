@@ -1,11 +1,57 @@
 @charset "utf-8";
 
 // -------------------------------------------------------
+// General
+// -------------------------------------------------------
+
+@import "imports/reset";
+@import "imports/mixins";
+@import "imports/variables";
+
+html {
+  color: $text-color;
+
+  font-size: 1.1em;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.4;
+}
+
+// Add the line-height as a the default spacing
+h1, h2, h3, h4, h5, h6,hgroup,
+ul, ol, dd,
+p, figure,
+pre, table, fieldset, hr {
+  margin-bottom: 1.4rem;
+}
+
+.page {
+  background-color: $background-color;
+}
+
+a {
+  @extend %link;
+}
+
+// Change the selection to white on green
+::-moz-selection {
+  background: $brand-color;
+  color: white;
+}
+
+// Change the selection to white on green
+::selection {
+  background: $brand-color;
+  color: white;
+}
+
+// -------------------------------------------------------
 // Résumé
 // -------------------------------------------------------
 
-.resume {
-  .resume__schools {
-    border: 1px solid black;
-  }
+.resume__schools {
+  width: 400px;
+
+  padding: 10px;
+  border-radius: 4px;
+  background: #fad889;
 }
