@@ -1,4 +1,4 @@
 #!/bin/sh
 
 jekyll serve --watch &
-scss _sources/solarsailer.scss:static/css/solarsailer.css -w
+scss _sources/:static/css/ --watch
