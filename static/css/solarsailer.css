@@ -163,6 +163,18 @@ blockquote {
   .article__text ul li, .article__text ol li {
     margin-left: 40px; }
 
+.article__text hr {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  max-width: 300px;
+  height: 1px;
+  border: 0;
+  background: #cecece; }
+
+@media only screen and (max-width: 500px) {
+  .article__text hr {
+    margin-left: 20%;
+    margin-right: 20%; } }
 .article__text a {
   color: #8ab635; }
   .article__text a:hover {
