@@ -5,7 +5,7 @@ title: Taking a break
 
 I'm self-employed and I work every day at home for my company, [Pixelnest Studio](http://pixelnest.io).
 
-A common good practice recommended by almost any home-worker is to take a quick (3 minutes) break every 45 minutes or so.
+A common good practice recommended by almost any home-worker is to take a quick (3 minutes) _walking_ break every 45 minutes or so.
 
 1. It makes you move your body. Especially your legs and your back.
 2. It gets you out of your computer.
