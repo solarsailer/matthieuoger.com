@@ -17,4 +17,6 @@ And… it's great. I'm really feeling much more concentrated and ready.
 
 Because I will forget to stand up as soon as I'm working, [I've made a little "app" for OSX](https://gist.github.com/solarsailer/6328415616b485ff7bef). In fact, it's just a simple automator app that will trigger a notification for three minutes. Follow the gist above to know how to use it. It's dead simple, but **it works**.
 
+---
+
 NB: this advice is especially true for self-employed people (because you can't take a break with your coworkers), but anybody working at a desk for several hours should do it. It costs nothing, and your body will love it.
