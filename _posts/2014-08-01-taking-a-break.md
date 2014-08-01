@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Taking a break
 ---
 
