@@ -1,19 +1,28 @@
 name: solar sailer
 
-# Code
-highlighter: pygments
+# Remove folders from build.
 exclude: ['_sources', '_raws']
 
-# Publishing
-#future: false
-show_drafts: nil
+# Code syntax highlighter.
+# TODO: switch to `rouge` when Github Pages supports it.
+highlighter: pygments
 
-# Permalink format (without day)
+# -------------------------------------------------------
+# Links & pagination.
+# -------------------------------------------------------
+
+# Permalink format (without day).
 permalink: /:categories/:year/:month/:title
 
-# Pagination
+# Pagination.
 paginate_path: 'page-:num'
 paginate: 20
 
-# Markdown formatter
+# -------------------------------------------------------
+# Markdown.
+# -------------------------------------------------------
+
 markdown: redcarpet
+
+redcarpet:
+  extensions: ["footnotes"]
