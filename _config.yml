@@ -1,7 +1,7 @@
 name: solar sailer
 
 # Remove folders from build.
-exclude: ['_sources', '_raws']
+exclude: ['_raws']
 
 # Code syntax highlighter.
 # TODO: switch to `rouge` when Github Pages supports it.
@@ -26,3 +26,10 @@ markdown: redcarpet
 
 redcarpet:
   extensions: ["footnotes", "no_intra_emphasis", "autolink", "strikethrough", "space_after_headers"]
+
+# -------------------------------------------------------
+# Sass.
+# -------------------------------------------------------
+
+sass:
+  style: :compressed
