@@ -1,7 +1,7 @@
 name: solar sailer
 
 # Remove folders from build.
-exclude: ['_raws']
+exclude: ['_raws', 'README.md']
 
 # Code syntax highlighter.
 # TODO: switch to `rouge` when Github Pages supports it.
