@@ -1,7 +1,7 @@
 name: solar sailer
 
 # Code
-pygments: true
+highlighter: pygments
 exclude: ['_sources', '_raws']
 
 # Publishing
