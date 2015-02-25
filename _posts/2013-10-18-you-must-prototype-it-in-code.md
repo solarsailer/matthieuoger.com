@@ -3,7 +3,7 @@ layout: post
 title: You must prototype it in code
 ---
 
-Jeff Atwood in [Good Programmers Get Off Their Butts](http://www.codinghorror.com/blog/2004/11/good-programmers-get-off-their-butts.html) :
+Jeff Atwood in [Good Programmers Get Off Their Butts](http://www.codinghorror.com/blog/2004/11/good-programmers-get-off-their-butts.html):
 
 > I am not proposing a code-like-hell methodology. I am merely observing that, in my experience, **coding without planning is just as futile as coding with too much planning**. Software development is [a wicked problem](http://www.codinghorror.com/blog/archives/000071.html); you should never make planning decisions without some kind of code prototype to ensure that you're making informed decisions. If you plan too far ahead of the code, I guarantee you are doing work that will be thrown away or altered until it is unrecognizable.
 

@@ -3,7 +3,7 @@ layout: post
 title: Nintendo 2DS
 ---
 
-[Great article](http://ignorethecode.net/blog/2013/08/29/nintendo/) (as usual) by Lukas Mathis :
+[Great article](http://ignorethecode.net/blog/2013/08/29/nintendo/) (as usual) by Lukas Mathis:
 
 > But the 2DS just isn’t made for people like me. That doesn’t mean it’s going to fail. That doesn’t mean it’s a bad product. It just means it’s not for me.
 

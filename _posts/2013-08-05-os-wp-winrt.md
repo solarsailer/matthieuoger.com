@@ -3,7 +3,7 @@ layout: post
 title: Windows Phone and WinRT
 ---
 
-From [Windows Phone or Windows RT?](http://winsupersite.com/windows-phone/windows-phone-or-windows-rt) :
+From [Windows Phone or Windows RT?](http://winsupersite.com/windows-phone/windows-phone-or-windows-rt):
 
 > Microsoft already has a mobile platform with a thriving ecosystem. It’s called Windows Phone, and I think it makes a far better choice for general purpose tablets than does Windows RT.
 

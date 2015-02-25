@@ -3,7 +3,7 @@ layout: post
 title: The gif “video format”
 ---
 
-[HTML video still can't beat GIF](http://pornel.net/beat-gif-manifesto) :
+[HTML video still can't beat GIF](http://pornel.net/beat-gif-manifesto):
 
 > Animated GIF, despite having awful compression and terrible quality, is still more useful on the web than any other video format.
 
