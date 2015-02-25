@@ -282,9 +282,7 @@ body {
     height: 1px;
 
     border: 0;
-    background: #cecece;
-
-
+    background: $line-color;
   }
 }
 
@@ -351,6 +349,13 @@ body {
   .footnotes {
     color: $text-light-color;
     font-size: 0.9rem;
+}
+
+.article__text .footnotes hr {
+  margin-left: 40px;
+  margin-right: 0;
+  max-width: $MAX;
+  background: rgba($line-color, 0.6);
 }
 
 .article__text
@@ -449,7 +454,7 @@ body {
   height: 1px;
 
   border: 0;
-  background: rgba(#cecece, 0.4);
+  background: rgba($line-color, 0.4);
 }
 
 .pager__older,
