@@ -443,17 +443,29 @@ body {
   }
 }
 
+.pager hr {
+  margin-bottom: 20px;
+  max-width: 450px;
+  height: 1px;
+
+  border: 0;
+  background: rgba(#cecece, 0.4);
+}
+
 .pager__older,
 .pager__newer,
 .pager__archives {
   @include grey-link;
-}
 
-.pager__older {
-  margin-right: 10%;
+  font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
 .pager__newer {
+  margin-right: 10%;
+}
+
+.pager__older {
   margin-left: 10%;
 }
 
