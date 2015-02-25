@@ -353,6 +353,13 @@ body {
   }
 }
 
+// Footnotes
+.article__text
+  .footnotes {
+    color: lighten($text-color, 30%);
+  font-size: 0.9rem;
+}
+
 .article__text
   .twitter-tweet {
   margin: 0 auto !important;
@@ -480,6 +487,11 @@ body {
   .article__text > blockquote {
     margin: 16px auto;
     max-width: $MAX - 200px;
+  }
+
+  .article__text .footnotes {
+    margin: 16px auto;
+    max-width: $MAX;
   }
 
   .article__text {
