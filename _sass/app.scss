@@ -249,7 +249,7 @@ body {
 
     border-left: 1px solid #cecece;
 
-    color: #787878;
+    color: $text-light-color;
     font-size: 1rem;
     font-style: normal;
 
@@ -348,8 +348,8 @@ body {
 // Footnotes
 .article__text
   .footnotes {
-    color: lighten($text-color, 30%);
-  font-size: 0.9rem;
+    color: $text-light-color;
+    font-size: 0.9rem;
 }
 
 .article__text
@@ -397,7 +397,7 @@ body {
   .article__text > blockquote {
     margin: 16px auto;
     margin-bottom: 32px;
-    max-width: $MAX;// - 140px;
+    max-width: $MAX;
   }
 
   .article__text .footnotes {
