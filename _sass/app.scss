@@ -546,7 +546,7 @@ body {
 }
 
 // ---------------------
-// page-footer
+// Archives
 // ---------------------
 
 .archives {
@@ -561,6 +561,7 @@ body {
 }
 
 .archive {
+  display: table;
   margin-bottom: 30px;
 }
 
