@@ -3,13 +3,12 @@
   <hr />
 
   <p>
-
     <!-- start newer -->
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <a href="/" class="pager__newer">← Previous Page</a>
+        <a href="/" class="pager__newer">← Previous</a>
       {% else %}
-        <a href="/page-{{ paginator.previous_page }}" class="pager__newer">← Previous Page</a>
+        <a href="/page-{{ paginator.previous_page }}" class="pager__newer">← Previous</a>
       {% endif %}
     {% endif %}
     <!-- end newer -->
@@ -20,10 +19,9 @@
 
     <!-- start older -->
     {% if paginator.next_page %}
-      <a href="/page-{{ paginator.next_page }}" class="pager__older">Next Page →</a>
+      <a href="/page-{{ paginator.next_page }}" class="pager__older">Next →</a>
     {% endif %}
     <!-- end older -->
-
   </p>
 </div>
 <!-- end pagination -->
