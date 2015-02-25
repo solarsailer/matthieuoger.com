@@ -357,6 +357,12 @@ body {
   margin: 0 auto !important;
 }
 
+.article__text {
+  iframe {
+    max-width: 100%;
+  }
+}
+
 // Tweaks for desktop-sized window
 @media only screen and (min-width:$desk-start) {
 
