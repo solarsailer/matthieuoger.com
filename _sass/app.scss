@@ -243,31 +243,23 @@ body {
 // Blockquote styling - add a « before and a » after
 .article__text
   blockquote {
-  position: relative;
-  margin: 16px 0;
-  padding: 1px 40px;
+    position: relative;
+    margin: 16px 0;
+    padding: 0 20px;
 
-  color: #686868;
-  font-style: normal;
+    border-left: 1px solid #cecece;
 
-  &:before,
-  &:after {
-    position: absolute;
-    color: #b9b9b9;
-    font-family: Georgia, serif;
-    font-size: 1.8em;
-  }
+    color: #787878;
+    font-size: 1rem;
+    font-style: normal;
 
-  &:before {
-    content: "«";
-    left: 10px;
-  }
+    p:first-of-type {
+      margin-top: 0;
+    }
 
-  &:after {
-    content: "»";
-    right: 10px;
-    bottom: 0;
-  }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
 }
 
 // Lists
@@ -404,7 +396,8 @@ body {
 
   .article__text > blockquote {
     margin: 16px auto;
-    max-width: $MAX - 200px;
+    margin-bottom: 32px;
+    max-width: $MAX;// - 140px;
   }
 
   .article__text .footnotes {
