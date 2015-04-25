@@ -17,7 +17,7 @@ But like the iPhone, there's a chance the Apple Watch will succeed and become a 
 
 That's not to say they are completely useless as of today.
 
-The usages that intrigue me the most on are:[^3]
+The usages that intrigue me the most are:[^3]
 
 - Maps navigation ("quick glance, straight on, a few haptic taps, go right — bam — you're arrived!").
 - Services like Capitaine Train [(with an awesome watch app design that clearly understands its support and context)](https://blog.capitainetrain.com/8788-apple-watch).
