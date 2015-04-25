@@ -15,7 +15,7 @@ But like the iPhone, there's a chance the Apple Watch will succeed and become a 
 
 **For the moment, I don't think there're many usages that make a watch (or other wearable devices) truly better than a phone**. Hopefully, we are only at the beginning. To understand what we can do as developers, we have to use those objects daily.
 
-That's not to say there are completely useless as of today.
+That's not to say they are completely useless as of today.
 
 The usages that intrigue me the most on are:[^3]
 
