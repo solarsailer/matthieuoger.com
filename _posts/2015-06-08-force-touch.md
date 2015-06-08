@@ -9,7 +9,7 @@ On the Watch, I found that the feedback was not properly mapped to the press (it
 
 On the new Macbooks' trackpad, the feeling is fantastic. You can push multiple times and sense the force you apply like it's real. You may not even understand that it's not a true physical button.
 
-But… Force Touch is not discoverable.
+But… **Force Touch is not discoverable.**
 
 There is no visual clue that Force Touch is available — either on the screen or on a specific control. It's like the menu button of the old Android versions: you tap somewhere (the menu button on Android, firmly with Force Touch) and something may happen. Or not. It's confusing and it's one more hidden gesture with no affordance. It's no better than a long press if its sole purpose is to be another context menu.
 
