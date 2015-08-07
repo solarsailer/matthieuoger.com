@@ -45,7 +45,7 @@ Like, when your train is ready to leave — which platform, what seat? That's us
 
 Having your itinerary directions given [to you by a few vibrations](http://daringfireball.net/linked/2015/04/23/apple-watch-user-guide)? That's great too.
 
-Having a full-fledged Twitter app on your wrist? Useless. Getting your Facebook likes instanly? Useless.[^4]
+Having a full-fledged Twitter app on your wrist? Useless. Getting your Facebook likes instantly? Useless.[^4]
 
 <br />
 
