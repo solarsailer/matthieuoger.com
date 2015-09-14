@@ -29,4 +29,4 @@ title: Quantum post-mortem
 
 [Quantum](http://www.funforge.fr/US/?portfolio=quantum) is one of the best boardgames I recently played. It was unavailable for a year but I finally got my hand on the re-edition. The post-mortem shows all the history behind the game and how some concepts were found and implemented.
 
-The game is really fast, complex and deep. There's a bit of chance in the roll of the dices, but I don't think that it matters that much in the end. Your decisions are way more important than your luck.
+The game is really fast, complex and deep. There's a bit of chance in the game through the roll of the dices (_obviously_), but I don't think it matters that much in the end. Your decisions are way more important than your luck.
