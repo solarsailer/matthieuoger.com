@@ -131,6 +131,8 @@ type Point struct {
 }
 ```
 
+_(Note the trailing comma on the last line.)_
+
 It's better than what Swift does (at least, diffs are not impacted and you don't have to think to add or remove a comma — you just have to).
 
 But why did they choose to keep the commas? No comma at all would have been way better AND coherent with the semicolon rule.
