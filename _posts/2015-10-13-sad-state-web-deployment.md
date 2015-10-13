@@ -3,7 +3,7 @@ layout: post
 title: The sad state of web app deployment
 ---
 
-[The sad state of web app deployment][link]:
+[Eevee on Fuzzy Notepad][link]:
 
 > We’ve been doing this for 20 years. We should have this by now. It should work, it should be pluggable and agnostic, and it should do everything right. […]
 
