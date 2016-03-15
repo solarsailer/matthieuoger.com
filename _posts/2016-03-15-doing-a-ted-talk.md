@@ -23,3 +23,5 @@ title: Doing a TED talk
 > […]
 >
 > [My rehearsal] was three days before my talk—and it was pretty rough, confirming to me and everyone present that I was officially not a fraud when it came to my topic. The irony of a guy rehearsing his TED Talk about how he’s a bad procrastinator, and being clearly underprepared while doing so, was not lost on anyone.
+
+**UPDATE**: and [the talk is up on TED](http://www.ted.com/talks/tim_urban_inside_the_mind_of_a_master_procrastinator). No surprise: it's great.
