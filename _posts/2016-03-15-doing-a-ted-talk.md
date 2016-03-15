@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Doing a TED talk
+title: Inside the mind of a master procrastinator
 ---
 
 [Tim Urban about rehearsing for his TED Talk](http://waitbutwhy.com/2016/03/doing-a-ted-talk-the-full-story.html):
