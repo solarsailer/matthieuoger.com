@@ -41,7 +41,7 @@ layout: null
     {% unless post.category == 'meta' %}
 
     <url>
-      <loc>http://solarsailer.net{{ post.url }}/</loc>
+      <loc>http://solarsailer.net{{ post.url }}</loc>
       <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
