@@ -12,7 +12,7 @@ highlighter: pygments
 # -------------------------------------------------------
 
 # Permalink format (without day).
-permalink: /:categories/:year/:month/:title
+permalink: /:categories/:year/:month/:title/
 
 # Pagination.
 paginate_path: 'page-:num'
