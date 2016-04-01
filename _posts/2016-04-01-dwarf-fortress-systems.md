@@ -19,7 +19,7 @@ title: Cats, taverns and cleaning systems
 >
 > Yeah, right now it’s any creature that has blood, and that includes, like, an octopus. I don’t know if an octopus can get drunk or not.
 
-The way the different systems are all interacting together is so fascinating. Especially when the outcome becomes something this. :)
+The way the different systems are all interacting together is so fascinating. Especially when the outcome becomes something like this. :)
 
 ---
 
