@@ -1,22 +1,17 @@
 name: solar sailer
 
-# Remove folders from build.
-exclude: ['_raws', 'README.md']
-
-# Code syntax highlighter.
-# TODO: switch to `rouge` when Github Pages supports it.
-highlighter: pygments
-
 # -------------------------------------------------------
-# Links & pagination.
+# Globals.
 # -------------------------------------------------------
 
-# Permalink format (without day).
+show_drafts: nil
 permalink: /:categories/:year/:month/:title/
 
-# Pagination.
-paginate_path: 'page-:num'
-paginate: 20
+exclude: ['_raws', 'README.md']
+
+# -------------------------------------------------------
+# Defaults.
+# -------------------------------------------------------
 
 # -------------------------------------------------------
 # Markdown.
@@ -26,6 +21,19 @@ markdown: redcarpet
 
 redcarpet:
   extensions: ["footnotes", "no_intra_emphasis", "autolink", "strikethrough", "space_after_headers"]
+
+# -------------------------------------------------------
+# Code.
+# -------------------------------------------------------
+
+highlighter: rouge
+
+# -------------------------------------------------------
+# Pagination.
+# -------------------------------------------------------
+
+paginate_path: 'page-:num'
+paginate: 20
 
 # -------------------------------------------------------
 # Sass.
@@ -40,3 +48,4 @@ sass:
 
 gems:
   - jekyll-paginate
+  - jekyll-redirect-from
