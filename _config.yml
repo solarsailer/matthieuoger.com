@@ -7,20 +7,30 @@ name: solar sailer
 show_drafts: nil
 permalink: /:categories/:year/:month/:title/
 
-exclude: ['_raws', 'README.md']
+include: ['_pages']
+exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', 'Gemfile', 'Gemfile.lock']
 
 # -------------------------------------------------------
 # Defaults.
 # -------------------------------------------------------
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
 # -------------------------------------------------------
 # Markdown.
 # -------------------------------------------------------
-
-markdown: redcarpet
-
-redcarpet:
-  extensions: ["footnotes", "no_intra_emphasis", "autolink", "strikethrough", "space_after_headers"]
 
 # -------------------------------------------------------
 # Code.
@@ -34,13 +44,6 @@ highlighter: rouge
 
 paginate_path: 'page-:num'
 paginate: 20
-
-# -------------------------------------------------------
-# Sass.
-# -------------------------------------------------------
-
-sass:
-  style: :compressed
 
 # -------------------------------------------------------
 # Plugins.
