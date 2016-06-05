@@ -3,4 +3,9 @@
 
 <!-- CSS. -->
 <link rel="stylesheet" type="text/css" href="/static/vendor/css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/solarsailer.min.css" />
+
+{% if jekyll.environment == "production" %}
+  <link rel="stylesheet" type="text/css" href="/static/css/solarsailer.min.css" />
+{% else %}
+  <link rel="stylesheet" type="text/css" href="/static/css/solarsailer.css" />
+{% endif %}
