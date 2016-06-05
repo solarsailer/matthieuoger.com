@@ -42,7 +42,7 @@ highlighter: rouge
 # Pagination.
 # -------------------------------------------------------
 
-paginate_path: 'page-:num'
+paginate_path: '/page/:num/'
 paginate: 20
 
 # -------------------------------------------------------
