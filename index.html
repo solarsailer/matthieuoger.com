@@ -2,26 +2,13 @@
 title: Home
 ---
 
-{% for post in paginator.posts %}
+{% for current_post in paginator.posts %}
+  {% assign post_url     = current_post.url     %}
+  {% assign post_title   = current_post.title   %}
+  {% assign post_date    = current_post.date    %}
+  {% assign post_content = current_post.content %}
 
-  <article class="article">
-
-    <header class="article__header">
-      <h3 class="article__title">
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </h3>
-      <h4 class="article__infos">
-        <!-- example: 12 dec. 2012 -->
-        {{ post.date | date_to_long_string }}
-      </h4>
-    </header>
-
-    <section class="article__text">
-      {{ post.content }}
-    </section>
-
-  </article>
-
+  {% include post.html %}
 {% endfor %}
 
 {% include pagination.html %}

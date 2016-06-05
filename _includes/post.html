@@ -1,0 +1,15 @@
+<article class="article">
+  <header class="article__header">
+    <h3 class="article__title">
+      <a href="{{ post_url }}">{{ post_title }}</a>
+    </h3>
+    <h4 class="article__infos">
+      <!-- example: 12 dec. 2012 -->
+      {{ post_date | date_to_long_string }}
+    </h4>
+  </header>
+
+  <section class="article__text">
+    {{ post_content }}
+  </section>
+</article>

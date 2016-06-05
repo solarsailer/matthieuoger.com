@@ -1,20 +1,10 @@
 ---
 layout: default
 ---
-<article class="article">
 
-  <header class="article__header">
-    <h3 class="article__title">
-      <a href="#">{{ page.title }}</a>
-    </h3>
-    <h4 class="article__infos">
-      <!-- example: 12 dec. 2012 -->
-      {{ page.date | date_to_long_string }}
-    </h4>
-  </header>
+{% assign post_url     = page.url     %}
+{% assign post_title   = page.title   %}
+{% assign post_date    = page.date    %}
+{% assign post_content = content      %}
 
-  <section class="article__text">
-    {{ content }}
-  </section>
-
-</article>
+{% include post.html %}
