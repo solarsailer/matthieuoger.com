@@ -1,32 +1,25 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- description -->
+{% if page.url == '/index.html' %}
+<title>Solar Sailer</title>
+{% else %}
+<title>{{ page.title }} — solar sailer</title>
+{% endif %}
+
+<!-- Misc. -->
+<link rel="shortcut icon" href="/static/images/favicon.ico?v=0001" />
+<link rel="alternate" type="application/atom+xml" title="Solar Sailer" href="http://feedpress.me/solarsailer" />
+
+<!-- Description. -->
 <meta name="author" content="Matthieu Oger" />
 <meta name="description" content="Solar Sailer — a collection of thoughts and opinions by Matthieu Oger." />
 <meta name="keywords" content="solar, sailer, matthieu, oger, technology, design, development, dev" />
 
-{% unless page.url == '/index.html' %}
-<title>{{ page.title }} — solar sailer</title>
-{% else %}
-<title>Solar Sailer</title>
-{% endunless %}
-
-<!-- misc -->
-<link rel="shortcut icon" href="/static/images/favicon.ico?v=0001" />
-<link rel="alternate" type="application/atom+xml" title="Solar Sailer" href="http://feedpress.me/solarsailer" />
-
-<!-- apple -->
-<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-precomposed.png" />
-<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
-<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
-<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-144x144-precomposed.png" sizes="144x144" />
-
-<!-- social -->
+<!-- Social. -->
 <link rel="author" href="http://solarsailer.net/about" />
-<link rel="publisher" href="https://plus.google.com/+MatthieuOger" />
 
-<!-- twitter -->
+<!-- Twitter. -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@solarsailer" />
 <meta name="twitter:creator" content="@solarsailer" />
