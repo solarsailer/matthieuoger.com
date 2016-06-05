@@ -1,7 +1,7 @@
 <div class="pager">
   <hr class="pager__divider" />
 
-  <p>
+  <div class="pager__controller">
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
         <a class="pager__previous" href="/">
@@ -23,5 +23,5 @@
         Next →
       </a>
     {% endif %}
-  </p>
+  </div>
 </div>
