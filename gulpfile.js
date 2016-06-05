@@ -55,7 +55,7 @@ gulp.task('build:sass', () => {
 
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .pipe(gulp.dest('_site/static/css'))
+    .pipe(gulp.dest('static/css'))
 })
 
 // -------------------------------------------------------
