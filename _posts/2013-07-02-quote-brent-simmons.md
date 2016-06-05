@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Quote — Brent Simmons
 ---
 

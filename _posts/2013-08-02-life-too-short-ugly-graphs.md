@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Quote — "Life is too short to stare at ugly graphs. And yes, you should feel bad."
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Pixelnest — Unity 2D tutorial
 ---
 

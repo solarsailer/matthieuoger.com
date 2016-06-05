@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Inventing the favicon
 ---
 

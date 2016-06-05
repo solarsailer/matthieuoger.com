@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Amazon's new product page
 ---
 

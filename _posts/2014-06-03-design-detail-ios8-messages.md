@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Design detail in iOS 8 Messages
 ---
 
@@ -25,12 +24,12 @@ _It's not a button. It's a grid of three (or more) images._
 
 It solves three problems:
 
-1. You can use the last photo. 80% of the time, it's what you (and I) want to do. 
-2. You can see the last photo and be sure of what you are doing **BEFORE** doing it. 
+1. You can use the last photo. 80% of the time, it's what you (and I) want to do.
+2. You can see the last photo and be sure of what you are doing **BEFORE** doing it.
 
-	With a button, the app had to provide a way to check the action. 
+	With a button, the app had to provide a way to check the action.
 
-	In Tweetbot, for example, the compose view shows a small thumbnail of the image. 
+	In Tweetbot, for example, the compose view shows a small thumbnail of the image.
 
 	In Droplr, it's too late. As soon as you tap the button, the photo is uploaded and you have to delete it to fix your error.
 

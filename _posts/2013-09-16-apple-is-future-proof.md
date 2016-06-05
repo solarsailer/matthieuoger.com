@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Apple is future proof
 ---
 

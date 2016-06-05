@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Compilation by a thousand semicolons and commas
 ---
 

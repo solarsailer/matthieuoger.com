@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Matt Thorson on Towerfall, Ouya, game design and pricing
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: A Tiny Game That You Can Play Forever
 ---
 

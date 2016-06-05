@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Quote — CGP Grey, the rule of two
 ---
 

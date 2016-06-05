@@ -1,5 +1,4 @@
 ---
-layout: post
 title: VR is not the future
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The search for a Google Reader alternative
 ---
 

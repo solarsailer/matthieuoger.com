@@ -1,5 +1,4 @@
 ---
-layout: post
 title: What makes an indie hit?
 ---
 

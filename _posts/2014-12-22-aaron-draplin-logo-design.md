@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Aaron Draplin Takes On A Logo Design Challenge
 ---
 

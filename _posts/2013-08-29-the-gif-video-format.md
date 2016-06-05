@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The gif “video format”
 ---
 

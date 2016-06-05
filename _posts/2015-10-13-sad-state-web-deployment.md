@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The sad state of web app deployment
 ---
 

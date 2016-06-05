@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Invention Centers
 ---
 
@@ -12,10 +11,10 @@ title: Invention Centers
 Later:
 
 > The shortest lived group at Xerox PARC was "Office of the Future," because Xerox executives would not leave them alone.
-> 
+>
 > I chose the most innocuous name for my own group, the Learning Research Group. Nobody knew what it meant, so they left us alone to invent-object oriented programming and the GUI.
 
-So weird that something like CDG is backed by SAP. 
+So weird that something like CDG is backed by SAP.
 
 (via [Avdi Grimm][mail])
 

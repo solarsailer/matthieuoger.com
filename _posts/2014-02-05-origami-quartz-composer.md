@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Interaction prototyping with Origami
 ---
 

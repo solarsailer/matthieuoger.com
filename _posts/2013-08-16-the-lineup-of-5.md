@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The Lineup of 5
 ---
 
@@ -30,4 +29,3 @@ The next year eventual iPhone five inches will fit perfectly in this new strateg
 [^1]: Cheap **does not necessarily mean low quality**.
 
 [^2]: I take AirDrop as an example because I think that this technology is going to be a decisive advantage for Apple. The fact that it is currently not available on every model is a pain. Hopefully, the new lineup will mitigate the problem a lot.
-

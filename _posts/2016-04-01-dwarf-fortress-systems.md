@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Cats, taverns and cleaning systems
 ---
 

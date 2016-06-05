@@ -1,5 +1,4 @@
 ---
-layout: post
 title: How Netflix Reverse Engineered Hollywood
 ---
 
@@ -30,4 +29,3 @@ The idea to tag any movie that much and create ultra-specific subgenres is so cl
 > Far from being a "bug", this is programming *platinum* for Netflix. If they're as smart as I think they are, this is the subgenre where they should be looking to make a TV series. The biggest problem will be finding a showrunner and scriptwriters who are able to go against so many of Hollywood's cliches and assumptions. They need to make something where what is visually interesting, striking, or exciting is unimportant, but where there are no holes in the plots. Very high degree of difficulty, and only profitable to Netflix, which makes money from its shows, not from the advertising.
 
 Sounds a bit like [Sherlock](http://www.imdb.com/title/tt1475582/?ref_=fn_al_tt_1), no?
-

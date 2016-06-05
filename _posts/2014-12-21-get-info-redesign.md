@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "\"Get Info\" redesign"
 ---
 
@@ -8,7 +7,7 @@ title: "\"Get Info\" redesign"
 [ ![OSX Get Info Design][image] ][image]
 
 > Everyone who has ever worked on MacOS has felt this pain at least once.
-> 
+>
 > You select a couple of files, right click, open the menu, and tap Get Info…
 
 Nice.

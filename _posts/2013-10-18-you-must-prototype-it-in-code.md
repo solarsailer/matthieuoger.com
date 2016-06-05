@@ -1,5 +1,4 @@
 ---
-layout: post
 title: You must prototype it in code
 ---
 

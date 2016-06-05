@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Dead or finished libraries?
 ---
 

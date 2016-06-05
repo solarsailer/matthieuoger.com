@@ -1,5 +1,4 @@
 ---
-layout: post
 title: How Designers Destroyed The World
 ---
 

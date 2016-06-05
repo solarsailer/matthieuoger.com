@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Something Slightly Less Terrible
 ---
 

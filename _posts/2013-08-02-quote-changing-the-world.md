@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Quote — "Changing the world."
 ---
 
@@ -9,6 +8,6 @@ title: Quote — "Changing the world."
 
 > Besides, I'm not even sure it's a healthy sentiment for most people. If your focus is as broad as "changing the world," you're probably setting yourself up to feel like a failure.
 
-> — [Freyr, Hacker News](https://news.ycombinator.com/item?id=6108967) 
+> — [Freyr, Hacker News](https://news.ycombinator.com/item?id=6108967)
 
 (via [Wolf's Little Store](http://wolfslittlestore.be/2013/08/changing-the-world/))

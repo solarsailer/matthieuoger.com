@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Inside the mind of a master procrastinator
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Is the new Apple iOS 7 look an improvement?
 ---
 

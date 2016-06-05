@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Quote — Myke Hurley about the new rumored Apple TV — a gaming console?
 ---
 

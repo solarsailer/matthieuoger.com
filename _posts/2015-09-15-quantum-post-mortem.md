@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Quantum post-mortem
 ---
 
