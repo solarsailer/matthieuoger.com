@@ -1,0 +1,27 @@
+<div class="pager">
+  <hr class="pager__divider" />
+
+  <p>
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a class="pager__previous" href="/">
+          ← Previous
+        </a>
+      {% else %}
+        <a class="pager__previous" href="/page-{{ paginator.previous_page }}/">
+          ← Previous
+        </a>
+      {% endif %}
+    {% endif %}
+
+    <a class="pager__all" href="/archives/">
+      Archives
+    </a>
+
+    {% if paginator.next_page %}
+      <a class="pager__next" href="/page-{{ paginator.next_page }}/">
+        Next →
+      </a>
+    {% endif %}
+  </p>
+</div>
