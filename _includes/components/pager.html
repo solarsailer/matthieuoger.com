@@ -4,14 +4,14 @@
   <div class="pager__controller">
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <a class="pager__previous" href="/">
-          ← Previous
-        </a>
+        {% assign url = "/" %}
       {% else %}
-        <a class="pager__previous" href="/page/{{ paginator.previous_page }}/">
-          ← Previous
-        </a>
+        {% capture url %}/page/{{ paginator.previous_page }}/{% endcapture %}
       {% endif %}
+
+      <a class="pager__previous" href="{{ url }}">
+        ← Previous
+      </a>
     {% endif %}
 
     <a class="pager__all" href="/archives/">
