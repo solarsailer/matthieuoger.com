@@ -1,26 +1,32 @@
-# -------------------------------------------------------
-# System.
-# -------------------------------------------------------
+# Always-ignore.
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
 
-Thumbs.db
-Desktop.ini
+# OS/Editor.
 .DS_Store
+.cache
+.project
+.settings
+.tmproj
+.env
+*.sass-cache
+nbproject
+Thumbs.db
 
-# -------------------------------------------------------
-# Jekyll.
-# -------------------------------------------------------
+# Packages.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
+bower_components/
 
+# Jekyll
 _site
 .jekyll-metadata
-
-# -------------------------------------------------------
-# Sass.
-# -------------------------------------------------------
-
-.sass-cache/
-
-# -------------------------------------------------------
-# NPM.
-# -------------------------------------------------------
-
-node_modules
