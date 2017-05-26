@@ -15,4 +15,4 @@ Nice.
 (/via [Subtraction](http://www.subtraction.com/2014/12/17/get-info-redesigned/))
 
 
-[image]: /static/posts/2014-12-21-get-info-redesign.png
+[image]: /static/images/posts/2014-12-21-get-info-redesign.png
