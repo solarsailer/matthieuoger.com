@@ -1,40 +1,49 @@
-name: solar sailer
+title: "Solar Sailer"
+description: "A collection of thoughts and opinions by Matthieu Oger"
+keywords: "solar, sailer, matthieu, oger, technology, design, development, dev"
 
-# -------------------------------------------------------
-# Globals.
-# -------------------------------------------------------
+github_username:  "solarsailer"
+twitter_username: "solarsailer"
+dribbble_username: "solarsailer"
 
-show_drafts: nil
-permalink: /:categories/:year/:month/:title/
+google_tracking_code: "UA-41853457-1"
 
-include: ['_pages']
-exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', 'Gemfile', 'Gemfile.lock']
+url: "http://solarsailer.net/"
 
 # -------------------------------------------------------
 # Defaults.
 # -------------------------------------------------------
 
+show_drafts: nil
+
+permalink: /:categories/:year/:month/:title/
+
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
 
-# -------------------------------------------------------
+# --------------------------------------------------------------
 # Markdown.
-# -------------------------------------------------------
+# --------------------------------------------------------------
 
-# -------------------------------------------------------
-# Code.
-# -------------------------------------------------------
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  parse_block_html: true
+  parse_span_html: true
+
+# --------------------------------------------------------------
+# Syntax Highlighter.
+# --------------------------------------------------------------
 
 highlighter: rouge
 
@@ -45,10 +54,36 @@ highlighter: rouge
 paginate_path: '/page/:num/'
 paginate: 20
 
-# -------------------------------------------------------
+# --------------------------------------------------------------
+# Build Configuration.
+# --------------------------------------------------------------
+
+include:
+  - '_pages'
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - yarn.lock
+  - webpack.config.js
+  - node_modules
+  - src
+
+keep_files:
+  - static/bundle.css
+  - static/bundle.css.map
+  - static/bundle.js
+  - static/bundle.js.map
+
+# --------------------------------------------------------------
 # Plugins.
-# -------------------------------------------------------
+# --------------------------------------------------------------
 
 gems:
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-feed
+  - jekyll-sitemap
