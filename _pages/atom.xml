@@ -1,41 +1,32 @@
 ---
 layout: null
-
 permalink: /atom.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
-  <title>Solar Sailer</title>
-
-  <link href="http://solarsailer.net/atom.xml" rel="self"/>
-  <link href="http://solarsailer.net/"/>
-
+  <title>{{ site.title | strip_html | xml_escape }}</title>
+  <subtitle>{{ site.site.description | strip_html | xml_escape }}</subtitle>
+  <link rel="alternate" type="text/html" href="{{ site.url }}" />
+  <link rel="self" type="application/atom+xml" href="{{ page.url | absolute_url }}" />
+  <id>{{ page.url | absolute_url }}</id>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://solarsailer.net/</id>
+  <rights>Copyright (c) {{ site.time | date: "%Y" }}, {{ site.author }}</rights>
   <author>
-    <name>Matthieu Oger</name>
-    <uri>http://solarsailer.net/about/</uri>
-  </author>
-
-  <!-- posts -->
-  {% for post in site.posts %}
-    {% unless post.category == 'meta' %}
-
-      <entry>
-        <title>{{ post.title }}</title>
-        <link href="http://solarsailer.net{{ post.url }}" />
-        <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <id>http://solarsailer.net{{ post.id }}</id>
-        <content type="html">
-          {{ post.content | xml_escape }}
-        </content>
-        <author>
-          <name>Matthieu Oger</name>
-          <uri>http://solarsailer.net/about/</uri>
-        </author>
-      </entry>
-
-    {% endunless %}
-  {% endfor %}
+    <name>{{ site.author }}</name>
+    <uri>{{ site.url }}</uri>
+  </author>{% for post in site.posts %}
+  {% unless post.category == 'meta' %}<entry>
+    <title>{{ post.title | strip_html | xml_escape }}</title>
+    <link rel="alternate" type="text/html" href="{{ post.url | absolute_url }}" />
+    <id>{{ post.url | absolute_url }}</id>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>{{ site.author }}</name>
+      <uri>{{ site.url }}</uri>
+    </author>
+    <content type="html">
+      {{ post.content | xml_escape }}
+    </content>
+  </entry>{% endunless %}{% endfor %}
 </feed>
