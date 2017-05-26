@@ -85,5 +85,4 @@ keep_files:
 gems:
   - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll-feed
   - jekyll-sitemap
