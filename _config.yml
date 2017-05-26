@@ -72,6 +72,7 @@ exclude:
   - webpack.config.js
   - node_modules
   - src
+  - npm-debug.log
 
 keep_files:
   - static/bundle.css
