@@ -4,7 +4,7 @@ title: Interaction prototyping with Origami
 
 [Origami](http://facebook.github.io/origami/) is a plugin for [Quartz Composer](http://en.wikipedia.org/wiki/Quartz_Composer), developed by Facebook.
 
-![Origami](http://farm4.staticflickr.com/3696/12330783085_c5e34ceaf4_m.jpg)
+![Origami][image]
 
 Initially, Quartz Composer is a “visual programming” environment to create animated scenes.
 
@@ -19,3 +19,6 @@ That's where Origami steps in:
 > Animations, transitions, buttons, layers, phones, etc.
 
 I recommend to watch [this video](https://vimeo.com/85578380) to get a brief overview of what is possible with Origami. It's intriguing, it looks promising and it motivates me to learn Quartz Composer more seriously.
+
+
+[image]: /static/posts/2014-02-05-origami.jpg

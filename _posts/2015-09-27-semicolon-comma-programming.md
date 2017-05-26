@@ -100,7 +100,7 @@ Simpler, prettier. And it gives a few bonuses beyond the cosmetic aspect:
 1. It's less error-prone.
 2. It's more practical for versioning tool's diffs:
 
-    ![Diff][i1]
+    ![Diff][image-diff]
 
 3. It's consistent with the semicolon behavior.
 
@@ -154,4 +154,4 @@ Yep, this time, there is nothing at all.
 [asi2]: http://mislav.uniqpath.com/2010/05/semicolons/
 [asi3]: http://inimino.org/~inimino/blog/javascript_semicolons
 
-[i1]: /static/posts/2015-09-27-image-01.png
+[image-diff]: /static/posts/2015-09-27-diff.png

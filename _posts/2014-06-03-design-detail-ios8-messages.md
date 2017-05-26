@@ -8,7 +8,7 @@ One of the features that I wanted the most in iOS 8 was simple: _Add a "Use Last
 
 An example with Tweetbot 3:
 
-![Use Last Photo Taken](https://farm4.staticflickr.com/3916/14336153925_c93fce6ac5_o.png)
+![Use Last Photo Taken][image-tweetbot]
 
 But it was still missing in the one place where it would definitely shine: Messages.
 
@@ -18,7 +18,7 @@ The way it was added is brilliant. It's so simple that I don't know why it hasn'
 
 Here it is:
 
-![iOS 8 Messages](https://farm3.staticflickr.com/2940/14149545550_cc16f54a07_o.png)
+![iOS 8 Messages][image-picker-8]
 
 _It's not a button. It's a grid of three (or more) images._
 
@@ -36,3 +36,7 @@ It solves three problems:
 3. You can use the last few photos too. Which might represent 80% of the last remaining use cases.
 
 It's so simple and clever that once you have seen it, you can only think: _"Of course."_.
+
+
+[image-tweetbot]: /static/posts/2014-06-03-picker-tweetbot.png
+[image-picker-8]: /static/posts/2014-06-03-picker-8.png

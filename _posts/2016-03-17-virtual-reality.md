@@ -27,7 +27,7 @@ VR is pretty boring for games, its main application right now. Yes, the immersio
 
 VR is ugly. VR is cumbersome. VR is like Google Glass (remember that?) in so many ways.
 
-![The Future?][img]
+![The Future?][image]
 
 <center>_The future? Really?_</center>
 
@@ -62,4 +62,4 @@ Virtual reality is a fad. And right now, journalists and tech companies are all 
 [^2]: It's like 3D glasses in theaters, but worse. And 3D glasses are already an aberration, we all agree, right?
 
 
-[img]: /static/posts/2016-03-17-virtual-reality.png
+[image]: /static/posts/2016-03-17-virtual-reality.png
