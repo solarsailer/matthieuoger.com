@@ -52,8 +52,8 @@ highlighter: rouge
 # Pagination.
 # -------------------------------------------------------
 
-paginate_path: '/page/:num/'
-paginate: 20
+paginate_path: '/articles/:num/'
+paginate: 10
 
 # --------------------------------------------------------------
 # Build Configuration.

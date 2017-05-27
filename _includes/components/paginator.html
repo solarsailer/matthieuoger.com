@@ -1,33 +1,5 @@
-{% comment %}
-  Beware: this is a small convenience that appears in most Jekyll sites.
-
-  However, the gem `jekyll-paginate` has been deprecated and
-  **you can't use a paginator with a permalink**.
-
-  But it still works. You need to configure the two variables below
-  (`paginator_page` and `list_page`) to match the variable `paginate_path`
-  you've set in your `_config.yml`.
-
-  ---
-
-  In order to work, use this component like this:
-
-  ```html
-  {% for post in paginator.posts %}
-    <div>
-      <h1>{{ post.title }}</h1>
-      <div>{{ post.content }}</div>
-    </div>
-  {% endfor %}
-
-  {% include components/paginator.html %}
-  ```
-
-  And you're set!
-{% endcomment %}
-
-{% assign paginator_page = "/posts/"         %}
-{% assign list_page      = "/posts/archive/" %}
+{% assign paginator_page = "/articles/"         %}
+{% assign list_page      = "/articles/archive/" %}
 
 <div class="paginator">
   <section class="paginator__previous">
