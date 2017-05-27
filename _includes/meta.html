@@ -1,26 +1,29 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% if page.url == '/' or page.url == '/index.html' or page.url contains "/page/" %}
-<title>Solar Sailer</title>
+{% if page.url == '/' or page.url == '/index.html' or page.url contains '/page/' %}
+  <title>{{ site.title | escape }}</title>
 {% else %}
-<title>{{ page.title }} — solar sailer</title>
+  <title>{{ page.title | escape }} — {{ site.title | escape }}</title>
 {% endif %}
 
-<!-- Misc. -->
-<link rel="shortcut icon" href="/static/images/favicon.ico?v=0001" />
-<link rel="alternate" type="application/atom+xml" title="Solar Sailer" href="http://feedpress.me/solarsailer" />
+<link rel="shortcut icon"
+      href="/static/images/favicon.ico?v=0001">
+<link rel="alternate"
+      type="application/json"
+      title="{{ site.title | escape }}"
+      href="{{ '/feed.json' | absolute_url }}">
+<link rel="alternate"
+      type="application/atom+xml"
+      title="{{ site.title | escape }}"
+      href="{{ '/feed.xml' | absolute_url }}">
 
-<!-- Description. -->
-<meta name="author" content="Matthieu Oger" />
-<meta name="description" content="Solar Sailer — a collection of thoughts and opinions by Matthieu Oger." />
-<meta name="keywords" content="solar, sailer, matthieu, oger, technology, design, development, dev" />
+<meta name="author" content="{{ site.author | escape }}">
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<meta name="keywords" content="{{ site.keywords | escape }}">
 
-<!-- Social. -->
-<link rel="author" href="http://solarsailer.net/about" />
-
-<!-- Twitter. -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@solarsailer" />
-<meta name="twitter:creator" content="@solarsailer" />
-<meta name="twitter:description" content="Solar Sailer — a collection of thoughts and opinions by Matthieu Oger." />
+<link rel="author" href="{{ '/about/' | absolute_url }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
+<meta name="twitter:creator" content="@{{ site.twitter_username }}">
+<meta name="twitter:description" content="{{ site.title }} — {{ site.description }}">
