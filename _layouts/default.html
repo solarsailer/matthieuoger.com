@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  {% include meta.html %}
-  {% include css.html %}
-</head>
-<body>
-  {% include development.html %}
+---
+layout: root
+---
 
-  <div class="page" id="page">
-    {% include header.html %}
+<div class="page" id="page">
+  {% include header.html %}
 
-    <div class="page-content" role="main">
-      {{ content }}
-    </div>
+  <main class="page-content" id="page_content" role="main">
+    {{ content }}
+  </main>
 
-    {% include footer.html %}
-  </div>
-
-  {% include js.html %}
-</body>
-</html>
+  {% include footer.html %}
+</div>
