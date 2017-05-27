@@ -14,4 +14,4 @@ For example, the fingerprint sensor is a really neat idea, but [we will be able 
 
 They are calmly preparing the ground for the shape of things to come. _It's thrilling._
 
-<br />N.B.: The Bluetooth LE technology that was embedded a few years ago was exactly that: at that time, it was useless, but in the context of a wearable Apple watch, it makes a **lot** of sense.
+<br>N.B.: The Bluetooth LE technology that was embedded a few years ago was exactly that: at that time, it was useless, but in the context of a wearable Apple watch, it makes a **lot** of sense.

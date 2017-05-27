@@ -46,7 +46,7 @@ Having your itinerary directions given [to you by a few vibrations](http://darin
 
 Having a full-fledged Twitter app on your wrist? Useless. Getting your Facebook likes instantly? Useless.[^4]
 
-<br />
+<br>
 
 I'm interested in wearables ([when they are not socially awkward](https://www.google.com/glass/)) because of what they might become. What they are today is just a glimpse of the potential of such devices.
 

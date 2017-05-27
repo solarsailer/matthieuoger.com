@@ -18,6 +18,6 @@ Here it is:
 
 Stupid system.
 
-<br />N.B.: I'm not against patents and inventors' rights. But there is a big difference between protecting your properties from real thieves and suing everyone without actually creating anything.
+<br>N.B.: I'm not against patents and inventors' rights. But there is a big difference between protecting your properties from real thieves and suing everyone without actually creating anything.
 
 However, if the only solution to this problem is to abolish the patents system, so be it.

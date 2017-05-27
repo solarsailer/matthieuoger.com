@@ -20,7 +20,7 @@ This article completely blew my mind. Great journalism.
 
 The idea to tag any movie that much and create ultra-specific subgenres is so clever. Hell of a work too.
 
-<br />Concerning the _Perry Mason_ mystery, I found an interesting [explanation](http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/#comment-1184453715) in the comments (yep):
+<br>Concerning the _Perry Mason_ mystery, I found an interesting [explanation](http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/#comment-1184453715) in the comments (yep):
 
 > Actually, Alexis, I am baffled by your conclusion that the Perry Mason Mystery is a "ghost in the machine".
 

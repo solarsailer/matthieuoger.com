@@ -15,7 +15,7 @@ I had a Windows 8 and a WinRT device (Surface) at my workplace these days, and i
 When the announcement of WinRT became public, I wondered why Microsoft did not leverage its Windows Phone OS, instead of starting from scratch with Windows 8. A tablet with Windows Phone would have been far better than a tablet with the fail that is WinRT/Windows 8.
 
 
-[^1]: To be fair, however, even then I thought that iOS was a superior OS. But I like to try a new OS to discover what works and not, and to make my own opinion.<br /><br />Windows Phone lacked some polish but was rock solid, especially when compared to Android. At least, the Lumia was a supercharged feature phone with a browser and a decent keyboard.
+[^1]: To be fair, however, even then I thought that iOS was a superior OS. But I like to try a new OS to discover what works and not, and to make my own opinion.<br><br>Windows Phone lacked some polish but was rock solid, especially when compared to Android. At least, the Lumia was a supercharged feature phone with a browser and a decent keyboard.
 
 [CV]: http://dmayance.com/culturez-vous/
 [image]: http://cl.ly/image/102N3O3C0k3z1c0g0u3g

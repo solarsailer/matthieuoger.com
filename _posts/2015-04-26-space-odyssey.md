@@ -4,7 +4,7 @@ title: Space Odyssey
 
 I've finally convinced myself to watch [2001: A Space Odyssey](http://www.imdb.com/title/tt0062622/?ref_=fn_al_tt_5).[^1]
 
-**N.B.: If you haven't seen it, I don't think you should read what's coming. Spoilers ahead.**<br /><br />
+**N.B.: If you haven't seen it, I don't think you should read what's coming. Spoilers ahead.**<br><br>
 
 Well. I didn't **love** the movie (the pace is really **slow**, even for a movie from the sixties, and not being a fan of classical scores might not have helped). I don't mind if a film is ambiguous or doesn't explain much, but 2001 may have gone a bit too far.
 
