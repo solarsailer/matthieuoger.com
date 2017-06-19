@@ -1,3 +1,54 @@
 <footer class="page-footer" id="page_footer">
-  © {{ site.time | date: '%Y' }} {{ site.author }} {{ site.url | replace_first: 'http://' }}
+  <ul class="social">
+    <li>
+      <a href="/about/">
+        <p>
+          About
+        </p>
+        <p>
+          {% include svg/solarsailer.svg %}
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/solarsailer/">
+        <p>
+          twitter.com/<span>solarsailer</span>
+        </p>
+        <p>
+          {% include svg/twitter.svg %}
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/solarsailer/">
+        <p>
+          github.com/<span>solarsailer</span>
+        </p>
+        <p>
+          {% include svg/github.svg %}
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="https://dribbble.com/solarsailer/">
+        <p>
+          dribbble.com/<span>solarsailer</span>
+        </p>
+        <p>
+          {% include svg/dribbble.svg %}
+        </p>
+      </a>
+    </li>
+    <li>
+      <p>
+        <a href="/feed.xml">RSS</a> or <a href="/feed.json">JSON</a> Feed
+      </p>
+      <p>
+        {% include svg/feed.svg %}
+      </p>
+    </li>
+  </ul>
+
+  © {{ site.time | date: '%Y' }} {{ site.author }} ({{ site.url | replace_first: 'http://' }})
 </footer>
