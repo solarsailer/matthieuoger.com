@@ -84,7 +84,7 @@ keep_files:
 # Plugins.
 # --------------------------------------------------------------
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
