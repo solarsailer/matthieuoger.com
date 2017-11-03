@@ -62,7 +62,7 @@ const babelLoader = {
     loader: 'babel-loader',
     options: {
       presets: [
-        'es2015'
+        'env'
       ],
       plugins: [
         'transform-object-rest-spread'
