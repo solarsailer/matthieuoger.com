@@ -10,7 +10,7 @@
     "url": "http://solarsailer.net/"
   },
   "scripts": {
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
   },
