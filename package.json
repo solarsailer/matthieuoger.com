@@ -1,43 +1,22 @@
 {
-  "name": "solarsailer.github.io",
+  "name": "solarsailer.net",
   "version": "4.0.0",
   "description": "Solar Sailer by Matthieu Oger",
   "license": "UNLICENSED",
   "private": true,
-  "repository": "solarsailer/solarsailer.github.io",
+  "repository": "https://github.com/solarsailer/solarsailer.github.io/",
   "author": {
     "name": "Matthieu Oger",
-    "url": "solarsailer.net"
+    "url": "http://solarsailer.net/"
   },
   "scripts": {
-    "start": "bundle exec jekyll build --watch & webpack --watch",
-    "build": "yarn run build:webpack && yarn run build:jekyll",
-    "build:webpack": "webpack -p --env.production",
-    "build:jekyll": "bundle exec jekyll clean && JEKYLL_ENV=production bundle exec jekyll build",
-    "test": "standard | snazzy"
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
   },
   "dependencies": {
+    "gatsby": "^1.9.238",
+    "gatsby-link": "^1.6.39",
     "normalize.css": "^5.0.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.5.3",
-    "postcss-loader": "^2.0.8",
-    "sass-loader": "^6.0.6",
-    "snazzy": "^7.0.0",
-    "standard": "^10.0.3",
-    "webpack": "^3.8.1"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
   }
 }
