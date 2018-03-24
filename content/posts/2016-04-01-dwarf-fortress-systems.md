@@ -1,4 +1,6 @@
 ---
+date: "2016-04-01"
+
 title: Cats, taverns and cleaning systems
 ---
 

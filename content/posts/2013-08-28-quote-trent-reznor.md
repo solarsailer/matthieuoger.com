@@ -1,4 +1,6 @@
 ---
+date: "2013-08-28"
+
 title: Quote — Trent Reznor
 ---
 

@@ -1,4 +1,6 @@
 ---
+date: "2015-09-03"
+
 title: Quote — Myke Hurley about the new rumored Apple TV — a gaming console?
 ---
 

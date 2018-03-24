@@ -1,4 +1,6 @@
 ---
+date: "2015-08-21"
+
 title: Dead or finished libraries?
 ---
 

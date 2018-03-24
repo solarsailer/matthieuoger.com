@@ -1,4 +1,6 @@
 ---
+date: "2015-01-15"
+
 title: Something Slightly Less Terrible
 ---
 

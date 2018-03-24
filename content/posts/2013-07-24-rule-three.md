@@ -1,4 +1,6 @@
 ---
+date: "2013-07-24"
+
 title: The rule of Three
 ---
 

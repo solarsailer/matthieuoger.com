@@ -1,4 +1,6 @@
 ---
+date: "2013-08-02"
+
 title: Quote — "Life is too short to stare at ugly graphs. And yes, you should feel bad."
 ---
 

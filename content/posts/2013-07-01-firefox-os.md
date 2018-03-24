@@ -1,4 +1,6 @@
 ---
+date: "2013-07-01"
+
 title: Firefox OS
 ---
 

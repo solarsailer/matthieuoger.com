@@ -1,4 +1,6 @@
 ---
+date: "2014-07-01"
+
 title: Material Design
 ---
 

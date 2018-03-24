@@ -1,4 +1,6 @@
 ---
+date: "2015-09-18"
+
 title: What makes an indie hit?
 ---
 

@@ -1,4 +1,6 @@
 ---
+date: "2014-12-21"
+
 title: "\"Get Info\" redesign"
 ---
 

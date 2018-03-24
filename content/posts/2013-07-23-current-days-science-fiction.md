@@ -1,4 +1,6 @@
 ---
+date: "2013-07-23"
+
 title: Current days science fiction
 ---
 

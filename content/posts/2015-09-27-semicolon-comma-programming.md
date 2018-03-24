@@ -1,4 +1,6 @@
 ---
+date: "2015-09-27"
+
 title: Compilation by a thousand semicolons and commas
 ---
 
@@ -115,7 +117,7 @@ func test(x: Int, y: Int) {}
 // Multi-lines, no comma.
 func test(
   x: Int
-  y: Int  
+  y: Int
 ) {
 
 }

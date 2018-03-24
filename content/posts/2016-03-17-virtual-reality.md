@@ -1,4 +1,6 @@
 ---
+date: "2016-03-17"
+
 title: VR is not the future
 ---
 

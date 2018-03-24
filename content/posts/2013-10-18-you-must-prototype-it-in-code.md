@@ -1,4 +1,6 @@
 ---
+date: "2013-10-18"
+
 title: You must prototype it in code
 ---
 

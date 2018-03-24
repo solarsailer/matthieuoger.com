@@ -1,4 +1,6 @@
 ---
+date: "2013-08-28"
+
 title: Amazon's new product page
 ---
 

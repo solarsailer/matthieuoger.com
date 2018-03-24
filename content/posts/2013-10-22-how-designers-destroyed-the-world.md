@@ -1,4 +1,6 @@
 ---
+date: "2013-10-22"
+
 title: How Designers Destroyed The World
 ---
 

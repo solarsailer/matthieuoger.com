@@ -1,4 +1,6 @@
 ---
+date: "2013-08-26"
+
 title: iOS 7 user tracking
 ---
 

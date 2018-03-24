@@ -1,4 +1,6 @@
 ---
+date: "2013-08-27"
+
 title: Quote — Jonathan Blow
 ---
 

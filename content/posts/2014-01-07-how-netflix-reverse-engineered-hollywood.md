@@ -1,4 +1,6 @@
 ---
+date: "2014-01-07"
+
 title: How Netflix Reverse Engineered Hollywood
 ---
 

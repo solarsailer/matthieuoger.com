@@ -1,4 +1,6 @@
 ---
+date: "2013-09-30"
+
 title: Paying for softwares
 ---
 

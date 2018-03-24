@@ -1,4 +1,6 @@
 ---
+date: "2015-09-09"
+
 title: Quote — CGP Grey, the rule of two
 ---
 

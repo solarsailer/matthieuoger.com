@@ -1,4 +1,6 @@
 ---
+date: "2014-06-03"
+
 title: Design detail in iOS 8 Messages
 ---
 

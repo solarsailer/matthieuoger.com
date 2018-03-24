@@ -1,4 +1,6 @@
 ---
+date: "2013-07-22"
+
 title: Matt Thorson on Towerfall, Ouya, game design and pricing
 ---
 

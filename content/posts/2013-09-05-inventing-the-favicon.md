@@ -1,4 +1,6 @@
 ---
+date: "2013-09-05"
+
 title: Inventing the favicon
 ---
 

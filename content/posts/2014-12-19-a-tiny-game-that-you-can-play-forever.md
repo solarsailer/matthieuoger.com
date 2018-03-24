@@ -1,4 +1,6 @@
 ---
+date: "2014-12-19"
+
 title: A Tiny Game That You Can Play Forever
 ---
 

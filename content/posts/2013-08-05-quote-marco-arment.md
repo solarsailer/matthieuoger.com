@@ -1,4 +1,6 @@
 ---
+date: "2013-08-05"
+
 title: Quote — Marco Arment
 ---
 

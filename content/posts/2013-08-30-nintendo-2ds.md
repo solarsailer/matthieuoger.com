@@ -1,4 +1,6 @@
 ---
+date: "2013-08-30"
+
 title: Nintendo 2DS
 ---
 

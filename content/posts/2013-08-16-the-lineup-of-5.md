@@ -1,4 +1,6 @@
 ---
+date: "2013-08-16"
+
 title: The Lineup of 5
 ---
 

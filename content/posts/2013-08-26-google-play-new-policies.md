@@ -1,4 +1,6 @@
 ---
+date: "2013-08-26"
+
 title: Google Play new policies
 ---
 

@@ -1,4 +1,6 @@
 ---
+date: "2013-09-09"
+
 title: Microsoft Out
 ---
 

@@ -1,4 +1,6 @@
 ---
+date: "2013-08-06"
+
 title: The Future Of Programming
 ---
 

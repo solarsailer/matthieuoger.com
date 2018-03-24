@@ -1,4 +1,6 @@
 ---
+date: "2013-08-29"
+
 title: Quote — Modern journalism
 ---
 

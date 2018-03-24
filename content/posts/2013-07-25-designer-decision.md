@@ -1,4 +1,6 @@
 ---
+date: "2013-07-25"
+
 title: Designer's decision
 ---
 

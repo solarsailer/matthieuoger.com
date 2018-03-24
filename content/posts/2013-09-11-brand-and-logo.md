@@ -1,4 +1,6 @@
 ---
+date: "2013-09-11"
+
 title: Brand and logo
 ---
 

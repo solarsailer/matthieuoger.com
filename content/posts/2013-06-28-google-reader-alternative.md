@@ -1,4 +1,6 @@
 ---
+date: "2013-06-28"
+
 title: The search for a Google Reader alternative
 ---
 

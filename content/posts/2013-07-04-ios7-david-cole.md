@@ -1,4 +1,6 @@
 ---
+date: "2013-07-04"
+
 title: Is the new Apple iOS 7 look an improvement?
 ---
 

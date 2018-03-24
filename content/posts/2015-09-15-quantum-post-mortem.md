@@ -1,4 +1,6 @@
 ---
+date: "2015-09-15"
+
 title: Quantum post-mortem
 ---
 

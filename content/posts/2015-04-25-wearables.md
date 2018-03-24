@@ -1,4 +1,6 @@
 ---
+date: "2015-04-25"
+
 title: Perspectives on wearables
 ---
 

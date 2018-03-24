@@ -1,4 +1,6 @@
 ---
+date: "2013-08-19"
+
 title: Team of One
 ---
 

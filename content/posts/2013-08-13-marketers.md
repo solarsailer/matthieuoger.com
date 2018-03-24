@@ -1,4 +1,6 @@
 ---
+date: "2013-08-13"
+
 title: Marketers
 ---
 

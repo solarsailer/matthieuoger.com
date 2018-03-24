@@ -1,4 +1,6 @@
 ---
+date: "2013-09-16"
+
 title: Apple is future proof
 ---
 

@@ -1,4 +1,6 @@
 ---
+date: "2013-08-02"
+
 title: Quote — "Changing the world."
 ---
 
