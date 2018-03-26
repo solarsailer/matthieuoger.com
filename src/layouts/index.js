@@ -6,6 +6,8 @@ import Footer from '../components/Footer'
 
 import Card from '../images/card.jpg'
 
+import '../styles/globals/manifest'
+
 // -------------------------------------------------------------
 // Component.
 // -------------------------------------------------------------
