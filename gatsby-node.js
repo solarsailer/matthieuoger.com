@@ -1,6 +1,8 @@
 const path = require('path')
 const {createFilePath} = require('gatsby-source-filesystem')
 
+const {makeArrayAndForEach} = require('./src/sol')
+
 const {
   createPathForMarkdownNode,
   removeDateInFilename,
@@ -25,6 +27,7 @@ const GET_ALL_POSTS = `{
           path
           title
           date
+          redirectFrom
         }
         fields {
           path
@@ -61,7 +64,7 @@ exports.onCreateNode = ({boundActionCreators, node, getNode}) => {
 }
 
 exports.createPages = ({boundActionCreators, graphql}) => {
-  const {createPage} = boundActionCreators
+  const {createPage, createRedirect} = boundActionCreators
 
   return graphql(GET_ALL_POSTS).then(result => {
     if (result.errors) {
@@ -76,6 +79,17 @@ exports.createPages = ({boundActionCreators, graphql}) => {
           id: node.id
         }
       })
+
+      const redirectCreator = x => {
+        createRedirect({
+          fromPath: x,
+          toPath: node.fields.path,
+          isPermanent: true,
+          redirectInBrowser: true
+        })
+      }
+
+      makeArrayAndForEach(redirectCreator, node.frontmatter.redirectFrom)
     })
   })
 }
