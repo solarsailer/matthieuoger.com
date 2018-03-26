@@ -5,50 +5,10 @@ import Link from 'gatsby-link'
 // Module.
 // -------------------------------------------------------------
 
-function mapNode({fields, id, excerpt, frontmatter}) {
-  return (
-    <li key={id}>
-      <h2>
-        <Link to={fields.path}>{frontmatter.title}</Link>{' '}
-        <span>{frontmatter.date}</span>
-      </h2>
-      <div>
-        <p>{excerpt}</p>
-      </div>
-    </li>
-  )
-}
-
-export default ({data}) => {
-  const edges = data.allMarkdownRemark.edges
-
-  return (
-    <main role="main">
-      <ul>{edges.map(({node}) => mapNode(node))}</ul>
-    </main>
-  )
-}
-
-// -------------------------------------------------------------
-// Query.
-// -------------------------------------------------------------
-
-export const POSTS_LIST_QUERY = graphql`
-  query PostsListQuery {
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-          }
-          fields {
-            path
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
+export default () => (
+  <div>
+    <h1>Solar Sailer</h1>
+    <h2>Matthieu Oger</h2>
+    <Link to="/archive/">Archive</Link>
+  </div>
+)
