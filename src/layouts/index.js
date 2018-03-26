@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
 
 import Header from '../components/Header'
@@ -12,6 +13,10 @@ import '../styles/globals/manifest'
 // Component.
 // -------------------------------------------------------------
 
+const Page = styled.div`
+  padding: 2rem;
+`
+
 export default ({data, children}) => {
   const {site: {siteMetadata: metadata}} = data
   const {handles} = metadata
@@ -19,7 +24,7 @@ export default ({data, children}) => {
   const fullUrl = `http://${metadata.url}/`
 
   return (
-    <div className="page" id="page">
+    <Page className="page" id="page">
       <Header />
 
       <main className="page-content" id="page_content" role="main">
@@ -66,7 +71,7 @@ export default ({data, children}) => {
         <meta property="og:image:type" content="image/jpg" />
         <meta property="og:type" content="website" />
       </Helmet>
-    </div>
+    </Page>
   )
 }
 
