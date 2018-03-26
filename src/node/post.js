@@ -1,5 +1,5 @@
 const path = require('path')
-const {isValidDate} = require('../utils')
+const {isValidDate} = require('../sol')
 
 // -------------------------------------------------------------
 // Functions.
