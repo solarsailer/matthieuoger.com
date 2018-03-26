@@ -1,15 +1,12 @@
 const path = require('path')
 const {createFilePath} = require('gatsby-source-filesystem')
 
-const {makeArrayAndForEach} = require('./src/sol')
-
 const {
+  createMarkdownNode,
   createPathForMarkdownNode,
   removeDateInFilename,
   convertDateToPath
-} = require('./src/node/post')
-
-const template = path.resolve('./src/templates/Post.js')
+} = require('./src/node/markdown-creator')
 
 // -------------------------------------------------------------
 // Module.
@@ -37,32 +34,13 @@ exports.onCreateNode = ({boundActionCreators, node, getNode}) => {
 }
 
 exports.createPages = ({boundActionCreators, graphql}) => {
-  const {createPage, createRedirect} = boundActionCreators
-
   return graphql(GET_ALL_POSTS).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
 
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
-      createPage({
-        path: node.fields.path,
-        component: template,
-        context: {
-          id: node.id
-        }
-      })
-
-      const redirectCreator = x => {
-        createRedirect({
-          fromPath: x,
-          toPath: node.fields.path,
-          isPermanent: true,
-          redirectInBrowser: true
-        })
-      }
-
-      makeArrayAndForEach(redirectCreator, node.frontmatter.redirectFrom)
+      createMarkdownNode(node, boundActionCreators)
     })
   })
 }

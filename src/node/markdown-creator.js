@@ -1,5 +1,7 @@
 const path = require('path')
-const {isValidDate} = require('../sol')
+const {isValidDate, makeArrayAndForEach} = require('../sol')
+
+const template = path.resolve('./src/templates/Post.js')
 
 // -------------------------------------------------------------
 // Functions.
@@ -13,6 +15,27 @@ const toTwoDigitsUTCMonth = date => ('0' + (date.getUTCMonth() + 1)).slice(-2)
 // -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------
+
+exports.createMarkdownNode = (node, {createPage, createRedirect}) => {
+  createPage({
+    path: node.fields.path,
+    component: template,
+    context: {
+      id: node.id
+    }
+  })
+
+  const redirectCreator = x => {
+    createRedirect({
+      fromPath: x,
+      toPath: node.fields.path,
+      isPermanent: true,
+      redirectInBrowser: true
+    })
+  }
+
+  makeArrayAndForEach(redirectCreator, node.frontmatter.redirectFrom)
+}
 
 exports.createPathForMarkdownNode = node => {
   const path = node.frontmatter.path
