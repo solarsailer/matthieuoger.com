@@ -40,5 +40,5 @@ It solves three problems:
 It's so simple and clever that once you have seen it, you can only think: _"Of course."_.
 
 
-[image-tweetbot]: /static/images/posts/2014-06-03-picker-tweetbot.png
-[image-picker-8]: /static/images/posts/2014-06-03-picker-8.png
+[image-tweetbot]: /images/posts/2014-06-03-picker-tweetbot.png
+[image-picker-8]: /images/posts/2014-06-03-picker-8.png

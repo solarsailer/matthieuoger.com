@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-import Card from './card.jpg'
+import Card from '../images/card.jpg'
 
 // -------------------------------------------------------------
 // Component.

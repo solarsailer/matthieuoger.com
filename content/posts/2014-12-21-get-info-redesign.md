@@ -17,4 +17,4 @@ Nice.
 (/via [Subtraction](http://www.subtraction.com/2014/12/17/get-info-redesigned/))
 
 
-[image]: /static/images/posts/2014-12-21-get-info-redesign.png
+[image]: /images/posts/2014-12-21-get-info-redesign.png

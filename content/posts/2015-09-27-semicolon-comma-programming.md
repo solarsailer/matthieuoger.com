@@ -156,4 +156,4 @@ Yep, this time, there is nothing at all.
 [asi2]: http://mislav.uniqpath.com/2010/05/semicolons/
 [asi3]: http://inimino.org/~inimino/blog/javascript_semicolons
 
-[image-diff]: /static/images/posts/2015-09-27-diff.png
+[image-diff]: /images/posts/2015-09-27-diff.png

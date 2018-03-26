@@ -15,4 +15,4 @@ I'm pretty sure that this game is going to generalize [low-poly graphics](http:/
 → [More info here](http://monumentvalleygame.com/).
 
 
-[image]: /static/images/posts/2014-04-04-monument-valley.png
+[image]: /images/posts/2014-04-04-monument-valley.png

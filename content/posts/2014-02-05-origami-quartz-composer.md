@@ -23,4 +23,4 @@ That's where Origami steps in:
 I recommend to watch [this video](https://vimeo.com/85578380) to get a brief overview of what is possible with Origami. It's intriguing, it looks promising and it motivates me to learn Quartz Composer more seriously.
 
 
-[image]: /static/images/posts/2014-02-05-origami.jpg
+[image]: /images/posts/2014-02-05-origami.jpg

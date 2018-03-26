@@ -64,4 +64,4 @@ Virtual reality is a fad. And right now, journalists and tech companies are all 
 [^2]: It's like 3D glasses in theaters, but worse. And 3D glasses are already an aberration, we all agree, right?
 
 
-[image]: /static/images/posts/2016-03-17-virtual-reality.png
+[image]: /images/posts/2016-03-17-virtual-reality.png

@@ -31,4 +31,4 @@ There's still a lot of things that I don't like about Android and there's still 
 The real problem for Google is to force developers to adapt to the new style. It's the fourth Android redesign (if I recount well) and the majority of the Android apps are still looking bad. I hope that this time, developers will rejoice and follow Google's lead.
 
 
-[image]: /static/images/posts/2014-07-01-material-design.png
+[image]: /images/posts/2014-07-01-material-design.png
