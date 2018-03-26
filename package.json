@@ -17,8 +17,10 @@
   "dependencies": {
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
+    "gatsby-plugin-styled-components": "^2.0.10",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
-    "normalize.css": "^5.0.0"
+    "normalize.css": "^5.0.0",
+    "styled-components": "^3.2.3"
   }
 }

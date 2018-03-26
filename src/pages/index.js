@@ -1,13 +1,18 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
 
 // -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------
 
+const Title = styled.h1`
+  color: red;
+`
+
 export default () => (
   <div>
-    <h1>Solar Sailer</h1>
+    <Title>Solar Sailer</Title>
     <h2>Matthieu Oger</h2>
     <Link to="/archive/">Archive</Link>
   </div>
