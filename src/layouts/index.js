@@ -31,8 +31,8 @@ export default ({data, children}) => {
 
         {/*
         <link rel="shortcut icon" href={Favicon}>
-        <link rel="alternate" type="application/atom+xml" title={metadata.title} href="FEED.ATOM">
-        <link rel="alternate" type="application/json" title={metadata.title} href="FEED.JSON">
+        <link rel="alternate" type="application/atom+xml" title={metadata.title} href="feed.xml">
+        <link rel="alternate" type="application/json" title={metadata.title} href="feed.json">
         */}
 
         <meta name="author" content={metadata.author} />
