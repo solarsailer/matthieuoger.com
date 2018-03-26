@@ -1,7 +1,7 @@
 import React from 'react'
 
 // -------------------------------------------------------------
-// Module.
+// Component.
 // -------------------------------------------------------------
 
 export default function Template({data}) {
@@ -17,7 +17,11 @@ export default function Template({data}) {
   )
 }
 
-export const pageQuery = graphql`
+// -------------------------------------------------------------
+// Queries.
+// -------------------------------------------------------------
+
+export const POST_QUERY = graphql`
   query PostById($id: String!) {
     markdownRemark(id: {eq: $id}) {
       html

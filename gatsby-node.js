@@ -12,33 +12,6 @@ const {
 const template = path.resolve('./src/templates/Post.js')
 
 // -------------------------------------------------------------
-// Queries.
-// -------------------------------------------------------------
-
-const GET_ALL_POSTS = `{
-  allMarkdownRemark(
-    sort: {order: DESC, fields: [frontmatter___date]}
-    limit: 1000
-  ) {
-    edges {
-      node {
-        id
-        frontmatter {
-          path
-          title
-          date
-          redirectFrom
-        }
-        fields {
-          path
-          slug
-        }
-      }
-    }
-  }
-}`
-
-// -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------
 
@@ -93,3 +66,30 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     })
   })
 }
+
+// -------------------------------------------------------------
+// Queries.
+// -------------------------------------------------------------
+
+const GET_ALL_POSTS = `{
+  allMarkdownRemark(
+    sort: {order: DESC, fields: [frontmatter___date]}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          path
+          title
+          date
+          redirectFrom
+        }
+        fields {
+          path
+          slug
+        }
+      }
+    }
+  }
+}`

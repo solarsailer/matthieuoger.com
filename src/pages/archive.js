@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 // -------------------------------------------------------------
-// Module.
+// Component.
 // -------------------------------------------------------------
 
 function mapNode({fields, id, excerpt, frontmatter}) {
@@ -31,7 +31,7 @@ export default ({data}) => {
 }
 
 // -------------------------------------------------------------
-// Query.
+// Queries.
 // -------------------------------------------------------------
 
 export const POSTS_LIST_QUERY = graphql`
