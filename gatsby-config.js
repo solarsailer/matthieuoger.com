@@ -35,13 +35,13 @@ exports.siteMetadata = {
 
 exports.plugins = [
   {
-    resolve: `gatsby-source-filesystem`,
+    resolve: 'gatsby-source-filesystem',
     options: {
       path: `${__dirname}/content/posts`,
       name: 'posts'
     }
   },
-  `gatsby-transformer-remark`,
-  `gatsby-plugin-styled-components`,
-  `gatsby-plugin-react-helmet`
+  'gatsby-transformer-remark',
+  'gatsby-plugin-styled-components',
+  'gatsby-plugin-react-helmet'
 ]
