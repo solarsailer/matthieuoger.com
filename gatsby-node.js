@@ -1,5 +1,5 @@
 const path = require('path')
-const {createFilePath} = require(`gatsby-source-filesystem`)
+const {createFilePath} = require('gatsby-source-filesystem')
 
 const {
   createPathForMarkdownNode,
@@ -7,7 +7,7 @@ const {
   convertDateToPath
 } = require('./src/node/post')
 
-const template = path.resolve(`./src/templates/Post.js`)
+const template = path.resolve('./src/templates/Post.js')
 
 // -------------------------------------------------------------
 // Queries.
@@ -48,13 +48,13 @@ exports.onCreateNode = ({boundActionCreators, node, getNode}) => {
 
     createNodeField({
       node,
-      name: `slug`,
+      name: 'slug',
       value: path.join('/', prefix, name)
     })
 
     createNodeField({
       node,
-      name: `path`,
+      name: 'path',
       value: createPathForMarkdownNode(node)
     })
   }
