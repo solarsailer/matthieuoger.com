@@ -1,16 +1,10 @@
 const {isValidDate} = require('../utils')
 
 // -------------------------------------------------------------
-// Exports.
-// -------------------------------------------------------------
-
-module.exports = {createPermalinkForPost}
-
-// -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------
 
-function createPermalinkForPost(frontmatter) {
+exports.createPermalinkForPost = frontmatter => {
   const permalink = frontmatter.permalink
   if (permalink) return permalink
 
@@ -26,4 +20,8 @@ function createPermalinkForPost(frontmatter) {
   const year = date.getUTCFullYear()
 
   return `/${year}/${month}/${day}/`
+}
+
+exports.removeDateInSlug = slug => {
+  return slug.replace(/[0-9]*-[0-9]*-[0-9]*-/i, '')
 }

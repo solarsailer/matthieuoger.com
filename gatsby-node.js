@@ -1,5 +1,7 @@
 const path = require('path')
-const {createPermalinkForPost} = require('./src/node/post')
+const {createFilePath} = require(`gatsby-source-filesystem`)
+
+const {createPermalinkForPost, removeDateInSlug} = require('./src/node/post')
 const template = path.resolve(`./src/templates/Post.js`)
 
 // -------------------------------------------------------------
@@ -19,6 +21,9 @@ const GET_ALL_POSTS = `{
           permalink
           date
         }
+        fields {
+          slug
+        }
       }
     }
   }
@@ -27,6 +32,20 @@ const GET_ALL_POSTS = `{
 // -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------
+
+exports.onCreateNode = ({boundActionCreators, node, getNode}) => {
+  const {createNodeField} = boundActionCreators
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = removeDateInSlug(createFilePath({node, getNode}))
+
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug
+    })
+  }
+}
 
 exports.createPages = ({boundActionCreators, graphql}) => {
   const {createPage} = boundActionCreators
