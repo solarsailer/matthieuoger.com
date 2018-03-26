@@ -9,12 +9,15 @@ import Footer from '../components/Footer'
 // -------------------------------------------------------------
 
 export default ({data, children}) => {
-  const {site} = data
+  const {site: {siteMetadata}} = data
 
   return (
     <div className="page" id="page">
       <Helmet>
-        <title>{site.siteMetadata.title}</title>
+        <title>{siteMetadata.title}</title>
+        <meta name="author" content={siteMetadata.author} />
+        <meta name="description" content={siteMetadata.description} />
+        <meta name="keywords" content={siteMetadata.keywords.join(', ')} />
       </Helmet>
 
       <Header />
@@ -37,6 +40,9 @@ export const LAYOUT_QUERY = graphql`
     site {
       siteMetadata {
         title
+        author
+        description
+        keywords
       }
     }
   }
