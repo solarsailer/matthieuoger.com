@@ -23,10 +23,10 @@ export default ({data}) => {
   const edges = data.allMarkdownRemark.edges
 
   return (
-    <main role="main">
+    <div>
       <Link to="/">Home</Link>
       <ul>{edges.map(({node}) => mapNode(node))}</ul>
-    </main>
+    </div>
   )
 }
 
