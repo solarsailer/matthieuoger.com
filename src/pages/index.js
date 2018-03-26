@@ -1,14 +1,16 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 // -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------
 
-function mapNode({id, excerpt, frontmatter}) {
+function mapNode({fields, id, excerpt, frontmatter}) {
   return (
     <li key={id}>
       <h2>
-        {frontmatter.title} <span>{frontmatter.date}</span>
+        <Link to={fields.path}>{frontmatter.title}</Link>{' '}
+        <span>{frontmatter.date}</span>
       </h2>
       <div>
         <p>{excerpt}</p>
@@ -40,6 +42,9 @@ export const POSTS_LIST_QUERY = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM YYYY")
+          }
+          fields {
+            path
           }
           excerpt
         }
