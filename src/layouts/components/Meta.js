@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import {Helmet} from 'react-helmet'
 
-import Card from '../../images/card.jpg'
+import card from '../../images/card.jpg'
 
 import '../../styles/globals/manifest'
 
@@ -49,7 +49,7 @@ export default ({site, layout}) => {
         <meta name="twitter:site" content={handles.twitter} />
         <meta name="twitter:creator" content={handles.twitter} />
         <meta name="twitter:url" content={fullUrl} />
-        <meta name="twitter:image" content={Card} />
+        <meta name="twitter:image" content={card} />
         <meta
           name="twitter:image:alt"
           content={`${metadata.title} — ${metadata.description}`}
@@ -61,7 +61,7 @@ export default ({site, layout}) => {
         <meta property="og:site_name" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:url" content={fullUrl} />
-        <meta property="og:image" content={Card} />
+        <meta property="og:image" content={card} />
         <meta property="og:image:height" content="1920" />
         <meta property="og:image:width" content="1080" />
         <meta property="og:image:type" content="image/jpg" />
