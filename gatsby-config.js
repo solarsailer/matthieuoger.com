@@ -44,5 +44,6 @@ exports.plugins = [
   },
   'gatsby-transformer-remark',
   'gatsby-plugin-styled-components',
-  'gatsby-plugin-react-helmet'
+  'gatsby-plugin-react-helmet',
+  'gatsby-plugin-react-next'
 ]
