@@ -14,7 +14,7 @@ export default ({data, children}) => {
         {children()}
       </main>
 
-      <Meta site={data.site} />
+      <Meta site={data.site} layout="home" />
     </div>
   )
 }

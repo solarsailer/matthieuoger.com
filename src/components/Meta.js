@@ -9,7 +9,7 @@ import '../styles/globals/manifest'
 // Component.
 // -------------------------------------------------------------
 
-export default ({site}) => {
+export default ({site, layout}) => {
   const {siteMetadata: metadata} = site
   const {handles} = metadata
 
@@ -27,6 +27,8 @@ export default ({site}) => {
     <Fragment>
       <Helmet>
         {googleFonts}
+
+        {layout && <html data-layout={layout} />}
 
         <title>{metadata.title}</title>
 
