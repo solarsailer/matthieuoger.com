@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Meta, {createMetadataQuery} from './components/Meta'
+import Meta from './components/Meta'
 
 // -------------------------------------------------------------
 // Layout.
