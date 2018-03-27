@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react'
 import {Helmet} from 'react-helmet'
 
-import Card from '../images/card.jpg'
+import Card from '../../images/card.jpg'
 
-import '../styles/globals/manifest'
+import '../../styles/globals/manifest'
 
 // -------------------------------------------------------------
 // Component.
