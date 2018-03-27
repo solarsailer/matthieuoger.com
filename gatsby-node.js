@@ -8,6 +8,8 @@ const {
   convertDateToPath
 } = require('./src/node/markdown-creator')
 
+const {assignLayout} = require('./src/node/layouts')
+
 // -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------
@@ -42,6 +44,17 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
       createMarkdownNode(node, boundActionCreators)
     })
+  })
+}
+
+exports.onCreatePage = async ({page, boundActionCreators}) => {
+  const {createPage} = boundActionCreators
+
+  return new Promise((resolve, reject) => {
+    const hasAssignedLayout = assignLayout(page)
+    if (hasAssignedLayout) createPage(page)
+
+    resolve()
   })
 }
 
