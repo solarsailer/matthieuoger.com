@@ -21,6 +21,14 @@ export default ({data, children}) => {
   const {site: {siteMetadata: metadata}} = data
   const {handles} = metadata
 
+  const googleFonts = metadata.googleFonts.map(x => (
+    <link
+      key={x}
+      rel="stylesheet"
+      href={'https://fonts.googleapis.com/css?family=' + x}
+    />
+  ))
+
   const fullUrl = `http://${metadata.url}/`
 
   return (
@@ -34,6 +42,8 @@ export default ({data, children}) => {
       <Footer />
 
       <Helmet>
+        {googleFonts}
+
         <title>{metadata.title}</title>
 
         {/*
@@ -88,6 +98,7 @@ export const LAYOUT_QUERY = graphql`
         description
         keywords
         url
+        googleFonts
         handles {
           github
           twitter

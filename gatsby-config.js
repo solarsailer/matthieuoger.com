@@ -25,8 +25,9 @@ exports.siteMetadata = {
     unsplash: 'solarsailer',
     instagram: 'matthieuoger'
   },
+  url: 'solarsailer.net',
   googleAnalyticsCode: 'UA-41853457-1',
-  url: 'solarsailer.net'
+  googleFonts: ['Rubik:300,300i,400,400i,500,500i,700,700i,900,900i']
 }
 
 // -------------------------------------------------------------
