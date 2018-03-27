@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Meta from './components/Meta'
+import {Page, PageContent} from './components/Page'
 
 // -------------------------------------------------------------
 // Layout.
@@ -9,13 +10,11 @@ import Meta from './components/Meta'
 
 export default ({data, children}) => {
   return (
-    <div className="page" id="page">
-      <main className="page-content" id="page_content" role="main">
-        {children()}
-      </main>
+    <Page>
+      <PageContent>{children()}</PageContent>
 
       <Meta site={data.site} layout="home" />
-    </div>
+    </Page>
   )
 }
 

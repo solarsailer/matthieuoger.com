@@ -5,6 +5,7 @@ import {Helmet} from 'react-helmet'
 import Meta from './components/Meta'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import {Page, PageContent} from './components/Page'
 
 // -------------------------------------------------------------
 // Component.
@@ -12,17 +13,13 @@ import Footer from './components/Footer'
 
 export default ({data, children}) => {
   return (
-    <div className="page" id="page">
+    <Page>
       <Header />
-
-      <main className="page-content" id="page_content" role="main">
-        {children()}
-      </main>
-
+      <PageContent>{children()}</PageContent>
       <Footer />
 
       <Meta site={data.site} />
-    </div>
+    </Page>
   )
 }
 
