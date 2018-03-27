@@ -1,6 +1,6 @@
 import {css} from 'styled-components'
 
-import {Colors} from '../variables'
+import {Typography, Colors} from '../variables'
 
 // -------------------------------------------------------------
 // Base Global Styles.
@@ -25,16 +25,19 @@ export default css`
 
   /**
    * Typography:
-   * 1. Change default typography (10px, 140% line-height, sans-serif).
-   * 2. Set a flexible font-size on the document (1.5em, ie. 15px).
+   * 1. Change default typography (eg. 10px, line-height, font stack).
+   * 2. Then, set a flexible font-size on the body.
    */
 
   html {
-    font: 62.5%/1.4 Verdana, sans-serif; /* 1 */
+    font: ${'62.5%/' +
+      Typography.Document.LineHeight +
+      ' ' +
+      Typography.Document.FontStack}; /* 1 */
   }
 
   body {
-    font-size: 1.5em; /* 2 */
+    font-size: ${Typography.Document.FontSize + 'em'}; /* 2 */
   }
 
   /**
