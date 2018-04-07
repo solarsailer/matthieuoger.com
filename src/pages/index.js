@@ -60,41 +60,22 @@ const SubTitle = styled.h2`
 `
 
 // -------------------------------------------------------------
-// Lists.
+// Navigation List.
 // -------------------------------------------------------------
 
-const List = styled.ul`
+const InnerNavigationList = styled.ul`
   display: flex;
-  justify-content: center;
 
-  li + li {
-    margin-left: 1rem;
-  }
+  margin-bottom: 4rem;
 
-  a {
-    color: white;
-  }
-`
-
-const LinkItem = ({url, children}) => (
-  <li>
-    {url.includes('http') ? (
-      <a href={url}>{children}</a>
-    ) : (
-      <Link to={url}>{children}</Link>
-    )}
-  </li>
-)
-
-const NavigationList = styled.ul`
-  display: flex;
+  line-height: normal;
 
   li + li {
     margin-left: 5rem;
   }
 `
 
-const NavigationItem = ({url, children}) => {
+const InnerNavigationItem = ({url, children}) => {
   const Container = styled.li`
     text-transform: uppercase;
     font-size: 1.25em;
@@ -124,6 +105,49 @@ const NavigationItem = ({url, children}) => {
 }
 
 // -------------------------------------------------------------
+// Outer Navigation.
+// -------------------------------------------------------------
+
+const OuterNavigationList = styled.ul`
+  display: flex;
+  justify-content: center;
+
+  font-size: 0.8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: normal;
+
+  li + li {
+    margin-left: 3rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+`
+
+const OuterNavigationItem = ({
+  url,
+  site,
+  domain = 'com',
+  handle = 'solarsailer',
+  color = 'white'
+}) => {
+  return (
+    <Fragment>
+      <li>
+        <a href={url} color={{color: color}}>
+          <span>{site}</span>
+          <span style={{opacity: 0.25}}>.{domain}/</span>
+          <span style={{color: color}}>{handle}</span>
+        </a>
+      </li>
+    </Fragment>
+  )
+}
+
+// -------------------------------------------------------------
 // Page.
 // -------------------------------------------------------------
 
@@ -135,30 +159,41 @@ export default () => (
       <SubTitle>Matthieu Oger</SubTitle>
     </Avatar>
 
-    <NavigationList>
-      <NavigationItem url="/about/">About</NavigationItem>
-      <NavigationItem url="/blog/">Blog</NavigationItem>
-      <NavigationItem url="/resume/">Resume</NavigationItem>
-      <NavigationItem url="/resume/">Photos</NavigationItem>
-      <NavigationItem url="/rss/">RSS</NavigationItem>
-    </NavigationList>
+    <InnerNavigationList>
+      <InnerNavigationItem url="/about/">About</InnerNavigationItem>
+      <InnerNavigationItem url="/blog/">Blog</InnerNavigationItem>
+      <InnerNavigationItem url="/resume/">Resume</InnerNavigationItem>
+      <InnerNavigationItem url="/resume/">Photos</InnerNavigationItem>
+      <InnerNavigationItem url="/rss/">RSS</InnerNavigationItem>
+    </InnerNavigationList>
 
-    <List>
-      <LinkItem url="https://twitter.com/solarsailer/">
-        twitter.com/solarsailer
-      </LinkItem>
-      <LinkItem url="https://github.com/solarsailer/">
-        github.com/solarsailer
-      </LinkItem>
-      <LinkItem url="https://dribbble.com/solarsailer/">
-        dribbble.com/solarsailer
-      </LinkItem>
-      <LinkItem url="https://unsplash.com/solarsailer/">
-        unsplash.com/solarsailer
-      </LinkItem>
-      <LinkItem url="https://instagram.com/matthieuoger/">
-        instagram.com/matthieuoger
-      </LinkItem>
-    </List>
+    <OuterNavigationList>
+      <OuterNavigationItem
+        url="https://twitter.com/solarsailer/"
+        site="twitter"
+        color="#4DA4FA"
+      />
+      <OuterNavigationItem
+        url="https://github.com/solarsailer/"
+        site="github"
+        color="#6CC644"
+      />
+      <OuterNavigationItem
+        url="https://dribbble.com/solarsailer/"
+        site="dribbble"
+        color="#EA4C89"
+      />
+      <OuterNavigationItem
+        url="https://unsplash.com/solarsailer/"
+        site="unsplash"
+        color="#B3B3B3"
+      />
+      <OuterNavigationItem
+        url="https://instagram.com/matthieuoger/"
+        site="instagram"
+        handle="matthieuoger"
+        color="#AB62EE"
+      />
+    </OuterNavigationList>
   </Container>
 )
