@@ -1,4 +1,5 @@
 const path = require('path')
+const is = require('@sindresorhus/is')
 const {isValidDate, makeArrayAndForEach} = require('../sol')
 
 const template = path.resolve('./src/templates/Post.js')
@@ -45,7 +46,7 @@ exports.createPathForMarkdownNode = node => {
 }
 
 exports.convertDateToPath = date => {
-  if (typeof date === 'string') date = new Date(date)
+  if (is.string(date)) date = new Date(date)
 
   if (!isValidDate(date)) {
     return ''
