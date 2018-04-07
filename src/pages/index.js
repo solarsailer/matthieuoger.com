@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+
+import {Colors} from '../styles/variables'
 
 import avatar from '../images/avatar-black-white.jpg'
 
@@ -21,6 +23,10 @@ const Container = styled.div`
   padding: 2rem;
 `
 
+// -------------------------------------------------------------
+// Avatar.
+// -------------------------------------------------------------
+
 const Avatar = styled.div`
   margin-bottom: 10rem;
   text-align: center;
@@ -29,12 +35,15 @@ const Avatar = styled.div`
     width: 350px;
     height: 350px;
     border-radius: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
   }
 `
 
 const MainTitle = styled.h1`
+  color: ${Colors.Brand.Main};
+
   margin-bottom: 0;
+
   font-size: 4em;
   font-weight: 300;
   text-transform: uppercase;
@@ -42,11 +51,17 @@ const MainTitle = styled.h1`
 `
 
 const SubTitle = styled.h2`
+  margin-bottom: 0;
+
   font-size: 3.15em;
   font-weight: bold;
   text-transform: uppercase;
   line-height: normal;
 `
+
+// -------------------------------------------------------------
+// Lists.
+// -------------------------------------------------------------
 
 const List = styled.ul`
   display: flex;
@@ -58,11 +73,6 @@ const List = styled.ul`
 
   a {
     color: white;
-    text-decoration-color: tomato;
-
-    &:hover {
-      color: tomato;
-    }
   }
 `
 
@@ -76,6 +86,47 @@ const LinkItem = ({url, children}) => (
   </li>
 )
 
+const NavigationList = styled.ul`
+  display: flex;
+
+  li + li {
+    margin-left: 5rem;
+  }
+`
+
+const NavigationItem = ({url, children}) => {
+  const Container = styled.li`
+    text-transform: uppercase;
+    font-size: 1.25em;
+
+    a {
+      color: white;
+      padding-bottom: 0.25rem;
+      border-bottom: 3px solid ${Colors.Brand.Main};
+      text-decoration: none;
+
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        color: ${Colors.Brand.Main};
+        padding-bottom: 0.5rem;
+      }
+    }
+  `
+
+  return (
+    <Fragment>
+      <Container>
+        <Link to={url}>{children}</Link>
+      </Container>
+    </Fragment>
+  )
+}
+
+// -------------------------------------------------------------
+// Page.
+// -------------------------------------------------------------
+
 export default () => (
   <Container>
     <Avatar>
@@ -84,13 +135,13 @@ export default () => (
       <SubTitle>Matthieu Oger</SubTitle>
     </Avatar>
 
-    <List>
-      <LinkItem url="/about/">About</LinkItem>
-      <LinkItem url="/blog/">Blog</LinkItem>
-      <LinkItem url="/archive/">Archive</LinkItem>
-      <LinkItem url="/resume/">Resume</LinkItem>
-      <LinkItem url="/rss/">RSS</LinkItem>
-    </List>
+    <NavigationList>
+      <NavigationItem url="/about/">About</NavigationItem>
+      <NavigationItem url="/blog/">Blog</NavigationItem>
+      <NavigationItem url="/resume/">Resume</NavigationItem>
+      <NavigationItem url="/resume/">Photos</NavigationItem>
+      <NavigationItem url="/rss/">RSS</NavigationItem>
+    </NavigationList>
 
     <List>
       <LinkItem url="https://twitter.com/solarsailer/">
