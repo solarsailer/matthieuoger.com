@@ -6,7 +6,7 @@ export const Typography = {
   Document: {
     FontStack: 'Rubik, Verdana, sans-serif',
     FontSize: '1.5', // em
-    LineHeight: '1.4'
+    LineHeight: '1.5'
   }
 }
 
