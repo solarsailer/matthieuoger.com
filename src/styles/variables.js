@@ -10,15 +10,20 @@ export const Typography = {
   }
 }
 
+const mainBrandColor = '#E44D2A'
+
 export const Colors = {
+  Brand: {
+    Main: mainBrandColor
+  },
   Selection: {
     Foreground: 'white',
-    Background: 'tomato'
+    Background: mainBrandColor
   },
   Page: {
-    Content: 'black',
+    Content: '#1A1A1A',
     Background: 'white',
-    Overscroll: 'tomato'
+    Overscroll: mainBrandColor
   }
 }
 
