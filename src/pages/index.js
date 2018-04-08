@@ -2,6 +2,7 @@ import React, {Fragment} from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import {getIcon} from '../components/Icon'
 import {Colors} from '../styles/variables'
 
 import avatar from '../images/avatar-black-white.jpg'
@@ -66,7 +67,7 @@ const SubTitle = styled.h2`
 const InnerNavigationList = styled.ul`
   display: flex;
 
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 
   line-height: normal;
 
@@ -83,6 +84,7 @@ const InnerNavigationItem = ({url, children}) => {
     a {
       color: white;
       padding-bottom: 0.25rem;
+      border-top: 3px solid transparent;
       border-bottom: 3px solid ${Colors.Brand.Main};
       text-decoration: none;
 
@@ -90,7 +92,9 @@ const InnerNavigationItem = ({url, children}) => {
 
       &:hover {
         color: ${Colors.Brand.Main};
+        padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+        border-top-color: ${Colors.Brand.Main};
       }
     }
   `
@@ -112,10 +116,16 @@ const OuterNavigationList = styled.ul`
   display: flex;
   justify-content: center;
 
-  font-size: 0.8em;
+  margin-bottom: 0;
+
+  font-size: 0.85em;
   font-weight: 500;
   text-transform: uppercase;
   line-height: normal;
+
+  li {
+    text-align: center;
+  }
 
   li + li {
     margin-left: 3rem;
@@ -123,7 +133,15 @@ const OuterNavigationList = styled.ul`
 
   a {
     color: white;
+
     text-decoration: none;
+  }
+
+  .text {
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
   }
 `
 
@@ -138,9 +156,12 @@ const OuterNavigationItem = ({
     <Fragment>
       <li>
         <a href={url} color={{color: color}}>
-          <span>{site}</span>
-          <span style={{opacity: 0.25}}>.{domain}/</span>
-          <span style={{color: color}}>{handle}</span>
+          <div className="text">
+            <span>{site}</span>
+            <span style={{opacity: 0.25}}>.{domain}/</span>
+            <span style={{color: color}}>{handle}</span>
+          </div>
+          <div className="icon">{getIcon(site)}</div>
         </a>
       </li>
     </Fragment>
