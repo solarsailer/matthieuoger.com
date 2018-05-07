@@ -15,15 +15,15 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@sindresorhus/is": "^0.8.0",
-    "gatsby": "^1.9.238",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-react-helmet": "^2.0.8",
+    "@sindresorhus/is": "^0.9.0",
+    "gatsby": "^1.9.259",
+    "gatsby-link": "^1.6.44",
+    "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-plugin-styled-components": "^2.0.10",
-    "gatsby-source-filesystem": "^1.5.27",
-    "gatsby-transformer-remark": "^1.7.37",
+    "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-source-filesystem": "^1.5.35",
+    "gatsby-transformer-remark": "^1.7.40",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.2.3"
+    "styled-components": "^3.2.6"
   }
 }
