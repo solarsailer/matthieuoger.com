@@ -18,7 +18,7 @@ export default props => {
     <Page>
       <Header />
       <PageContent>{props.children({...props, metadata})}</PageContent>
-      <Footer />
+      <Footer handles={metadata.handles} />
 
       <Meta site={props.data.site} />
     </Page>

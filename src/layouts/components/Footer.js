@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import OuterNavigation from '../../components/OuterNavigation'
+import SocialNavigation from '../../components/CompactSocialNavigation'
 
 // -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
 
-export default () => (
+export default ({handles}) => (
   <footer className="page-footer" id="page_footer">
-    <OuterNavigation />
+    <SocialNavigation handles={handles} />
     <p>© 2018 Matthieu Oger</p>
   </footer>
 )
