@@ -32,6 +32,10 @@ export const LAYOUT_QUERY = graphql`
         keywords
         url
         googleFonts
+        home {
+          title
+          subtitle
+        }
         handles {
           github
           twitter

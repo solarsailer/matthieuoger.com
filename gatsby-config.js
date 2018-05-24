@@ -18,6 +18,10 @@ exports.siteMetadata = {
     'photography',
     'pixelnest'
   ],
+  home: {
+    title: 'SolarSailer',
+    subtitle: 'Matthieu Oger'
+  },
   handles: {
     github: 'solarsailer',
     twitter: 'solarsailer',
