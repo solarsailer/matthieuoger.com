@@ -1,16 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
 
 // -------------------------------------------------------------
-// Component.
+// Components.
 // -------------------------------------------------------------
+
+const Post = styled.article`
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem;
+`
 
 export default function Template({data}) {
   const {markdownRemark, site} = data
   const {frontmatter, html} = markdownRemark
 
   return (
-    <div>
+    <Post>
       <Helmet>
         <title>
           {frontmatter.title} — {site.siteMetadata.title}
@@ -19,7 +27,7 @@ export default function Template({data}) {
       <h1>{frontmatter.title}</h1>
       <h2>{frontmatter.date}</h2>
       <div dangerouslySetInnerHTML={{__html: html}} />
-    </div>
+    </Post>
   )
 }
 
