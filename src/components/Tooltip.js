@@ -31,7 +31,7 @@ const Tooltip = styled.div`
   border-radius: 4px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 
-  font-size: 0.7em;
+  font-size: 1.25rem;
   line-height: normal;
   text-transform: uppercase;
 
