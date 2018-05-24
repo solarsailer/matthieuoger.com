@@ -113,12 +113,12 @@ const InnerNavigationItem = ({url, children}) => {
 // Page.
 // -------------------------------------------------------------
 
-export default () => (
+export default ({metadata}) => (
   <Container>
     <Avatar>
       <img src={avatar} title="Matthieu Oger" alt="Matthieu Oger" />
-      <MainTitle>SolarSailer</MainTitle>
-      <SubTitle>Matthieu Oger</SubTitle>
+      <MainTitle>{metadata.home.title}</MainTitle>
+      <SubTitle>{metadata.home.subtitle}</SubTitle>
     </Avatar>
 
     <InnerNavigationList>
