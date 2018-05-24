@@ -34,7 +34,7 @@ const List = styled.ul`
 
   margin-bottom: 0;
 
-  font-size: 0.85em;
+  font-size: 0.7em;
   font-weight: 500;
   text-transform: uppercase;
   line-height: normal;

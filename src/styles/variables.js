@@ -5,8 +5,8 @@
 export const Typography = {
   Document: {
     FontStack: 'Rubik, Verdana, sans-serif',
-    FontSize: '1.5', // em
-    LineHeight: '1.5'
+    FontSize: '1.8', // em
+    LineHeight: '1.45'
   }
 }
 
@@ -23,7 +23,7 @@ export const Colors = {
   Page: {
     Content: '#1A1A1A',
     Background: 'white',
-    Overscroll: mainBrandColor
+    Overscroll: 'white'
   }
 }
 

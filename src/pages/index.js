@@ -46,7 +46,7 @@ const MainTitle = styled.h1`
 
   margin-bottom: 0;
 
-  font-size: 4em;
+  font-size: 3.35em;
   font-weight: 300;
   text-transform: uppercase;
   line-height: 0.75;
@@ -55,7 +55,7 @@ const MainTitle = styled.h1`
 const SubTitle = styled.h2`
   margin-bottom: 0;
 
-  font-size: 3.15em;
+  font-size: 2.625em;
   font-weight: bold;
   text-transform: uppercase;
   line-height: normal;
@@ -80,7 +80,6 @@ const InnerNavigationList = styled.ul`
 const InnerNavigationItem = ({url, children}) => {
   const Container = styled.li`
     text-transform: uppercase;
-    font-size: 1.25em;
 
     a {
       color: white;
