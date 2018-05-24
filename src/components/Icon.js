@@ -1,18 +1,6 @@
 import React, {Fragment} from 'React'
 
 // -------------------------------------------------------------
-// Colors.
-// -------------------------------------------------------------
-
-export const BrandColors = {
-  Twitter: '#4DA4FA',
-  GitHub: '#6CC644',
-  Dribbble: '#EA4C89',
-  Unsplash: '#B3B3B3',
-  Instagram: '#AB62EE'
-}
-
-// -------------------------------------------------------------
 // Icons.
 // -------------------------------------------------------------
 
@@ -47,7 +35,7 @@ export function getIcon(name, props) {
 // Twitter.
 // -------------------------------------------------------------
 
-export const TwitterIcon = ({color = BrandColors.Twitter}) => {
+export const TwitterIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -63,7 +51,7 @@ export const TwitterIcon = ({color = BrandColors.Twitter}) => {
   )
 }
 
-export const TwitterLineIcon = ({color = BrandColors.Twitter}) => {
+export const TwitterLineIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -93,7 +81,7 @@ export const TwitterLineIcon = ({color = BrandColors.Twitter}) => {
 // GitHub.
 // -------------------------------------------------------------
 
-export const GitHubIcon = ({color = BrandColors.GitHub}) => {
+export const GitHubIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -109,7 +97,7 @@ export const GitHubIcon = ({color = BrandColors.GitHub}) => {
   )
 }
 
-export const GitHubLineIcon = ({color = BrandColors.GitHub}) => {
+export const GitHubLineIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -139,7 +127,7 @@ export const GitHubLineIcon = ({color = BrandColors.GitHub}) => {
 // Dribbble.
 // -------------------------------------------------------------
 
-export const DribbbleIcon = ({color = BrandColors.Dribbble}) => {
+export const DribbbleIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -155,7 +143,7 @@ export const DribbbleIcon = ({color = BrandColors.Dribbble}) => {
   )
 }
 
-export const DribbbleLineIcon = ({color = BrandColors.Dribbble}) => {
+export const DribbbleLineIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -185,7 +173,7 @@ export const DribbbleLineIcon = ({color = BrandColors.Dribbble}) => {
 // Unsplash.
 // -------------------------------------------------------------
 
-export const UnsplashIcon = ({color = BrandColors.Unsplash}) => {
+export const UnsplashIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -202,7 +190,7 @@ export const UnsplashIcon = ({color = BrandColors.Unsplash}) => {
   )
 }
 
-export const UnsplashLineIcon = ({color = BrandColors.Unsplash}) => {
+export const UnsplashLineIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -231,7 +219,7 @@ export const UnsplashLineIcon = ({color = BrandColors.Unsplash}) => {
 // Instagram.
 // -------------------------------------------------------------
 
-export const InstagramIcon = ({color = BrandColors.Instagram}) => {
+export const InstagramIcon = ({color}) => {
   return (
     <svg
       width="25"
@@ -247,7 +235,7 @@ export const InstagramIcon = ({color = BrandColors.Instagram}) => {
   )
 }
 
-export const InstagramLineIcon = ({color = BrandColors.Instagram}) => {
+export const InstagramLineIcon = ({color}) => {
   return (
     <svg
       width="25"
