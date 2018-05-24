@@ -16,8 +16,8 @@ function convertSocialToItem([name, handle]) {
     <SocialItem
       key={name}
       handle={handle}
+      name={info.name}
       url={info.url}
-      site={info.name}
       domain={info.domain}
       color={info.color}
     />
@@ -46,32 +46,31 @@ const List = styled.ul`
   li + li {
     margin-left: 3rem;
   }
-
-  a {
-    color: white;
-
-    text-decoration: none;
-  }
-
-  .text {
-    margin-bottom: 1.5rem;
-  }
-
-  .icon {
-  }
 `
 
-const SocialItem = ({url, site, domain, handle, color = 'white'}) => {
+const SocialItemLink = styled.a`
+  color: white;
+
+  text-decoration: none;
+`
+
+const SocialItemText = styled.div`
+  margin-bottom: 1.5rem;
+`
+
+const SocialItem = ({handle, name, url, domain, color = 'white'}) => {
+  url = url.replace('@HANDLE', handle)
+
   return (
     <li>
-      <a href={url} color={{color: color}}>
-        <div className="text">
-          <span>{site}</span>
+      <SocialItemLink href={url}>
+        <SocialItemText>
+          <span>{name}</span>
           <span style={{opacity: 0.25}}>.{domain}/</span>
           <span style={{color: color}}>{handle}</span>
-        </div>
-        <div className="icon">{getIcon(site, {color})}</div>
-      </a>
+        </SocialItemText>
+        <aside>{getIcon(name, {color})}</aside>
+      </SocialItemLink>
     </li>
   )
 }
