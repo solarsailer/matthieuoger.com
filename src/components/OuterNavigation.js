@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
 
-import {getIcon} from './Icon'
+import {getIcon, BrandColors} from './Icon'
+import Tooltip from './Tooltip'
 
 // -------------------------------------------------------------
 // Components.
@@ -31,19 +32,29 @@ export default () => {
     <nav>
       <List>
         <li>
-          <Link href="">{getIcon('twitter-line')}</Link>
+          <Tooltip data="Twitter" color={BrandColors.Twitter}>
+            <Link href="">{getIcon('twitter-line')}</Link>
+          </Tooltip>
         </li>
         <li>
-          <Link href="">{getIcon('github-line')}</Link>
+          <Tooltip data="GitHub" color={BrandColors.GitHub}>
+            <Link href="">{getIcon('github-line')}</Link>
+          </Tooltip>
         </li>
         <li>
-          <Link href="">{getIcon('dribbble-line')}</Link>
+          <Tooltip data="Dribbble" color={BrandColors.Dribbble}>
+            <Link href="">{getIcon('dribbble-line')}</Link>
+          </Tooltip>
         </li>
         <li>
-          <Link href="">{getIcon('unsplash-line')}</Link>
+          <Tooltip data="Unsplash" color={BrandColors.Unsplash}>
+            <Link href="">{getIcon('unsplash-line')}</Link>
+          </Tooltip>
         </li>
         <li>
-          <Link href="">{getIcon('instagram-line')}</Link>
+          <Tooltip data="Instagram" color={BrandColors.Instagram}>
+            <Link href="">{getIcon('instagram-line')}</Link>
+          </Tooltip>
         </li>
       </List>
     </nav>
