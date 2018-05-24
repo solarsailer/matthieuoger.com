@@ -11,14 +11,16 @@ import {Page, PageContent} from './components/Page'
 // Component.
 // -------------------------------------------------------------
 
-export default ({data, children}) => {
+export default props => {
+  const metadata = props.data.site.siteMetadata
+
   return (
     <Page>
       <Header />
-      <PageContent>{children()}</PageContent>
+      <PageContent>{props.children({...props, metadata})}</PageContent>
       <Footer />
 
-      <Meta site={data.site} />
+      <Meta site={props.data.site} />
     </Page>
   )
 }
