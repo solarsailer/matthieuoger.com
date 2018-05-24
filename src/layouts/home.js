@@ -39,8 +39,8 @@ export const LAYOUT_QUERY = graphql`
           subtitle
         }
         handles {
-          github
           twitter
+          github
           dribbble
           unsplash
           instagram

@@ -23,8 +23,8 @@ exports.siteMetadata = {
     subtitle: 'Matthieu Oger'
   },
   handles: {
-    github: 'solarsailer',
     twitter: 'solarsailer',
+    github: 'solarsailer',
     dribbble: 'solarsailer',
     unsplash: 'solarsailer',
     instagram: 'matthieuoger'
