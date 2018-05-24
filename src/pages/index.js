@@ -129,6 +129,6 @@ export default ({metadata}) => (
       <InnerNavigationItem url="/rss/">RSS</InnerNavigationItem>
     </InnerNavigationList>
 
-    <SocialNavigation />
+    <SocialNavigation handles={metadata.handles} />
   </Container>
 )

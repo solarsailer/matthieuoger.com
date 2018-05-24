@@ -2,12 +2,33 @@ import React, {Fragment} from 'react'
 import styled from 'styled-components'
 
 import {getIcon} from '../components/Icon'
+import {getSocial} from '../content/social'
+
+// -------------------------------------------------------------
+// Functions.
+// -------------------------------------------------------------
+
+function convertSocialToItem([name, handle]) {
+  const info = getSocial(name)
+  if (!info) return
+
+  return (
+    <SocialItem
+      key={name}
+      handle={handle}
+      url={info.url}
+      site={info.name}
+      domain={info.domain}
+      color={info.color}
+    />
+  )
+}
 
 // -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
 
-const OuterNavigationList = styled.ul`
+const List = styled.ul`
   display: flex;
   justify-content: center;
 
@@ -40,58 +61,21 @@ const OuterNavigationList = styled.ul`
   }
 `
 
-const OuterNavigationItem = ({
-  url,
-  site,
-  domain = 'com',
-  handle = 'solarsailer',
-  color = 'white'
-}) => {
+const SocialItem = ({url, site, domain, handle, color = 'white'}) => {
   return (
-    <Fragment>
-      <li>
-        <a href={url} color={{color: color}}>
-          <div className="text">
-            <span>{site}</span>
-            <span style={{opacity: 0.25}}>.{domain}/</span>
-            <span style={{color: color}}>{handle}</span>
-          </div>
-          <div className="icon">{getIcon(site)}</div>
-        </a>
-      </li>
-    </Fragment>
+    <li>
+      <a href={url} color={{color: color}}>
+        <div className="text">
+          <span>{site}</span>
+          <span style={{opacity: 0.25}}>.{domain}/</span>
+          <span style={{color: color}}>{handle}</span>
+        </div>
+        <div className="icon">{getIcon(site, {color})}</div>
+      </a>
+    </li>
   )
 }
 
-export default () => {
-  return (
-    <OuterNavigationList>
-      <OuterNavigationItem
-        url="https://twitter.com/solarsailer/"
-        site="twitter"
-        color="#4DA4FA"
-      />
-      <OuterNavigationItem
-        url="https://github.com/solarsailer/"
-        site="github"
-        color="#6CC644"
-      />
-      <OuterNavigationItem
-        url="https://dribbble.com/solarsailer/"
-        site="dribbble"
-        color="#EA4C89"
-      />
-      <OuterNavigationItem
-        url="https://unsplash.com/solarsailer/"
-        site="unsplash"
-        color="#B3B3B3"
-      />
-      <OuterNavigationItem
-        url="https://instagram.com/matthieuoger/"
-        site="instagram"
-        handle="matthieuoger"
-        color="#AB62EE"
-      />
-    </OuterNavigationList>
-  )
+export default ({handles}) => {
+  return <List>{Object.entries(handles).map(convertSocialToItem)}</List>
 }
