@@ -31,7 +31,7 @@ export const social = {
     name: 'Instagram',
     color: '#AB62EE',
     domain: 'com',
-    url: 'https://instagram.com/@HANDLE/'
+    url: 'https://www.instagram.com/@HANDLE/'
   }
 }
 
