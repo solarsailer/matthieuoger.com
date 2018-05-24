@@ -110,7 +110,7 @@ export default class extends React.Component {
           bottom={this.state.bottom}
           ref="tooltip"
         >
-          <div>{this.props.data}</div>
+          <div>{this.props.text}</div>
         </Tooltip>
       </Container>
     )
