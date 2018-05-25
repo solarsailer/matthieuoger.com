@@ -24,17 +24,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
+  min-height: 100vh;
 
   color: white;
 
-  padding: 2rem;
-
-  @media (max-width: ${HOME_BREAKPOINT}px) {
-    justify-content: flex-start;
-    height: auto;
-    padding: 4rem 2rem;
-  }
+  padding: 4rem 2rem;
 `
 
 // -------------------------------------------------------------
