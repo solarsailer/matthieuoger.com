@@ -48,14 +48,41 @@ const List = styled.ul`
   }
 `
 
+// -------------------------------------------------------------
+// Item.
+// -------------------------------------------------------------
+
 const SocialItemLink = styled.a`
   color: white;
 
+  span,
+  aside {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+
   text-decoration: none;
+
+  &:hover {
+    color: white;
+
+    span,
+    aside {
+      opacity: 1;
+    }
+
+    .special-opacity {
+      opacity: 0.25;
+    }
+  }
 `
 
 const SocialItemText = styled.div`
   margin-bottom: 1.5rem;
+`
+
+const SocialItemHandle = styled.span`
+  color: ${props => props.color};
 `
 
 const SocialItem = ({handle, name, url, domain, color = 'white'}) => {
@@ -66,14 +93,18 @@ const SocialItem = ({handle, name, url, domain, color = 'white'}) => {
       <SocialItemLink href={url}>
         <SocialItemText>
           <span>{name}</span>
-          <span style={{opacity: 0.25}}>.{domain}/</span>
-          <span style={{color: color}}>{handle}</span>
+          <span className="special-opacity">.{domain}/</span>
+          <SocialItemHandle color={color}>{handle}</SocialItemHandle>
         </SocialItemText>
         <aside>{getIcon(name, {color})}</aside>
       </SocialItemLink>
     </li>
   )
 }
+
+// -------------------------------------------------------------
+// Export.
+// -------------------------------------------------------------
 
 export default ({handles}) => {
   return <List>{Object.entries(handles).map(convertSocialToItem)}</List>
