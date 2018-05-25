@@ -1,8 +1,12 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
+import posed from 'react-pose'
+import {random} from 'lodash'
+import {tween, easing} from 'popmotion'
 
 import {getIcon} from '../components/Icon'
 import {getSocial} from '../content/social'
+import {withMountedAnimator} from './MountedAnimator'
 
 // -------------------------------------------------------------
 // Functions.
@@ -52,6 +56,25 @@ const List = styled.ul`
 // Item.
 // -------------------------------------------------------------
 
+// Animate the component on start with the mounted animator HOC.
+const Animation = withMountedAnimator(
+  posed.div({
+    mounted: {
+      y: 0,
+      opacity: 1,
+      transition: props =>
+        tween({
+          ...props,
+          ease: props.key === 'y' ? easing.backOut : easing.linear
+        })
+    },
+    unmounted: {
+      y: 10,
+      opacity: 0
+    }
+  })
+)
+
 const SocialItemLink = styled.a`
   color: white;
 
@@ -85,19 +108,22 @@ const SocialItemHandle = styled.span`
   color: ${props => props.color};
 `
 
+// Full item.
 const SocialItem = ({handle, name, url, domain, color = 'white'}) => {
   url = url.replace('@HANDLE', handle)
 
   return (
     <li>
-      <SocialItemLink href={url}>
-        <SocialItemText>
-          <span>{name}</span>
-          <span className="special-opacity">.{domain}/</span>
-          <SocialItemHandle color={color}>{handle}</SocialItemHandle>
-        </SocialItemText>
-        <aside>{getIcon(name, {color})}</aside>
-      </SocialItemLink>
+      <Animation delay={random(0, 250)} duration={random(500, 2000)}>
+        <SocialItemLink href={url}>
+          <SocialItemText>
+            <span>{name}</span>
+            <span className="special-opacity">.{domain}/</span>
+            <SocialItemHandle color={color}>{handle}</SocialItemHandle>
+          </SocialItemText>
+          <aside>{getIcon(name, {color})}</aside>
+        </SocialItemLink>
+      </Animation>
     </li>
   )
 }
