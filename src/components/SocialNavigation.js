@@ -9,6 +9,12 @@ import {getSocial} from '../content/social'
 import {withMountedAnimator} from './MountedAnimator'
 
 // -------------------------------------------------------------
+// Constants.
+// -------------------------------------------------------------
+
+const SOCIAL_BREAKPOINT = 1200
+
+// -------------------------------------------------------------
 // Functions.
 // -------------------------------------------------------------
 
@@ -35,6 +41,7 @@ function convertSocialToItem([name, handle]) {
 const List = styled.ul`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   margin-bottom: 0;
 
@@ -44,11 +51,20 @@ const List = styled.ul`
   line-height: normal;
 
   li {
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     text-align: center;
   }
 
   li + li {
-    margin-left: 3rem;
+  }
+
+  @media (max-width: ${SOCIAL_BREAKPOINT}px) {
+    li {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
   }
 `
 
@@ -96,6 +112,20 @@ const SocialItemLink = styled.a`
 
     .special-opacity {
       opacity: 0.25;
+    }
+  }
+
+  @media (max-width: ${SOCIAL_BREAKPOINT}px) {
+    display: flex;
+    align-items: center;
+
+    div {
+      margin-bottom: 0;
+    }
+
+    aside {
+      order: -1;
+      margin-right: 1rem;
     }
   }
 `
