@@ -23,6 +23,7 @@
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-filesystem": "^1.5.35",
     "gatsby-transformer-remark": "^1.7.40",
+    "polished": "^1.9.2",
     "react-helmet": "^5.2.0",
     "styled-components": "^3.2.6"
   }
