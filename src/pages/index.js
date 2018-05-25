@@ -9,7 +9,13 @@ import SocialNavigation from '../components/SocialNavigation'
 import avatar from '../images/avatar-black-white.jpg'
 
 // -------------------------------------------------------------
-// Component.
+// Constants.
+// -------------------------------------------------------------
+
+const HOME_BREAKPOINT = 800
+
+// -------------------------------------------------------------
+// Components.
 // -------------------------------------------------------------
 
 const Container = styled.div`
@@ -23,6 +29,12 @@ const Container = styled.div`
   color: white;
 
   padding: 2rem;
+
+  @media (max-width: ${HOME_BREAKPOINT}px) {
+    justify-content: flex-start;
+    height: auto;
+    padding: 4rem 2rem;
+  }
 `
 
 // -------------------------------------------------------------
@@ -38,6 +50,10 @@ const Avatar = styled.div`
     height: 350px;
     border-radius: 100%;
     margin-bottom: 4.5rem;
+  }
+
+  @media (max-width: ${HOME_BREAKPOINT}px) {
+    margin-bottom: 4rem;
   }
 `
 
@@ -67,13 +83,25 @@ const SubTitle = styled.h2`
 
 const InnerNavigationList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 
   line-height: normal;
 
-  li + li {
-    margin-left: 5rem;
+  li {
+    margin: 0 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: ${HOME_BREAKPOINT}px) {
+    display: block;
+    width: 400px;
+
+    li {
+      text-align: center;
+    }
   }
 `
 
@@ -138,6 +166,9 @@ export default ({metadata}) => (
       <InnerNavigationItem url="/rss/">RSS</InnerNavigationItem>
     </InnerNavigationList>
 
-    <SocialNavigation handles={metadata.handles} />
+    <SocialNavigation
+      handles={metadata.handles}
+      iconsOnlyBreakpoint={HOME_BREAKPOINT}
+    />
   </Container>
 )
