@@ -1,10 +1,10 @@
 import React, {Fragment} from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-
-import SocialNavigation from '../components/SocialNavigation'
+import {rgba, shade, tint} from 'polished'
 
 import {Colors} from '../styles/variables'
+import SocialNavigation from '../components/SocialNavigation'
 
 import avatar from '../images/avatar-black-white.jpg'
 
@@ -82,19 +82,29 @@ const InnerNavigationItem = ({url, children}) => {
     text-transform: uppercase;
 
     a {
+      display: block;
       color: white;
-      padding-bottom: 0.25rem;
-      border-top: 3px solid transparent;
-      border-bottom: 3px solid ${Colors.Brand.Main};
+      padding: 1rem 2rem;
+      background: ${rgba(Colors.Brand.Main, 0.2)};
+      border: 2px solid transparent;
+      border-radius: 5px;
+
+      transition: all 0.2s ease-in;
       text-decoration: none;
 
-      transition: all 0.1s ease-in;
-
       &:hover {
-        color: ${Colors.Brand.Main};
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        border-top-color: ${Colors.Brand.Main};
+        background: ${Colors.Brand.Main};
+        box-shadow: 0 2px 15px ${rgba(Colors.Brand.Main, 0.5)};
+        transform: translateY(-2px);
+      }
+
+      &:focus {
+        outline: none;
+        border: 2px solid ${rgba(tint(0.75, Colors.Brand.Main), 0.5)};
+      }
+
+      &:active {
+        outline: none;
       }
     }
   `
