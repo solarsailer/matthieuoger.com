@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
 
+import BodyLink from '../styles/components/BodyLink'
+
 // -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
@@ -11,6 +13,8 @@ const Post = styled.article`
   margin-left: auto;
   margin-right: auto;
   padding: 4rem;
+
+  ${BodyLink};
 `
 
 export default function Template({data}) {

@@ -1,4 +1,7 @@
 import {css} from 'styled-components'
+import {tint} from 'polished'
+
+import {Colors} from '../variables'
 
 // -------------------------------------------------------------
 // App Global Styles.
@@ -40,5 +43,17 @@ export default css`
 
   html[data-layout='home'] body {
     background-color: #1a1016;
+  }
+
+  /**
+   * Default links.
+   */
+
+  a {
+    color: ${Colors.Brand.Main};
+  }
+
+  a:hover {
+    color: ${tint(0.75, Colors.Brand.Main)};
   }
 `
