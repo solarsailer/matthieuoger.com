@@ -4,7 +4,8 @@ import posed from 'react-pose'
 import {random} from 'lodash'
 import {tween, easing} from 'popmotion'
 
-import {getIcon} from '../components/Icon'
+import Tooltip from './Tooltip'
+import {getIcon} from './Icon'
 import {getSocial} from '../content/social'
 import {withMountedAnimator} from './MountedAnimator'
 
@@ -66,6 +67,29 @@ const List = styled.ul`
       margin-right: 2rem;
     }
   }
+
+  @media (min-width: ${props => props.iconsOnlyBreakpoint}px) {
+    /* Hide tooltip on big screens. */
+    .tooltip {
+      display: none;
+    }
+  }
+
+  @media (max-width: ${props => props.iconsOnlyBreakpoint}px) {
+    li {
+      margin-left: 1.25rem;
+      margin-right: 1.25rem;
+    }
+
+    .must-hide-if-icons-only {
+      display: none;
+    }
+
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
 `
 
 // -------------------------------------------------------------
@@ -121,11 +145,11 @@ const SocialItemLink = styled.a`
 
     div {
       margin-bottom: 0;
+      margin-left: 1rem;
     }
 
     aside {
       order: -1;
-      margin-right: 1rem;
     }
   }
 `
@@ -144,16 +168,18 @@ const SocialItem = ({handle, name, url, domain, color = 'white'}) => {
 
   return (
     <li>
-      <Animation delay={random(0, 250)} duration={random(500, 2000)}>
-        <SocialItemLink href={url}>
-          <SocialItemText>
-            <span>{name}</span>
-            <span className="special-opacity">.{domain}/</span>
-            <SocialItemHandle color={color}>{handle}</SocialItemHandle>
-          </SocialItemText>
-          <aside>{getIcon(name, {color})}</aside>
-        </SocialItemLink>
-      </Animation>
+      <Tooltip text={name} color={color}>
+        <Animation delay={random(0, 250)} duration={random(500, 2000)}>
+          <SocialItemLink href={url}>
+            <SocialItemText className="must-hide-if-icons-only">
+              <span>{name}</span>
+              <span className="special-opacity">.{domain}/</span>
+              <SocialItemHandle color={color}>{handle}</SocialItemHandle>
+            </SocialItemText>
+            <aside>{getIcon(name, {color})}</aside>
+          </SocialItemLink>
+        </Animation>
+      </Tooltip>
     </li>
   )
 }
@@ -162,6 +188,10 @@ const SocialItem = ({handle, name, url, domain, color = 'white'}) => {
 // Export.
 // -------------------------------------------------------------
 
-export default ({handles}) => {
-  return <List>{Object.entries(handles).map(convertSocialToItem)}</List>
+export default ({handles, iconsOnlyBreakpoint}) => {
+  return (
+    <List iconsOnlyBreakpoint={iconsOnlyBreakpoint}>
+      {Object.entries(handles).map(convertSocialToItem)}
+    </List>
+  )
 }
