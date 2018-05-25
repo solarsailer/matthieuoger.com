@@ -97,6 +97,8 @@ export default class extends React.Component {
       visibility: this.state.open ? 'visible' : 'hidden'
     }
 
+    const openedClass = this.state.open ? ' is-opened' : ''
+
     return (
       <Container ref="container">
         <Content onMouseOver={this.handleIn} onMouseOut={this.handleOut}>
@@ -104,7 +106,7 @@ export default class extends React.Component {
         </Content>
         <Tooltip
           style={style}
-          className={this.state.open && 'is-opened'}
+          className={'tooltip' + openedClass}
           color={this.props.color}
           x={this.state.x}
           y={this.state.y}
