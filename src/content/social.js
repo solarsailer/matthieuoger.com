@@ -23,7 +23,7 @@ export const social = {
   },
   unsplash: {
     name: 'Unsplash',
-    color: '#EDC811',
+    color: '#EE8B21',
     domain: 'com',
     url: 'https://unsplash.com/@HANDLE/'
   },
