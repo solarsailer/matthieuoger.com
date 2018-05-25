@@ -38,6 +38,7 @@ export function getIcon(name, props) {
 export const TwitterIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -54,6 +55,7 @@ export const TwitterIcon = ({color}) => {
 export const TwitterLineIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -84,6 +86,7 @@ export const TwitterLineIcon = ({color}) => {
 export const GitHubIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -100,6 +103,7 @@ export const GitHubIcon = ({color}) => {
 export const GitHubLineIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -130,6 +134,7 @@ export const GitHubLineIcon = ({color}) => {
 export const DribbbleIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -146,6 +151,7 @@ export const DribbbleIcon = ({color}) => {
 export const DribbbleLineIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -176,6 +182,7 @@ export const DribbbleLineIcon = ({color}) => {
 export const UnsplashIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -193,6 +200,7 @@ export const UnsplashIcon = ({color}) => {
 export const UnsplashLineIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -222,6 +230,7 @@ export const UnsplashLineIcon = ({color}) => {
 export const InstagramIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -238,6 +247,7 @@ export const InstagramIcon = ({color}) => {
 export const InstagramLineIcon = ({color}) => {
   return (
     <svg
+      className="icon"
       width="25"
       height="25"
       viewBox="0 0 25 25"
