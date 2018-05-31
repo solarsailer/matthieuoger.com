@@ -37,14 +37,36 @@ const List = styled.ul`
   li + li {
     margin-left: 2rem;
   }
+
+  svg {
+    display: block;
+    width: 35px;
+    height: 35px;
+  }
 `
 
 const Link = styled.a`
-  opacity: 0.5;
+  color: #aaa;
   transition: all 0.12s ease-out;
 
+  circle {
+    stroke: currentColor;
+    opacity: 0.25;
+    transition: all 0.5s ease-out;
+  }
+
+  path {
+    opacity: 0.9;
+    transition: all 0.5s ease-out;
+  }
+
   &:hover {
-    opacity: 1;
+    color: ${props => props.color};
+
+    circle,
+    path {
+      opacity: 1;
+    }
   }
 `
 
@@ -54,7 +76,9 @@ const Item = ({handle, name, url, color = 'white'}) => {
   return (
     <li>
       <Tooltip text={name} color={color}>
-        <a href={url}>{getIcon(`${name}-line`, {color})}</a>
+        <Link href={url} color={color}>
+          {getIcon(`${name}-line`, {color})}
+        </Link>
       </Tooltip>
     </li>
   )
