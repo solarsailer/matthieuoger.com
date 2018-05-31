@@ -8,7 +8,7 @@ import postStyles from '../../styles/components/post'
 // Components.
 // -------------------------------------------------------------
 
-const Post = styled.article`
+const PostContent = styled.div`
   ${postStyles};
 `
 
@@ -25,7 +25,7 @@ export default function PostTemplate({data}) {
       </Helmet>
       <h1>{frontmatter.title}</h1>
       <h2>{frontmatter.date}</h2>
-      <Post dangerouslySetInnerHTML={{__html: html}} />
+      <PostContent dangerouslySetInnerHTML={{__html: html}} />
     </article>
   )
 }
