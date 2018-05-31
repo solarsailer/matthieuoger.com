@@ -12,7 +12,7 @@ export const typography = {
   document: {
     fontStack: 'Rubik, Verdana, sans-serif',
     fontSize: '1.8', // em
-    lineHeight: '1.45'
+    lineHeight: '1.5'
   }
 }
 
