@@ -1,6 +1,6 @@
 import {css} from 'styled-components'
 
-import {Typography, Colors} from '../variables'
+import {typography, colors} from '../variables'
 
 // -------------------------------------------------------------
 // Base Global Styles.
@@ -31,13 +31,13 @@ export default css`
 
   html {
     font: ${'62.5%/' +
-      Typography.Document.LineHeight +
+      typography.document.lineHeight +
       ' ' +
-      Typography.Document.FontStack}; /* 1 */
+      typography.document.fontStack}; /* 1 */
   }
 
   body {
-    font-size: ${Typography.Document.FontSize + 'em'}; /* 2 */
+    font-size: ${typography.document.fontSize + 'em'}; /* 2 */
   }
 
   /**
@@ -59,17 +59,17 @@ export default css`
    */
 
   html {
-    color: ${Colors.Page.Content}; /* 1 */
-    background: ${Colors.Page.Overscroll}; /* 2 */
+    color: ${colors.page.content}; /* 1 */
+    background: ${colors.page.overscroll}; /* 2 */
   }
 
   body {
-    background: ${Colors.Page.Background}; /* 3 */
+    background: ${colors.page.background}; /* 3 */
   }
 
   ::selection {
     /* 4 */
-    color: ${Colors.Selection.Foreground};
-    background: ${Colors.Selection.Background};
+    color: ${colors.selection.foreground};
+    background: ${colors.selection.background};
   }
 `

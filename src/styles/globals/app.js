@@ -1,7 +1,7 @@
 import {css} from 'styled-components'
 import {tint} from 'polished'
 
-import {Colors} from '../variables'
+import {colors} from '../variables'
 
 // -------------------------------------------------------------
 // App Global Styles.
@@ -50,10 +50,10 @@ export default css`
    */
 
   a {
-    color: ${Colors.Brand.Main};
+    color: ${colors.brand.main};
   }
 
   a:hover {
-    color: ${tint(0.75, Colors.Brand.Main)};
+    color: ${tint(0.75, colors.brand.main)};
   }
 `

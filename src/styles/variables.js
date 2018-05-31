@@ -2,29 +2,29 @@
 // Values.
 // -------------------------------------------------------------
 
-export const Typography = {
-  Document: {
-    FontStack: 'Rubik, Verdana, sans-serif',
-    FontSize: '1.8', // em
-    LineHeight: '1.45'
+export const typography = {
+  document: {
+    fontStack: 'Rubik, Verdana, sans-serif',
+    fontSize: '1.8', // em
+    lineHeight: '1.45'
   }
 }
 
 const mainBrandColor = '#E44D2A'
 
-export const Colors = {
-  Brand: {
-    Main: mainBrandColor
+export const colors = {
+  brand: {
+    main: mainBrandColor
   },
-  Selection: {
-    Foreground: 'white',
-    Background: mainBrandColor
+  selection: {
+    foreground: 'white',
+    background: mainBrandColor
   },
-  Page: {
-    Content: '#1A1A1A',
-    Background: 'white',
-    Overscroll: 'white'
+  page: {
+    content: '#1A1A1A',
+    background: 'white',
+    overscroll: 'white'
   }
 }
 
-export const Breakpoints = {}
+export const breakpoints = {}
