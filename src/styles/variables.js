@@ -1,4 +1,10 @@
 // -------------------------------------------------------------
+// Constants.
+// -------------------------------------------------------------
+
+const MAIN_BRAND_COLOR = '#E44D2A'
+
+// -------------------------------------------------------------
 // Values.
 // -------------------------------------------------------------
 
@@ -10,15 +16,13 @@ export const typography = {
   }
 }
 
-const mainBrandColor = '#E44D2A'
-
 export const colors = {
   brand: {
-    main: mainBrandColor
+    main: MAIN_BRAND_COLOR
   },
   selection: {
     foreground: 'white',
-    background: mainBrandColor
+    background: MAIN_BRAND_COLOR
   },
   page: {
     content: '#1A1A1A',
