@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
 
-import bodyLinkStyles from '../../styles/components/body-link'
+import postStyles from '../../styles/components/post'
 
 // -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
 
-const Container = styled.article`
-  ${bodyLinkStyles};
+const Post = styled.article`
+  ${postStyles};
 `
 
 export default function PostTemplate({data}) {
@@ -17,7 +17,7 @@ export default function PostTemplate({data}) {
   const {frontmatter, html} = markdownRemark
 
   return (
-    <Container>
+    <article>
       <Helmet>
         <title>
           {frontmatter.title} — {site.siteMetadata.title}
@@ -25,8 +25,8 @@ export default function PostTemplate({data}) {
       </Helmet>
       <h1>{frontmatter.title}</h1>
       <h2>{frontmatter.date}</h2>
-      <div dangerouslySetInnerHTML={{__html: html}} />
-    </Container>
+      <Post dangerouslySetInnerHTML={{__html: html}} />
+    </article>
   )
 }
 
