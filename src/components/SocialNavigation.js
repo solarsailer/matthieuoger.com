@@ -6,7 +6,7 @@ import {tween, easing} from 'popmotion'
 
 import Tooltip from './Tooltip'
 import {getIcon} from './Icon'
-import {getSocial} from '../content/social'
+import {getSocial} from '../../content/config/social'
 import {withMountedAnimator} from './MountedAnimator'
 
 // -------------------------------------------------------------

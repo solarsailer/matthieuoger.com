@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 import styled from 'styled-components'
 
 import {getIcon} from './Icon'
-import {getSocial} from '../content/social'
+import {getSocial} from '../../content/config/social'
 
 import Tooltip from './Tooltip'
 
