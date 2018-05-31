@@ -25,7 +25,7 @@ export const colors = {
     background: MAIN_BRAND_COLOR
   },
   page: {
-    content: '#1A1A1A',
+    content: 'rgb(25, 25, 25)',
     background: 'white',
     overscroll: 'white'
   }
