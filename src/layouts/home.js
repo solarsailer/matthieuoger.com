@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Meta from './components/Meta'
-import {Page, PageContent} from './components/Page'
+import Meta from '../components/layouts/Meta'
+import {Page, PageContent} from '../components/layouts/Page'
 
 // -------------------------------------------------------------
 // Layout.

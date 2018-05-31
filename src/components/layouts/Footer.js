@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import SocialNavigation from '../../components/CompactSocialNavigation'
+import SocialNavigation from '../CompactSocialNavigation'
 
 // -------------------------------------------------------------
 // Components.
