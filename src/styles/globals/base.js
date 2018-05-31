@@ -1,6 +1,6 @@
 import {css} from 'styled-components'
 
-import {typography, colors} from '../variables'
+import {typography, colors} from '../config'
 
 // -------------------------------------------------------------
 // Base Global Styles.

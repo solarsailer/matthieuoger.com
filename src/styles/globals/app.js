@@ -1,7 +1,7 @@
 import {css} from 'styled-components'
 import {tint} from 'polished'
 
-import {colors} from '../variables'
+import {colors} from '../config'
 
 // -------------------------------------------------------------
 // App Global Styles.

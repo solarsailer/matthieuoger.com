@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import {rgba, shade, tint} from 'polished'
 
-import {colors} from '../styles/variables'
+import {colors} from '../styles/config'
 import SocialNavigation from '../components/SocialNavigation'
 
 import avatar from '../../content/images/avatar-black-white.jpg'

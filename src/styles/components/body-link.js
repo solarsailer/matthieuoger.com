@@ -1,7 +1,7 @@
 import {css} from 'styled-components'
 import {tint, shade} from 'polished'
 
-import {colors} from '../variables'
+import {colors} from '../config'
 
 // -------------------------------------------------------------
 // Body Link.
