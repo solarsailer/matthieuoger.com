@@ -6,7 +6,7 @@ import {rgba, shade, tint} from 'polished'
 import {colors} from '../styles/variables'
 import SocialNavigation from '../components/SocialNavigation'
 
-import avatar from '../images/avatar-black-white.jpg'
+import avatar from '../../content/images/avatar-black-white.jpg'
 
 // -------------------------------------------------------------
 // Constants.

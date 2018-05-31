@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import {Helmet} from 'react-helmet'
 
-import card from '../../images/card.jpg'
+import card from '../../../content/images/card.jpg'
 
 import '../../styles/globals/manifest'
 
