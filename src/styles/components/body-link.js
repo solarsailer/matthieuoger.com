@@ -11,6 +11,8 @@ export default css`
   a {
     color: ${shade(0.2, colors.brand.main)};
 
+    padding-top: 1px;
+
     border-bottom: 2px solid ${colors.brand.main};
 
     transition: all 0.175s;
