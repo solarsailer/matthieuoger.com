@@ -9,11 +9,6 @@ import bodyLinkStyles from '../../styles/components/body-link'
 // -------------------------------------------------------------
 
 const Container = styled.article`
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 4rem;
-
   ${bodyLinkStyles};
 `
 
