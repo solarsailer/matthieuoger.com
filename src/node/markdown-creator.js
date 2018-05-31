@@ -2,7 +2,7 @@ const path = require('path')
 const is = require('@sindresorhus/is')
 const {isValidDate, makeArrayAndForEach} = require('../sol')
 
-const template = path.resolve('./src/templates/Post.js')
+const template = path.resolve('./src/components/templates/PostTemplate.js')
 
 // -------------------------------------------------------------
 // Functions.
