@@ -21,14 +21,14 @@ const Header = styled.header`
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
   padding: 4rem;
 
   line-height: normal;
 
   @media (max-width: ${BREAKPOINT}px) {
     flex-direction: column;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 `
 
