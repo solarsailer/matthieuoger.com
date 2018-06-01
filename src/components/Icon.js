@@ -8,6 +8,8 @@ export function getIcon(name, props) {
   name = name.toLowerCase()
 
   switch (name) {
+    case 'site':
+      return <SiteIcon {...props} />
     case 'twitter':
       return <TwitterIcon {...props} />
     case 'github':
@@ -18,6 +20,8 @@ export function getIcon(name, props) {
       return <UnsplashIcon {...props} />
     case 'instagram':
       return <InstagramIcon {...props} />
+    case 'site-line':
+      return <SiteLineIcon {...props} />
     case 'twitter-line':
       return <TwitterLineIcon {...props} />
     case 'github-line':
@@ -29,6 +33,48 @@ export function getIcon(name, props) {
     case 'instagram-line':
       return <InstagramLineIcon {...props} />
   }
+}
+
+// -------------------------------------------------------------
+// Solar Sailer.
+// -------------------------------------------------------------
+
+export const SiteIcon = ({color}) => {
+  return (
+    <svg
+      className="icon"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zM4.615 6.154V9.23h10.77V6.154H4.615zm0 4.615v3.077h7.693V10.77H4.615z"
+        fillRule="evenodd"
+        fill={color}
+      />
+    </svg>
+  )
+}
+
+export const SiteLineIcon = ({color}) => {
+  return (
+    <svg
+      className="icon"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g fill="none" fill-rule="evenodd">
+        <circle stroke={color} stroke-width="1.3" cx="10" cy="10" r="9.35" />
+        <path
+          d="M4.615 6.154h10.769v3.077H4.615zm0 4.615h7.692v3.077H4.615z"
+          fill={color}
+        />
+      </g>
+    </svg>
+  )
 }
 
 // -------------------------------------------------------------
