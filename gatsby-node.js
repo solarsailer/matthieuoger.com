@@ -1,5 +1,6 @@
 const path = require('path')
 const {createFilePath} = require('gatsby-source-filesystem')
+const createPaginatedPages = require('gatsby-paginate')
 
 const {
   createMarkdownNode,
@@ -36,11 +37,24 @@ exports.onCreateNode = ({boundActionCreators, node, getNode}) => {
 }
 
 exports.createPages = ({boundActionCreators, graphql}) => {
+  const {createPage} = boundActionCreators
+
   return graphql(GET_ALL_POSTS).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
 
+    // Add pagination for blog posts.
+    createPaginatedPages({
+      edges: result.data.allMarkdownRemark.edges,
+      createPage: createPage,
+      pageTemplate: 'src/components/templates/PaginationTemplate.js',
+      pageLength: 10,
+      pathPrefix: 'blog',
+      context: {}
+    })
+
+    // Create markdown pages.
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
       createMarkdownNode(node, boundActionCreators)
     })
