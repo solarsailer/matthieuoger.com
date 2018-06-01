@@ -27,6 +27,7 @@ const MainTitle = styled.h1`
 
 const SubTitle = styled.h2`
   margin-bottom: 0;
+  color: #aaa;
   font-size: 0.8em;
   font-weight: normal;
 `
