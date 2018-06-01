@@ -6,6 +6,7 @@ import {rgba, shade, tint} from 'polished'
 import {colors} from '../styles/config'
 import SocialNavigation from '../components/SocialNavigation'
 
+import navigation, {siteNavigation} from '../../content/config/site-navigation'
 import avatar from '../../content/images/avatar-black-white.jpg'
 
 // -------------------------------------------------------------
@@ -153,11 +154,11 @@ export default ({metadata}) => (
     </Avatar>
 
     <InnerNavigationList>
-      <InnerNavigationItem url="/about/">About</InnerNavigationItem>
-      <InnerNavigationItem url="/blog/">Blog</InnerNavigationItem>
-      <InnerNavigationItem url="/resume/">Resume</InnerNavigationItem>
-      <InnerNavigationItem url="/resume/">Photos</InnerNavigationItem>
-      <InnerNavigationItem url="/rss/">RSS</InnerNavigationItem>
+      {siteNavigation.map(x => (
+        <InnerNavigationItem key={x.url} url={x.url}>
+          {x.name}
+        </InnerNavigationItem>
+      ))}
     </InnerNavigationList>
 
     <SocialNavigation
