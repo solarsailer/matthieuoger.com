@@ -144,13 +144,20 @@ export default css`
     margin-right: 1.5rem;
     margin-bottom: 2rem;
 
-    padding: 2.5rem 3rem;
+    padding: 2.5rem;
+    padding-right: 3rem;
+    padding-left: calc(3rem - 3px); /* Subtract left border. */
 
     background: #f2f2f2;
     border-radius: 5px;
+    border-left: 3px solid rgb(125, 125, 125);
 
     font-size: 0.9em;
     line-height: 1.45;
+  }
+
+  blockquote > :last-child {
+    margin-bottom: 0;
   }
 
   /* HR. */
