@@ -1,5 +1,7 @@
 import styled, {css} from 'styled-components'
+import {rgba} from 'polished'
 
+import {colors} from '../config'
 import bodyLinkStyles from './body-link'
 
 // -------------------------------------------------------------
@@ -149,5 +151,19 @@ export default css`
 
     font-size: 0.9em;
     line-height: 1.45;
+  }
+
+  /* HR. */
+
+  hr {
+    color: ${rgba(colors.brand.main, 0.2)};
+
+    max-width: 80%;
+    margin: 5rem 0 6rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: none;
+    border-bottom: 3px solid currentColor;
   }
 `
