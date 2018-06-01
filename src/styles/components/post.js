@@ -15,6 +15,8 @@ export default css`
     margin-bottom: 0;
   }
 
+  /* Titles. */
+
   h1,
   h2,
   h3,
@@ -115,7 +117,11 @@ export default css`
     }
   }
 
+  /* Links. */
+
   ${bodyLinkStyles};
+
+  /* Lists. */
 
   ul {
     list-style-type: disc;
