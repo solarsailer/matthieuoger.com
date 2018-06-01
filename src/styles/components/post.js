@@ -7,11 +7,11 @@ import bodyLinkStyles from './body-link'
 // -------------------------------------------------------------
 
 export default css`
-  & :first-child {
+  & > :first-child {
     margin-top: 0;
   }
 
-  & :last-child {
+  & > :last-child {
     margin-bottom: 0;
   }
 
