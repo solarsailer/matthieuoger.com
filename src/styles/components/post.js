@@ -131,4 +131,23 @@ export default css`
   li {
     margin-bottom: 1rem;
   }
+
+  /* Blockquotes. */
+
+  blockquote {
+    color: rgb(50, 50, 50);
+
+    margin-top: 0;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+
+    padding: 2.5rem 3rem;
+
+    background: #f2f2f2;
+    border-radius: 5px;
+
+    font-size: 0.9em;
+    line-height: 1.45;
+  }
 `
