@@ -30,6 +30,7 @@ exports.siteMetadata = {
     instagram: 'matthieuoger'
   },
   url: 'solarsailer.net',
+  siteUrl: `http://solarsailer.net/`,
   googleAnalyticsCode: 'UA-41853457-1',
   googleFonts: ['Rubik:300,300i,400,400i,500,500i,700,700i,900,900i']
 }
@@ -53,6 +54,7 @@ exports.plugins = [
       showSpinner: false
     }
   },
+  'gatsby-plugin-feeds',
   'gatsby-transformer-remark',
   'gatsby-plugin-styled-components',
   'gatsby-plugin-react-helmet',
