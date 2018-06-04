@@ -46,6 +46,13 @@ exports.plugins = [
       name: 'posts'
     }
   },
+  {
+    resolve: `gatsby-plugin-nprogress`,
+    options: {
+      color: '#f1c40f',
+      showSpinner: false
+    }
+  },
   'gatsby-transformer-remark',
   'gatsby-plugin-styled-components',
   'gatsby-plugin-react-helmet',
