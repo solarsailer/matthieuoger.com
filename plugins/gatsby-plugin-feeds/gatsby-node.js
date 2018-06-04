@@ -4,7 +4,7 @@ const {promisify} = require('util')
 const writeFile = promisify(fs.writeFile)
 
 const {getAtomFeed} = require('./atom')
-const {getJsonFeed} = require('./json-feed')
+const {getJSONFeed} = require('./json-feed')
 const {runQuery, defaultOptions} = require('./internals')
 
 // -------------------------------------------------------------
@@ -37,16 +37,21 @@ exports.onPostBuild = async ({graphql}, pluginOptions) => {
   for (const feed of options.feeds) {
     feed.query = await runQuery(graphql, feed.query)
 
-    const atomData = getAtomFeed({
+    const data = {
       ignoredCategories: feed.ignoredCategories,
-      outputPath: feed.atomPath,
       metadata,
 
       // This is too specific and should be reworked to be a real plugin.
       elements: feed.query.allMarkdownRemark.edges.map(x => x.node)
-    })
+    }
 
-    await writeFile(path.join(PUBLIC_PATH, feed.atomPath), atomData)
+    const atomData = getAtomFeed({...data, outputPath: feed.atomPath})
+    const jsonData = getJSONFeed({...data, outputPath: feed.jsonPath})
+
+    await Promise.all([
+      writeFile(path.join(PUBLIC_PATH, feed.atomPath), atomData),
+      writeFile(path.join(PUBLIC_PATH, feed.jsonPath), jsonData)
+    ])
   }
 
   return Promise.resolve()
