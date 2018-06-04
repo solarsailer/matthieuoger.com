@@ -36,15 +36,21 @@ function getMetadata(data) {
 // This is too specific and should be reworked to be a real plugin.
 function getEntries(data) {
   const {
+    ignoredCategories,
     metadata: {siteUrl: url, author},
     elements
   } = data
 
-  return elements.map(x => {
+  return elements.reduce((entries, x) => {
     const postUrl = new URL(x.fields.path, url).toString()
     const postDate = new Date(x.frontmatter.date)
 
-    return {
+    // Ignore an element if its category is ignored.
+    if (ignoredCategories.includes(x.frontmatter.category)) {
+      return entries
+    }
+
+    entries.push({
       entry: [
         {id: postUrl},
         {updated: postDate.toISOString()},
@@ -53,8 +59,10 @@ function getEntries(data) {
         {content: {_attr: {type: 'html'}, _cdata: x.html}},
         {author: [{name: author}, {uri: url}]}
       ]
-    }
-  })
+    })
+
+    return entries
+  }, [])
 }
 
 exports.getAtomFeed = data => {

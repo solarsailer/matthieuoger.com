@@ -38,8 +38,9 @@ exports.onPostBuild = async ({graphql}, pluginOptions) => {
     feed.query = await runQuery(graphql, feed.query)
 
     const atomData = getAtomFeed({
-      metadata,
+      ignoredCategories: feed.ignoredCategories,
       outputPath: feed.atomPath,
+      metadata,
 
       // This is too specific and should be reworked to be a real plugin.
       elements: feed.query.allMarkdownRemark.edges.map(x => x.node)

@@ -38,6 +38,7 @@ exports.defaultOptions = {
                 frontmatter {
                   title
                   date
+                  category
                 }
                 fields {
                   path
@@ -48,6 +49,7 @@ exports.defaultOptions = {
           }
         }
       `,
+      ignoredCategories: ['meta'],
       atomPath: `atom.xml`,
       jsonPath: `feed.json`
     }
