@@ -71,12 +71,12 @@ const GlobalTitle = styled.h1`
   }
 
   a:hover {
-    transform: scale(1.05);
+    transform: translate(5px, -1px) scale(0.95);
   }
 
   a:hover svg {
     opacity: 0.9;
-    transform: scale(0.8) rotate(1turn);
+    transform: scale(0.9) rotate(1turn);
   }
 `
 
