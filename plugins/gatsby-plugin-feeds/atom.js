@@ -43,7 +43,7 @@ function getEntries(data) {
 
   return elements.reduce((entries, x) => {
     const postUrl = new URL(x.fields.path, url).toString()
-    const postDate = new Date(x.frontmatter.date)
+    const postDate = new Date(x.frontmatter.date).toISOString()
 
     // Ignore an element if its category is ignored.
     if (ignoredCategories.includes(x.frontmatter.category)) {
@@ -53,7 +53,7 @@ function getEntries(data) {
     entries.push({
       entry: [
         {id: postUrl},
-        {updated: postDate.toISOString()},
+        {updated: postDate},
         {title: x.frontmatter.title},
         {link: {_attr: {href: postUrl}}},
         {content: {_attr: {type: 'html'}, _cdata: x.html}},
