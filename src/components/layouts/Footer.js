@@ -16,13 +16,17 @@ const Footer = styled.footer`
   margin-right: auto;
 
   margin-top: 10rem;
-  margin-bottom: 3rem;
   padding-top: 3rem;
+  padding-bottom: 3rem;
 
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 
   ul {
     margin-bottom: 1rem;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
   }
 `
 
