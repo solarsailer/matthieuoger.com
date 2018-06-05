@@ -2,16 +2,16 @@ import React from 'react'
 
 import Link from 'gatsby-link'
 
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {rgba, shade, tint} from 'polished'
 
 import {colors} from '../styles/config'
 
 // -------------------------------------------------------------
-// Components.
+// Constants.
 // -------------------------------------------------------------
 
-const StyledLink = styled(Link)`
+const LINK_CSS = css`
   display: block;
   color: white;
   padding: 1rem 2rem;
@@ -46,4 +46,38 @@ const StyledLink = styled(Link)`
   }
 `
 
-export default ({url, children}) => <StyledLink to={url}>{children}</StyledLink>
+// -------------------------------------------------------------
+// Components.
+// -------------------------------------------------------------
+
+const StyledLink = styled(Link)`
+  ${LINK_CSS};
+`
+
+const StyledExternalLink = styled.a`
+  ${LINK_CSS};
+`
+
+export default props => {
+  if (props.external) {
+    if (props.newTab) {
+      return (
+        <StyledExternalLink href={props.url} target="_blank" {...props}>
+          {props.children}
+        </StyledExternalLink>
+      )
+    }
+
+    return (
+      <StyledExternalLink href={props.url} {...props}>
+        {props.children}
+      </StyledExternalLink>
+    )
+  }
+
+  return (
+    <StyledLink to={props.url} {...props}>
+      {props.children}
+    </StyledLink>
+  )
+}
