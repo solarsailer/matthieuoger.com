@@ -91,7 +91,7 @@ const Bio = styled.p`
   }
 
   a {
-    color: ${tint(0.5, colors.brand.main)};
+    color: ${tint(0.75, colors.brand.main)};
     text-decoration: underline;
     transition: color 0.3s ease-out;
 
