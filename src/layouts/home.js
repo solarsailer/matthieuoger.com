@@ -40,6 +40,7 @@ export const LAYOUT_QUERY = graphql`
           dribbble
           unsplash
           instagram
+          speakerDeck
         }
       }
     }

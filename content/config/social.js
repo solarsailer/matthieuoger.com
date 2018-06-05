@@ -28,6 +28,12 @@ export const social = {
     color: '#AB62EE',
     domain: 'com',
     url: 'https://www.instagram.com/@HANDLE/'
+  },
+  speakerDeck: {
+    name: 'Speaker Deck',
+    color: '#396',
+    domain: 'com',
+    url: 'https://speakerdeck.com/@HANDLE/'
   }
 }
 

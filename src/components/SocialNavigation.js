@@ -13,7 +13,7 @@ import {withMountedAnimator} from './MountedAnimator'
 // Constants.
 // -------------------------------------------------------------
 
-const SOCIAL_BREAKPOINT = 1200
+const SOCIAL_BREAKPOINT = 1400
 
 // -------------------------------------------------------------
 // Functions.
