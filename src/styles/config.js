@@ -3,6 +3,7 @@
 // -------------------------------------------------------------
 
 const MAIN_BRAND_COLOR = '#E44D2A'
+const BACKGROUND_COLOR = '#f9f9f9'
 
 // -------------------------------------------------------------
 // Values.
@@ -26,8 +27,8 @@ export const colors = {
   },
   page: {
     content: 'rgb(25, 25, 25)',
-    background: 'white',
-    overscroll: 'white'
+    background: BACKGROUND_COLOR,
+    overscroll: BACKGROUND_COLOR
   }
 }
 
