@@ -172,8 +172,8 @@ const SocialItem = ({handle, name, url, domain, color = 'white'}) => {
         <Animation delay={random(0, 250)} duration={random(500, 2000)}>
           <SocialItemLink href={url}>
             <SocialItemText className="must-hide-if-icons-only">
-              <span>{name}</span>
-              <span className="special-opacity">.{domain}/</span>
+              <span>{name.replace(' ', '')}</span>
+              <span className="special-opacity">{domain && `.${domain}`}/</span>
               <SocialItemHandle color={color}>{handle}</SocialItemHandle>
             </SocialItemText>
             <aside>{getIcon(name, {color})}</aside>
