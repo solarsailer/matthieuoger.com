@@ -34,6 +34,7 @@ const Tooltip = styled.div`
   font-size: 1.25rem;
   line-height: normal;
   text-transform: uppercase;
+  text-align: center;
 
   opacity: 0;
   transition: all 0.225s ease-in;
