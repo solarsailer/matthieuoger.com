@@ -1,12 +1,13 @@
 import React, {Fragment} from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import {rgba, shade, tint} from 'polished'
 
-import {colors} from '../styles/config'
+import Button from '../components/Button'
 import SocialNavigation from '../components/SocialNavigation'
 
-import navigation, {siteNavigation} from '../../content/config/site-navigation'
+import {colors} from '../styles/config'
+import {siteNavigation} from '../../content/config/site-navigation'
+
 import avatar from '../../content/images/avatar-black-white.jpg'
 
 // -------------------------------------------------------------
@@ -76,7 +77,7 @@ const SubTitle = styled.h2`
 // Navigation List.
 // -------------------------------------------------------------
 
-const InnerNavigationList = styled.ul`
+const Navigation = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -100,50 +101,6 @@ const InnerNavigationList = styled.ul`
   }
 `
 
-const InnerNavigationItem = ({url, children}) => {
-  const Container = styled.li`
-    a {
-      display: block;
-      color: white;
-      padding: 1rem 2rem;
-      background: ${rgba(colors.brand.main, 0.2)};
-      border: 2px solid transparent;
-      border-radius: 5px;
-
-      transition: all 0.2s ease-in;
-      text-transform: uppercase;
-      text-decoration: none;
-
-      &:hover {
-        background: ${colors.brand.main};
-        border: 2px solid ${rgba(tint(0.8, colors.brand.main), 0.5)};
-
-        box-shadow: 0 2px 15px ${rgba(colors.brand.main, 0.5)};
-        transform: translateY(-2px);
-
-        text-shadow: 0 2px 4px ${rgba('black', 0.25)};
-      }
-
-      &:focus {
-        outline: none;
-        border: 2px solid ${rgba(tint(0.75, colors.brand.main), 0.5)};
-      }
-
-      &:active {
-        outline: none;
-      }
-    }
-  `
-
-  return (
-    <Fragment>
-      <Container>
-        <Link to={url}>{children}</Link>
-      </Container>
-    </Fragment>
-  )
-}
-
 // -------------------------------------------------------------
 // Page.
 // -------------------------------------------------------------
@@ -156,13 +113,13 @@ export default ({metadata}) => (
       <SubTitle>{metadata.home.subtitle}</SubTitle>
     </Avatar>
 
-    <InnerNavigationList>
+    <Navigation>
       {siteNavigation.map(x => (
-        <InnerNavigationItem key={x.url} url={x.url}>
-          {x.name}
-        </InnerNavigationItem>
+        <li key={x.url}>
+          <Button url={x.url}>{x.name}</Button>
+        </li>
       ))}
-    </InnerNavigationList>
+    </Navigation>
 
     <SocialNavigation
       handles={metadata.handles}
