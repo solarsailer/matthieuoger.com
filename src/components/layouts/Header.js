@@ -1,29 +1,56 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import {rgba, shade, tint} from 'polished'
 
 import {getIcon} from '../Icon'
 
 import {colors} from '../../styles/config'
 import {siteNavigation} from '../../../content/config/site-navigation'
 
+import Button from '../Button'
+
 // -------------------------------------------------------------
 // Constants.
 // -------------------------------------------------------------
 
-const BREAKPOINT = 700
+const BACKGROUND_COLOR = colors.page.background
+const BREAKPOINT = 650
 
 // -------------------------------------------------------------
-// Functions.
+// Components.
 // -------------------------------------------------------------
 
-function convertItemToMenuElement(item) {
-  return (
-    <li key={item.url}>
-      <Link to={item.url}>• {item.name}</Link>
-    </li>
-  )
-}
+const Header = styled.header`
+  margin-bottom: 5rem;
+`
+
+const Separator = styled.hr`
+  height: 1px;
+  margin-left: 50%;
+
+  background: linear-gradient(to right, ${BACKGROUND_COLOR}, #e0e0e0);
+  border-top: none;
+  border-bottom: none;
+`
+
+// Button extension.
+const MenuButton = styled(Button)`
+  color: #888;
+  padding: 3px 1rem 1px;
+
+  background: ${rgba('white', 0.5)};
+  border: 2px solid ${rgba('#888', 0.25)};
+  border-radius: 3px;
+
+  font-size: 0.85em;
+
+  &.selected:not(:hover) {
+    color: white;
+    background: ${tint(0.75, colors.brand.main)};
+    border: 2px solid ${tint(0.75, colors.brand.main)};
+  }
+`
 
 // -------------------------------------------------------------
 // Global Menu.
@@ -31,133 +58,83 @@ function convertItemToMenuElement(item) {
 
 const GlobalMenu = styled.nav`
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
 
-  padding: 2rem 10%;
+  padding: 2rem;
 
-  color: white;
-  background: ${colors.brand.main};
+  background: linear-gradient(to bottom, #e2e1e1, ${BACKGROUND_COLOR});
 
-  line-height: normal;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  @media (max-width: 950px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  @media (max-width: ${BREAKPOINT}px) {
+    flex-direction: column;
   }
 `
 
 const GlobalTitle = styled.h1`
-  margin: 0;
-  margin-right: 5rem;
+  margin-bottom: 0;
 
-  font-size: 1.15em;
-  font-weight: normal;
+  font-size: 1.4em;
+  font-weight: 500;
   text-transform: uppercase;
+  line-height: normal;
 
   a {
     display: block;
+
+    color: #888;
+    text-decoration: none;
+
     transition: all 0.3s ease-out;
-    transform-origin: bottom left;
   }
 
-  a svg {
-    vertical-align: -2px;
+  svg {
+    width: 20px;
+    height: 20px;
+
+    transition: all 0.3s ease-out;
+  }
+
+  path {
+    fill: #888;
+
     transition: all 0.3s ease-out;
   }
 
   a:hover {
-    transform: translate(5px, -1px) scale(0.95);
+    color: ${colors.brand.main};
+    transform: translateX(5px);
+    text-shadow: 0 2px 10px ${rgba(colors.brand.main, 0.25)};
+
+    svg {
+      transform: translateX(-5px) rotate(1turn);
+      transform-origin: center;
+    }
+
+    path {
+      fill: ${colors.brand.main};
+    }
   }
 
-  a:hover svg {
-    opacity: 0.9;
-    transform: scale(0.9) rotate(1turn);
+  @media (max-width: ${BREAKPOINT}px) {
+    margin-bottom: 1rem;
   }
 `
 
 const GlobalList = styled.ul`
   flex: 1;
-
   display: flex;
+
+  margin-bottom: 0;
+
   justify-content: flex-end;
 
-  margin: 0;
-  margin-left: auto;
-
   li + li {
-    margin-left: 2rem;
-  }
-`
-
-const GlobalItem = styled.li`
-  font-size: 0.9em;
-  text-transform: uppercase;
-
-  &::before {
-    content: '•';
-    margin-right: 0.5rem;
-    opacity: 0.8;
-  }
-
-  &:last-of-type::before {
-    content: '|' !important;
-    margin-right: 2rem;
-    opacity: 0.5;
-  }
-
-  a {
-    opacity: 0.8;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease-out;
-  }
-
-  a.special {
-    opacity: 0.5;
-  }
-
-  a.selected {
-    opacity: 1;
-    border-bottom: 2px solid white;
-  }
-`
-
-// -------------------------------------------------------------
-// Contextual Menu.
-// -------------------------------------------------------------
-
-const ContextualMenu = styled.nav`
-  background: #f7f7f7;
-  padding: 1rem 10%;
-
-  @media (max-width: 950px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-`
-
-const ContextualList = styled.ul`
-  display: flex;
-  margin: 0;
-
-  font-size: 0.9em;
-
-  li + li {
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
 `
 
 // -------------------------------------------------------------
 // Export.
 // -------------------------------------------------------------
-
-const Header = styled.header`
-  margin-bottom: 5rem;
-`
 
 export default () => {
   const withoutAboutNavigation = siteNavigation.filter(x => x.id !== 'about')
@@ -170,40 +147,25 @@ export default () => {
           <Link to="/">{getIcon('site', {color: 'white'})}  SolarSailer</Link>
         </GlobalTitle>
         <GlobalList>
-          <GlobalItem>
-            <Link to="/blog/" activeClassName="selected">
-              Blog
-            </Link>
-          </GlobalItem>
-          <GlobalItem>
-            <Link to="/resume/" activeClassName="selected">
-              Resume
-            </Link>
-          </GlobalItem>
-          <GlobalItem>
-            <Link to="/photos/" activeClassName="selected">
-              Photos
-            </Link>
-          </GlobalItem>
-          <GlobalItem>
-            <Link to="/rss/" activeClassName="selected">
+          <li>
+            <MenuButton url="/about/" activeClassName="selected">
+              About
+            </MenuButton>
+          </li>
+          <li>
+            <MenuButton url="/blog/" activeClassName="selected">
+              Articles
+            </MenuButton>
+          </li>
+          <li>
+            <MenuButton url="/rss/" external newTab>
               RSS
-            </Link>
-          </GlobalItem>
-          <GlobalItem>
-            <Link to="/about/" className="special" activeClassName="selected">
-              About <strong>Matthieu Oger</strong>
-            </Link>
-          </GlobalItem>
+            </MenuButton>
+          </li>
         </GlobalList>
       </GlobalMenu>
-      <ContextualMenu>
-        <ContextualList>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ContextualList>
-      </ContextualMenu>
+
+      <Separator />
     </Header>
   )
 }
