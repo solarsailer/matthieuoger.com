@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import {rgba, tint} from 'polished'
 
 import Button from '../components/Button'
 import SocialNavigation from '../components/SocialNavigation'
@@ -65,12 +66,39 @@ const MainTitle = styled.h1`
 `
 
 const SubTitle = styled.h2`
-  margin-bottom: 0;
+  margin-bottom: 2rem;
 
   font-size: 2.625em;
   font-weight: bold;
   text-transform: uppercase;
   line-height: normal;
+`
+
+const Bio = styled.p`
+  color: #aaa;
+
+  max-width: 650px;
+  margin-bottom: 0;
+  padding: 2rem;
+  background: ${rgba('#666', 0.05)};
+  border-radius: 5px;
+
+  font-size: 0.8em;
+  font-style: normal;
+
+  strong {
+    font-weight: 500;
+  }
+
+  a {
+    color: ${tint(0.5, colors.brand.main)};
+    text-decoration: underline;
+    transition: color 0.3s ease-out;
+
+    &:hover {
+      color: ${colors.brand.main};
+    }
+  }
 `
 
 // -------------------------------------------------------------
@@ -109,8 +137,15 @@ export default ({metadata}) => (
   <Container>
     <Avatar>
       <img src={avatar} title="Matthieu Oger" alt="Matthieu Oger" />
-      <MainTitle>{metadata.home.title}</MainTitle>
-      <SubTitle>{metadata.home.subtitle}</SubTitle>
+      <MainTitle>SOLARSAILER</MainTitle>
+      <SubTitle>Matthieu Oger</SubTitle>
+      <Bio>
+        <strong>I'm a developer, designer and product manager.</strong> I
+        co-founded <a href="https://pixelnest.io/">Pixelnest Studio</a> in
+        February 2014, where we created{' '}
+        <a href="http://steredenn.pixelnest.io/">Steredenn</a>. I'm also an
+        amateur street·travel photographer.
+      </Bio>
     </Avatar>
 
     <Navigation>
