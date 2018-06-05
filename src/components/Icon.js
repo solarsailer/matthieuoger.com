@@ -70,7 +70,7 @@ export const SiteLineIcon = ({color}) => {
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <circle stroke={color} stroke-width="1.3" cx="10" cy="10" r="9.35" />
         <path
           d="M4.615 6.154h10.769v3.077H4.615zm0 4.615h7.692v3.077H4.615z"
@@ -337,7 +337,6 @@ export const SpeakerDeckIcon = ({color}) => {
       <path
         d="M12.5 25C5.596 25 0 19.404 0 12.5S5.596 0 12.5 0 25 5.596 25 12.5 19.404 25 12.5 25zM8 7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H8zm0 1h9a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zm3.5 7v-5l-3 2.5 3 2.5zm2 0l3-2.5-3-2.5v5z"
         fill={color}
-        fill-rule="nonzero"
       />
     </svg>
   )
@@ -352,10 +351,10 @@ export const SpeakerDeckLineIcon = ({color}) => {
       viewBox="0 0 25 25"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <circle
           stroke={color}
-          stroke-width="1.3"
+          strokeWidth="1.3"
           cx="12.5"
           cy="12.5"
           r="11.85"
@@ -363,7 +362,7 @@ export const SpeakerDeckLineIcon = ({color}) => {
         <path
           d="M8 7h9a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H8zm3.5 7l-3-2.5 3-2.5v5zm2 0v-5l3 2.5-3 2.5z"
           fill={color}
-          fill-rule="nonzero"
+          fillRule="nonzero"
         />
       </g>
     </svg>
