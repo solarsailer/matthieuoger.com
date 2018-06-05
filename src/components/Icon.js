@@ -5,7 +5,7 @@ import React, {Fragment} from 'React'
 // -------------------------------------------------------------
 
 export function getIcon(name, props) {
-  name = name.toLowerCase()
+  name = name.toLowerCase().replace(' ', '')
 
   switch (name) {
     case 'site':
@@ -20,6 +20,8 @@ export function getIcon(name, props) {
       return <UnsplashIcon {...props} />
     case 'instagram':
       return <InstagramIcon {...props} />
+    case 'speakerdeck':
+      return <SpeakerDeckIcon {...props} />
     case 'site-line':
       return <SiteLineIcon {...props} />
     case 'twitter-line':
@@ -32,6 +34,8 @@ export function getIcon(name, props) {
       return <UnsplashLineIcon {...props} />
     case 'instagram-line':
       return <InstagramLineIcon {...props} />
+    case 'speakerdeck-line':
+      return <SpeakerDeckLineIcon {...props} />
   }
 }
 
@@ -311,6 +315,55 @@ export const InstagramLineIcon = ({color}) => {
           d="M18.971 15.184a4.78 4.78 0 0 1-.302 1.58 3.328 3.328 0 0 1-1.904 1.905 4.78 4.78 0 0 1-1.58.302c-.695.032-.917.04-2.685.04s-1.99-.008-2.684-.04a4.78 4.78 0 0 1-1.58-.302 3.328 3.328 0 0 1-1.905-1.904 4.78 4.78 0 0 1-.302-1.58c-.032-.695-.04-.917-.04-2.685s.008-1.99.04-2.684a4.78 4.78 0 0 1 .302-1.58A3.328 3.328 0 0 1 8.235 6.33a4.78 4.78 0 0 1 1.58-.302c.695-.032.917-.04 2.685-.04s1.99.008 2.684.04a4.78 4.78 0 0 1 1.58.302 3.328 3.328 0 0 1 1.905 1.904c.19.506.291 1.04.302 1.58.032.695.04.917.04 2.685s-.008 1.99-.04 2.684zM17.575 8.66a2.156 2.156 0 0 0-1.235-1.235 3.601 3.601 0 0 0-1.21-.224c-.686-.032-.892-.038-2.63-.038s-1.944.006-2.63.038c-.414.004-.823.08-1.21.224A2.156 2.156 0 0 0 7.425 8.66c-.144.387-.22.796-.224 1.21-.032.686-.038.892-.038 2.63s.006 1.944.038 2.63c.004.414.08.823.224 1.21a2.156 2.156 0 0 0 1.235 1.235c.387.144.796.22 1.21.224.686.032.892.038 2.63.038s1.944-.006 2.63-.038c.414-.004.823-.08 1.21-.224a2.156 2.156 0 0 0 1.235-1.235c.144-.387.22-.796.224-1.21.032-.686.038-.892.038-2.63s-.006-1.944-.038-2.63a3.601 3.601 0 0 0-.224-1.21zM12.5 15.843a3.343 3.343 0 1 1 0-6.686 3.343 3.343 0 0 1 0 6.686zm3.475-6.037a.781.781 0 1 1 0-1.563.781.781 0 0 1 0 1.563zM12.5 14.67a2.17 2.17 0 1 0 0-4.34 2.17 2.17 0 0 0 0 4.34z"
           fill={color}
           fillRule="nonzero"
+        />
+      </g>
+    </svg>
+  )
+}
+
+// -------------------------------------------------------------
+// Speaker Deck.
+// -------------------------------------------------------------
+
+export const SpeakerDeckIcon = ({color}) => {
+  return (
+    <svg
+      className="icon"
+      width="25"
+      height="25"
+      viewBox="0 0 25 25"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.5 25C5.596 25 0 19.404 0 12.5S5.596 0 12.5 0 25 5.596 25 12.5 19.404 25 12.5 25zM8 7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H8zm0 1h9a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zm3.5 7v-5l-3 2.5 3 2.5zm2 0l3-2.5-3-2.5v5z"
+        fill={color}
+        fill-rule="nonzero"
+      />
+    </svg>
+  )
+}
+
+export const SpeakerDeckLineIcon = ({color}) => {
+  return (
+    <svg
+      className="icon"
+      width="25"
+      height="25"
+      viewBox="0 0 25 25"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g fill="none" fill-rule="evenodd">
+        <circle
+          stroke={color}
+          stroke-width="1.3"
+          cx="12.5"
+          cy="12.5"
+          r="11.85"
+        />
+        <path
+          d="M8 7h9a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H8zm3.5 7l-3-2.5 3-2.5v5zm2 0v-5l3 2.5-3 2.5z"
+          fill={color}
+          fill-rule="nonzero"
         />
       </g>
     </svg>
