@@ -18,7 +18,7 @@ export const PageContent = ({children}) => (
 )
 
 const Constraints = styled.div`
-  max-width: 750px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 4rem;

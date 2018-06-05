@@ -10,7 +10,33 @@ import postStyles from '../../styles/components/post'
 // Components.
 // -------------------------------------------------------------
 
-const Article = styled.article``
+const Wrapper = styled.div`
+  position: relative;
+  z-index: 1;
+`
+
+const Article = styled.article`
+  padding: 5rem;
+
+  background: white;
+  border-radius: 2px;
+
+  &::before {
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    z-index: -1;
+
+    top: 2rem;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+
+    box-shadow: 0 20px 30px ${rgba('black', 0.1)};
+  }
+`
 
 const Titles = styled.div`
   margin-bottom: 6rem;
@@ -41,18 +67,20 @@ export default function PostTemplate({data}) {
   const {frontmatter, html} = markdownRemark
 
   return (
-    <Article>
-      <Helmet>
-        <title>
-          {frontmatter.title} — {site.siteMetadata.title}
-        </title>
-      </Helmet>
-      <Titles>
-        <MainTitle>{frontmatter.title}</MainTitle>
-        <SubTitle>{frontmatter.date}</SubTitle>
-      </Titles>
-      <PostContent dangerouslySetInnerHTML={{__html: html}} />
-    </Article>
+    <Wrapper>
+      <Article>
+        <Helmet>
+          <title>
+            {frontmatter.title} — {site.siteMetadata.title}
+          </title>
+        </Helmet>
+        <Titles>
+          <MainTitle>{frontmatter.title}</MainTitle>
+          <SubTitle>{frontmatter.date}</SubTitle>
+        </Titles>
+        <PostContent dangerouslySetInnerHTML={{__html: html}} />
+      </Article>
+    </Wrapper>
   )
 }
 
