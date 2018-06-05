@@ -102,8 +102,6 @@ const InnerNavigationList = styled.ul`
 
 const InnerNavigationItem = ({url, children}) => {
   const Container = styled.li`
-    text-transform: uppercase;
-
     a {
       display: block;
       color: white;
@@ -113,12 +111,17 @@ const InnerNavigationItem = ({url, children}) => {
       border-radius: 5px;
 
       transition: all 0.2s ease-in;
+      text-transform: uppercase;
       text-decoration: none;
 
       &:hover {
         background: ${colors.brand.main};
+        border: 2px solid ${rgba(tint(0.8, colors.brand.main), 0.5)};
+
         box-shadow: 0 2px 15px ${rgba(colors.brand.main, 0.5)};
         transform: translateY(-2px);
+
+        text-shadow: 0 2px 4px ${rgba('black', 0.25)};
       }
 
       &:focus {
