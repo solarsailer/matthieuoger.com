@@ -4,7 +4,8 @@ import Link from 'gatsby-link'
 import {rgba, shade} from 'polished'
 
 import Post from '../Post'
-import MiniPostCard from '../MiniPostCard'
+import PostRecap from '../PostRecap'
+
 import PaginationController from '../PaginationController'
 
 // -------------------------------------------------------------
@@ -15,7 +16,7 @@ function createGridItems(items) {
   return items.map(({node}) => (
     <Item key={node.id}>
       <StyledLink to={node.fields.slug}>
-        <MiniPostCard {...node} />
+        <PostRecap {...node} />
       </StyledLink>
     </Item>
   ))
