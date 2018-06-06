@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {rgba, shade} from 'polished'
 
 import {ButtonSmall, DisabledButtonSmall} from './Button'
@@ -12,6 +12,24 @@ import {colors} from '../styles/config'
 
 const PAGINATION_BORDER = rgba('black', 0.1)
 
+const BUTTON_CSS_EXTENSION = css`
+  display: inline-block;
+  width: 150px;
+  border-radius: 0;
+
+  &:first-child {
+    border-right: 2px solid ${PAGINATION_BORDER};
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &:last-child {
+    border-left: 2px solid ${PAGINATION_BORDER};
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+`
+
 // -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
@@ -19,37 +37,21 @@ const PAGINATION_BORDER = rgba('black', 0.1)
 const Container = styled.div`
   display: flex;
   justify-content: center;
-
-  span {
-    width: 150px;
-  }
-
-  a {
-    display: inline-block;
-    width: 150px;
-    border-radius: 0;
-  }
-
-  span:first-child,
-  a:first-child {
-    border-right: 2px solid ${PAGINATION_BORDER};
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-
-  span:last-child,
-  a:last-child {
-    border-left: 2px solid ${PAGINATION_BORDER};
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
 `
 
-const Element = ({url, children, isTextOnly}) => {
+const PaginationButtonNormal = styled(ButtonSmall)`
+  ${BUTTON_CSS_EXTENSION};
+`
+
+const PaginationDisabledButton = styled(DisabledButtonSmall)`
+  ${BUTTON_CSS_EXTENSION};
+`
+
+const PaginationButton = ({url, children, isTextOnly}) => {
   if (isTextOnly) {
-    return <DisabledButtonSmall>{children}</DisabledButtonSmall>
+    return <PaginationDisabledButton>{children}</PaginationDisabledButton>
   } else {
-    return <ButtonSmall url={url}>{children}</ButtonSmall>
+    return <PaginationButtonNormal url={url}>{children}</PaginationButtonNormal>
   }
 }
 
@@ -60,15 +62,15 @@ const Element = ({url, children, isTextOnly}) => {
 export default ({isFirstPage, isLastPage, previousUrl, nextUrl}) => {
   return (
     <Container>
-      <Element isTextOnly={isFirstPage} url={`/blog/${previousUrl}`}>
+      <PaginationButton isTextOnly={isFirstPage} url={`/blog/${previousUrl}`}>
         ← Previous
-      </Element>
+      </PaginationButton>
 
-      <ButtonSmall url="/archive/">Archive</ButtonSmall>
+      <PaginationButton url="/archive/">Archive</PaginationButton>
 
-      <Element isTextOnly={isLastPage} url={`/blog/${nextUrl}`}>
+      <PaginationButton isTextOnly={isLastPage} url={`/blog/${nextUrl}`}>
         Next →
-      </Element>
+      </PaginationButton>
     </Container>
   )
 }
