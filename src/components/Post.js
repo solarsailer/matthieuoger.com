@@ -47,7 +47,7 @@ const Header = styled.header`
 
 const Title = styled.h1`
   margin-bottom: 0.5rem;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: normal;
 `
 
