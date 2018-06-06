@@ -8,7 +8,7 @@ import {getIcon} from '../Icon'
 import {colors} from '../../styles/config'
 import {siteNavigation} from '../../../content/config/site-navigation'
 
-import Button from '../Button'
+import {Button} from '../Button'
 
 // -------------------------------------------------------------
 // Constants.

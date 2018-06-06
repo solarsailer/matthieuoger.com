@@ -58,7 +58,7 @@ const StyledExternalLink = styled.a`
   ${LINK_CSS};
 `
 
-export default props => {
+export const Button = props => {
   if (props.external) {
     if (props.newTab) {
       return (

@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import {rgba, tint} from 'polished'
 
-import Button from '../components/Button'
+import {Button} from '../components/Button'
 import SocialNavigation from '../components/SocialNavigation'
 
 import {colors} from '../styles/config'
