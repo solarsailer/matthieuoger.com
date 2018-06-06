@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Link from 'gatsby-link'
+
 import {colors} from '../styles/config'
 
 // -------------------------------------------------------------
@@ -12,6 +14,12 @@ const TRANSITION = 'all 0.2s ease-out'
 // -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
+
+const BlockLink = styled(Link)`
+  display: block;
+  color: inherit;
+  text-decoration: none;
+`
 
 // We use a wrapper to create a shadow with a ::before pseudo-element.
 // This allows us to create a shadow smaller than the box of the actual element.
@@ -106,24 +114,26 @@ const Excerpt = styled.p`
 // Export.
 // -------------------------------------------------------------
 
-export default ({frontmatter, excerpt}) => {
+export default ({url, title, date, excerpt}) => {
   return (
-    <Wrapper>
-      <Article>
-        <Header>
-          <Title>{frontmatter.title}</Title>
-          <Date>{frontmatter.readableDate} </Date>
-        </Header>
-        {frontmatter.excerpt && (
-          <Content>
-            <Excerpt
-              dangerouslySetInnerHTML={{
-                __html: frontmatter.excerpt
-              }}
-            />
-          </Content>
-        )}
-      </Article>
-    </Wrapper>
+    <BlockLink to={url}>
+      <Wrapper>
+        <Article>
+          <Header>
+            <Title>{title}</Title>
+            <Date>{date}</Date>
+          </Header>
+          {excerpt && (
+            <Content>
+              <Excerpt
+                dangerouslySetInnerHTML={{
+                  __html: excerpt
+                }}
+              />
+            </Content>
+          )}
+        </Article>
+      </Wrapper>
+    </BlockLink>
   )
 }

@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+
 import {rgba, shade} from 'polished'
 
 import Post from '../Post'
@@ -15,9 +15,12 @@ import PaginationController from '../PaginationController'
 function createGridItems(items) {
   return items.map(({node}) => (
     <Item key={node.id}>
-      <StyledLink to={node.fields.slug}>
-        <PostRecap {...node} />
-      </StyledLink>
+      <PostRecap
+        url={node.fields.slug}
+        title={node.frontmatter.title}
+        date={node.frontmatter.readableDate}
+        excerpt={node.frontmatter.excerpt}
+      />
     </Item>
   ))
 }
@@ -68,12 +71,6 @@ const MainItem = styled.li`
 
 const Item = styled.li`
   margin-bottom: 2rem;
-`
-
-const StyledLink = styled(Link)`
-  display: block;
-  color: inherit;
-  text-decoration: none;
 `
 
 // -------------------------------------------------------------
