@@ -22,6 +22,10 @@ const HOME_BREAKPOINT = 800
 // Components.
 // -------------------------------------------------------------
 
+const HomeButton = styled(Button)`
+  background: ${rgba(colors.brand.main, 0.2)};
+`
+
 const Container = styled.div`
   color: white;
 
@@ -155,7 +159,7 @@ export default ({metadata}) => (
     <Navigation>
       {siteNavigation.map(x => (
         <li key={x.url}>
-          <Button url={x.url}>{x.name}</Button>
+          <HomeButton url={x.url}>{x.name}</HomeButton>
         </li>
       ))}
     </Navigation>

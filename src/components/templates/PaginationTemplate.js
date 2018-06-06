@@ -85,7 +85,6 @@ const PaginationContainer = styled.div`
     display: inline-block;
     width: 150px;
     border-radius: 0;
-    background: ${rgba(colors.brand.main, 0.9)};
   }
 
   span:first-child,

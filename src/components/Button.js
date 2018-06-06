@@ -16,7 +16,9 @@ const LINK_CSS = css`
 
   color: white;
   padding: 1rem 2rem;
-  background: ${rgba(colors.brand.main, 0.2)};
+
+  background: ${rgba(colors.brand.main, 0.9)};
+
   border: 2px solid transparent;
   border-radius: 5px;
 
@@ -28,18 +30,20 @@ const LINK_CSS = css`
 
   &:hover {
     color: white;
+
     background: ${colors.brand.main};
     border: 2px solid ${rgba(tint(0.8, colors.brand.main), 0.5)};
 
     box-shadow: 0 2px 15px ${rgba(colors.brand.main, 0.5)};
-    transform: translateY(-2px);
-
     text-shadow: 0 2px 4px ${rgba('black', 0.25)};
+
+    transform: translateY(-2px);
   }
 
   &:focus {
-    outline: none;
     border: 2px solid ${rgba(tint(0.75, colors.brand.main), 0.5)};
+
+    outline: none;
   }
 
   &:active {
