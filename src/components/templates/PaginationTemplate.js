@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
+import styled from 'styled-components'
 import Link from 'gatsby-link'
+
+import MiniPostCard from '../MiniPostCard'
 
 // -------------------------------------------------------------
 // Components.
@@ -12,6 +15,27 @@ const PaginationLink = ({isTextOnly, url, children}) => {
     return <Link to={url}>{children}</Link>
   }
 }
+
+const Grid = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
+
+const GridItem = styled.li`
+  width: 250px;
+  margin-bottom: 3rem;
+
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+`
+
+// -------------------------------------------------------------
+// Export.
+// -------------------------------------------------------------
 
 export default ({data, pathContext}) => {
   const {group, index, first, last, pageCount} = pathContext
@@ -31,15 +55,15 @@ export default ({data, pathContext}) => {
         </PaginationLink>
       </p>
 
-      {group.map(({node}) => (
-        <article key={node.id}>
-          <div>
-            <span>{node.frontmatter.date} </span>
-            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-          </div>
-          <div>{node.excerpt}</div>
-        </article>
-      ))}
+      <Grid>
+        {group.map(({node}) => (
+          <GridItem key={node.id}>
+            <Link to={node.fields.slug}>
+              <MiniPostCard {...node} />
+            </Link>
+          </GridItem>
+        ))}
+      </Grid>
     </div>
   )
 }
