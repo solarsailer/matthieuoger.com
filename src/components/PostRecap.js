@@ -7,7 +7,7 @@ import {colors} from '../styles/config'
 // Constants.
 // -------------------------------------------------------------
 
-const CARD_TRANSITION = 'all 0.2s ease-out'
+const TRANSITION = 'all 0.2s ease-out'
 
 // -------------------------------------------------------------
 // Components.
@@ -17,25 +17,25 @@ const CARD_TRANSITION = 'all 0.2s ease-out'
 // This allows us to create a shadow smaller than the box of the actual element.
 // The shadow is more distant and subtle.
 
-const CardWrapper = styled.div`
+const Wrapper = styled.div`
   position: relative;
   z-index: 1;
 
-  transition: ${CARD_TRANSITION};
+  transition: ${TRANSITION};
 
   &:hover {
     transform: translateY(-5px);
   }
 `
 
-const Card = styled.article`
+const Article = styled.article`
   padding: 2rem;
 
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 3px;
 
-  transition: ${CARD_TRANSITION};
+  transition: ${TRANSITION};
 
   &::before {
     content: '';
@@ -52,7 +52,7 @@ const Card = styled.article`
 
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 
-    transition: ${CARD_TRANSITION};
+    transition: ${TRANSITION};
   }
 
   &:hover {
@@ -108,8 +108,8 @@ const Excerpt = styled.p`
 
 export default ({frontmatter, excerpt}) => {
   return (
-    <CardWrapper>
-      <Card>
+    <Wrapper>
+      <Article>
         <Header>
           <Title>{frontmatter.title}</Title>
           <Date>{frontmatter.readableDate} </Date>
@@ -123,7 +123,7 @@ export default ({frontmatter, excerpt}) => {
             />
           </Content>
         )}
-      </Card>
-    </CardWrapper>
+      </Article>
+    </Wrapper>
   )
 }
