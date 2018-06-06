@@ -2,6 +2,8 @@
 date: "2016-04-01"
 
 title: Cats, taverns and cleaning systems
+
+excerpt: "Tarn Adams: <em>“It’s funny how I have popular bugs, right? You shouldn’t have popular bugs.”</em>"
 ---
 
 [Tarn Adams](http://www.pcgamer.com/dwarf-fortress-creator-on-how-hes-42-towards-simulating-existence/):
