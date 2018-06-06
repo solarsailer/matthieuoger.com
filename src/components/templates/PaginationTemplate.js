@@ -13,11 +13,11 @@ import PaginationController from '../PaginationController'
 
 function createGridItems(items) {
   return items.map(({node}) => (
-    <GridItem key={node.id}>
-      <Link to={node.fields.slug}>
+    <Item key={node.id}>
+      <StyledLink to={node.fields.slug}>
         <MiniPostCard {...node} />
-      </Link>
-    </GridItem>
+      </StyledLink>
+    </Item>
   ))
 }
 
@@ -30,13 +30,13 @@ function divideContent(items, {isFirstPage, splitAt}) {
       <Fragment>
         <Posts>
           {main.map(({node}) => (
-            <li key={node.id}>
+            <MainItem key={node.id}>
               <Post
                 title={node.frontmatter.title}
                 date={node.frontmatter.readableDate}
                 content={node.html}
               />
-            </li>
+            </MainItem>
           ))}
         </Posts>
         <Grid>{createGridItems(rest)}</Grid>
@@ -55,29 +55,24 @@ const Pagination = styled.div`
   padding: 5rem 0;
 `
 
-const Posts = styled.ul`
-  li {
-    margin-bottom: 3rem;
-  }
-`
+const Posts = styled.ul``
 
 const Grid = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
   margin-bottom: 0;
 `
 
-const GridItem = styled.li`
-  width: 250px;
-  margin-bottom: 3rem;
+const MainItem = styled.li`
+  margin-bottom: 4rem;
+`
 
-  a {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-  }
+const Item = styled.li`
+  margin-bottom: 2rem;
+`
+
+const StyledLink = styled(Link)`
+  display: block;
+  color: inherit;
+  text-decoration: none;
 `
 
 // -------------------------------------------------------------
