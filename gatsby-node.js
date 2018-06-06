@@ -49,7 +49,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
       edges: result.data.allMarkdownRemark.edges,
       createPage: createPage,
       pageTemplate: 'src/components/templates/PaginationTemplate.js',
-      pageLength: 10,
+      pageLength: 9,
       pathPrefix: 'blog',
       context: {}
     })
@@ -89,6 +89,7 @@ const GET_ALL_POSTS = `{
           title
           date
           redirectFrom
+          excerpt
         }
         fields {
           path
