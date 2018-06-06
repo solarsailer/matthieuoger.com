@@ -10,6 +10,7 @@ import {colors} from '../styles/config'
 import {siteNavigation} from '../../content/config/site-navigation'
 
 import avatar from '../../content/images/avatar-black-white.jpg'
+import backgroundImage from '../../content/images/background.jpg'
 
 // -------------------------------------------------------------
 // Constants.
@@ -22,16 +23,19 @@ const HOME_BREAKPOINT = 800
 // -------------------------------------------------------------
 
 const Container = styled.div`
+  color: white;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   min-height: 100vh;
-
-  color: white;
-
   padding: 4rem 2rem;
+
+  /* Add transparent background. */
+  background: url(${backgroundImage}) bottom center;
+  background-size: cover;
 `
 
 // -------------------------------------------------------------
