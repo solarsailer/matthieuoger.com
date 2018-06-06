@@ -88,6 +88,7 @@ const GET_ALL_POSTS = `{
           path
           title
           date
+          readableDate: date(formatString: "DD MMMM YYYY")
           redirectFrom
           excerpt
         }

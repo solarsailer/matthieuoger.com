@@ -112,7 +112,7 @@ export default ({frontmatter, excerpt}) => {
       <Card>
         <Header>
           <Title>{frontmatter.title}</Title>
-          <Date>{frontmatter.date} </Date>
+          <Date>{frontmatter.readableDate} </Date>
         </Header>
         {frontmatter.excerpt && (
           <Content>
