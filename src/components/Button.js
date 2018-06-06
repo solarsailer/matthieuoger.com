@@ -13,6 +13,7 @@ import {colors} from '../styles/config'
 
 const LINK_CSS = css`
   display: block;
+
   color: white;
   padding: 1rem 2rem;
   background: ${rgba(colors.brand.main, 0.2)};
@@ -58,6 +59,27 @@ const StyledExternalLink = styled.a`
   ${LINK_CSS};
 `
 
+export const DisabledButton = styled.span`
+  display: block;
+
+  padding: 1rem 2rem;
+
+  background: #ddd;
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+`
+
+export const DisabledButtonSmall = DisabledButton.extend`
+  padding: 4px 1rem 2px;
+
+  font-size: 0.8em;
+`
+
 export const Button = props => {
   if (props.external) {
     if (props.newTab) {
@@ -81,3 +103,8 @@ export const Button = props => {
     </StyledLink>
   )
 }
+
+export const ButtonSmall = styled(Button)`
+  padding: 4px 1rem 2px;
+  font-size: 0.8em;
+`
