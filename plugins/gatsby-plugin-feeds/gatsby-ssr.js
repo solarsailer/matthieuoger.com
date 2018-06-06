@@ -28,15 +28,13 @@ exports.onRenderBody = ({setHeadComponents}, pluginOptions) => {
     jsonPath = prefixWithSlash(jsonPath)
 
     return (
-      <Fragment>
+      <Fragment key={`gatsby-plugin-feeds-${i}`}>
         <link
-          key={`gatsby-plugin-feeds-${i}-atom`}
           rel="alternate"
           type="application/atom+xml"
           href={withPrefix(atomPath)}
         />
         <link
-          key={`gatsby-plugin-feeds-${i}-json`}
           rel="alternate"
           type="application/json"
           href={withPrefix(jsonPath)}
