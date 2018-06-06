@@ -96,6 +96,7 @@ const GET_ALL_POSTS = `{
           path
           slug
         }
+        html
       }
     }
   }

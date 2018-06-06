@@ -1,8 +1,23 @@
-import React, {Component} from 'react'
+import React, {Fragment} from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
+import Post from '../Post'
 import MiniPostCard from '../MiniPostCard'
+
+// -------------------------------------------------------------
+// Functions.
+// -------------------------------------------------------------
+
+function createGridItems(items) {
+  return items.map(({node}) => (
+    <GridItem key={node.id}>
+      <Link to={node.fields.slug}>
+        <MiniPostCard {...node} />
+      </Link>
+    </GridItem>
+  ))
+}
 
 // -------------------------------------------------------------
 // Components.
@@ -15,6 +30,12 @@ const PaginationLink = ({isTextOnly, url, children}) => {
     return <Link to={url}>{children}</Link>
   }
 }
+
+const Posts = styled.ul`
+  li {
+    margin-bottom: 3rem;
+  }
+`
 
 const Grid = styled.ul`
   display: flex;
@@ -43,6 +64,31 @@ export default ({data, pathContext}) => {
   const previous = index - 1 == 1 ? '' : (index - 1).toString()
   const next = (index + 1).toString()
 
+  let content
+  if (first) {
+    const big = group.slice(0, 3)
+    const small = group.slice(3)
+
+    content = (
+      <Fragment>
+        <Posts>
+          {big.map(({node}) => (
+            <li key={node.id}>
+              <Post
+                title={node.frontmatter.title}
+                date={node.frontmatter.readableDate}
+                content={node.html}
+              />
+            </li>
+          ))}
+        </Posts>
+        <Grid>{createGridItems(small)}</Grid>
+      </Fragment>
+    )
+  } else {
+    content = <Grid>{createGridItems(group)}</Grid>
+  }
+
   return (
     <div>
       <p>
@@ -55,15 +101,7 @@ export default ({data, pathContext}) => {
         </PaginationLink>
       </p>
 
-      <Grid>
-        {group.map(({node}) => (
-          <GridItem key={node.id}>
-            <Link to={node.fields.slug}>
-              <MiniPostCard {...node} />
-            </Link>
-          </GridItem>
-        ))}
-      </Grid>
+      {content}
     </div>
   )
 }
