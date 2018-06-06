@@ -19,7 +19,8 @@ const Article = styled.article`
   padding: 5rem;
 
   background: white;
-  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
 
   &::before {
     content: '';
