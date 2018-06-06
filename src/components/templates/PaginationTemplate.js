@@ -5,16 +5,7 @@ import {rgba, shade} from 'polished'
 
 import Post from '../Post'
 import MiniPostCard from '../MiniPostCard'
-import {ButtonSmall, DisabledButtonSmall} from '../Button'
-
-import {colors} from '../../styles/config'
-
-// -------------------------------------------------------------
-// Constants.
-// -------------------------------------------------------------
-
-// const PAGINATION_BORDER = rgba(shade(0.9, colors.brand.main), 0.5)
-const PAGINATION_BORDER = rgba('black', 0.1)
+import PaginationController from '../PaginationController'
 
 // -------------------------------------------------------------
 // Functions.
@@ -30,9 +21,39 @@ function createGridItems(items) {
   ))
 }
 
+function divideContent(items, {isFirstPage, splitAt}) {
+  if (isFirstPage) {
+    const main = items.slice(0, splitAt)
+    const rest = items.slice(splitAt)
+
+    return (
+      <Fragment>
+        <Posts>
+          {main.map(({node}) => (
+            <li key={node.id}>
+              <Post
+                title={node.frontmatter.title}
+                date={node.frontmatter.readableDate}
+                content={node.html}
+              />
+            </li>
+          ))}
+        </Posts>
+        <Grid>{createGridItems(rest)}</Grid>
+      </Fragment>
+    )
+  }
+
+  return <Grid>{createGridItems(items)}</Grid>
+}
+
 // -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
+
+const Pagination = styled.div`
+  padding: 5rem 0;
+`
 
 const Posts = styled.ul`
   li {
@@ -44,6 +65,8 @@ const Grid = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  margin-bottom: 0;
 `
 
 const GridItem = styled.li`
@@ -57,65 +80,6 @@ const GridItem = styled.li`
   }
 `
 
-const PaginationLink = ({url, children, isTextOnly}) => {
-  if (isTextOnly) {
-    return <DisabledButtonSmall>{children}</DisabledButtonSmall>
-  } else {
-    return <ButtonSmall url={url}>{children}</ButtonSmall>
-  }
-}
-
-const PaginationContainer = styled.div`
-  display: flex;
-  justify-content: center;
-
-  :first-child {
-    margin-bottom: 5rem;
-  }
-
-  :last-child {
-    margin-top: 5rem;
-  }
-
-  span {
-    width: 150px;
-  }
-
-  a {
-    display: inline-block;
-    width: 150px;
-    border-radius: 0;
-  }
-
-  span:first-child,
-  a:first-child {
-    border-right: 2px solid ${PAGINATION_BORDER};
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-
-  span:last-child,
-  a:last-child {
-    border-left: 2px solid ${PAGINATION_BORDER};
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-`
-
-const Pagination = ({isFirstPage, isLastPage, previousUrl, nextUrl}) => {
-  return (
-    <PaginationContainer>
-      <PaginationLink isTextOnly={isFirstPage} url={`/blog/${previousUrl}`}>
-        ← Previous
-      </PaginationLink>
-      <ButtonSmall url="/archive/">Archive</ButtonSmall>
-      <PaginationLink isTextOnly={isLastPage} url={`/blog/${nextUrl}`}>
-        Next →
-      </PaginationLink>
-    </PaginationContainer>
-  )
-}
-
 // -------------------------------------------------------------
 // Export.
 // -------------------------------------------------------------
@@ -126,48 +90,27 @@ export default ({data, pathContext}) => {
   const previous = index - 1 == 1 ? '' : (index - 1).toString()
   const next = (index + 1).toString()
 
-  let content
-  if (first) {
-    const big = group.slice(0, 3)
-    const small = group.slice(3)
-
-    content = (
-      <Fragment>
-        <Posts>
-          {big.map(({node}) => (
-            <li key={node.id}>
-              <Post
-                title={node.frontmatter.title}
-                date={node.frontmatter.readableDate}
-                content={node.html}
-              />
-            </li>
-          ))}
-        </Posts>
-        <Grid>{createGridItems(small)}</Grid>
-      </Fragment>
-    )
-  } else {
-    content = <Grid>{createGridItems(group)}</Grid>
-  }
+  const content = divideContent(group, {isFirstPage: first, splitAt: 3})
 
   return (
     <div>
-      <Pagination
+      <PaginationController
         previousUrl={previous}
         nextUrl={next}
         isFirstPage={first}
         isLastPage={last}
       />
 
-      {content}
+      <Pagination>{content}</Pagination>
 
-      <Pagination
-        previousUrl={previous}
-        nextUrl={next}
-        isFirstPage={first}
-        isLastPage={last}
-      />
+      {group.length > 3 && (
+        <PaginationController
+          previousUrl={previous}
+          nextUrl={next}
+          isFirstPage={first}
+          isLastPage={last}
+        />
+      )}
     </div>
   )
 }
