@@ -1,31 +1,33 @@
 import React from 'react'
+import styled from 'styled-components'
 import Link from 'gatsby-link'
+
+import PostRecap from '../components/PostRecap'
 
 // -------------------------------------------------------------
 // Component.
 // -------------------------------------------------------------
 
-function mapNode({fields, id, excerpt, frontmatter}) {
-  return (
-    <li key={id}>
-      <h2>
-        <Link to={fields.path}>{frontmatter.title}</Link>{' '}
-        <span>{frontmatter.date}</span>
-      </h2>
-      <div>
-        <p>{excerpt}</p>
-      </div>
-    </li>
-  )
-}
+const List = styled.ul`
+  margin-bottom: 0;
+`
 
 export default ({data}) => {
   const edges = data.allMarkdownRemark.edges
 
   return (
     <div>
-      <Link to="/">Home</Link>
-      <ul>{edges.map(({node}) => mapNode(node))}</ul>
+      <List>
+        {edges.map(({node}) => (
+          <li key={node.id}>
+            <PostRecap
+              url={node.fields.path}
+              title={node.frontmatter.title}
+              date={node.frontmatter.readableDate}
+            />
+          </li>
+        ))}
+      </List>
     </div>
   )
 }
@@ -42,7 +44,8 @@ export const POSTS_LIST_QUERY = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM YYYY")
+            date
+            readableDate: date(formatString: "DD MMMM YYYY")
           }
           fields {
             path
