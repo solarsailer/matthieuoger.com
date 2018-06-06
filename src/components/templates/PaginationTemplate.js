@@ -1,9 +1,20 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import {rgba, shade} from 'polished'
 
 import Post from '../Post'
 import MiniPostCard from '../MiniPostCard'
+import {ButtonSmall, DisabledButtonSmall} from '../Button'
+
+import {colors} from '../../styles/config'
+
+// -------------------------------------------------------------
+// Constants.
+// -------------------------------------------------------------
+
+// const PAGINATION_BORDER = rgba(shade(0.9, colors.brand.main), 0.5)
+const PAGINATION_BORDER = rgba('black', 0.1)
 
 // -------------------------------------------------------------
 // Functions.
@@ -22,14 +33,6 @@ function createGridItems(items) {
 // -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
-
-const PaginationLink = ({isTextOnly, url, children}) => {
-  if (isTextOnly) {
-    return children
-  } else {
-    return <Link to={url}>{children}</Link>
-  }
-}
 
 const Posts = styled.ul`
   li {
@@ -53,6 +56,66 @@ const GridItem = styled.li`
     text-decoration: none;
   }
 `
+
+const PaginationLink = ({url, children, isTextOnly}) => {
+  if (isTextOnly) {
+    return <DisabledButtonSmall>{children}</DisabledButtonSmall>
+  } else {
+    return <ButtonSmall url={url}>{children}</ButtonSmall>
+  }
+}
+
+const PaginationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  :first-child {
+    margin-bottom: 5rem;
+  }
+
+  :last-child {
+    margin-top: 5rem;
+  }
+
+  span {
+    width: 150px;
+  }
+
+  a {
+    display: inline-block;
+    width: 150px;
+    border-radius: 0;
+    background: ${rgba(colors.brand.main, 0.9)};
+  }
+
+  span:first-child,
+  a:first-child {
+    border-right: 2px solid ${PAGINATION_BORDER};
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  span:last-child,
+  a:last-child {
+    border-left: 2px solid ${PAGINATION_BORDER};
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+`
+
+const Pagination = ({isFirstPage, isLastPage, previousUrl, nextUrl}) => {
+  return (
+    <PaginationContainer>
+      <PaginationLink isTextOnly={isFirstPage} url={`/blog/${previousUrl}`}>
+        ← Previous
+      </PaginationLink>
+      <ButtonSmall url="/archive/">Archive</ButtonSmall>
+      <PaginationLink isTextOnly={isLastPage} url={`/blog/${nextUrl}`}>
+        Next →
+      </PaginationLink>
+    </PaginationContainer>
+  )
+}
 
 // -------------------------------------------------------------
 // Export.
@@ -91,17 +154,21 @@ export default ({data, pathContext}) => {
 
   return (
     <div>
-      <p>
-        <PaginationLink isTextOnly={first} url={`/blog/${previous}`}>
-          ← Previous
-        </PaginationLink>{' '}
-        —{' '}
-        <PaginationLink isTextOnly={last} url={`/blog/${next}`}>
-          Next →
-        </PaginationLink>
-      </p>
+      <Pagination
+        previousUrl={previous}
+        nextUrl={next}
+        isFirstPage={first}
+        isLastPage={last}
+      />
 
       {content}
+
+      <Pagination
+        previousUrl={previous}
+        nextUrl={next}
+        isFirstPage={first}
+        isLastPage={last}
+      />
     </div>
   )
 }
