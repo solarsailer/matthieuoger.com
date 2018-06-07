@@ -3,7 +3,9 @@ date: "2015-01-15"
 
 title: Something Slightly Less Terrible
 
-excerpt: "Loren Brichter: <em>“The more I learn, the more terrible I think programming is. I’d love to rip everything up and start over.”</em>"
+excerptQuote:
+  name: "Loren Brichter"
+  quote: "The more I learn, the more terrible I think programming is. I’d love to rip everything up and start over."
 ---
 
 [Fantastic interview of Loren Brichter on objc.io](http://www.objc.io/issue-20/loren-brichter.html):
