@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 
 import PostRecap from '../components/PostRecap'
 import HeaderRow from '../components/HeaderRow'
+
+import PageTitle from '../components/PageTitle'
 
 // -------------------------------------------------------------
 // Functions.
@@ -68,9 +69,10 @@ export default ({data}) => {
   const nodes = data.allMarkdownRemark.edges.map(x => x.node)
 
   return (
-    <div>
+    <Fragment>
+      <PageTitle>Archive</PageTitle>
       <List>{convertAndAddHeaders(nodes)}</List>
-    </div>
+    </Fragment>
   )
 }
 
