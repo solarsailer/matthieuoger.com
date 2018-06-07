@@ -2,9 +2,13 @@
 date: "2013-06-28"
 
 title: The search for a Google Reader alternative
+
+excerptQuote:
+  name: "Rian Van Der Merwe"
+  quote: "But I do feel like I now know way too much about the RSS reader landscape than I every wanted to. Thanks, Google."
 ---
 
-[Rian van der Merwe, my Google Reader replacement setup](http://www.elezea.com/2013/06/google-reader-replacement/):
+[Rian Van Der Merwe, my Google Reader replacement setup](http://www.elezea.com/2013/06/google-reader-replacement/):
 
 > But I do feel like I now know way too much about the RSS reader landscape than I every wanted to. Thanks, Google.
 

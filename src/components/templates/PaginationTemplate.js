@@ -20,6 +20,7 @@ function createGridItems(items) {
         title={node.frontmatter.title}
         date={node.frontmatter.readableDate}
         excerpt={node.frontmatter.excerpt}
+        excerptQuote={node.frontmatter.excerptQuote}
       />
     </Item>
   ))

@@ -130,7 +130,7 @@ const Excerpt = styled.p`
 // Export.
 // -------------------------------------------------------------
 
-export default ({url, title, date, excerpt}) => {
+export default ({url, title, date, excerpt, excerptQuote}) => {
   return (
     <BlockLink to={url}>
       <Wrapper>
@@ -146,6 +146,13 @@ export default ({url, title, date, excerpt}) => {
                   __html: excerpt
                 }}
               />
+            </Content>
+          )}
+          {excerptQuote && (
+            <Content>
+              <Excerpt>
+                {excerptQuote.name}: <em>“{excerptQuote.quote}”</em>
+              </Excerpt>
             </Content>
           )}
         </Article>
