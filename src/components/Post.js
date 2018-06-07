@@ -66,7 +66,7 @@ const Content = styled.div`
 // Default.
 // -------------------------------------------------------------
 
-export default ({title, date, content}) => {
+export default ({url, title, date, content}) => {
   return (
     <Wrapper>
       <Article>

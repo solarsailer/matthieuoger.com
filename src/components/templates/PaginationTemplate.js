@@ -36,6 +36,7 @@ function divideContent(items, {isFirstPage, splitAt}) {
           {main.map(({node}) => (
             <MainItem key={node.id}>
               <Post
+                url={node.fields.path}
                 title={node.frontmatter.title}
                 date={node.frontmatter.readableDate}
                 content={node.html}

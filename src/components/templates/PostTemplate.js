@@ -13,6 +13,7 @@ export default function PostTemplate({data}) {
   const {
     markdownRemark: {
       frontmatter: {title, readableDate, showPageTitle},
+      fields: {path},
       html
     },
     site: {siteMetadata}
@@ -28,10 +29,10 @@ export default function PostTemplate({data}) {
       {showPageTitle ? (
         <Fragment>
           <PageTitle>{title}</PageTitle>
-          <Post date={readableDate} content={html} />
+          <Post url={path} date={readableDate} content={html} />
         </Fragment>
       ) : (
-        <Post title={title} date={readableDate} content={html} />
+        <Post url={path} title={title} date={readableDate} content={html} />
       )}
     </Fragment>
   )
@@ -56,6 +57,9 @@ export const POST_QUERY = graphql`
         readableDate: date(formatString: "DD MMMM YYYY")
         title
         showPageTitle
+      }
+      fields {
+        path
       }
     }
   }
