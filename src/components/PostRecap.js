@@ -48,7 +48,8 @@ const Article = styled.article`
   transition: ${TRANSITION};
   transition-property: color, background-color;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
 
     display: block;
@@ -64,20 +65,31 @@ const Article = styled.article`
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 
     transition: ${TRANSITION};
-    transition-property: left, right, box-shadow;
+    transition-property: opacity;
+  }
+
+  &::after {
+    left: 0;
+    right: 0;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
   }
 
   &:hover {
     color: white;
     background: ${colors.brand.main};
 
+    /* Swap between ::before and ::after pseudo.
+     * Its gives more fps than transitioning the shadow/left/right directly.
+     */
     &::before {
-      /* Increase the shadow height and force. */
+      opacity: 0;
+    }
 
-      left: 0;
-      right: 0;
-
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    &::after {
+      opacity: 1;
     }
   }
 `
