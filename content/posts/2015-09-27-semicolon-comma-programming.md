@@ -2,6 +2,8 @@
 date: "2015-09-27"
 
 title: Compilation by a thousand semicolons and commas
+
+excerpt: "Something I like in most modern programming languages is that they tend to ditch semicolons completely — semicolons are a nuisance, a waste of time, a source of (easily fixable) errors, ugly and unnecessary."
 ---
 
 Something I like in most modern programming languages is that they tend to ditch semicolons completely.

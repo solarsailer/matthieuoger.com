@@ -10,9 +10,7 @@ excerptQuote:
 
 [Fascinating post-mortem of Quantum, by its designer, Eric Zimmerman](http://boardgamegeek.com/blogpost/24083/designer-diary-cruel-cruel-galaxy-or-designing-qua):
 
-> Quantum is a strategy game for two through four players that incorporates elements of tactics, resource management, and empire building. Players each begin the game with a small fleet of three starships on a customizable map built of modular tiles. Your goal is to expand by building Quantum Cubes on planets, along the way growing your fleet and evolving its abilities.
->
-> […]
+> Quantum is a strategy game for two through four players that incorporates elements of tactics, resource management, and empire building. Players each begin the game with a small fleet of three starships on a customizable map built of modular tiles. Your goal is to expand by building Quantum Cubes on planets, along the way growing your fleet and evolving its abilities. […]
 >
 > Another element that opened up the possibilities of the game during this early prototyping period was the addition of special power cards. While I was working on it, I remember seeing a talk at the Game Developers Conference by Rob Pardo, one of the lead designers of World of Warcraft. According to Rob, one of the philosophies at his company Blizzard was to make the player feel overpowered. According to Rob, special abilities and power-ups should feel mighty and spectacular, rather than just being some kind of incremental stat improvement.
 >
@@ -20,13 +18,9 @@ excerptQuote:
 >
 > The challenge of powerful cards, of course, is balancing them. […]
 >
-> Designing the right mix of cards came down to good old-fashioned balancing and testing. There are a number of heuristics I tried to use in designing the cards to be balanced. For example, no card simply gives players an extra fourth action each turn; instead, some cards give you an extra action, but that action is limited, such as a free move that is only one space. There are also cards that do give you a completely open-ended extra action, but only if certain conditions are met, such as if you have more ships on the map than any other player.
+> Designing the right mix of cards came down to good old-fashioned balancing and testing. There are a number of heuristics I tried to use in designing the cards to be balanced. For example, no card simply gives players an extra fourth action each turn; instead, some cards give you an extra action, but that action is limited, such as a free move that is only one space. There are also cards that do give you a completely open-ended extra action, but only if certain conditions are met, such as if you have more ships on the map than any other player. […]
 >
-> […]
->
->  It seemed hopeless; I had designed a game with a combat system that no one wanted to use! The solution to this problem was to directly link combat to winning the game.
->
-> […]
+>  It seemed hopeless; I had designed a game with a combat system that no one wanted to use! The solution to this problem was to directly link combat to winning the game. […]
 >
 > One strong focus of our work was the language of Quantum: the terms in the rules, the names of the cards and units, and the other words we used in the game. In early prototypes, the titles of the advance cards were more technological: "Ferocious", the card that gives you a combat bonus, was originally called "Armor", while "Energetic", which gives you a movement bonus, was titled "Propulsion".
 >

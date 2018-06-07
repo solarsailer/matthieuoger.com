@@ -2,6 +2,10 @@
 date: "2013-08-14"
 
 title: Animations, interactions, transitions
+
+excerptQuote:
+  name: "Pasquale D’Silva"
+  quote: "It seems crazy to me that more people don’t think about interfaces with respect to the dimension of time. Motion can provide so much information!"
 ---
 
 [Transitional Interfaces](https://medium.com/design-ux/926eb80d64e3):

@@ -2,6 +2,8 @@
 date: "2015-09-18"
 
 title: What makes an indie hit?
+
+exceprt: "Should every game have a hook, a "gimmick", a unique twist?"
 ---
 
 ["What Makes an Indie Hit?: How to Choose the Right Design"](http://www.gamasutra.com/blogs/RyanClark/20150917/253842/What_Makes_an_Indie_Hit_How_to_Choose_the_Right_Design.php) by Ryan Clark (of [Crypt of the NecroDancer](http://necrodancer.com/)) is an interesting read:

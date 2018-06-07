@@ -2,6 +2,8 @@
 date: "2016-03-17"
 
 title: VR is not the future
+
+excerpt: "Right now, journalists and tech companies are all buzzing and craving for VR. When the first officially released headsets will be available, I expect a massive flop. As soon as the novelty wears off, people will just forget it. Because outside of some narrow use cases, it's just not practical or invisible enough."
 ---
 
 <small>
