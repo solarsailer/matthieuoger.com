@@ -29,6 +29,7 @@ const Wrapper = styled.div`
   position: relative;
   z-index: 1;
 
+  will-change: transform;
   transition: ${TRANSITION};
   transition-property: transform;
 
