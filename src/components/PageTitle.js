@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 import {colors} from '../styles/config'
+import invisibleLinkStyles from '../styles/components/invisible-link'
 
 // -------------------------------------------------------------
 // Default
@@ -38,15 +39,7 @@ const Title = styled.h1`
     background: linear-gradient(to right, #e2e1e1, ${colors.page.background});
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease-in;
-  }
-
-  a:hover {
-    color: ${colors.brand.main};
-  }
+  ${invisibleLinkStyles};
 `
 
 export default ({url, children}) => {
