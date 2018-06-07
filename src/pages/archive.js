@@ -9,10 +9,6 @@ import HeaderRow from '../components/HeaderRow'
 // Functions.
 // -------------------------------------------------------------
 
-function convertEdgeToNode(x) {
-  return x.node
-}
-
 function getYear(node) {
   return new Date(node.frontmatter.date).getUTCFullYear()
 }
@@ -37,7 +33,7 @@ function createHeaderRow(year) {
   )
 }
 
-function groupByYear(items) {
+function convertAndAddHeaders(items) {
   return items.reduce((acc, x, i) => {
     const year = getYear(x)
 
@@ -69,11 +65,11 @@ const List = styled.ul`
 `
 
 export default ({data}) => {
-  const edges = data.allMarkdownRemark.edges
+  const nodes = data.allMarkdownRemark.edges.map(x => x.node)
 
   return (
     <div>
-      <List>{groupByYear(edges.map(convertEdgeToNode))}</List>
+      <List>{convertAndAddHeaders(nodes)}</List>
     </div>
   )
 }
