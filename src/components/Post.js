@@ -52,6 +52,8 @@ const Title = styled.h1`
   margin-bottom: 0.5rem;
   font-size: 1.6em;
   font-weight: normal;
+
+  ${invisibleLinkStyles};
 `
 
 const Subtitle = styled.h2`
@@ -91,7 +93,9 @@ export default ({url, title, date, content}) => {
       <Article>
         {title && (
           <Header>
-            <Title>{title}</Title>
+            <Title>
+              <Link to={url}>{title}</Link>
+            </Title>
             <Subtitle>{date}</Subtitle>
           </Header>
         )}
