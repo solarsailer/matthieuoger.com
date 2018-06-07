@@ -32,4 +32,7 @@ export const colors = {
   }
 }
 
-export const breakpoints = {}
+export const breakpoints = {
+  xsmall: 550,
+  small: 700
+}
