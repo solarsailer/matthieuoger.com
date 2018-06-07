@@ -70,10 +70,12 @@ export default ({title, date, content}) => {
   return (
     <Wrapper>
       <Article>
-        <Header>
-          <Title>{title}</Title>
-          <Subtitle>{date}</Subtitle>
-        </Header>
+        {title && (
+          <Header>
+            <Title>{title}</Title>
+            <Subtitle>{date}</Subtitle>
+          </Header>
+        )}
         <Content dangerouslySetInnerHTML={{__html: content}} />
       </Article>
     </Wrapper>
