@@ -87,7 +87,7 @@ export default ({data, pathContext}) => {
 
   return (
     <Fragment>
-      <PageTitle>Articles</PageTitle>
+      <PageTitle url="/blog/">Articles</PageTitle>
 
       <PaginationController
         previousUrl={previous}
