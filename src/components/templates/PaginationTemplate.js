@@ -1,11 +1,10 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
 
-import {rgba, shade} from 'polished'
-
 import Post from '../Post'
 import PostRecap from '../PostRecap'
 
+import PageTitle from '../PageTitle'
 import PaginationController from '../PaginationController'
 
 // -------------------------------------------------------------
@@ -87,7 +86,9 @@ export default ({data, pathContext}) => {
   const content = divideContent(group, {isFirstPage: first, splitAt: 3})
 
   return (
-    <div>
+    <Fragment>
+      <PageTitle>Articles</PageTitle>
+
       <PaginationController
         previousUrl={previous}
         nextUrl={next}
@@ -105,6 +106,6 @@ export default ({data, pathContext}) => {
           isLastPage={last}
         />
       )}
-    </div>
+    </Fragment>
   )
 }
