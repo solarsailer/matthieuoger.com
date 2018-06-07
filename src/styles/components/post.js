@@ -166,11 +166,18 @@ export default css`
     color: ${rgba(colors.brand.main, 0.2)};
 
     max-width: 80%;
+    height: 1px;
     margin: 5rem 0 6rem;
     margin-left: auto;
     margin-right: auto;
 
+    background: linear-gradient(
+      to right,
+      ${colors.page.background},
+      #e0e0e0,
+      ${colors.page.background}
+    );
+
     border: none;
-    border-bottom: 3px solid currentColor;
   }
 `
