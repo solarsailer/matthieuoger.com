@@ -199,9 +199,6 @@ const AnimatedHello = withMountedAnimator(
 // -------------------------------------------------------------
 
 export default () => {
-  const withoutAboutNavigation = siteNavigation.filter(x => x.id !== 'about')
-  const aboutNavigation = siteNavigation.filter(x => x.id === 'about')
-
   return (
     <Header className="page-header" id="page_header">
       <GlobalMenu>
@@ -212,6 +209,7 @@ export default () => {
             <HelloName>Matthieu Oger</HelloName>
           </AnimatedHello>
         </GlobalTitle>
+
         <GlobalList>
           <li>
             <MenuButton url="/about/" activeClassName="selected">
