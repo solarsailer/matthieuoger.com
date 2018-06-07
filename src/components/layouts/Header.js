@@ -1,7 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import Link from 'gatsby-link'
 import {rgba, shade, tint} from 'polished'
+import posed from 'react-pose'
+import {random} from 'lodash'
 
 import {getIcon} from '../Icon'
 
@@ -9,6 +11,8 @@ import {colors} from '../../styles/config'
 import {siteNavigation} from '../../../content/config/site-navigation'
 
 import {Button} from '../Button'
+
+import {withMountedAnimator} from '../MountedAnimator'
 
 // -------------------------------------------------------------
 // Constants.
@@ -78,7 +82,7 @@ const GlobalTitle = styled.h1`
   line-height: normal;
 
   a {
-    display: block;
+    display: inline-block;
 
     color: #888;
     text-decoration: none;
@@ -133,6 +137,64 @@ const GlobalList = styled.ul`
 `
 
 // -------------------------------------------------------------
+// Hello.
+// -------------------------------------------------------------
+
+const Hello = styled.aside`
+  position: absolute;
+  left: 52px;
+
+  color: ${rgba(colors.page.content, 0.5)};
+
+  font-size: 0.62em;
+  font-weight: normal;
+  text-transform: none;
+
+  @media (max-width: ${BREAKPOINT}px) {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    margin-left: 1rem;
+  }
+`
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+`
+
+const HelloElement = styled.span`
+  opacity: 0;
+`
+
+const HelloPrefix = HelloElement.extend`
+  animation: ${fadeOut} linear 150s;
+`
+
+const HelloName = HelloElement.extend`
+  color: ${colors.page.content};
+  animation: ${fadeOut} linear 180s;
+`
+
+const AnimatedHello = withMountedAnimator(
+  posed(Hello)({
+    unmounted: {
+      x: -100,
+      opacity: 0
+    },
+    mounted: {
+      x: 0,
+      opacity: 1
+    }
+  })
+)
+
+// -------------------------------------------------------------
 // Export.
 // -------------------------------------------------------------
 
@@ -145,6 +207,10 @@ export default () => {
       <GlobalMenu>
         <GlobalTitle>
           <Link to="/">{getIcon('site', {color: 'white'})}  SolarSailer</Link>
+          <AnimatedHello duration={random(500, 1000)}>
+            <HelloPrefix>Hello, I'm</HelloPrefix>{' '}
+            <HelloName>Matthieu Oger</HelloName>
+          </AnimatedHello>
         </GlobalTitle>
         <GlobalList>
           <li>
