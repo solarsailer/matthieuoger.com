@@ -124,6 +124,12 @@ const Date = styled.p`
 
 const Excerpt = styled.p`
   font-size: 0.8em;
+
+  .read-more-hint {
+    color: ${colors.brand.main}
+    font-style: italic;
+    font-size: 0.75em;
+  }
 `
 
 // -------------------------------------------------------------
@@ -143,7 +149,8 @@ export default ({url, title, date, excerpt, excerptQuote}) => {
             <Content>
               <Excerpt
                 dangerouslySetInnerHTML={{
-                  __html: excerpt
+                  __html:
+                    excerpt + ' <span class="read-more-hint">→ Read More</span>'
                 }}
               />
             </Content>
@@ -151,7 +158,8 @@ export default ({url, title, date, excerpt, excerptQuote}) => {
           {excerptQuote && (
             <Content>
               <Excerpt>
-                {excerptQuote.name}: <em>“{excerptQuote.quote}”</em>
+                {excerptQuote.name}: <em>“{excerptQuote.quote}”</em>{' '}
+                <span className="read-more-hint">→ Read More</span>
               </Excerpt>
             </Content>
           )}
