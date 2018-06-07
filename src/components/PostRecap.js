@@ -30,6 +30,7 @@ const Wrapper = styled.div`
   z-index: 1;
 
   transition: ${TRANSITION};
+  transition-property: transform;
 
   &:hover {
     transform: translateY(-5px);
@@ -44,6 +45,7 @@ const Article = styled.article`
   border-radius: 3px;
 
   transition: ${TRANSITION};
+  transition-property: color, background-color;
 
   &::before {
     content: '';
@@ -61,6 +63,7 @@ const Article = styled.article`
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 
     transition: ${TRANSITION};
+    transition-property: left, right, box-shadow;
   }
 
   &:hover {
