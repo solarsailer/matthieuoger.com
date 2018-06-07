@@ -148,11 +148,11 @@ export default css`
     padding-right: 3rem;
     padding-left: calc(3rem - 3px); /* Subtract left border. */
 
-    background: #f2f2f2;
+    background: #f1f1f1;
     border-radius: 5px;
-    border-left: 3px solid rgb(125, 125, 125);
+    border-left: 3px solid rgb(220, 220, 220);
 
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 1.45;
   }
 
