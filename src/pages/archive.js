@@ -92,7 +92,6 @@ export const POSTS_LIST_QUERY = graphql`
           fields {
             path
           }
-          excerpt
         }
       }
     }
