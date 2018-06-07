@@ -7,10 +7,8 @@ excerpt: "Right now, journalists and tech companies are all buzzing and craving 
 ---
 
 <small>
-This is a prediction. I may (must?) be completely wrong—after all, I hold an unpopular opinion and many tech companies seem to think otherwise.
-
-We'll see. ¯\\_(ツ)\_/¯
-<br><br>
+  <em>This is a prediction. I may (must?) be completely wrong—after all, I hold an unpopular opinion and many tech companies seem to think otherwise. We'll see.</em>‍ 🤷
+  <br><br>
 </small>
 
 [Virtual Reality](https://en.wikipedia.org/wiki/Virtual_reality) (or VR) is a fantasy that many geeks love. It's in books, in movies, in games. In our collective mind, virtual reality is like flying cars: it's a dream that we always envisioned for our future as an high tech society.
