@@ -119,6 +119,12 @@ export default css`
     }
   }
 
+  /* Images. */
+
+  img {
+    max-width: 100%;
+  }
+
   /* Links. */
 
   ${bodyLinkStyles};
