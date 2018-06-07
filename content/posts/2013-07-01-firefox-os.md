@@ -2,6 +2,10 @@
 date: "2013-07-01"
 
 title: Firefox OS
+
+excerptQuote:
+  name: "Benedict Evans"
+  quote: "When I hear people say how great Firefox OS is, they talk about operators, OEMs, litigation… and sometimes remember to mention users."
 ---
 
 Mozilla and Telefónica have announced a phone running Firefox OS this morning - the ZTE Open. It will cost $69.

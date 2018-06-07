@@ -3,7 +3,9 @@ date: "2015-09-15"
 
 title: Quantum post-mortem
 
-excerpt: "Eric Zimmerman: <em>“My goal was that every card should feel incredibly powerful – a potential game winner in the right situation. I loved seeing my playtesters' faces grow greedy as they read the cards, astonished at how good the powers seemed to be.”</em>"
+excerptQuote:
+  name: "Eric Zimmerman"
+  quote: "My goal was that every card should feel incredibly powerful – a potential game winner in the right situation. I loved seeing my playtesters' faces grow greedy as they read the cards, astonished at how good the powers seemed to be."
 ---
 
 [Fascinating post-mortem of Quantum, by its designer, Eric Zimmerman](http://boardgamegeek.com/blogpost/24083/designer-diary-cruel-cruel-galaxy-or-designing-qua):

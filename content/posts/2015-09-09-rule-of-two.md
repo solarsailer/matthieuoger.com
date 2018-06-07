@@ -3,7 +3,9 @@ date: "2015-09-09"
 
 title: Quote — CGP Grey, the rule of two
 
-excerpt: "CGP Grey: <em>“The rule of two is that two is one — and one is none.”</em>"
+excerptQuote:
+  name: "CGP Grey"
+  quote: "The rule of two is that two is one — and one is none."
 ---
 
 > The rule of two is that **two is one — and one is none.** This is applicable to so many things in your life. As a starting point, I often like to think of the rule of two with things that you have around the house. So, for example, if you have one roll of toilet paper, you really don't have any toilet paper. Because when that one runs out, you're in trouble. So you really need two rolls of toilet paper at all time. It's a redundancy rule, basically. It's where this comes from.
