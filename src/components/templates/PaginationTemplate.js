@@ -15,7 +15,7 @@ function createGridItems(items) {
   return items.map(({node}) => (
     <Item key={node.id}>
       <PostRecap
-        url={node.fields.slug}
+        url={node.fields.path}
         title={node.frontmatter.title}
         date={node.frontmatter.readableDate}
         excerpt={node.frontmatter.excerpt}
