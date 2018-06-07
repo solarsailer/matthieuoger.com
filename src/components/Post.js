@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import {rgba} from 'polished'
+import Link from 'gatsby-link'
 
 import {colors} from '../styles/config'
 import postStyles from '../styles/components/post'
+
+import invisibleLinkStyles from '../styles/components/invisible-link'
 
 // -------------------------------------------------------------
 // Components.
@@ -62,6 +65,22 @@ const Content = styled.div`
   ${postStyles};
 `
 
+const Footer = styled.footer`
+  padding-top: 5rem;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+`
+
+const Date = styled.p`
+  color: #aaa;
+  font-size: 0.75em;
+  text-align: center;
+
+  ${invisibleLinkStyles};
+`
+
 // -------------------------------------------------------------
 // Default.
 // -------------------------------------------------------------
@@ -77,6 +96,11 @@ export default ({url, title, date, content}) => {
           </Header>
         )}
         <Content dangerouslySetInnerHTML={{__html: content}} />
+        <Footer>
+          <Date>
+            <Link to={url}>{date}</Link>
+          </Date>
+        </Footer>
       </Article>
     </Wrapper>
   )
