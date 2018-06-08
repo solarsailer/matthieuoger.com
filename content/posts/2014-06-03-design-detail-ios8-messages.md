@@ -2,9 +2,11 @@
 date: "2014-06-03"
 
 title: Design detail in iOS 8 Messages
+
+excerpt: "One of the features that I wanted the most in iOS 8 was simple: Add a “Use Last Photo Taken” button in the Messages app."
 ---
 
-One of the features that I wanted the most in iOS 8 was simple: _Add a "Use Last Photo Taken" button in the Messages app_ (along with the current "Take Photo or Video" and "Choose Existing").
+One of the features that I wanted the most in iOS 8 was simple: add a _“Use Last Photo Taken”_ button in the Messages app (along with the current "Take Photo or Video" and "Choose Existing").
 
 <br>The idea was originally thought by [Neven Mrgan](http://mrgan.tumblr.com/post/12808983893/tweetbot-adds-last-photo-taken-feature) and later adopted by a lot of apps (Tweetbot, Slack, Droplr, etc.).
 
@@ -14,7 +16,9 @@ An example with Tweetbot 3:
 
 But it was still missing in the one place where it would definitely shine: Messages.
 
-<br>**No more.**
+**No more.**
+
+---
 
 The way it was added is brilliant. It's so simple that I don't know why it hasn't been done already (it might, I just don't know of an app that have done that).
 

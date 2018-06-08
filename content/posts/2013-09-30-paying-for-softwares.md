@@ -2,12 +2,16 @@
 date: "2013-09-30"
 
 title: Paying for softwares
+
+excerptQuote:
+  name: "Florian Kugler"
+  quote: "[People] might say otherwise when asked about, but their actions speak pretty clearly: A cup of coffee is worth more than almost every app on the store. That's a hard pill to swallow, but we should let it sink in. We pour all our creativity, time, and passion into creating basically worthless products."
 ---
 
 Florian Kugler about mobile apps in [Worth Less than a Cup of Coffee](http://floriankugler.com/blog/2013/9/30/worth-less-than-a-cup-of-coffee):
 
 > [People] might say otherwise when asked about, but their actions speak pretty clearly: A cup of coffee is worth more than almost every app on the store.
-
+>
 > That's a hard pill to swallow, but we should let it sink in. We pour all our creativity, time, and passion into creating basically worthless products.
 
 Recent events and the backlash [against Realmac with Clear for iOS 7](http://realmacsoftware.com/blog/some-changes-for-clear) are sad.

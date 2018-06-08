@@ -2,6 +2,10 @@
 date: "2013-10-22"
 
 title: How Designers Destroyed The World
+
+excerptQuote:
+  name: "Mike Monteiro"
+  quote: "There are professions more harmful than (industrial) design, but only a very few of them."
 ---
 
 Better late than never; I've managed to watch [How Designers Destroyed The World](https://vimeo.com/68470326) by Mike Monteiro.
@@ -25,5 +29,5 @@ When I talk about that with some of my friends, they think that I'm excessively 
 I will conclude with a quote from the talk:
 
 > There are professions more harmful than (industrial) design, **but only a very few of them.**
-
+>
 > — Victor Papanek _(modified by Mike Monteiro)_

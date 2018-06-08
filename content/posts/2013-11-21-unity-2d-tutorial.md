@@ -2,6 +2,8 @@
 date: "2013-11-21"
 
 title: Pixelnest — Unity 2D tutorial
+
+excerpt: "We cooked a complete tutorial about Unity and its new 2D tools. This tutorial covers the creation of a very small game from start to finish."
 ---
 
 During the last weeks, we ([Damien](http://dmayance.com/) and I) have cooked a complete tutorial about Unity and its new 2D tools. This tutorial covers the creation of a very small game from start to finish.

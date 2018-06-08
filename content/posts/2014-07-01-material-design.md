@@ -2,6 +2,8 @@
 date: "2014-07-01"
 
 title: Material Design
+
+excerpt: "<strong>Material Design</strong> is the new Google's design language. It looks promising and great. There are some nice ideas, akin to iOS 7, like depth (automatically integrated by a z-axis with live shadows rendering for developers) or transitions and animations as first-class citizens."
 ---
 
 I've finally watched the Material Design segment of the Google I/O 2014 keynote.
@@ -14,10 +16,8 @@ Bonus? A [comprehensive set of guidelines](http://www.google.com/design/) with a
 
 Unfortunately, there is some bullshit lines lurking inside the documentation…
 
-> Create a visual language that synthesizes classic principles of good design with the innovation and possibility of technology and science.
-
-> […]
-
+> Create a visual language that synthesizes classic principles of good design with the innovation and possibility of technology and science. […]
+>
 > A material metaphor is the unifying theory of a rationalized space and a system of motion. The material is grounded in tactile reality, inspired by the study of paper and ink, yet technologically advanced and open to imagination and magic.
 
 Please, oh please, don't let marketing people write technical papers.
