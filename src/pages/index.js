@@ -8,6 +8,8 @@ import SocialNavigation from '../components/SocialNavigation'
 
 import {colors} from '../styles/config'
 
+import {getWrappedIcon} from '../components/Icon'
+
 import avatar from '../../content/images/avatar-black-white.jpg'
 import backgroundImage from '../../content/images/background.jpg'
 
@@ -163,7 +165,13 @@ export default ({metadata}) => (
         <HomeButton url="/blog/">Articles</HomeButton>
       </li>
       <li>
-        <HomeButton url="/rss/">RSS</HomeButton>
+        <HomeButton url="/rss/">
+          {getWrappedIcon('rss', {
+            width: '13px',
+            height: '13px',
+            marginRight: '8px'
+          })}RSS
+        </HomeButton>
       </li>
     </Navigation>
 
