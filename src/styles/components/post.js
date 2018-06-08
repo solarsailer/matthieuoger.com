@@ -232,23 +232,30 @@ export default css`
     }
 
     li {
-      display: flex;
-      align-items: center;
+      position: relative;
       margin-bottom: 2rem;
-      padding: 0 2rem 2rem;
+      padding: 0 2rem 0;
       border-bottom: 1px solid ${rgba('black', 0.1)};
 
       &:last-of-type {
-        margin-bottom: 0;
+        margin-bottom: -2rem;
         padding-bottom: 0;
         border: none;
       }
 
-      > p {
-        margin-bottom: 0;
+      blockquote {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1.5rem;
+        background: #ddd;
+        border: none;
       }
 
-      > a {
+      .footnote-backref {
+        position: absolute;
+        top: 0;
+        right: -11px;
+
         margin-left: 2rem;
         padding: 6px 6px 3px;
         background: ${tint(0.4, colors.brand.main)};
