@@ -3,6 +3,7 @@ import {rgba, tint} from 'polished'
 
 import {colors} from '../config'
 import bodyLinkStyles from './body-link'
+import specialLinkStyles from './special-link'
 
 // -------------------------------------------------------------
 // Post Styles.
@@ -132,6 +133,7 @@ export default css`
   /* Links. */
 
   ${bodyLinkStyles};
+  ${specialLinkStyles};
 
   /* Lists. */
 
