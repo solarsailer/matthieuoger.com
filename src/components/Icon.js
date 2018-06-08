@@ -1,4 +1,5 @@
 import React, {Fragment} from 'React'
+import styled from 'styled-components'
 
 // -------------------------------------------------------------
 // Icons.
@@ -40,6 +41,28 @@ export function getIcon(name, props) {
       return <SpeakerDeckLineIcon {...props} />
   }
 }
+
+const IconWrapper = styled.span`
+  margin-left: ${props => (props.marginLeft ? props.marginLeft : 0)};
+  margin-right: ${props => (props.marginRight ? props.marginRight : 0)};
+
+  svg {
+    width: ${props => props.width};
+    height: ${props => props.height};
+  }
+
+  path {
+    stroke: currentColor;
+  }
+
+  circle {
+    fill: currentColor;
+  }
+`
+
+export const getWrappedIcon = (name, props) => (
+  <IconWrapper {...props}>{getIcon(name)}</IconWrapper>
+)
 
 // -------------------------------------------------------------
 // Solar Sailer.
