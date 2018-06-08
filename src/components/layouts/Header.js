@@ -150,10 +150,7 @@ const Hello = styled.aside`
   text-transform: none;
 
   @media (max-width: ${BREAKPOINT}px) {
-    display: inline-block;
-    position: relative;
-    left: 0;
-    margin-left: 1rem;
+    display: none;
   }
 `
 
