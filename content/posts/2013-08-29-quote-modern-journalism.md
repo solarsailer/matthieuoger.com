@@ -2,17 +2,19 @@
 date: "2013-08-29"
 
 title: Quote — Modern journalism
+
+excerptQuote:
+  name: "God"
+  quote: "Modern journalism is 90% reporting what people are saying on Twitter."
 ---
 
 This tweet could not better describe my feeling:
 
 <blockquote class="twitter-tweet">
+  <p>
+    Modern journalism is 90% reporting what people are saying on Twitter.
+  </p>
 
-<p>
-Modern journalism is 90% reporting what people are saying on Twitter.
-</p>
-
-&mdash; God (@TheTweetOfGod)
-<a href="https://twitter.com/TheTweetOfGod/statuses/359441152522469376">July 22, 2013</a>
-
+  &mdash; God (@TheTweetOfGod)
+  <a href="https://twitter.com/TheTweetOfGod/statuses/359441152522469376">July 22, 2013</a>
 </blockquote>

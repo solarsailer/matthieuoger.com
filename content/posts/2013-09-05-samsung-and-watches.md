@@ -6,10 +6,8 @@ title: Samsung And Watches
 
 [Ben Thompson nails it in “Shameless Samsung“](http://stratechery.com/2013/shameless-samsung/):
 
-> I jumped on the leaked prototype, with the same general sentiment: Samsung’s watch will undoubtedly change drastically whenever Apple’s wearable is released. And, to be certain, we will mock them for copying.
-
-> […]
-
+> I jumped on the leaked prototype, with the same general sentiment: Samsung’s watch will undoubtedly change drastically whenever Apple’s wearable is released. And, to be certain, we will mock them for copying. […]
+>
 > We, especially in the West, have a powerful sense of justice and fairness when it comes to product features and being first. Business, though, is not fair, even if it is more just than we care to admit.
 
 The Samsung Galaxy Gear is horrid. I was tempted to write an article about watches and Samsung last week, but Ben Thompson did it way better today.

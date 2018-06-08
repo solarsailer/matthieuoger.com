@@ -2,6 +2,10 @@
 date: "2013-08-26"
 
 title: Google Play new policies
+
+excerptQuote:
+  name: "Inner Active"
+  quote: "So what does all this mean? It means that Google understands that while open is great, at the end of the day, users would rather have a superior experience both in terms of Google Play as a whole, and apps behavior in particular."
 ---
 
 [Google’s New Policies: Good for Users, Great for Android Developers and the Ecosystem](http://blog.inner-active.com/2013/08/googles-new-policies-good-for-users-great-for-android-developers-and-the-ecosystem/):
