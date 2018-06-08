@@ -150,8 +150,8 @@ const ReadMore = () => (
   />
 )
 
-export default ({url, title, date, excerpt, excerptQuote}) => {
-  const noContent = !excerpt && !excerptQuote
+export default ({url, title, date, excerpt, excerptQuote, showReadMoreHintInHeader = false}) => {
+  const hasNoContent = (!excerpt && !excerptQuote)
 
   return (
     <BlockLink to={url}>
@@ -160,7 +160,7 @@ export default ({url, title, date, excerpt, excerptQuote}) => {
           <Header>
             <Title>{title}</Title>
             <Date>
-              {date} {noContent && <ReadMore />}
+              {date} {hasNoContent && showReadMoreHintInHeader && <ReadMore />}
             </Date>
           </Header>
           {excerpt && (

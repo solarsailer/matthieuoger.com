@@ -20,6 +20,7 @@ function createGridItems(items) {
         date={node.frontmatter.readableDate}
         excerpt={node.frontmatter.excerpt}
         excerptQuote={node.frontmatter.excerptQuote}
+        showReadMoreHintInHeader
       />
     </Item>
   ))
