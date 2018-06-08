@@ -10,6 +10,8 @@ import {colors} from '../styles/config'
 // -------------------------------------------------------------
 
 const TRANSITION = 'all 0.2s ease-out'
+const READ_MORE_CLASS = 'read-more-hint'
+const READ_MORE_CONTENT = '→&nbsp;Read&nbsp;More'
 
 // -------------------------------------------------------------
 // Components.
@@ -19,6 +21,13 @@ const BlockLink = styled(Link)`
   display: block;
   color: inherit;
   text-decoration: none;
+
+  .read-more-hint {
+    color: ${colors.brand.main};
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: normal;
+  }
 `
 
 // We use a wrapper to create a shadow with a ::before pseudo-element.
@@ -124,33 +133,39 @@ const Date = styled.p`
 
 const Excerpt = styled.p`
   font-size: 0.8em;
-
-  .read-more-hint {
-    color: ${colors.brand.main}
-    font-style: italic;
-    font-size: 0.75em;
-  }
 `
 
 // -------------------------------------------------------------
 // Export.
 // -------------------------------------------------------------
 
+const ReadMore = () => (
+  <span
+    class={READ_MORE_CLASS}
+    dangerouslySetInnerHTML={{__html: READ_MORE_CONTENT}}
+  />
+)
+
 export default ({url, title, date, excerpt, excerptQuote}) => {
+  const noContent = !excerpt && !excerptQuote
+
   return (
     <BlockLink to={url}>
       <Wrapper>
         <Article>
           <Header>
             <Title>{title}</Title>
-            <Date>{date}</Date>
+            <Date>
+              {date} {noContent && <ReadMore />}
+            </Date>
           </Header>
           {excerpt && (
             <Content>
               <Excerpt
                 dangerouslySetInnerHTML={{
                   __html:
-                    excerpt + ' <span class="read-more-hint">→ Read More</span>'
+                    excerpt +
+                    ` <span class="${READ_MORE_CLASS}">${READ_MORE_CONTENT}</span>`
                 }}
               />
             </Content>
@@ -159,7 +174,7 @@ export default ({url, title, date, excerpt, excerptQuote}) => {
             <Content>
               <Excerpt>
                 {excerptQuote.name}: <em>“{excerptQuote.quote}”</em>{' '}
-                <span className="read-more-hint">→ Read More</span>
+                <ReadMore />
               </Excerpt>
             </Content>
           )}
