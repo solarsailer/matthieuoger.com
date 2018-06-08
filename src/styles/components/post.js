@@ -136,6 +136,15 @@ export default css`
     padding-left: 4rem;
   }
 
+  ol {
+    list-style-type: decimal;
+    padding-left: 4rem;
+
+    li {
+      padding-left: 1rem;
+    }
+  }
+
   li {
     margin-bottom: 1rem;
   }
