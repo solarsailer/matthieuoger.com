@@ -7,6 +7,12 @@ import {getSocial} from '../../content/config/social'
 import Tooltip from './Tooltip'
 
 // -------------------------------------------------------------
+// Constants.
+// -------------------------------------------------------------
+
+export const GRID_BREAKPOINT = 400
+
+// -------------------------------------------------------------
 // Functions.
 // -------------------------------------------------------------
 
@@ -44,7 +50,7 @@ const List = styled.ul`
     height: 35px;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: ${GRID_BREAKPOINT}px) {
     flex-wrap: wrap;
 
     svg {

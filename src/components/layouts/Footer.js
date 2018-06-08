@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import SocialNavigation from '../CompactSocialNavigation'
+import SocialNavigation, {GRID_BREAKPOINT} from '../CompactSocialNavigation'
 
 import {colors} from '../../styles/config'
 
@@ -27,6 +27,12 @@ const Footer = styled.footer`
 
   > :last-child {
     margin-bottom: 0;
+  }
+
+  @media (max-width: ${GRID_BREAKPOINT}px) {
+    ul {
+      margin-bottom: 2rem;
+    }
   }
 `
 
