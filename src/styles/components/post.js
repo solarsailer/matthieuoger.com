@@ -126,7 +126,7 @@ export default css`
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid ${rgba('black', 0.1)}
+    border: 1px solid ${rgba('black', 0.1)};
   }
 
   /* Links. */
@@ -208,6 +208,16 @@ export default css`
     );
 
     border: none;
+  }
+
+  /* Embeds. */
+
+  iframe {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
   }
 
   /* Footnotes */
