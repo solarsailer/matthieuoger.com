@@ -139,6 +139,10 @@ const Excerpt = styled.p`
 // Export.
 // -------------------------------------------------------------
 
+const ExcerptQuote = styled.em`
+  opacity: 0.75;
+`
+
 const ReadMore = () => (
   <span
     class={READ_MORE_CLASS}
@@ -173,8 +177,8 @@ export default ({url, title, date, excerpt, excerptQuote}) => {
           {excerptQuote && (
             <Content>
               <Excerpt>
-                {excerptQuote.name}: <em>“{excerptQuote.quote}”</em>{' '}
-                <ReadMore />
+                {excerptQuote.name}:{' '}
+                <ExcerptQuote>“{excerptQuote.quote}”</ExcerptQuote> <ReadMore />
               </Excerpt>
             </Content>
           )}
