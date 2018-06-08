@@ -2,6 +2,8 @@
 date: "2015-04-25"
 
 title: Perspectives on wearables
+
+excerpt: "I'm interested in wearables (when they are not socially awkward) because of what they might become. What they are today is just a glimpse of the potential of such devices."
 ---
 
 For a few reasons, I'm considering whether or not I should be buying an Apple Watch.[^1]

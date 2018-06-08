@@ -2,6 +2,8 @@
 date: "2015-04-26"
 
 title: Space Odyssey
+
+excerpt: "I've finally convinced myself to watch “2001: A Space Odyssey”. Quick review and analysis."
 ---
 
 I've finally convinced myself to watch [2001: A Space Odyssey](http://www.imdb.com/title/tt0062622/?ref_=fn_al_tt_5).[^1]
@@ -29,15 +31,15 @@ What I loved about the movie is some of the possible interpretations. I'm really
 I've also found a great quote by Stanley Kubrick about intelligent life when [I was reading articles about the movie](http://en.wikipedia.org/wiki/Interpretations_of_2001:_A_Space_Odyssey):
 
 > I will say that the God concept is at the heart of 2001 but not any traditional, anthropomorphic image of God.
-
+>
 > I don't believe in any of Earth's monotheistic religions, but I do believe that one can construct an intriguing scientific definition of God, once you accept the fact that there are approximately 100 billion stars in our galaxy alone, that each star is a life-giving sun and that there are approximately 100 billion galaxies in just the visible universe. Given a planet in a stable orbit, not too hot and not too cold, and given a few billion years of chance chemical reactions created by the interaction of a sun's energy on the planet's chemicals, it's fairly certain that life in one form or another will eventually emerge.
-
+>
 > It's reasonable to assume that there must be, in fact, countless billions of such planets where biological life has arisen, and the odds of some proportion of such life developing intelligence are high.
-
+>
 > Now, the sun is by no means an old star, and its planets are mere children in cosmic age, so it seems likely that there are billions of planets in the universe not only where intelligent life is on a lower scale than man but other billions where it is approximately equal and others still where it is hundreds of thousands of millions of years in advance of us.
-
+>
 > When you think of the giant technological strides that man has made in a few millennia—less than a microsecond in the chronology of the universe—can you imagine the evolutionary development that much older life forms have taken? They may have progressed from biological species, which are fragile shells for the mind at best, into immortal machine entities—and then, over innumerable eons, they could emerge from the chrysalis of matter transformed into beings of pure energy and spirit.
-
+>
 > Their potentialities would be limitless and their intelligence ungraspable by humans.
 
 

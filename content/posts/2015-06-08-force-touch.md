@@ -2,6 +2,8 @@
 date: "2015-06-08"
 
 title: Force Touch Affordance
+
+excerpt: "Force Touch is not discoverable."
 ---
 
 [Force Touch](https://www.apple.com/watch/technology/#sensitive) is an impressive piece of technology. It currently equips the Apple Watch and the new Macbooks. You press firmly on the screen and the haptic engine will register a "deep" press.
