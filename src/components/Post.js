@@ -39,6 +39,16 @@ const Article = styled.article`
 
     box-shadow: 0 20px 30px ${rgba('black', 0.1)};
   }
+
+  @media (max-width: 900px) {
+    padding: 4rem;
+  }
+
+  @media (max-width: 700px) {
+    padding: 4rem 2rem;
+
+    font-size: 0.9em;
+  }
 `
 
 const Header = styled.header`

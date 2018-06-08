@@ -160,6 +160,16 @@ export default css`
 
     font-size: 0.85em;
     line-height: 1.45;
+
+    @media (max-width: 700px) {
+      margin-left: -2rem;
+      margin-right: -2rem;
+
+      border-left: none;
+      border-radius: 0;
+
+      background: #eaeaea;
+    }
   }
 
   blockquote > :last-child {

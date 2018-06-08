@@ -24,6 +24,14 @@ const Constraints = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 4rem;
+
+  @media (max-width: 900px) {
+    padding: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    padding: 1.5rem;
+  }
 `
 
 export const PageContentConstrained = ({children}) => (
