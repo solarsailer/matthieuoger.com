@@ -122,7 +122,11 @@ export default css`
   /* Images. */
 
   img {
+    display: block;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid ${rgba('black', 0.1)}
   }
 
   /* Links. */
