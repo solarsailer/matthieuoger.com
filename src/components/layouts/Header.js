@@ -69,6 +69,7 @@ const GlobalMenu = styled.nav`
 
   @media (max-width: ${BREAKPOINT}px) {
     flex-direction: column;
+    align-items: center;
   }
 `
 
