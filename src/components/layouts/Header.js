@@ -219,7 +219,7 @@ export default () => {
             </MenuButton>
           </li>
           <li>
-            <MenuButton url="/rss/" external newTab>
+            <MenuButton url="/atom.xml" external newTab>
               {getWrappedIcon('rss', {
                 width: '11px',
                 height: '11px',

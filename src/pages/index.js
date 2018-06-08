@@ -165,7 +165,7 @@ export default ({metadata}) => (
         <HomeButton url="/blog/">Articles</HomeButton>
       </li>
       <li>
-        <HomeButton url="/rss/">
+        <HomeButton url="/atom.xml">
           {getWrappedIcon('rss', {
             width: '13px',
             height: '13px',
