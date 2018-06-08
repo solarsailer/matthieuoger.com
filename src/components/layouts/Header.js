@@ -5,7 +5,7 @@ import {rgba, shade, tint} from 'polished'
 import posed from 'react-pose'
 import {random} from 'lodash'
 
-import {getIcon} from '../Icon'
+import {getIcon, getWrappedIcon} from '../Icon'
 
 import {colors} from '../../styles/config'
 import {siteNavigation} from '../../../content/config/site-navigation'
@@ -223,6 +223,11 @@ export default () => {
           </li>
           <li>
             <MenuButton url="/rss/" external newTab>
+              {getWrappedIcon('rss', {
+                width: '11px',
+                height: '11px',
+                marginRight: '6px'
+              })}
               RSS
             </MenuButton>
           </li>
