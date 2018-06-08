@@ -7,7 +7,6 @@ import {Button} from '../components/Button'
 import SocialNavigation from '../components/SocialNavigation'
 
 import {colors} from '../styles/config'
-import {siteNavigation} from '../../content/config/site-navigation'
 
 import avatar from '../../content/images/avatar-black-white.jpg'
 import backgroundImage from '../../content/images/background.jpg'
@@ -157,11 +156,15 @@ export default ({metadata}) => (
     </Avatar>
 
     <Navigation>
-      {siteNavigation.map(x => (
-        <li key={x.url}>
-          <HomeButton url={x.url}>{x.name}</HomeButton>
-        </li>
-      ))}
+      <li>
+        <HomeButton url="/about/">About</HomeButton>
+      </li>
+      <li>
+        <HomeButton url="/blog/">Articles</HomeButton>
+      </li>
+      <li>
+        <HomeButton url="/rss/">RSS</HomeButton>
+      </li>
     </Navigation>
 
     <SocialNavigation

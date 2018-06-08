@@ -8,7 +8,6 @@ import {random} from 'lodash'
 import {getIcon, getWrappedIcon} from '../Icon'
 
 import {colors} from '../../styles/config'
-import {siteNavigation} from '../../../content/config/site-navigation'
 
 import {Button} from '../Button'
 
