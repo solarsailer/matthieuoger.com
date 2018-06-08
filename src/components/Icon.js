@@ -22,6 +22,8 @@ export function getIcon(name, props) {
       return <InstagramIcon {...props} />
     case 'speakerdeck':
       return <SpeakerDeckIcon {...props} />
+    case 'rss':
+      return <RSSIcon {...props} />
     case 'site-line':
       return <SiteLineIcon {...props} />
     case 'twitter-line':
@@ -76,6 +78,40 @@ export const SiteLineIcon = ({color}) => {
           d="M4.615 6.154h10.769v3.077H4.615zm0 4.615h7.692v3.077H4.615z"
           fill={color}
         />
+      </g>
+    </svg>
+  )
+}
+
+// -------------------------------------------------------------
+// RSS.
+// -------------------------------------------------------------
+
+export const RSSIcon = ({color}) => {
+  return (
+    <svg
+      className="icon"
+      width="9"
+      height="9"
+      viewBox="0 0 9 9"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g fill="none" fillRule="evenodd">
+        <path
+          d="M.665.672c5.716.53 7.655 5.644 7.655 7.668"
+          stroke={color}
+          strokeWidth="1.3"
+          opacity=".6"
+          strokeLinecap="round"
+        />
+        <path
+          d="M.66 3.69c3.233.482 4.537 3.177 4.66 4.65"
+          stroke={color}
+          strokeWidth="1.3"
+          opacity=".8"
+          strokeLinecap="round"
+        />
+        <circle fill={color} cx="1.28" cy="7.72" r="1.28" />
       </g>
     </svg>
   )
