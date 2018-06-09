@@ -52,7 +52,12 @@ exports.plugins = [
     }
   },
   'gatsby-plugin-feeds',
-  'gatsby-transformer-remark',
+  {
+    resolve: 'gatsby-transformer-remark',
+    options: {
+      plugins: [{resolve: 'gatsby-remark-prismjs'}]
+    }
+  },
   'gatsby-plugin-styled-components',
   'gatsby-plugin-react-helmet',
   'gatsby-plugin-react-next'
