@@ -34,6 +34,10 @@ const Footer = styled.footer`
       margin-bottom: 2rem;
     }
   }
+
+  @media (max-width: 600px) {
+    max-width: 80%;
+  }
 `
 
 const Copyright = styled.p`
