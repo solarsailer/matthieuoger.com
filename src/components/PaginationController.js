@@ -37,6 +37,22 @@ const BUTTON_CSS_EXTENSION = css`
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  @media (max-width: 400px) {
+    font-size: 0.8em;
+
+    /* Hack… I would like to know if it's possible
+     * to get a styled-components class to prevent that.
+     *
+     * But well, increase the padding to make bigger buttons on mobiles.
+     */
+    a,
+    span {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+  }
 `
 
 const PaginationButtonNormal = styled(ButtonSmall)`
@@ -63,13 +79,13 @@ export default ({isFirstPage, isLastPage, previousUrl, nextUrl}) => {
   return (
     <Container>
       <PaginationButton isTextOnly={isFirstPage} url={`/blog/${previousUrl}`}>
-        ← Previous
+        ←{'\u00A0'}Previous
       </PaginationButton>
 
       <PaginationButton url="/archive/">Archive</PaginationButton>
 
       <PaginationButton isTextOnly={isLastPage} url={`/blog/${nextUrl}`}>
-        Next →
+        Next{'\u00A0'}→
       </PaginationButton>
     </Container>
   )
