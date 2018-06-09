@@ -6,6 +6,8 @@ import {getSocial} from '../../content/config/social'
 
 import Tooltip from './Tooltip'
 
+import gridStyles from '../styles/components/grid-social-nav'
+
 // -------------------------------------------------------------
 // Constants.
 // -------------------------------------------------------------
@@ -51,43 +53,7 @@ const List = styled.ul`
   }
 
   @media (max-width: ${GRID_BREAKPOINT}px) {
-    flex-wrap: wrap;
-
-    svg {
-      width: 30px;
-      height: 30px;
-    }
-
-    li + li {
-      /* We must override this selector. */
-      margin-left: 0.75rem;
-    }
-
-    li {
-      /* And also set the left value here for the first element. */
-      margin-left: 0.75rem;
-      margin-right: 0.75rem;
-      margin-bottom: 1.5rem;
-    }
-
-    /* For browsers that support grid, we need to override what we have done and use a grid instead. */
-    /* This way, we can present a pretty 2x3 grid. */
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: repeat(3, 35px);
-      grid-row-gap: 1rem;
-      grid-column-gap: 2rem;
-
-      svg {
-        width: 35px;
-        height: 35px;
-      }
-
-      li,
-      li + li {
-        margin: 0;
-      }
-    }
+    ${gridStyles};
   }
 `
 

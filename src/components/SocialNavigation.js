@@ -9,6 +9,8 @@ import {getIcon} from './Icon'
 import {getSocial} from '../../content/config/social'
 import {withMountedAnimator} from './MountedAnimator'
 
+import gridStyles from '../styles/components/grid-social-nav'
+
 // -------------------------------------------------------------
 // Constants.
 // -------------------------------------------------------------
@@ -89,6 +91,10 @@ const List = styled.ul`
       width: 35px;
       height: 35px;
     }
+  }
+
+  @media (max-width: 500px) {
+    ${gridStyles};
   }
 `
 
