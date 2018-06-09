@@ -10,6 +10,7 @@ import specialLinkStyles from './special-link'
 // -------------------------------------------------------------
 
 const BREAKPOINT_MOBILE = 700
+const INNER_BLOCK_BORDER_RADIUS = 5
 
 // -------------------------------------------------------------
 // Post Styles.
@@ -209,7 +210,7 @@ export default css`
     padding-left: calc(3rem - 3px); /* Subtract left border. */
 
     background: #f1f1f1;
-    border-radius: 5px;
+    border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
     border-left: 3px solid rgb(220, 220, 220);
 
     font-size: 0.85em;
@@ -271,7 +272,7 @@ export default css`
     padding: 2rem 0;
 
     background: #eee;
-    border-radius: 5px;
+    border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
 
     font-size: 0.85em;
 
@@ -324,7 +325,7 @@ export default css`
         padding: 6px 6px 3px;
         background: ${tint(0.4, colors.brand.main)};
         border-bottom: none;
-        border-radius: 5px;
+        border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
 
         font-size: 0.9em;
         line-height: normal;
