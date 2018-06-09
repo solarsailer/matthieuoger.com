@@ -195,6 +195,39 @@ export default css`
     text-align: center;
   }
 
+  /* Code. */
+
+  .gatsby-highlight pre {
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
+
+    code {
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: ${BREAKPOINT_MOBILE}px) {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      border-radius: 0;
+    }
+  }
+
+  code {
+    font-size: 0.8em;
+  }
+
+  /* Inline code block. */
+  p code {
+    color: black;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: #eee;
+  }
+
   /* Blockquotes. */
 
   blockquote {
