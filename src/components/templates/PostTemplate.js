@@ -23,7 +23,7 @@ export default function PostTemplate({data}) {
     <Fragment>
       <Helmet>
         <title>
-          {title} — {siteMetadata.title}
+          {title} — {siteMetadata.author}
         </title>
       </Helmet>
       {showPageTitle ? (
@@ -47,6 +47,7 @@ export const POST_QUERY = graphql`
     site {
       siteMetadata {
         title
+        author
       }
     }
 

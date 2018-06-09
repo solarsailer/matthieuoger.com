@@ -91,7 +91,7 @@ export default ({data, pathContext}) => {
   return (
     <Fragment>
       <Helmet>
-        <title>Articles — Solar Sailer</title>
+        <title>Articles — Matthieu Oger</title>
       </Helmet>
 
       <PageTitle url="/blog/">Articles</PageTitle>

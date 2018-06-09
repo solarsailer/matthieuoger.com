@@ -72,7 +72,7 @@ export default ({data}) => {
   return (
     <Fragment>
       <Helmet>
-        <title>Archive — Solar Sailer</title>
+        <title>Archive — Matthieu Oger</title>
       </Helmet>
       <PageTitle>Archive</PageTitle>
       <List>{convertAndAddHeaders(nodes)}</List>

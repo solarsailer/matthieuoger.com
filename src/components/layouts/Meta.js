@@ -30,7 +30,7 @@ export default ({site, layout}) => {
 
         {layout && <html data-layout={layout} />}
 
-        <title>{metadata.title}</title>
+        <title>{metadata.author}</title>
 
         <link rel="shortcut icon" href="/favicon.ico?v=0002" />
         <link rel="mask-icon" href="/favicon.svg?v=0002" color="#E44D2A" />
