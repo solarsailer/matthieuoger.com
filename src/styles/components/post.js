@@ -237,7 +237,7 @@ export default css`
   }
 
   code {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 
   /* Inline code block. */
