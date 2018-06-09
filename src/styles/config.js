@@ -14,6 +14,10 @@ export const typography = {
     fontStack: 'Rubik, Verdana, sans-serif',
     fontSize: '1.8', // em
     lineHeight: '1.5'
+  },
+  code: {
+    fontStack: '"Fira Mono", monospace',
+    lineHeight: '1.25'
   }
 }
 

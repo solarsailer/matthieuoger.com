@@ -40,6 +40,15 @@ export default css`
     font-size: ${typography.document.fontSize + 'em'}; /* 2 */
   }
 
+  pre,
+  code {
+    /* We don't have the control on PrismJS output,
+     * so we need to force these styles with !important.
+     */
+    font-family: ${typography.code.fontStack} !important;
+    line-height: ${typography.code.lineHeight} !important;
+  }
+
   /**
    * Full-viewport body.
    */
