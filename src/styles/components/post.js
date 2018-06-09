@@ -253,20 +253,18 @@ export default css`
   /* Blockquotes. */
 
   blockquote {
+    position: relative;
+
     color: rgb(50, 50, 50);
 
-    margin-top: 0;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin: 0;
     margin-bottom: 2rem;
 
-    padding: 2.5rem;
-    padding-right: 3rem;
-    padding-left: calc(3rem - 3px); /* Subtract left border. */
+    padding: 2rem calc(2.5rem - 1px);
 
     background: #f1f1f1;
     border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
-    border-left: 3px solid rgb(220, 220, 220);
+    border: 1px solid #e0e0e0;
 
     font-size: 0.85em;
     line-height: 1.45;
@@ -275,15 +273,31 @@ export default css`
       margin-left: -2rem;
       margin-right: -2rem;
 
-      border-left: none;
+      border: none;
       border-radius: 0;
 
       background: #eaeaea;
+    }
+
+    &::before {
+      content: 'Quote';
+      ${HINT};
     }
   }
 
   blockquote > :last-child {
     margin-bottom: 0;
+  }
+
+  .twitter-tweet {
+    background: ${tint(0.15, '#4da4fa')};
+    border: 1px solid ${tint(0.25, '#4da4fa')};
+
+    &::before {
+      content: 'Tweet';
+      color: #4da4fa;
+      opacity: 0.55;
+    }
   }
 
   /* HR. */
