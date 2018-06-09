@@ -157,8 +157,25 @@ export default css`
   /* Lists. */
 
   ul {
-    list-style-type: disc;
     padding-left: 4rem;
+
+    li {
+      position: relative;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 11px;
+        left: -18px;
+
+        width: 6px;
+        height: 6px;
+
+        background: ${colors.brand.main};
+        border-radius: 50%;
+      }
+    }
   }
 
   ol {
