@@ -44,13 +44,13 @@ exports.createPages = ({boundActionCreators, graphql}) => {
       return Promise.reject(result.errors)
     }
 
-    // Add pagination for blog posts.
+    // Add pagination for posts.
     createPaginatedPages({
       edges: result.data.allMarkdownRemark.edges,
       createPage: createPage,
       pageTemplate: 'src/components/templates/PaginationTemplate.js',
       pageLength: 9,
-      pathPrefix: 'blog',
+      pathPrefix: 'articles',
       context: {}
     })
 

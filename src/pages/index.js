@@ -197,7 +197,7 @@ export default ({metadata}) => (
         <HomeButton url="/about/">About</HomeButton>
       </li>
       <li>
-        <HomeButton url="/blog/">Articles</HomeButton>
+        <HomeButton url="/articles/">Articles</HomeButton>
       </li>
       <li>
         <HomeButton url="/atom.xml">

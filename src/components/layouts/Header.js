@@ -214,7 +214,7 @@ export default () => {
             </MenuButton>
           </li>
           <li>
-            <MenuButton url="/blog/" activeClassName="selected">
+            <MenuButton url="/articles/" activeClassName="selected">
               Articles
             </MenuButton>
           </li>

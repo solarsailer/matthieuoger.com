@@ -78,13 +78,13 @@ const PaginationButton = ({url, children, isTextOnly}) => {
 export default ({isFirstPage, isLastPage, previousUrl, nextUrl}) => {
   return (
     <Container>
-      <PaginationButton isTextOnly={isFirstPage} url={`/blog/${previousUrl}`}>
+      <PaginationButton isTextOnly={isFirstPage} url={`/articles/${previousUrl}`}>
         ←{'\u00A0'}Previous
       </PaginationButton>
 
       <PaginationButton url="/archive/">Archive</PaginationButton>
 
-      <PaginationButton isTextOnly={isLastPage} url={`/blog/${nextUrl}`}>
+      <PaginationButton isTextOnly={isLastPage} url={`/articles/${nextUrl}`}>
         Next{'\u00A0'}→
       </PaginationButton>
     </Container>

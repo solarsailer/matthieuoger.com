@@ -94,7 +94,7 @@ export default ({data, pathContext}) => {
         <title>Articles — Matthieu Oger</title>
       </Helmet>
 
-      <PageTitle url="/blog/">Articles</PageTitle>
+      <PageTitle url="/articles/">Articles</PageTitle>
 
       <PaginationController
         previousUrl={previous}
