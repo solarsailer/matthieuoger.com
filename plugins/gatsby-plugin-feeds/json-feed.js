@@ -47,14 +47,18 @@ exports.getJSONFeed = data => {
   const {metadata, outputPath} = data
 
   const feedUrl = new URL(outputPath, metadata.siteUrl).toString()
+
+  const faviconUrl = new URL('/favicon.ico', metadata.siteUrl).toString()
+  const imageUrl = new URL('/feed.png', metadata.siteUrl).toString()
+
   const items = getItems(data)
 
   const feed = {
     version: VERSION,
     title: metadata.title,
     description: metadata.description,
-    // icon: 'png',
-    // favicon: 'favicon.ico',
+    icon: imageUrl,
+    favicon: faviconUrl,
     home_page_url: metadata.siteUrl,
     feed_url: feedUrl,
     items
