@@ -1,5 +1,5 @@
 # solarsailer.net
 
-A collection of thoughts and opinions by Matthieu Oger.
+I am a developer, designer and product manager from France. Co-founder of Pixelnest Studio.
 
 → [Read here](http://solarsailer.net/).

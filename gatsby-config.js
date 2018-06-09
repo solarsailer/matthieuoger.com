@@ -5,12 +5,15 @@
 exports.siteMetadata = {
   title: 'Solar Sailer',
   author: 'Matthieu Oger',
-  description: 'A collection of thoughts and opinions by Matthieu Oger',
+  description: 'I am a developer, designer and product manager from France. Co-founder of Pixelnest Studio.',
   keywords: [
     'solar',
     'sailer',
     'matthieu',
     'oger',
+    'designer',
+    'developer',
+    'product manager',
     'technology',
     'design',
     'development',
