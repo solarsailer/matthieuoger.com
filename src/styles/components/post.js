@@ -53,6 +53,14 @@ export default css`
       font-weight: 300;
       font-style: normal;
     }
+
+    .more {
+      color: #888;
+      margin-left: 0.5rem;
+      font-size: 0.7em;
+      font-weight: normal;
+      text-transform: none;
+    }
   }
 
   h1 {

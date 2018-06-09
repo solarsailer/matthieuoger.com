@@ -18,6 +18,6 @@ excerptQuote:
 
 ---
 
-## Update (2018-06-08)
+## Update <span class="more">08 June 2018</span>
 
 [It's](https://stratechery.com/2018/the-end-of-windows/) [funny](https://en.wikipedia.org/wiki/Satya_Nadella) [how](https://blog.github.com/2018-06-04-github-microsoft/) [things](https://code.visualstudio.com/) [change](https://www.typescriptlang.org/)…

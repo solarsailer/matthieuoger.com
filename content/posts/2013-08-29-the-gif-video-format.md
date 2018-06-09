@@ -20,6 +20,6 @@ The electrical cost of gifs must be gigantic.
 
 ---
 
-## Update (2018-06-08)
+## Update <span class="more">08 June 2018</span>
 
 There's [hope](https://calendar.perfplanet.com/2017/animated-gif-without-the-gif/). In a near future, and in other browsers than Safari, we will be able to use a video as an image to _simulate a gif_ (ie., silence and autoplay). With perks of a video instead of an awful low-quality and heavy gif.
