@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components'
 import {rgba, tint} from 'polished'
 
-import {colors} from '../config'
+import {colors, typography} from '../config'
 import bodyLinkStyles from './body-link'
 import specialLinkStyles from './special-link'
 
@@ -204,6 +204,7 @@ export default css`
   figcaption {
     color: #666;
     padding: 0 2rem;
+    font-family: ${typography.code.fontStack};
     font-size: 0.8em;
     text-align: center;
   }
