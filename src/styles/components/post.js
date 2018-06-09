@@ -16,6 +16,18 @@ const INNER_BLOCK_BORDER_RADIUS = 5
 // Post Styles.
 // -------------------------------------------------------------
 
+const HINT = css`
+  position: absolute;
+  top: -20px;
+  right: 20px;
+
+  color: black;
+  opacity: 0.35;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-transform: uppercase;
+`
+
 export default css`
   & > :first-child {
     margin-top: 0;
@@ -198,6 +210,15 @@ export default css`
 
   /* Code. */
 
+  .gatsby-highlight {
+    position: relative;
+
+    &::before {
+      content: 'Code';
+      ${HINT};
+    }
+  }
+
   .gatsby-highlight pre {
     margin: 0;
     margin-bottom: 2rem;
@@ -312,14 +333,7 @@ export default css`
 
     &::before {
       content: 'Footnotes';
-
-      position: absolute;
-      top: -20px;
-      right: 20px;
-
-      color: #bbb;
-      font-size: 0.75em;
-      text-transform: uppercase;
+      ${HINT};
     }
 
     hr {
