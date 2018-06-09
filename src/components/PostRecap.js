@@ -145,13 +145,20 @@ const ExcerptQuote = styled.em`
 
 const ReadMore = () => (
   <span
-    class={READ_MORE_CLASS}
+    className={READ_MORE_CLASS}
     dangerouslySetInnerHTML={{__html: READ_MORE_CONTENT}}
   />
 )
 
-export default ({url, title, date, excerpt, excerptQuote, showReadMoreHintInHeader = false}) => {
-  const hasNoContent = (!excerpt && !excerptQuote)
+export default ({
+  url,
+  title,
+  date,
+  excerpt,
+  excerptQuote,
+  showReadMoreHintInHeader = false
+}) => {
+  const hasNoContent = !excerpt && !excerptQuote
 
   return (
     <BlockLink to={url}>
