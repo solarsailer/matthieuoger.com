@@ -61,6 +61,29 @@ const Avatar = styled.div`
   @media (max-width: ${HOME_BREAKPOINT}px) {
     margin-bottom: 4rem;
   }
+
+  @media (max-width: 400px) {
+    img {
+      max-width: 85%;
+      height: auto;
+    }
+  }
+`
+
+const Header = styled.header`
+  padding: 0 2rem;
+
+  @media (max-width: 600px) {
+    font-size: 0.85em;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 0.7em;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 0.55em;
+  }
 `
 
 const MainTitle = styled.h1`
@@ -108,6 +131,12 @@ const Bio = styled.p`
       color: ${colors.brand.main};
     }
   }
+
+  @media (max-width: 750px) {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 
 // -------------------------------------------------------------
@@ -136,6 +165,10 @@ const Navigation = styled.ul`
       text-align: center;
     }
   }
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `
 
 // -------------------------------------------------------------
@@ -146,8 +179,10 @@ export default ({metadata}) => (
   <Container>
     <Avatar>
       <img src={avatar} title="Matthieu Oger" alt="Matthieu Oger" />
-      <MainTitle>SOLARSAILER</MainTitle>
-      <SubTitle>Matthieu Oger</SubTitle>
+      <Header>
+        <MainTitle>SOLARSAILER</MainTitle>
+        <SubTitle>Matthieu Oger</SubTitle>
+      </Header>
       <Bio>
         <strong>I'm a developer, designer and product manager.</strong> I
         co-founded <a href="https://pixelnest.io/">Pixelnest Studio</a> in
