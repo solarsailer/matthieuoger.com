@@ -174,6 +174,7 @@ export default css`
     padding-bottom: 1rem;
 
     background: #f6f6f6;
+    border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
 
     img {
       margin-bottom: 1rem;
