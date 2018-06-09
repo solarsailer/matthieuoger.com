@@ -357,6 +357,8 @@ export default css`
 
     ol {
       margin-bottom: 0;
+      padding-left: 0;
+      list-style: none;
     }
 
     li {
@@ -369,6 +371,10 @@ export default css`
         margin-bottom: -2rem;
         padding-bottom: 0;
         border: none;
+      }
+
+      &:target {
+        font-weight: 500;
       }
 
       blockquote {
