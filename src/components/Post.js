@@ -62,6 +62,7 @@ const Title = styled.h1`
   margin-bottom: 0.5rem;
   font-size: 1.7em;
   font-weight: 500;
+  text-transform: capitalize;
 
   ${invisibleLinkStyles};
 `
