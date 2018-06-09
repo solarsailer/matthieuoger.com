@@ -19,6 +19,8 @@ const Container = styled.div`
 const Content = styled.div``
 
 const Tooltip = styled.div`
+  display: none;
+
   z-index: 999;
   position: absolute;
 
@@ -64,6 +66,9 @@ export default class extends React.Component {
 
     const containerNode = ReactDOM.findDOMNode(this.refs.container)
     const tooltipNode = ReactDOM.findDOMNode(this.refs.tooltip)
+
+    /* We need to delete the default display since the tooltip is now initialized. */
+    tooltipNode.style.display = 'block'
 
     const {x, y, bottom} = this.getPosition(containerNode, tooltipNode)
 
