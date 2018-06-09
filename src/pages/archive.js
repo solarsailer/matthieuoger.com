@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
+import {Helmet} from 'react-helmet'
 
 import PostRecap from '../components/PostRecap'
 import HeaderRow from '../components/HeaderRow'
@@ -70,6 +71,9 @@ export default ({data}) => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Archive — Solar Sailer</title>
+      </Helmet>
       <PageTitle>Archive</PageTitle>
       <List>{convertAndAddHeaders(nodes)}</List>
     </Fragment>

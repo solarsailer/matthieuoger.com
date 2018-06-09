@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
+import {Helmet} from 'react-helmet'
 
 import Post from '../Post'
 import PostRecap from '../PostRecap'
@@ -89,6 +90,10 @@ export default ({data, pathContext}) => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Articles — Solar Sailer</title>
+      </Helmet>
+
       <PageTitle url="/blog/">Articles</PageTitle>
 
       <PaginationController
