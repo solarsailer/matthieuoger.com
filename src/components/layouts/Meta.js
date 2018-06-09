@@ -32,11 +32,8 @@ export default ({site, layout}) => {
 
         <title>{metadata.title}</title>
 
-        {/*
-        <link rel="shortcut icon" href={Favicon}>
-        <link rel="alternate" type="application/atom+xml" title={metadata.title} href="feed.xml">
-        <link rel="alternate" type="application/json" title={metadata.title} href="feed.json">
-        */}
+        <link rel="shortcut icon" href="/favicon.ico?v=0002" />
+        <link rel="mask-icon" href="/favicon.svg?v=0002" color="#E44D2A" />
 
         <meta name="author" content={metadata.author} />
         <meta name="description" content={metadata.description} />
