@@ -46,6 +46,7 @@ export default css`
   h5,
   h6 {
     font-weight: normal;
+    line-height: normal;
 
     &::before {
       opacity: 0.25;
@@ -67,9 +68,9 @@ export default css`
     margin-top: 6rem;
     margin-bottom: 4rem;
 
-    font-size: 2em;
-    font-weight: 300;
-    font-variant: small-caps;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
 
     &::before {
       content: '# ';
@@ -83,8 +84,9 @@ export default css`
     padding-bottom: 0.5rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 
-    font-size: 1.6em;
-    font-variant: small-caps;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-transform: uppercase;
 
     &::before {
       content: '## ';
@@ -100,7 +102,9 @@ export default css`
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-transform: none;
 
     &::before {
       content: '### ';
@@ -109,11 +113,13 @@ export default css`
 
   h4 {
     margin-top: 4rem;
+    margin-bottom: 2rem;
 
     color: rgb(50, 50, 50);
 
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 500;
+    text-transform: none;
 
     &::before {
       content: '#### ';
@@ -122,6 +128,7 @@ export default css`
 
   h5 {
     margin-top: 3rem;
+    margin-bottom: 2rem;
 
     color: rgb(100, 100, 100);
 
@@ -136,10 +143,12 @@ export default css`
 
   h6 {
     margin-top: 3rem;
+    margin-bottom: 2rem;
 
     color: rgb(150, 150, 150);
 
     font-size: 0.8em;
+    font-weight: normal;
     text-transform: uppercase;
 
     &::before {

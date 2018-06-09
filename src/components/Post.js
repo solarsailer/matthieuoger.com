@@ -60,8 +60,8 @@ const Header = styled.header`
 
 const Title = styled.h1`
   margin-bottom: 0.5rem;
-  font-size: 1.8em;
-  font-weight: normal;
+  font-size: 1.7em;
+  font-weight: 500;
 
   ${invisibleLinkStyles};
 `
