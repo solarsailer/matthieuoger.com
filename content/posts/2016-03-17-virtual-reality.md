@@ -29,9 +29,14 @@ VR is pretty boring for games, its main application right now. Yes, the immersio
 
 VR is ugly. VR is cumbersome. VR is like Google Glass (remember that?) in so many ways.
 
-![The Future?][image]
-
-<center>_The future? Really?_</center>
+<figure>
+  <img
+    src="/images/posts/2016-03-17-virtual-reality.png"
+    alt="Men and women sitting with a VR headset, Mark Zuckerberg marching among them."
+    title="The future?"
+  >
+  <figcaption>The future? Really?</figcaption>
+</figure>
 
 If you're at home, it might be fine, although that wearing another thing on your head is not that comfy. I already wear glasses, I really don't want to add something more on my head, I assure you. Especially if it means that I might hit a wall someway.[^2]
 
@@ -62,6 +67,3 @@ Virtual reality is a fad. And right now, journalists and tech companies are all 
 
 [^1]: VR is the new [AR](https://en.wikipedia.org/wiki/Augmented_reality)? I'm still inclined to think there's a slight chance that AR might come back in a way or another and be pertinent.
 [^2]: It's like 3D glasses in theaters, but worse. And 3D glasses are already an aberration, we all agree, right?
-
-
-[image]: /images/posts/2016-03-17-virtual-reality.png

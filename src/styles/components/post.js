@@ -6,6 +6,12 @@ import bodyLinkStyles from './body-link'
 import specialLinkStyles from './special-link'
 
 // -------------------------------------------------------------
+// Constants.
+// -------------------------------------------------------------
+
+const BREAKPOINT_MOBILE = 700
+
+// -------------------------------------------------------------
 // Post Styles.
 // -------------------------------------------------------------
 
@@ -155,6 +161,38 @@ export default css`
     margin-bottom: 1rem;
   }
 
+  /* Figure and figcaption. */
+
+  figure {
+    margin-top: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: 2rem;
+        
+    padding-top: 0;
+    padding-bottom: 1rem;
+
+    background: #f6f6f6;
+
+    img {
+      margin-bottom: 1rem;border: none;
+    }
+
+    @media (max-width: ${BREAKPOINT_MOBILE}px) {
+      margin-left: -2rem;
+      margin-right: -2rem;
+
+      background: #f1f1f1;
+    }
+  }
+
+  figcaption {
+    color: #666;
+    padding: 0 2rem;
+    font-size: 0.8em;
+    text-align: center;
+  }
+
   /* Blockquotes. */
 
   blockquote {
@@ -176,7 +214,7 @@ export default css`
     font-size: 0.85em;
     line-height: 1.45;
 
-    @media (max-width: 700px) {
+    @media (max-width: ${BREAKPOINT_MOBILE}px) {
       margin-left: -2rem;
       margin-right: -2rem;
 
