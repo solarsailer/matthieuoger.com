@@ -168,14 +168,15 @@ export default css`
     margin-left: -1rem;
     margin-right: -1rem;
     margin-bottom: 2rem;
-        
+
     padding-top: 0;
     padding-bottom: 1rem;
 
     background: #f6f6f6;
 
     img {
-      margin-bottom: 1rem;border: none;
+      margin-bottom: 1rem;
+      border: none;
     }
 
     @media (max-width: ${BREAKPOINT_MOBILE}px) {
