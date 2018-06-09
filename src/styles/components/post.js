@@ -174,8 +174,6 @@ export default css`
   /* Lists. */
 
   ul {
-    padding-left: 4rem;
-
     li {
       position: relative;
 
@@ -183,11 +181,11 @@ export default css`
         content: '';
 
         position: absolute;
-        top: 11px;
-        left: -18px;
+        top: 0.525em;
+        left: -1.05em;
 
-        width: 6px;
-        height: 6px;
+        width: 5px;
+        height: 5px;
 
         background: ${colors.brand.main};
         border-radius: 50%;
@@ -197,10 +195,19 @@ export default css`
 
   ol {
     list-style-type: decimal;
-    padding-left: 4rem;
 
     li {
       padding-left: 1rem;
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 4rem;
+    font-size: 0.9em;
+
+    @media (max-width: 600px) {
+      padding-left: 3rem;
     }
   }
 
