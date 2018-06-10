@@ -21,7 +21,7 @@ export default ({site, layout}) => {
     />
   ))
 
-  const fullUrl = `http://${metadata.url}/`
+  const authorAndDescription = `${metadata.author} — ${metadata.description}`
 
   return (
     <Fragment>
@@ -40,28 +40,26 @@ export default ({site, layout}) => {
         <meta name="keywords" content={metadata.keywords.join(', ')} />
 
         {/* Twitter */}
-        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:title" content={metadata.author} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={handles.twitter} />
         <meta name="twitter:creator" content={handles.twitter} />
-        <meta name="twitter:url" content={fullUrl} />
+        <meta name="twitter:url" content={metadata.siteUrl} />
         <meta name="twitter:image" content={card} />
-        <meta
-          name="twitter:image:alt"
-          content={`${metadata.title} — ${metadata.description}`}
-        />
+        <meta name="twitter:image:alt" content={authorAndDescription} />
 
         {/* OpenGraph */}
         <meta property="og:locale" content="en" />
-        <meta property="og:title" content={metadata.title} />
+        <meta property="og:title" content={metadata.author} />
         <meta property="og:site_name" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-        <meta property="og:url" content={fullUrl} />
+        <meta property="og:url" content={metadata.siteUrl} />
         <meta property="og:image" content={card} />
         <meta property="og:image:height" content="1920" />
         <meta property="og:image:width" content="1080" />
         <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:alt" content={authorAndDescription} />
         <meta property="og:type" content="website" />
       </Helmet>
     </Fragment>
