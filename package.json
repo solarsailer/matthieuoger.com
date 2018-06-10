@@ -13,7 +13,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "prod": "gatsby build && gatsby serve"
+    "prod": "gatsby build && gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public -b master -r https://github.com/solarsailer/solarsailer.github.io/"
   },
   "dependencies": {
     "@sindresorhus/is": "^0.9.0",
@@ -36,5 +37,8 @@
     "react-pose": "^1.6.4",
     "styled-components": "^3.2.6",
     "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }
