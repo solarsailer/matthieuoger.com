@@ -20,4 +20,4 @@ See also: [Something Slightly Less Terrible][link2].
 
 
 [link]: http://eev.ee/blog/2015/09/17/the-sad-state-of-web-app-deployment/
-[link2]: http://solarsailer.net/2015/01/something-slightly-less-terrible/
+[link2]: https://solarsailer.net/2015/01/something-slightly-less-terrible/

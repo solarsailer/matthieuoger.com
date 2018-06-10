@@ -7,7 +7,7 @@
   "repository": "https://github.com/solarsailer/solarsailer.net/",
   "author": {
     "name": "Matthieu Oger",
-    "url": "http://solarsailer.net/"
+    "url": "https://solarsailer.net/"
   },
   "scripts": {
     "start": "gatsby develop",

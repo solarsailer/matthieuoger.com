@@ -31,7 +31,7 @@ exports.siteMetadata = {
     speakerDeck: 'solarsailer'
   },
   url: 'solarsailer.net',
-  siteUrl: `http://solarsailer.net/`,
+  siteUrl: 'https://solarsailer.net/',
   googleAnalyticsCode: 'UA-41853457-1',
   googleFonts: ['Rubik:300,300i,400,400i,500,500i,700,700i,900,900i|Fira+Mono']
 }
