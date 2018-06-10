@@ -67,6 +67,7 @@ exports.plugins = [
       trackingId: 'UA-41853457-1'
     }
   },
+  'gatsby-plugin-sitemap',
   'gatsby-plugin-feeds',
   'gatsby-plugin-styled-components',
   'gatsby-plugin-react-helmet',
