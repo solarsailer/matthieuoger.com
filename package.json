@@ -14,7 +14,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "prod": "gatsby build && gatsby serve",
-    "deploy": "gatsby build && gh-pages -d public -b master -r https://github.com/solarsailer/solarsailer.github.io/"
+    "deploy": "gatsby build && gh-pages -d public -b master -r git@github.com:solarsailer/solarsailer.github.io.git"
   },
   "dependencies": {
     "@sindresorhus/is": "^0.9.0",
