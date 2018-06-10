@@ -5,7 +5,8 @@
 exports.siteMetadata = {
   title: 'Solar Sailer',
   author: 'Matthieu Oger',
-  description: 'I am a developer, designer and product manager from France. Co-founder of Pixelnest Studio.',
+  description:
+    'I am a developer, designer and product manager from France. Co-founder of Pixelnest Studio.',
   keywords: [
     'solar',
     'sailer',
@@ -48,19 +49,25 @@ exports.plugins = [
     }
   },
   {
-    resolve: `gatsby-plugin-nprogress`,
+    resolve: 'gatsby-plugin-nprogress',
     options: {
       color: '#f1c40f',
       showSpinner: false
     }
   },
-  'gatsby-plugin-feeds',
   {
     resolve: 'gatsby-transformer-remark',
     options: {
       plugins: [{resolve: 'gatsby-remark-prismjs'}]
     }
   },
+  {
+    resolve: 'gatsby-plugin-google-analytics',
+    options: {
+      trackingId: 'UA-41853457-1'
+    }
+  },
+  'gatsby-plugin-feeds',
   'gatsby-plugin-styled-components',
   'gatsby-plugin-react-helmet',
   'gatsby-plugin-react-next'
