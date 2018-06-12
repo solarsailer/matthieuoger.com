@@ -41,6 +41,8 @@
     "xml": "^1.0.1"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0"
+    "gh-pages": "^1.2.0",
+    "husky": "^0.14.3",
+    "jest": "^23.1.0"
   }
 }
