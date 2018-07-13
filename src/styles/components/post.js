@@ -284,12 +284,17 @@ export default css`
 
   /* Inline code block. */
   p code {
-    color: black;
+    color: ${colors.brand.main};
+
+    margin-left: 2px;
+    margin-right: 2px;
+
     padding-top: 4px;
     padding-bottom: 2px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background: #eee;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    background: #f1f1f1;
   }
 
   /* Blockquotes. */
