@@ -91,10 +91,12 @@ const GlobalTitle = styled.h1`
   }
 
   svg {
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
 
     transition: all 0.3s ease-out;
+
+    vertical-align: -1px;
   }
 
   path {
@@ -142,7 +144,7 @@ const GlobalList = styled.ul`
 
 const Hello = styled.aside`
   position: absolute;
-  left: 52px;
+  left: 53px;
 
   color: ${rgba(colors.page.content, 0.5)};
 
