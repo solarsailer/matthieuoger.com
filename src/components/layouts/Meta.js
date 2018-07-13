@@ -32,8 +32,8 @@ export default ({site, layout}) => {
 
         <title>{metadata.author}</title>
 
-        <link rel="shortcut icon" href="/favicon.ico?v=0005" />
-        <link rel="mask-icon" href="/favicon.svg?v=0005" color="#E44D2A" />
+        <link rel="shortcut icon" href="/favicon.ico?v=0006" />
+        <link rel="mask-icon" href="/favicon.svg?v=0006" color="#E44D2A" />
 
         <meta name="author" content={metadata.author} />
         <meta name="description" content={metadata.description} />
