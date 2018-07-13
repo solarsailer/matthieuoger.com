@@ -20,11 +20,13 @@ function getMetadata(data) {
   } = data
 
   const fullUrl = new URL(outputPath, url).toString()
+  const iconUrl = new URL('/feed.png', url).toString()
 
   return [
     {id: url},
     {updated: new Date().toISOString()},
     {title: title},
+    {icon: iconUrl},
     {
       link: {_attr: {href: fullUrl, rel: 'self'}}
     },
