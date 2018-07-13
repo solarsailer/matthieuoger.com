@@ -73,6 +73,23 @@ const GlobalMenu = styled.nav`
   }
 `
 
+const HeaderIcon = (color = '#E44D2A') => {
+  return (
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.822.14l7.037 7.038a.456.456 0 0 1 0 .644L7.822 14.86a.456.456 0 0 1-.644 0L.14 7.822a.456.456 0 0 1 0-.644L7.178.14a.456.456 0 0 1 .644 0zM2.316 8.07h2.906a.294.294 0 0 0 .303-.302v-.523a.326.326 0 0 0-.08-.23.29.29 0 0 0-.223-.086H2.316a.294.294 0 0 0-.217.086.311.311 0 0 0-.086.23v.523a.294.294 0 0 0 .303.303zm7.462 0h2.906a.294.294 0 0 0 .303-.302v-.523a.326.326 0 0 0-.079-.23.29.29 0 0 0-.224-.086H9.778a.294.294 0 0 0-.217.086.311.311 0 0 0-.086.23v.523a.294.294 0 0 0 .303.303zM8.071 5.223V2.316a.294.294 0 0 0-.303-.303h-.523a.326.326 0 0 0-.23.079.29.29 0 0 0-.086.224v2.906c0 .088.029.16.086.217a.311.311 0 0 0 .23.086h.523a.294.294 0 0 0 .303-.303zm0 7.462V9.778a.294.294 0 0 0-.303-.303h-.523a.326.326 0 0 0-.23.08.29.29 0 0 0-.086.223v2.906c0 .088.029.16.086.217a.311.311 0 0 0 .23.086h.523a.294.294 0 0 0 .303-.303z"
+        fill={color}
+        fill-rule="nonzero"
+      />
+    </svg>
+  )
+}
+
 const GlobalTitle = styled.h1`
   margin-bottom: 0;
 
@@ -202,7 +219,9 @@ export default () => {
     <Header className="page-header" id="page_header">
       <GlobalMenu>
         <GlobalTitle>
-          <Link to="/">{getIcon('site', {color: 'white'})}  SolarSailer</Link>
+          <Link to="/">
+            <HeaderIcon />  SolarSailer
+          </Link>
           <AnimatedHello duration={random(500, 1000)}>
             <HelloPrefix>Hello, I'm</HelloPrefix>{' '}
             <HelloName>Matthieu Oger</HelloName>
