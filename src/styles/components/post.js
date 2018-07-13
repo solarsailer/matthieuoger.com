@@ -255,6 +255,11 @@ export default css`
   .gatsby-highlight {
     position: relative;
 
+    @media (max-width: ${BREAKPOINT_MOBILE}px) {
+      margin-left: -2rem;
+      margin-right: -2rem;
+    }
+
     &::before {
       content: 'Code';
       ${HINT};
@@ -272,8 +277,6 @@ export default css`
     }
 
     @media (max-width: ${BREAKPOINT_MOBILE}px) {
-      margin-left: -2rem;
-      margin-right: -2rem;
       border-radius: 0;
     }
   }
