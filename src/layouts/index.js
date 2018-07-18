@@ -16,13 +16,13 @@ export default props => {
 
   return (
     <Page>
+      <Meta site={props.data.site} />
+
       <Header />
       <PageContentConstrained>
         {props.children({...props, metadata})}
       </PageContentConstrained>
       <Footer handles={metadata.handles} />
-
-      <Meta site={props.data.site} />
     </Page>
   )
 }

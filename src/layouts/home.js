@@ -13,9 +13,9 @@ export default props => {
 
   return (
     <Page>
-      <PageContent>{props.children({...props, metadata})}</PageContent>
-
       <Meta site={props.data.site} layout="home" />
+
+      <PageContent>{props.children({...props, metadata})}</PageContent>
     </Page>
   )
 }
