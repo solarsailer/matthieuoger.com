@@ -42,30 +42,31 @@ export default function PostTemplate({data}) {
 
   const IsomorphicURL = URL ? URL : window.URL
 
-  const postUrl = new IsomorphicURL(path, siteMetadata.siteUrl).toString()
-  const postDescription =
+  // Update for meta tags.
+  const metaTitle = `${title} — ${siteMetadata.author}`
+  const metaUrl = new IsomorphicURL(path, siteMetadata.siteUrl).toString()
+  const metaDescription =
     getExcerpt(excerptLine, excerptQuote) || siteMetadata.description
 
   return (
     <Fragment>
       <Helmet>
-        <title>
-          {title} — {siteMetadata.author}
-        </title>
+        <title>{metaTitle}</title>
 
-        <meta name="twitter:title" content={title} />
-        <meta property="og:title" content={title} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta property="og:title" content={metaTitle} />
 
-        <meta name="twitter:url" content={postUrl} />
-        <meta property="og:url" content={postUrl} />
+        <meta name="twitter:url" content={metaUrl} />
+        <meta property="og:url" content={metaUrl} />
 
-        {postDescription && (
-          <meta name="twitter:description" content={postDescription} />
+        {metaDescription && (
+          <meta name="twitter:description" content={metaDescription} />
         )}
-        {postDescription && (
-          <meta property="og:description" content={postDescription} />
+        {metaDescription && (
+          <meta property="og:description" content={metaDescription} />
         )}
       </Helmet>
+
       {showPageTitle ? (
         <Fragment>
           <PageTitle>{title}</PageTitle>
