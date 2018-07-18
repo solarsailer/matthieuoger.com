@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
@@ -46,6 +47,7 @@ const List = styled.ul`
 export default ({data}) => {
   return (
     <Container>
+      <Helmet title="Not Found — Matthieu Oger" />
       <Title>404</Title>
       <p>There's nothing here, unfortunately.</p>
       <List>
