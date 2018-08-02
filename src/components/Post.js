@@ -1,7 +1,7 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import styled from 'styled-components'
 import {rgba} from 'polished'
-import Link from 'gatsby-link'
 
 import {colors} from '../styles/config'
 import postStyles from '../styles/components/post'

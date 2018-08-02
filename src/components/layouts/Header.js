@@ -1,9 +1,9 @@
 import React from 'react'
-import styled, {keyframes} from 'styled-components'
 import Link from 'gatsby-link'
-import {rgba, shade, tint} from 'polished'
 import posed from 'react-pose'
 import {random} from 'lodash'
+import styled, {keyframes} from 'styled-components'
+import {rgba, tint} from 'polished'
 
 import {getIcon, getWrappedIcon} from '../Icon'
 

@@ -1,5 +1,5 @@
 import {css} from 'styled-components'
-import {tint, shade} from 'polished'
+import {shade} from 'polished'
 
 import {colors} from '../config'
 

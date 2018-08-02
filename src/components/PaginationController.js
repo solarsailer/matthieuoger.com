@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
-import {rgba, shade} from 'polished'
+import {rgba} from 'polished'
 
 import {ButtonSmall, DisabledButtonSmall} from './Button'
 
@@ -78,7 +78,10 @@ const PaginationButton = ({url, children, isTextOnly}) => {
 export default ({isFirstPage, isLastPage, previousUrl, nextUrl}) => {
   return (
     <Container>
-      <PaginationButton isTextOnly={isFirstPage} url={`/articles/${previousUrl}`}>
+      <PaginationButton
+        isTextOnly={isFirstPage}
+        url={`/articles/${previousUrl}`}
+      >
         ←{'\u00A0'}Previous
       </PaginationButton>
 

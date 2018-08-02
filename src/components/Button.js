@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import styled, {css} from 'styled-components'
-import {rgba, shade, tint} from 'polished'
+import {rgba, tint} from 'polished'
 
 import {colors} from '../styles/config'
 
