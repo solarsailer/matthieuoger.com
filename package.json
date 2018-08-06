@@ -21,7 +21,6 @@
     "babel-plugin-styled-components": "^1.5.1",
     "babel-polyfill": "^6.26.0",
     "gatsby": "next",
-    "gatsby-link": "next",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-lodash": "next",
     "gatsby-plugin-nprogress": "next",
