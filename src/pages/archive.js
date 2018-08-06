@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
+import {graphql} from 'gatsby'
 
 import PostRecap from '../components/PostRecap'
 import HeaderRow from '../components/HeaderRow'

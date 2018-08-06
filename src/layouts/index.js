@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
+import {graphql} from 'gatsby'
 
 import Meta from '../components/layouts/Meta'
 import Header from '../components/layouts/Header'

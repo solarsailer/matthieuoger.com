@@ -2,6 +2,7 @@ import React, {Fragment} from 'react'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
 import {URL} from 'url'
+import {graphql} from 'gatsby'
 
 import PageTitle from '../PageTitle'
 import Post from '../Post'
