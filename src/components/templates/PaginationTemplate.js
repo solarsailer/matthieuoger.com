@@ -80,8 +80,8 @@ const Item = styled.li`
 // Export.
 // -------------------------------------------------------------
 
-export default ({data, pathContext}) => {
-  const {group, index, first, last, pageCount} = pathContext
+export default ({data, pageContext}) => {
+  const {group, index, first, last, pageCount} = pageContext
 
   const previous = index - 1 == 1 ? '' : (index - 1).toString()
   const next = (index + 1).toString()
