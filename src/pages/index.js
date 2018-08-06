@@ -1,5 +1,4 @@
-import React, {Fragment} from 'react'
-import {Link} from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
 import {rgba, tint} from 'polished'
 

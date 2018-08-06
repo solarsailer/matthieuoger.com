@@ -81,9 +81,10 @@ const Item = styled.li`
 // -------------------------------------------------------------
 
 export default ({data, pageContext}) => {
-  const {group, index, first, last, pageCount} = pageContext
+  // Grab {pageCount} if needed.
+  const {group, index, first, last} = pageContext
 
-  const previous = index - 1 == 1 ? '' : (index - 1).toString()
+  const previous = index - 1 === 1 ? '' : (index - 1).toString()
   const next = (index + 1).toString()
 
   const content = divideContent(group, {isFirstPage: first, splitAt: 3})
