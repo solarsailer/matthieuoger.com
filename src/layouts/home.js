@@ -26,7 +26,7 @@ export default props => {
 // -------------------------------------------------------------
 
 export const LAYOUT_QUERY = graphql`
-  query HomeLayoutQuery {
+  query {
     site {
       siteMetadata {
         title

@@ -85,7 +85,7 @@ export default function PostTemplate({data}) {
 // -------------------------------------------------------------
 
 export const POST_QUERY = graphql`
-  query PostById($id: String!) {
+  query($id: String!) {
     site {
       siteMetadata {
         title

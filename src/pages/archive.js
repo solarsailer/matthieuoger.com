@@ -86,7 +86,7 @@ export default ({data}) => {
 // -------------------------------------------------------------
 
 export const POSTS_LIST_QUERY = graphql`
-  query PostsListQuery {
+  query {
     allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
       edges {
         node {
