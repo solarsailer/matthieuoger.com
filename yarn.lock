@@ -1735,7 +1735,7 @@ babel-plugin-transform-strict-mode@^6.24.1:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
-babel-polyfill@^6.20.0, babel-polyfill@^6.26.0:
+babel-polyfill@^6.20.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
   dependencies:
@@ -4257,7 +4257,7 @@ gatsby-link@^2.0.0-beta.9:
     prop-types "^15.6.1"
     ric "^1.3.0"
 
-gatsby-paginate@next:
+gatsby-paginate@^1.0.16:
   version "1.0.16"
   resolved "https://registry.yarnpkg.com/gatsby-paginate/-/gatsby-paginate-1.0.16.tgz#b45b92898005aa798b3b51c7abab286753e4cbe5"
   dependencies:
