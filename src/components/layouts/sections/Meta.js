@@ -1,14 +1,14 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import {Helmet} from 'react-helmet'
+import {StaticQuery, graphql} from 'gatsby'
 
-import '../../styles/globals/manifest'
+import '../../../styles/globals/manifest'
 
 // -------------------------------------------------------------
 // Component.
 // -------------------------------------------------------------
 
-export default ({site, layout}) => {
-  const {siteMetadata: metadata} = site
+const MetaWrapper = ({metadata, layout}) => {
   const {handles} = metadata
 
   const googleFonts = metadata.googleFonts.map(x => (
@@ -22,7 +22,7 @@ export default ({site, layout}) => {
   const authorAndDescription = `${metadata.author} — ${metadata.description}`
 
   return (
-    <Fragment>
+    <>
       <Helmet>
         {googleFonts}
 
@@ -60,6 +60,41 @@ export default ({site, layout}) => {
         <meta property="og:image:alt" content={authorAndDescription} />
         <meta property="og:type" content="website" />
       </Helmet>
-    </Fragment>
+    </>
+  )
+}
+
+// -------------------------------------------------------------
+// Export.
+// -------------------------------------------------------------
+
+export default ({data}) => {
+  return (
+    <StaticQuery
+      query={graphql`
+        {
+          site {
+            siteMetadata {
+              title
+              author
+              description
+              keywords
+              url
+              siteUrl
+              googleFonts
+              handles {
+                twitter
+                github
+                dribbble
+                unsplash
+                instagram
+                speakerDeck
+              }
+            }
+          }
+        }
+      `}
+      render={data => <MetaWrapper metadata={data.site.siteMetadata} />}
+    />
   )
 }

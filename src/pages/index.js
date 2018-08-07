@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import {rgba, tint} from 'polished'
+import {graphql} from 'gatsby'
 
+import Layout from '../components/layouts/HomeLayout'
 import {Button} from '../components/Button'
 import SocialNavigation from '../components/SocialNavigation'
-
 import {colors} from '../styles/config'
-
 import {getWrappedIcon} from '../components/Icon'
-
 import avatar from '../../content/images/avatar-black-white.jpg'
 import backgroundImage from '../../content/images/background.jpg'
 
@@ -174,44 +173,67 @@ const Navigation = styled.ul`
 // Page.
 // -------------------------------------------------------------
 
-export default ({metadata}) => (
-  <Container>
-    <Avatar>
-      <img src={avatar} title="Matthieu Oger" alt="Matthieu Oger" />
-      <Header>
-        <MainTitle>SOLARSAILER</MainTitle>
-        <SubTitle>Matthieu Oger</SubTitle>
-      </Header>
-      <Bio>
-        <strong>I'm a developer, designer and product manager.</strong> I
-        co-founded <a href="https://pixelnest.io/">Pixelnest Studio</a> in
-        February 2014, where we created{' '}
-        <a href="http://steredenn.pixelnest.io/">Steredenn</a>. I'm also an
-        amateur street·travel photographer.
-      </Bio>
-    </Avatar>
+export default ({data}) => {
+  const handles = data.site.siteMetadata.handles
 
-    <Navigation>
-      <li>
-        <HomeButton url="/about/">About</HomeButton>
-      </li>
-      <li>
-        <HomeButton url="/articles/">Articles</HomeButton>
-      </li>
-      <li>
-        <HomeButton url="/atom.xml">
-          {getWrappedIcon('rss', {
-            width: '13px',
-            height: '13px',
-            marginRight: '8px'
-          })}RSS
-        </HomeButton>
-      </li>
-    </Navigation>
+  return (
+    <Layout>
+      <Container>
+        <Avatar>
+          <img src={avatar} title="Matthieu Oger" alt="Matthieu Oger" />
+          <Header>
+            <MainTitle>SOLARSAILER</MainTitle>
+            <SubTitle>Matthieu Oger</SubTitle>
+          </Header>
+          <Bio>
+            <strong>I'm a developer, designer and product manager.</strong> I
+            co-founded <a href="https://pixelnest.io/">Pixelnest Studio</a> in
+            February 2014, where we created{' '}
+            <a href="http://steredenn.pixelnest.io/">Steredenn</a>. I'm also an
+            amateur street·travel photographer.
+          </Bio>
+        </Avatar>
 
-    <SocialNavigation
-      handles={metadata.handles}
-      iconsOnlyBreakpoint={HOME_BREAKPOINT}
-    />
-  </Container>
-)
+        <Navigation>
+          <li>
+            <HomeButton url="/about/">About</HomeButton>
+          </li>
+          <li>
+            <HomeButton url="/articles/">Articles</HomeButton>
+          </li>
+          <li>
+            <HomeButton url="/atom.xml">
+              {getWrappedIcon('rss', {
+                width: '13px',
+                height: '13px',
+                marginRight: '8px'
+              })}RSS
+            </HomeButton>
+          </li>
+        </Navigation>
+
+        <SocialNavigation
+          handles={handles}
+          iconsOnlyBreakpoint={HOME_BREAKPOINT}
+        />
+      </Container>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  {
+    site {
+      siteMetadata {
+        handles {
+          twitter
+          github
+          dribbble
+          unsplash
+          instagram
+          speakerDeck
+        }
+      }
+    }
+  }
+`

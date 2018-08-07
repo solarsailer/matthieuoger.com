@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
+import Layout from '../components/layouts/PageLayout'
 import {Button} from '../components/Button'
 
 // -------------------------------------------------------------
@@ -43,23 +44,25 @@ const List = styled.ul`
 // Default.
 // -------------------------------------------------------------
 
-export default ({data}) => {
+export default () => {
   return (
-    <Container>
-      <Helmet title="Not Found — Matthieu Oger" />
-      <Title>404</Title>
-      <p>There's nothing here, unfortunately.</p>
-      <List>
-        <li>
-          <Button url="/">Home</Button>
-        </li>
-        <li>
-          <Button url="/about/">About</Button>
-        </li>
-        <li>
-          <Button url="/articles/">Articles</Button>
-        </li>
-      </List>
-    </Container>
+    <Layout>
+      <Container>
+        <Helmet title="Not Found — Matthieu Oger" />
+        <Title>404</Title>
+        <p>There's nothing here, unfortunately.</p>
+        <List>
+          <li>
+            <Button url="/">Home</Button>
+          </li>
+          <li>
+            <Button url="/about/">About</Button>
+          </li>
+          <li>
+            <Button url="/articles/">Articles</Button>
+          </li>
+        </List>
+      </Container>
+    </Layout>
   )
 }
