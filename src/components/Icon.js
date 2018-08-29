@@ -1,4 +1,4 @@
-import React, {Fragment} from 'React'
+import React from 'react'
 import styled from 'styled-components'
 
 // -------------------------------------------------------------
@@ -39,6 +39,9 @@ export function getIcon(name, props) {
       return <InstagramLineIcon {...props} />
     case 'speakerdeck-line':
       return <SpeakerDeckLineIcon {...props} />
+
+    default:
+      return <SiteIcon {...props} />
   }
 }
 

@@ -1,8 +1,9 @@
-import React, {Fragment} from 'react'
-import styled from 'styled-components'
+import React from 'react'
 import {Helmet} from 'react-helmet'
 import {URL} from 'url'
+import {graphql} from 'gatsby'
 
+import Layout from '../layouts/PageLayout'
 import PageTitle from '../PageTitle'
 import Post from '../Post'
 
@@ -49,7 +50,7 @@ export default function PostTemplate({data}) {
     getExcerpt(excerptLine, excerptQuote) || siteMetadata.description
 
   return (
-    <Fragment>
+    <Layout>
       <Helmet>
         <title>{metaTitle}</title>
 
@@ -68,14 +69,14 @@ export default function PostTemplate({data}) {
       </Helmet>
 
       {showPageTitle ? (
-        <Fragment>
+        <>
           <PageTitle>{title}</PageTitle>
           <Post url={path} date={readableDate} content={html} />
-        </Fragment>
+        </>
       ) : (
         <Post url={path} title={title} date={readableDate} content={html} />
       )}
-    </Fragment>
+    </Layout>
   )
 }
 
@@ -83,13 +84,13 @@ export default function PostTemplate({data}) {
 // Queries.
 // -------------------------------------------------------------
 
-export const POST_QUERY = graphql`
-  query PostById($id: String!) {
+export const query = graphql`
+  query($id: String!) {
     site {
       siteMetadata {
         title
-        description
         author
+        description
         siteUrl
       }
     }

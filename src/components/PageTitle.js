@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import {Link} from 'gatsby'
 
 import {colors} from '../styles/config'
 import invisibleLinkStyles from '../styles/components/invisible-link'

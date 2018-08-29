@@ -1,10 +1,11 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
+import {graphql} from 'gatsby'
 
+import Layout from '../components/layouts/PageLayout'
 import PostRecap from '../components/PostRecap'
 import HeaderRow from '../components/HeaderRow'
-
 import PageTitle from '../components/PageTitle'
 
 // -------------------------------------------------------------
@@ -70,13 +71,13 @@ export default ({data}) => {
   const nodes = data.allMarkdownRemark.edges.map(x => x.node)
 
   return (
-    <Fragment>
+    <Layout>
       <Helmet>
         <title>Archive — Matthieu Oger</title>
       </Helmet>
       <PageTitle>Archive</PageTitle>
       <List>{convertAndAddHeaders(nodes)}</List>
-    </Fragment>
+    </Layout>
   )
 }
 
@@ -84,8 +85,8 @@ export default ({data}) => {
 // Queries.
 // -------------------------------------------------------------
 
-export const POSTS_LIST_QUERY = graphql`
-  query PostsListQuery {
+export const query = graphql`
+  {
     allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
       edges {
         node {

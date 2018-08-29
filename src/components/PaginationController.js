@@ -4,8 +4,6 @@ import {rgba} from 'polished'
 
 import {ButtonSmall, DisabledButtonSmall} from './Button'
 
-import {colors} from '../styles/config'
-
 // -------------------------------------------------------------
 // Constants.
 // -------------------------------------------------------------

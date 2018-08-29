@@ -9,14 +9,12 @@ const {
   convertDateToPath
 } = require('./src/node/markdown-creator')
 
-const {assignLayout} = require('./src/node/layouts')
-
 // -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------
 
-exports.onCreateNode = ({boundActionCreators, node, getNode}) => {
-  const {createNodeField} = boundActionCreators
+exports.onCreateNode = ({actions, node, getNode}) => {
+  const {createNodeField} = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     const prefix = convertDateToPath(node.frontmatter.date)
@@ -36,8 +34,8 @@ exports.onCreateNode = ({boundActionCreators, node, getNode}) => {
   }
 }
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-  const {createPage} = boundActionCreators
+exports.createPages = ({actions, graphql}) => {
+  const {createPage} = actions
 
   return graphql(GET_ALL_POSTS).then(result => {
     if (result.errors) {
@@ -56,19 +54,8 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
     // Create markdown pages.
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
-      createMarkdownNode(node, boundActionCreators)
+      createMarkdownNode(node, actions)
     })
-  })
-}
-
-exports.onCreatePage = async ({page, boundActionCreators}) => {
-  const {createPage} = boundActionCreators
-
-  return new Promise((resolve, reject) => {
-    const hasAssignedLayout = assignLayout(page)
-    if (hasAssignedLayout) createPage(page)
-
-    resolve()
   })
 }
 

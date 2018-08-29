@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import {StaticQuery, graphql} from 'gatsby'
 
-import SocialNavigation, {GRID_BREAKPOINT} from '../CompactSocialNavigation'
-
-import {colors} from '../../styles/config'
+import SocialNavigation, {GRID_BREAKPOINT} from '../../CompactSocialNavigation'
+import {colors} from '../../../styles/config'
 
 // -------------------------------------------------------------
 // Components.
@@ -56,7 +56,7 @@ const Copyright = styled.p`
   }
 `
 
-export default ({handles}) => (
+const FooterWrapper = ({handles}) => (
   <Footer className="page-footer" id="page_footer">
     <SocialNavigation handles={handles} />
     <Copyright>
@@ -66,3 +66,33 @@ export default ({handles}) => (
     </Copyright>
   </Footer>
 )
+
+// -------------------------------------------------------------
+// Export.
+// -------------------------------------------------------------
+
+export default () => {
+  return (
+    <StaticQuery
+      query={graphql`
+        {
+          site {
+            siteMetadata {
+              handles {
+                twitter
+                github
+                dribbble
+                unsplash
+                instagram
+                speakerDeck
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+        <FooterWrapper handles={data.site.siteMetadata.handles} />
+      )}
+    />
+  )
+}

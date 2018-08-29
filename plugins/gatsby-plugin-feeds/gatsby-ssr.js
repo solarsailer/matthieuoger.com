@@ -1,6 +1,7 @@
-import React, {Fragment} from 'react'
-import {withPrefix} from 'gatsby-link'
-import {defaultOptions} from './internals'
+const React = require('react')
+const {withPrefix} = require('gatsby')
+
+const {defaultOptions} = require('./internals')
 
 // -------------------------------------------------------------
 // Module.
@@ -28,7 +29,7 @@ exports.onRenderBody = ({setHeadComponents}, pluginOptions) => {
     jsonPath = prefixWithSlash(jsonPath)
 
     return (
-      <Fragment key={`gatsby-plugin-feeds-${i}`}>
+      <React.Fragment key={`gatsby-plugin-feeds-${i}`}>
         <link
           rel="alternate"
           type="application/atom+xml"
@@ -39,7 +40,7 @@ exports.onRenderBody = ({setHeadComponents}, pluginOptions) => {
           type="application/json"
           href={withPrefix(jsonPath)}
         />
-      </Fragment>
+      </React.Fragment>
     )
   })
 

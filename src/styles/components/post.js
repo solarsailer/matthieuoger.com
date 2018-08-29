@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components'
-import {rgba, tint, shade} from 'polished'
+import {css} from 'styled-components'
+import {rgba, tint} from 'polished'
 
 import {colors, typography} from '../config'
 import bodyLinkStyles from './body-link'

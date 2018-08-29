@@ -1,10 +1,10 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {Helmet} from 'react-helmet'
 
+import Layout from '../layouts/PageLayout'
 import Post from '../Post'
 import PostRecap from '../PostRecap'
-
 import PageTitle from '../PageTitle'
 import PaginationController from '../PaginationController'
 
@@ -33,7 +33,7 @@ function divideContent(items, {isFirstPage, splitAt}) {
     const rest = items.slice(splitAt)
 
     return (
-      <Fragment>
+      <>
         <Posts>
           {main.map(({node}) => (
             <MainItem key={node.id}>
@@ -47,7 +47,7 @@ function divideContent(items, {isFirstPage, splitAt}) {
           ))}
         </Posts>
         <Grid>{createGridItems(rest)}</Grid>
-      </Fragment>
+      </>
     )
   }
 
@@ -80,16 +80,17 @@ const Item = styled.li`
 // Export.
 // -------------------------------------------------------------
 
-export default ({data, pathContext}) => {
-  const {group, index, first, last, pageCount} = pathContext
+export default ({pageContext}) => {
+  // Grab {pageCount} if needed.
+  const {group, index, first, last} = pageContext
 
-  const previous = index - 1 == 1 ? '' : (index - 1).toString()
+  const previous = index - 1 === 1 ? '' : (index - 1).toString()
   const next = (index + 1).toString()
 
   const content = divideContent(group, {isFirstPage: first, splitAt: 3})
 
   return (
-    <Fragment>
+    <Layout>
       <Helmet>
         <title>Articles — Matthieu Oger</title>
       </Helmet>
@@ -113,6 +114,6 @@ export default ({data, pathContext}) => {
           isLastPage={last}
         />
       )}
-    </Fragment>
+    </Layout>
   )
 }

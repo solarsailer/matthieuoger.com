@@ -71,6 +71,5 @@ exports.plugins = [
   'gatsby-plugin-feeds',
   'gatsby-plugin-styled-components',
   'gatsby-plugin-react-helmet',
-  'gatsby-plugin-react-next',
   'gatsby-plugin-lodash'
 ]

@@ -1,17 +1,14 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import {Link} from 'gatsby'
 import posed from 'react-pose'
 import {random} from 'lodash'
 import styled, {keyframes} from 'styled-components'
 import {rgba, tint} from 'polished'
 
-import {getIcon, getWrappedIcon} from '../Icon'
-
-import {colors} from '../../styles/config'
-
-import {Button} from '../Button'
-
-import {withMountedAnimator} from '../MountedAnimator'
+import {getWrappedIcon} from '../../Icon'
+import {colors} from '../../../styles/config'
+import {Button} from '../../Button'
+import {withMountedAnimator} from '../../MountedAnimator'
 
 // -------------------------------------------------------------
 // Constants.
