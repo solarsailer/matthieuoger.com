@@ -31,18 +31,18 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "lodash": "^4.17.10",
-    "polished": "^1.9.3",
+    "polished": "^2.0.3",
     "prismjs": "^1.15.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
-    "react-pose": "^2.2.0",
-    "styled-components": "^3.4.1",
+    "react-pose": "^3.1.0",
+    "styled-components": "^3.4.5",
     "xml": "^1.0.1"
   },
   "devDependencies": {
     "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
-    "jest": "^23.4.0"
+    "jest": "^23.5.0"
   }
 }
