@@ -68,7 +68,7 @@ const MetaWrapper = ({metadata, layout}) => {
 // Export.
 // -------------------------------------------------------------
 
-export default ({data}) => {
+export default props => {
   return (
     <StaticQuery
       query={graphql`
@@ -94,7 +94,9 @@ export default ({data}) => {
           }
         }
       `}
-      render={data => <MetaWrapper metadata={data.site.siteMetadata} />}
+      render={data => (
+        <MetaWrapper {...props} metadata={data.site.siteMetadata} />
+      )}
     />
   )
 }
