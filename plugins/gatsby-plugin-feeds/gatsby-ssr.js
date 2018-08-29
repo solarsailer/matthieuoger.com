@@ -1,5 +1,5 @@
 const React = require('react')
-const {withPrefix} = require('gatsby-link')
+const {withPrefix} = require('gatsby')
 
 const {defaultOptions} = require('./internals')
 
