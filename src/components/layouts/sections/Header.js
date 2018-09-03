@@ -185,11 +185,11 @@ const HelloElement = styled.span`
   opacity: 0;
 `
 
-const HelloPrefix = HelloElement.extend`
+const HelloPrefix = styled(HelloElement)`
   animation: ${fadeOut} linear 150s;
 `
 
-const HelloName = HelloElement.extend`
+const HelloName = styled(HelloElement)`
   color: ${colors.page.content};
   animation: ${fadeOut} linear 180s;
 `
@@ -217,7 +217,8 @@ export default () => {
       <GlobalMenu>
         <GlobalTitle>
           <Link to="/">
-            <HeaderIcon />  SolarSailer
+            <HeaderIcon />
+              SolarSailer
           </Link>
           <AnimatedHello duration={random(500, 1000)}>
             <HelloPrefix>Hello, I'm</HelloPrefix>{' '}

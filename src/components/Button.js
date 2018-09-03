@@ -78,7 +78,7 @@ export const DisabledButton = styled.span`
   opacity: 0.5;
 `
 
-export const DisabledButtonSmall = DisabledButton.extend`
+export const DisabledButtonSmall = styled(DisabledButton)`
   padding: 4px 1rem 2px;
 
   font-size: 0.8em;
