@@ -23,8 +23,11 @@ export function getIcon(name, props) {
       return <InstagramIcon {...props} />
     case 'speakerdeck':
       return <SpeakerDeckIcon {...props} />
+    case 'linkedin':
+      return <LinkedInIcon {...props} />
     case 'rss':
       return <RSSIcon {...props} />
+
     case 'site-line':
       return <SiteLineIcon {...props} />
     case 'twitter-line':
@@ -39,6 +42,8 @@ export function getIcon(name, props) {
       return <InstagramLineIcon {...props} />
     case 'speakerdeck-line':
       return <SpeakerDeckLineIcon {...props} />
+    case 'linkedin-line':
+      return <LinkedInLineIcon {...props} />
 
     default:
       return <SiteIcon {...props} />
@@ -431,6 +436,54 @@ export const SpeakerDeckLineIcon = ({color}) => {
           d="M8 7h9a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H8zm3.5 7l-3-2.5 3-2.5v5zm2 0v-5l3 2.5-3 2.5z"
           fill={color}
           fillRule="nonzero"
+        />
+      </g>
+    </svg>
+  )
+}
+
+// -------------------------------------------------------------
+// LinkedIn.
+// -------------------------------------------------------------
+
+export const LinkedInIcon = ({color}) => {
+  return (
+    <svg
+      className="icon"
+      width="25"
+      height="25"
+      viewBox="0 0 25 25"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0zM9.44 17.681H6.91V9.535H9.44v8.146zM8.16 8.535c-.8 0-1.317-.566-1.317-1.267 0-.715.533-1.264 1.35-1.264.816 0 1.316.55 1.331 1.264 0 .7-.515 1.267-1.364 1.267zm10.526 9.146h-2.531v-4.514c0-1.051-.368-1.765-1.283-1.765-.7 0-1.114.483-1.298.948-.068.166-.085.4-.085.633v4.697h-2.532v-5.547c0-1.017-.033-1.867-.067-2.6h2.2l.115 1.132h.051c.334-.53 1.15-1.315 2.516-1.315 1.665 0 2.914 1.116 2.914 3.515v4.816z"
+        fill={color}
+        fillRule="nonzero"
+      />
+    </svg>
+  )
+}
+
+export const LinkedInLineIcon = ({color}) => {
+  return (
+    <svg
+      className="icon"
+      width="25"
+      height="25"
+      viewBox="0 0 25 25"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g fill="none" fillRule="evenodd">
+        <circle
+          stroke={color}
+          strokeWidth="1.3"
+          cx="12.5"
+          cy="12.5"
+          r="11.85"
+        />
+        <path
+          d="M9.44 17.681H6.91V9.535H9.44v8.146zM8.16 8.535c-.8 0-1.317-.566-1.317-1.267 0-.715.533-1.264 1.35-1.264.816 0 1.316.55 1.331 1.264 0 .7-.515 1.267-1.364 1.267zm10.526 9.146h-2.531v-4.514c0-1.051-.368-1.765-1.283-1.765-.7 0-1.114.483-1.298.948-.068.166-.085.4-.085.633v4.697h-2.532v-5.547c0-1.017-.033-1.867-.067-2.6h2.2l.115 1.132h.051c.334-.53 1.15-1.315 2.516-1.315 1.665 0 2.914 1.116 2.914 3.515v4.816z"
+          fill={color}
         />
       </g>
     </svg>

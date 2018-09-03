@@ -28,7 +28,8 @@ exports.siteMetadata = {
     dribbble: 'solarsailer',
     unsplash: 'solarsailer',
     instagram: 'matthieuoger',
-    speakerDeck: 'solarsailer'
+    speakerDeck: 'solarsailer',
+    linkedIn: 'matthieuoger'
   },
   url: 'solarsailer.net',
   siteUrl: 'https://solarsailer.net/',

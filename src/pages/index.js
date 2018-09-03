@@ -207,7 +207,8 @@ export default ({data}) => {
                 width: '13px',
                 height: '13px',
                 marginRight: '8px'
-              })}RSS
+              })}
+              RSS
             </HomeButton>
           </li>
         </Navigation>
@@ -232,6 +233,7 @@ export const query = graphql`
           unsplash
           instagram
           speakerDeck
+          linkedIn
         }
       }
     }

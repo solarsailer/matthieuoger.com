@@ -85,6 +85,7 @@ export default () => {
                 unsplash
                 instagram
                 speakerDeck
+                linkedIn
               }
             }
           }

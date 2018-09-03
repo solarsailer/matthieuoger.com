@@ -11,7 +11,8 @@ export default css`
   a[href*='dribbble.com'],
   a[href*='unsplash.com'],
   a[href*='instagram.com'],
-  a[href*='speakerdeck.com'] {
+  a[href*='speakerdeck.com'],
+  a[href*='linkedin.com'] {
     position: relative;
     margin-left: 1.5em;
 
@@ -68,6 +69,12 @@ export default css`
 
   a[href*='speakerdeck.com']::before {
     background-image: url("data:image/svg+xml,%3Csvg width='13' height='11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0h9a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm3.5 7l-3-2.5 3-2.5v5zm2 0V3l3 2.5-3 2.5z' fill='%23396' fill-rule='nonzero'/%3E%3C/svg%3E");
+  }
+
+  a[href*='linkedin.com']::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.444 1.222c0 .672-.427 1.222-1.222 1.222C.49 2.444 0 1.894 0 1.284 0 .61.489 0 1.222 0c.734 0 1.222.55 1.222 1.222zM0 11h2.444V3.056H0V11zm8.311-7.822c-1.283 0-2.017.733-2.322 1.222h-.061l-.122-1.039h-2.2c0 .672.06 1.467.06 2.383V11h2.445V6.661c0-.244 0-.428.061-.611.184-.428.49-.978 1.161-.978.856 0 1.223.734 1.223 1.711V11H11V6.478c0-2.261-1.161-3.3-2.689-3.3z' fill='%230077B5' fill-rule='nonzero'/%3E%3C/svg%3E");
+
+    font-size: 0.8em;
   }
 
   /* In Twitter embed, disable the icon. */

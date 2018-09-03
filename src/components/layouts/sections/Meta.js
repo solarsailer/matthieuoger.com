@@ -89,6 +89,7 @@ export default props => {
                 unsplash
                 instagram
                 speakerDeck
+                linkedIn
               }
             }
           }

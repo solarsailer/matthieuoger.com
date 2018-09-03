@@ -34,6 +34,12 @@ export const social = {
     color: '#396',
     domain: 'com',
     url: 'https://speakerdeck.com/@HANDLE/'
+  },
+  linkedIn: {
+    name: 'LinkedIn',
+    color: '#0077B5',
+    domain: 'com',
+    url: 'https://linkedin.com/in/@HANDLE/'
   }
 }
 
