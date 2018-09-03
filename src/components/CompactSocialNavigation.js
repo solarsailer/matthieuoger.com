@@ -12,7 +12,7 @@ import gridStyles from '../styles/components/grid-social-nav'
 // Constants.
 // -------------------------------------------------------------
 
-export const GRID_BREAKPOINT = 400
+export const GRID_BREAKPOINT = 500
 
 // -------------------------------------------------------------
 // Functions.

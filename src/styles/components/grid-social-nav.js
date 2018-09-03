@@ -32,6 +32,7 @@ export default css`
   /* This way, we can present a pretty 2x3 grid. */
   @supports (display: grid) {
     display: grid;
+
     grid-template-columns: repeat(3, 35px);
     grid-row-gap: 1rem;
     grid-column-gap: 2rem;
@@ -44,6 +45,12 @@ export default css`
     li,
     li + li {
       margin: 0;
+    }
+
+    /* Hacks for a 7 elements list. */
+
+    li:nth-child(7) {
+      grid-column: 2;
     }
   }
 `

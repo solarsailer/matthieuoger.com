@@ -15,7 +15,8 @@ import gridStyles from '../styles/components/grid-social-nav'
 // Constants.
 // -------------------------------------------------------------
 
-const SOCIAL_BREAKPOINT = 1400
+const SOCIAL_BREAKPOINT = 1600
+const GRID_BREAKPONT = 525
 
 // -------------------------------------------------------------
 // Functions.
@@ -93,7 +94,7 @@ const List = styled.ul`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: ${GRID_BREAKPONT}px) {
     ${gridStyles};
   }
 `
