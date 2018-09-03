@@ -6,12 +6,18 @@ import SocialNavigation, {GRID_BREAKPOINT} from '../../CompactSocialNavigation'
 import {colors} from '../../../styles/config'
 
 // -------------------------------------------------------------
+// Constants.
+// -------------------------------------------------------------
+
+const MAX_WIDTH_FOOTER = 550
+
+// -------------------------------------------------------------
 // Components.
 // -------------------------------------------------------------
 
 const Footer = styled.footer`
   color: #aaa;
-  max-width: 500px;
+  max-width: ${MAX_WIDTH_FOOTER}px;
   margin-left: auto;
   margin-right: auto;
 
@@ -35,7 +41,7 @@ const Footer = styled.footer`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: ${MAX_WIDTH_FOOTER + 100}px) {
     max-width: 80%;
   }
 `
