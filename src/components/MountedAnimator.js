@@ -12,9 +12,13 @@ export function withMountedAnimator(WrappedComponent) {
     state = {isMounted: false}
 
     componentDidMount() {
-      setTimeout(() => {
+      this.delayId = setTimeout(() => {
         this.setState({isMounted: true})
       }, this.props.delay || 0)
+    }
+
+    componentWillUnmount() {
+      if (this.delayId) clearTimeout(this.delayId)
     }
 
     render() {
