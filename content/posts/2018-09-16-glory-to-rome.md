@@ -3,7 +3,9 @@ date: "2018-09-16"
 
 title: "The Story of Glory To Rome"
 
-excerpt: ""
+excerptQuote:
+  name: "Cyrus Farivar"
+  quote: "In less than a decade, how could a game whose ranking still remains relatively high on Board Game Geek have totally disappeared? […] With a successful production, he could have taken the game from indie cult favorite to something much bigger. Instead [it] represented the beginning of the end."
 ---
 
 [Cyrus Farivar at Ars Technica][article]:
