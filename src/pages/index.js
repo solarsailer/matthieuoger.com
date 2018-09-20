@@ -202,7 +202,7 @@ export default ({data}) => {
             <HomeButton url="/articles/">Articles</HomeButton>
           </li>
           <li>
-            <HomeButton url="/atom.xml">
+            <HomeButton url="/atom.xml" external newTab>
               {getWrappedIcon('rss', {
                 width: '13px',
                 height: '13px',
