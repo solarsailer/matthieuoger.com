@@ -25,10 +25,10 @@ exports.siteMetadata = {
   handles: {
     twitter: 'solarsailer',
     github: 'solarsailer',
-    dribbble: 'solarsailer',
-    unsplash: 'solarsailer',
+    dribbble: 'matthieuoger',
+    unsplash: 'matthieuoger',
     instagram: 'matthieuoger',
-    speakerDeck: 'solarsailer',
+    speakerDeck: 'matthieuoger',
     linkedIn: 'matthieuoger'
   },
   url: 'solarsailer.net',
