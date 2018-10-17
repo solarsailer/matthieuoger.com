@@ -1,5 +1,5 @@
 {
-  "name": "matthieuoger.com",
+  "name": "solarsailer.net",
   "version": "5.0.0",
   "description": "Solar Sailer by Matthieu Oger",
   "license": "UNLICENSED",
@@ -7,7 +7,7 @@
   "repository": "https://github.com/solarsailer/solarsailer.net/",
   "author": {
     "name": "Matthieu Oger",
-    "url": "https://matthieuoger.com/"
+    "url": "https://solarsailer.net/"
   },
   "scripts": {
     "start": "gatsby develop",
