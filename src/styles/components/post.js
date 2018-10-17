@@ -156,9 +156,10 @@ export default css`
     }
   }
 
-  /* Images. */
+  /* Images & videos. */
 
-  img {
+  img,
+  video {
     display: block;
     max-width: 100%;
     margin-left: auto;
@@ -229,7 +230,8 @@ export default css`
     background: #f6f6f6;
     border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
 
-    img {
+    img,
+    video {
       margin-bottom: 1rem;
       border: none;
     }
