@@ -1,13 +1,15 @@
 ---
-date: "2018-10-17"
+date: "2018-10-18"
 
 title: "Unity and iPhone X's home indicator"
 
-excerpt: ""
+excerpt: "Use the `Bottom` option for \"Defer system gestures on edges\" in the `Edit → Project Settings → Player` menu of Unity to make the iPhone X's home indicator less visible and obtrusive. Don't use \"Hide home button on iPhone X\". This is not what you want for a game."
 ---
 
 <blockquote class="tldr">
-  <p>Check the <code>Bottom</code> option for "Defer system gestures on edges" in the <code>Edit → Project Settings → Player</code> menu of Unity to make the iPhone X's home indicator less visible and obtrusive in a game.</p>
+  <p>Check the <code>Bottom</code> option for "Defer system gestures on edges" in the <code>Edit → Project Settings → Player</code> menu of Unity to make the iPhone X's home indicator less visible and obtrusive in your project.</p>
+
+  <p>Don't use "Hide home button on iPhone X". This is not what you want for a game.</p>
 </blockquote>
 
 ---
@@ -24,18 +26,18 @@ Since the iPhone X, the mechanism to go back to the home screen has changed on i
 
 By default, at the bottom (where the chin was), the home indicator is **always visible** in an app. It's the black bar you can see on this screenshot:
 
-![Home indicator default state](/images/posts/2018-10-17/home-indicator.jpg)
+![Home indicator default state](/images/posts/2018-10-18/home-indicator.jpg)
 
 For the moment, it's a permanent indicator if the app does not specify a different behavior.[^1]
 
 See what it does in action:
 
 <figure>
-  <video src="/images/posts/2018-10-17/action.mp4" width="221.5" height="480" controls muted loop>
+  <video src="/images/posts/2018-10-18/action.mp4" width="221.5" height="480" controls muted loop>
     Your browser doesn't support videos. You can download it below.
   </video>
   <figcaption>
-    Using the home indicator (<a href="/images/posts/2018-10-17/action.mp4">download video</a>).
+    Using the home indicator (<a href="/images/posts/2018-10-18/action.mp4">download video</a>).
   </figcaption>
 </figure>
 
@@ -45,7 +47,7 @@ It's a thoughtful UI that follows the finger precisely. With the haptic feedback
 
 However, this (default) behavior is not great for games. It's too bright and it hides a small portion of the bottom part of the screen. Which can be confusing in games like Steredenn, where many things are displayed at the same time.
 
-![Home indicator in Steredenn](/images/posts/2018-10-17/steredenn.jpg)
+![Home indicator in Steredenn](/images/posts/2018-10-18/steredenn.jpg)
 
 Fortunately, Unity (well, technically, it's iOS) provides 2 ways to change the home indicator. Obviously with Unity, the correct one is not the one you would expect.
 
@@ -53,15 +55,15 @@ You can find these settings by following this procedure:
 
 1. Go to `Edit → Project Settings → Player`.
 
-![Open the Player's settings](/images/posts/2018-10-17/unity-01.jpg)
+![Open the Player's settings](/images/posts/2018-10-18/unity-01.jpg)
 
 2. Then, click on the iOS tab, and find the "Other Settings" area.
 
-![Find "Other Settings"](/images/posts/2018-10-17/unity-02.jpg)
+![Find "Other Settings"](/images/posts/2018-10-18/unity-02.jpg)
 
 3. Finally, we are interested in 2 settings: "Hide home button on iPhone X" and "Defer system gestures on edges".
 
-!["Hide home button on iPhone X" and "Defer system gestures on edges"](/images/posts/2018-10-17/unity-03.jpg)
+!["Hide home button on iPhone X" and "Defer system gestures on edges"](/images/posts/2018-10-18/unity-03.jpg)
 
 ## "Hide home button on iPhone X"
 
@@ -74,11 +76,11 @@ Note that this setting can be useful sometimes. For example, if you are doing a 
 This is what YouTube does, for example (it's hard to see cos' the home indicator is black here, but look at the bottom):
 
 <figure>
-  <video src="/images/posts/2018-10-17/hide.mp4" controls muted loop>
+  <video src="/images/posts/2018-10-18/hide.mp4" controls muted loop>
     Your browser doesn't support videos. You can download it below.
   </video>
   <figcaption>
-    "Hide home button on iPhone X" (<a href="/images/posts/2018-10-17/hide.mp4">download video</a>).
+    "Hide home button on iPhone X" (<a href="/images/posts/2018-10-18/hide.mp4">download video</a>).
   </figcaption>
 </figure>
 
@@ -96,11 +98,11 @@ The "bottom" checkbox is enough if you only want to change the home indicator be
 This is what Alto's Adventure does, as well as Steredenn:
 
 <figure>
-  <video src="/images/posts/2018-10-17/defer.mp4" controls muted loop>
+  <video src="/images/posts/2018-10-18/defer.mp4" controls muted loop>
     Your browser doesn't support videos. You can download it below.
   </video>
   <figcaption>
-    "Defer system gestures on edges" (<a href="/images/posts/2018-10-17/defer.mp4">download video</a>).
+    "Defer system gestures on edges" (<a href="/images/posts/2018-10-18/defer.mp4">download video</a>).
   </figcaption>
 </figure>
 
