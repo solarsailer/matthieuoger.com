@@ -355,6 +355,17 @@ export default css`
     }
   }
 
+  .tldr {
+    background: ${tint(0.15, '#EC854C')};
+    border: 1px solid ${tint(0.25, '#EC854C')};
+
+    &::before {
+      content: 'tl;dr';
+      color: #EC854C;
+      opacity: 0.9;
+    }
+  }
+
   /* HR. */
 
   hr {
