@@ -288,18 +288,21 @@ export default css`
   }
 
   /* Inline code block. */
-  p code {
+  p code,
+  li code {
     color: ${colors.brand.main};
 
     margin-left: 2px;
     margin-right: 2px;
 
     padding-top: 4px;
-    padding-bottom: 2px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
 
-    background: #f1f1f1;
+    background: ${rgba('black', 0.09)};
+
+    font-weight: bold;
   }
 
   /* Blockquotes. */
