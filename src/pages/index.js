@@ -82,26 +82,29 @@ const Header = styled.header`
   @media (max-width: 350px) {
     font-size: 0.55em;
   }
+
+  @media (max-width: 300px) {
+    font-size: 0.5em;
+    padding: 0 1rem;
+  }
 `
 
-const MainTitle = styled.h1`
-  color: ${colors.brand.main};
-
-  margin-bottom: 0;
-
-  font-size: 3.35em;
-  font-weight: 300;
-  text-transform: uppercase;
-  line-height: 0.75;
-`
-
-const SubTitle = styled.h2`
+const TitleContainer = styled.h1`
   margin-bottom: 2rem;
 
-  font-size: 2.625em;
-  font-weight: bold;
+  font-size: 3.25em;
+  line-height: 0.9;
   text-transform: uppercase;
-  line-height: normal;
+`
+
+const MainTitle = styled.span`
+  color: ${colors.brand.main};
+
+  font-weight: 300;
+`
+
+const SubTitle = styled.span`
+  font-weight: bold;
 `
 
 const Bio = styled.p`
@@ -182,8 +185,11 @@ export default ({data}) => {
         <Avatar>
           <img src={avatar} title="Matthieu Oger" alt="Matthieu Oger" />
           <Header>
-            <MainTitle>SOLARSAILER</MainTitle>
-            <SubTitle>Matthieu Oger</SubTitle>
+            <TitleContainer>
+              <MainTitle>Matthieu</MainTitle>
+              {' '}
+              <SubTitle>Oger</SubTitle>
+            </TitleContainer>
           </Header>
           <Bio>
             <strong>I'm a developer, designer and product manager.</strong> I

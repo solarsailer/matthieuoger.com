@@ -1,14 +1,11 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import posed from 'react-pose'
-import {random} from 'lodash'
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 import {rgba, tint} from 'polished'
 
 import {getWrappedIcon} from '../../Icon'
 import {colors} from '../../../styles/config'
 import {Button} from '../../Button'
-import {withMountedAnimator} from '../../MountedAnimator'
 
 // -------------------------------------------------------------
 // Constants.
@@ -104,6 +101,10 @@ const GlobalTitle = styled.h1`
     transition: all 0.3s ease-out;
   }
 
+  span {
+    opacity: 0.75;
+  }
+
   svg {
     width: 21px;
     height: 21px;
@@ -153,61 +154,6 @@ const GlobalList = styled.ul`
 `
 
 // -------------------------------------------------------------
-// Hello.
-// -------------------------------------------------------------
-
-const Hello = styled.aside`
-  position: absolute;
-  left: 53px;
-
-  color: ${rgba(colors.page.content, 0.5)};
-
-  font-size: 0.62em;
-  font-weight: normal;
-  text-transform: none;
-
-  @media (max-width: ${BREAKPOINT}px) {
-    display: none;
-  }
-`
-
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-`
-
-const HelloElement = styled.span`
-  opacity: 0;
-`
-
-const HelloPrefix = styled(HelloElement)`
-  animation: ${fadeOut} linear 150s;
-`
-
-const HelloName = styled(HelloElement)`
-  color: ${colors.page.content};
-  animation: ${fadeOut} linear 180s;
-`
-
-const AnimatedHello = withMountedAnimator(
-  posed(Hello)({
-    unmounted: {
-      x: -100,
-      opacity: 0
-    },
-    mounted: {
-      x: 0,
-      opacity: 1
-    }
-  })
-)
-
-// -------------------------------------------------------------
 // Export.
 // -------------------------------------------------------------
 
@@ -218,12 +164,11 @@ export default () => {
         <GlobalTitle>
           <Link to="/">
             <HeaderIcon />
-              SolarSailer
+            {'  '}
+            <span>Matthieu</span>
+            {' '}
+            Oger
           </Link>
-          <AnimatedHello duration={random(500, 1000)}>
-            <HelloPrefix>Hello, I'm</HelloPrefix>{' '}
-            <HelloName>Matthieu Oger</HelloName>
-          </AnimatedHello>
         </GlobalTitle>
 
         <GlobalList>

@@ -73,7 +73,7 @@ export const getWrappedIcon = (name, props) => (
 )
 
 // -------------------------------------------------------------
-// Solar Sailer.
+// Site.
 // -------------------------------------------------------------
 
 export const SiteIcon = ({color}) => {

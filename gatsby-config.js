@@ -3,7 +3,7 @@
 // -------------------------------------------------------------
 
 exports.siteMetadata = {
-  title: 'Solar Sailer',
+  title: 'Matthieu Oger',
   author: 'Matthieu Oger',
   description:
     'I am a developer, designer and product manager from France. Co-founder of Pixelnest Studio.',
