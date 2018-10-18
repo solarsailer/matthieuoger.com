@@ -14,4 +14,4 @@ excerptQuote:
 
 Hard but hyper-efficient.
 
-We work _a bit_ like that at [Pixelnest](http://pixelnest.io). [Damien](http://dmayance.com) and me have a slightly different skill set, thus we can split the work almost equally. The advantage is that we can discuss together to avoid finishing in a dead end.
+We work _a bit_ like that at [Pixelnest](https://pixelnest.io). [Damien](https://dmayance.com) and me have a slightly different skill set, thus we can split the work almost equally. The advantage is that we can discuss together to avoid finishing in a dead end.

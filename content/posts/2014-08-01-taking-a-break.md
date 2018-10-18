@@ -6,7 +6,7 @@ title: Taking a break
 excerpt: "A common good practice recommended by almost any home-worker is to take a quick (3 minutes) <em>walking</em> break every 45 minutes or so."
 ---
 
-I'm self-employed and I work every day at home for my company, [Pixelnest Studio](http://pixelnest.io).
+I'm self-employed and I work every day at home for my company, [Pixelnest Studio](https://pixelnest.io).
 
 A common good practice recommended by almost any home-worker is to take a quick (3 minutes) _walking_ break every 45 minutes or so.
 
