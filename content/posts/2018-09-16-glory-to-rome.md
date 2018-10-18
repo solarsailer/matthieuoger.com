@@ -38,7 +38,7 @@ _Side note: the work by [Heiko Günther][heiko] is beautiful too. I think that t
 
 This article makes me think that many boardgames disappear each year, going unnoticed and forgotten forever.
 
-I wrote about [Quantum](https://solarsailer.net/2015/09/quantum-post-mortem/) before, one of my favorite boardgames, which is out of stock too. I looked for a new copy a few months ago, and to my surprise, wasn't able to find one. I looked today, and the game is not even listed on most sites anymore.
+I wrote about [Quantum](https://matthieuoger.com/2015/09/quantum-post-mortem/) before, one of my favorite boardgames, which is out of stock too. I looked for a new copy a few months ago, and to my surprise, wasn't able to find one. I looked today, and the game is not even listed on most sites anymore.
 
 Each year[^1], an increasing number of new games is released, and each year, an even bigger number is retired. The disturbing thing, however, is that most of these games are, actually, great games.
 
