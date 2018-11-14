@@ -5,7 +5,7 @@ title: "The cost of bad design and the “ghetto of inattention”"
 
 excerptQuote:
   name: "Khoi Vinh"
-  quote: "It’s the idea that design should make tech comfortable for people. It should put people at ease. So you have all these little cues that make people feel like they can explore the tech, they don’t have to worry about being caught in a trap or inadvertently triggering a nuclear meltdown. […] I mean, on the one hand, technology that consumers interact with has gotten so much better. We don’t have manuals anymore. Everything is much, much more intuitive. And so, design has really come a long way in that respect. But there’s this whole other sector of technology – the stuff that you and I don’t get to interact with everyday. The stuff that–  power plants or emergency centers. That stuff still is pretty rough still."
+  quote: "It’s the idea that design should make tech comfortable for people. It should put people at ease. So you have all these little cues that make people feel like they can explore the tech, they don’t have to worry about being caught in a trap or inadvertently triggering a nuclear meltdown. […] I mean, on the one hand, technology that consumers interact with has gotten so much better. […] But there’s this whole other sector of technology – the stuff that you and I don’t get to interact with everyday [like power plants or emergency centers]. That stuff still is pretty rough still."
 ---
 
 From the “[Wireframe][wireframe]” podcast, “[Good Design is Human][episode]”:
