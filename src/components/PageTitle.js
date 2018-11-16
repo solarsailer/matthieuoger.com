@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 
-import {colors} from '../styles/config'
+import {light} from '../styles/config'
 import invisibleLinkStyles from '../styles/components/invisible-link'
 
 // -------------------------------------------------------------
@@ -31,12 +31,12 @@ const Title = styled.h1`
 
   &::before {
     margin-right: 3rem;
-    background: linear-gradient(to left, #e2e1e1, ${colors.page.background});
+    background: linear-gradient(to left, #e2e1e1, ${light.page.background});
   }
 
   &::after {
     margin-left: 3rem;
-    background: linear-gradient(to right, #e2e1e1, ${colors.page.background});
+    background: linear-gradient(to right, #e2e1e1, ${light.page.background});
   }
 
   ${invisibleLinkStyles};

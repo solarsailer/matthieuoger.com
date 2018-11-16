@@ -1,7 +1,7 @@
 import {css} from 'styled-components'
 import {rgba, tint} from 'polished'
 
-import {colors, typography} from '../config'
+import {colors, light, typography} from '../config'
 import bodyLinkStyles from './body-link'
 import specialLinkStyles from './special-link'
 
@@ -361,7 +361,7 @@ export default css`
 
     &::before {
       content: 'tl;dr';
-      color: #EC854C;
+      color: #ec854c;
       opacity: 0.9;
     }
   }
@@ -379,9 +379,9 @@ export default css`
 
     background: linear-gradient(
       to right,
-      ${colors.page.background},
+      ${light.page.background},
       #e0e0e0,
-      ${colors.page.background}
+      ${light.page.background}
     );
 
     border: none;

@@ -4,14 +4,14 @@ import styled from 'styled-components'
 import {rgba, tint} from 'polished'
 
 import {getWrappedIcon} from '../../Icon'
-import {colors} from '../../../styles/config'
+import {colors, light} from '../../../styles/config'
 import {Button} from '../../Button'
 
 // -------------------------------------------------------------
 // Constants.
 // -------------------------------------------------------------
 
-const BACKGROUND_COLOR = colors.page.background
+const BACKGROUND_COLOR = light.page.background
 const BREAKPOINT = 650
 
 // -------------------------------------------------------------

@@ -1,6 +1,6 @@
 import {css} from 'styled-components'
 
-import {typography, colors} from '../config'
+import {typography} from '../config'
 
 // -------------------------------------------------------------
 // Base Global Styles.
@@ -68,17 +68,21 @@ export default css`
    */
 
   html {
-    color: ${colors.page.content}; /* 1 */
-    background: ${colors.page.overscroll}; /* 2 */
+    /* 1 */
+    color: var(--colors-page-content);
+
+    /* 2 */
+    background: var(--colors-page-overscroll);
   }
 
   body {
-    background: ${colors.page.background}; /* 3 */
+    /* 3 */
+    background: var(--colors-page-background);
   }
 
   ::selection {
     /* 4 */
-    color: ${colors.selection.foreground};
-    background: ${colors.selection.background};
+    color: var(--colors-selection-foreground);
+    background: var(--colors-selection-background);
   }
 `

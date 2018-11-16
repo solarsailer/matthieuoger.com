@@ -1,6 +1,7 @@
 import {injectGlobal} from 'styled-components'
 
 import normalize from './normalize'
+import theme from './theme'
 import base from './base'
 import app from './app'
 
@@ -13,5 +14,6 @@ import 'prismjs/themes/prism-tomorrow.css'
 // -------------------------------------------------------------
 
 injectGlobal`${normalize}`
+injectGlobal`${theme}`
 injectGlobal`${base}`
 injectGlobal`${app}`
