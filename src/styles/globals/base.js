@@ -69,20 +69,20 @@ export default css`
 
   html {
     /* 1 */
-    color: var(--colors-page-content);
+    color: var(--color-page-content);
 
     /* 2 */
-    background: var(--colors-page-overscroll);
+    background: var(--color-page-overscroll);
   }
 
   body {
     /* 3 */
-    background: var(--colors-page-background);
+    background: var(--color-page-background);
   }
 
   ::selection {
     /* 4 */
-    color: var(--colors-selection-foreground);
-    background: var(--colors-selection-background);
+    color: var(--color-selection-foreground);
+    background: var(--color-selection-background);
   }
 `

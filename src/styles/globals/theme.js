@@ -1,29 +1,31 @@
 import {css} from 'styled-components'
 
-import {colors, light, dark} from '../config'
-
 // -------------------------------------------------------------
-// Base Global Styles.
+// Themes.
 // -------------------------------------------------------------
 
 const lightTheme = css`
-  --colors-brand-main: ${colors.brand.main};
+  --hue-accent: 11;
+  --color-accent: hsl(var(--hue-accent), 78%, 53%);
 
-  --colors-selection-foreground: ${light.selection.foreground};
-  --colors-selection-background: ${light.selection.background};
-  --colors-page-content: ${light.page.content};
-  --colors-page-background: ${light.page.background};
-  --colors-page-overscroll: ${light.page.background};
+  --color-selection-foreground: hsl(0, 0%, 100%);
+  --color-selection-background: hsl(11, 78%, 53%);
+
+  --color-page-content: hsl(0, 0%, 10%);
+  --color-page-background: hsl(0, 0%, 98%);
+  --color-page-overscroll: hsl(0, 0%, 98%);
 `
 
 const darkTheme = css`
-  --colors-brand-main: ${colors.brand.main};
+  --hue-accent: 11;
+  --color-accent: hsl(var(--hue-accent), 78%, 53%);
 
-  --colors-selection-foreground: ${dark.selection.foreground};
-  --colors-selection-background: ${dark.selection.background};
-  --colors-page-content: ${dark.page.content};
-  --colors-page-background: ${dark.page.background};
-  --colors-page-overscroll: ${dark.page.background};
+  --color-selection-foreground: hsl(0, 0%, 100%);
+  --color-selection-background: hsl(11, 78%, 53%);
+
+  --color-page-content: hsl(0, 0%, 100%);
+  --color-page-background: hsl(325, 13%, 18%);
+  --color-page-overscroll: hsl(325, 13%, 18%);
 `
 
 export default css`
