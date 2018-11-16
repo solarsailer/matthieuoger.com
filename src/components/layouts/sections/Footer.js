@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import {StaticQuery, graphql} from 'gatsby'
 
 import SocialNavigation, {GRID_BREAKPOINT} from '../../CompactSocialNavigation'
-import {colors} from '../../../styles/config'
 
 // -------------------------------------------------------------
 // Constants.
@@ -25,7 +24,7 @@ const Footer = styled.footer`
   padding-top: 3rem;
   padding-bottom: 3rem;
 
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid hsla(0, 0%, 0%, 0.1);
 
   ul {
     margin-bottom: 1rem;
@@ -58,7 +57,7 @@ const Copyright = styled.p`
   }
 
   a:hover {
-    color: ${colors.brand.main};
+    color: var(--color-accent);
   }
 `
 

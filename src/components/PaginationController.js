@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
-import {rgba} from 'polished'
 
 import {ButtonSmall, DisabledButtonSmall} from './Button'
 
@@ -8,7 +7,7 @@ import {ButtonSmall, DisabledButtonSmall} from './Button'
 // Constants.
 // -------------------------------------------------------------
 
-const PAGINATION_BORDER = rgba('black', 0.1)
+const PAGINATION_BORDER = 'hsla(0, 0%, 0%, 0.1)'
 
 const BUTTON_CSS_EXTENSION = css`
   display: inline-block;

@@ -1,10 +1,9 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
-import {rgba, tint} from 'polished'
 
 import {getWrappedIcon} from '../../Icon'
-import {colors, light} from '../../../styles/config'
+import {light} from '../../../styles/config'
 import {Button} from '../../Button'
 
 // -------------------------------------------------------------
@@ -36,16 +35,16 @@ const MenuButton = styled(Button)`
   color: #888;
   padding: 3px 1rem 1px;
 
-  background: ${rgba('white', 0.5)};
-  border: 2px solid ${rgba('#888', 0.25)};
+  background: hsla(0, 0%, 100%, 0.5);
+  border: 2px solid hsla(0, 0%, 53%, 0.25);
   border-radius: 3px;
 
   font-size: 0.85em;
 
   &.selected:not(:hover) {
     color: white;
-    background: ${tint(0.75, colors.brand.main)};
-    border: 2px solid ${tint(0.75, colors.brand.main)};
+    background: hsl(var(--hue-accent), 77%, 65%);
+    border: 2px solid hsl(var(--hue-accent), 77%, 65%);
   }
 `
 
@@ -121,9 +120,9 @@ const GlobalTitle = styled.h1`
   }
 
   a:hover {
-    color: ${colors.brand.main};
+    color: var(--color-accent);
     transform: translateX(5px);
-    text-shadow: 0 2px 10px ${rgba(colors.brand.main, 0.25)};
+    text-shadow: 0 2px 10px hsla(var(--hue-accent), 78%, 53%, 0.25);
 
     svg {
       transform: translateX(-5px) rotate(1turn);
@@ -131,7 +130,7 @@ const GlobalTitle = styled.h1`
     }
 
     path {
-      fill: ${colors.brand.main};
+      fill: var(--color-accent);
     }
   }
 

@@ -3,9 +3,6 @@ import React from 'react'
 import {Link} from 'gatsby'
 
 import styled, {css} from 'styled-components'
-import {rgba, tint} from 'polished'
-
-import {colors} from '../styles/config'
 
 // -------------------------------------------------------------
 // Constants.
@@ -17,7 +14,7 @@ const LINK_CSS = css`
   color: white;
   padding: 1rem 2rem;
 
-  background: ${rgba(colors.brand.main, 0.9)};
+  background: hsla(var(--hue-accent), 78%, 53%, 0.9);
 
   border: 2px solid transparent;
   border-radius: 5px;
@@ -31,17 +28,17 @@ const LINK_CSS = css`
   &:hover {
     color: white;
 
-    background: ${colors.brand.main};
-    border: 2px solid ${rgba(tint(0.8, colors.brand.main), 0.5)};
+    background: var(--color-accent);
+    border: 2px solid hsla(var(--hue-accent), 77%, 62%, 0.5);
 
-    box-shadow: 0 2px 15px ${rgba(colors.brand.main, 0.5)};
-    text-shadow: 0 2px 4px ${rgba('black', 0.25)};
+    box-shadow: 0 2px 15px hsla(var(--hue-accent), 78%, 53%, 0.5);
+    text-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.25);
 
     transform: translateY(-2px);
   }
 
   &:focus {
-    border: 2px solid ${rgba(tint(0.75, colors.brand.main), 0.5)};
+    border: 2px solid hsla(var(--hue-accent), 77%, 65%, 0.5);
 
     outline: none;
   }

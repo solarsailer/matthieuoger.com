@@ -3,8 +3,6 @@ import styled from 'styled-components'
 
 import {Link} from 'gatsby'
 
-import {colors} from '../styles/config'
-
 // -------------------------------------------------------------
 // Constants.
 // -------------------------------------------------------------
@@ -23,7 +21,7 @@ const BlockLink = styled(Link)`
   text-decoration: none;
 
   .read-more-hint {
-    color: ${colors.brand.main};
+    color: var(--color-accent);
     font-size: 1.1rem;
     font-style: italic;
     font-weight: normal;
@@ -51,7 +49,7 @@ const Article = styled.article`
   padding: 2rem;
 
   background: white;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid hsla(0, 0%, 0%, 0.05);
   border-radius: 3px;
 
   transition: ${TRANSITION};
@@ -71,7 +69,7 @@ const Article = styled.article`
     left: 1rem;
     right: 1rem;
 
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 30px hsla(0, 0%, 0%, 0.1);
 
     transition: ${TRANSITION};
     transition-property: opacity;
@@ -81,14 +79,14 @@ const Article = styled.article`
     left: 0;
     right: 0;
 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px hsla(0, 0%, 0%, 0.4);
 
     opacity: 0;
   }
 
   &:hover {
     color: white;
-    background: ${colors.brand.main};
+    background: var(--color-accent);
 
     /* Swap between ::before and ::after pseudo.
      * Its gives more fps than transitioning the shadow/left/right directly.
@@ -123,7 +121,7 @@ const Title = styled.h2`
 `
 
 const Date = styled.p`
-  color: rgba(0, 0, 0, 0.5);
+  color: hsla(0, 0%, 0%, 0.5);
 
   margin-bottom: 0;
 

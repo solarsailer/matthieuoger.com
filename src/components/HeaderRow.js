@@ -14,7 +14,7 @@ const Header = styled.header`
   padding: 1rem 2rem;
 
   background: #f1f1f1;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid hsla(0, 0%, 0%, 0.05);
   border-radius: 3px;
 
   &::before {
@@ -30,7 +30,7 @@ const Header = styled.header`
     left: 1rem;
     right: 1rem;
 
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 30px hsla(0, 0%, 0%, 0.1);
   }
 `
 

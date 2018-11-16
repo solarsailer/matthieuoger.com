@@ -5,9 +5,6 @@ import {css} from 'styled-components'
 // -------------------------------------------------------------
 
 const lightTheme = css`
-  --hue-accent: 11;
-  --color-accent: hsl(var(--hue-accent), 78%, 53%);
-
   --color-selection-foreground: hsl(0, 0%, 100%);
   --color-selection-background: hsl(11, 78%, 53%);
 
@@ -17,9 +14,6 @@ const lightTheme = css`
 `
 
 const darkTheme = css`
-  --hue-accent: 11;
-  --color-accent: hsl(var(--hue-accent), 78%, 53%);
-
   --color-selection-foreground: hsl(0, 0%, 100%);
   --color-selection-background: hsl(11, 78%, 53%);
 
@@ -31,6 +25,15 @@ const darkTheme = css`
 export default css`
   /* 1. Light mode by default. */
   :root {
+    --hue-accent: 11;
+    --color-accent: hsl(var(--hue-accent), 78%, 53%);
+
+    --hue-twitter: 210;
+    --color-twitter: hsl(210, 95%, 64%);
+
+    --hue-tldr: 21;
+    --color-tldr: hsl(21, 81%, 61%);
+
     ${lightTheme};
   }
 

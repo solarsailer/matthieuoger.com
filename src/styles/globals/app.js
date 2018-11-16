@@ -1,7 +1,4 @@
 import {css} from 'styled-components'
-import {tint} from 'polished'
-
-import {colors} from '../config'
 
 // -------------------------------------------------------------
 // App Global Styles.
@@ -50,10 +47,10 @@ export default css`
    */
 
   a {
-    color: ${colors.brand.main};
+    color: var(--color-accent);
   }
 
   a:hover {
-    color: ${tint(0.75, colors.brand.main)};
+    color: hsl(var(--hue-accent), 77%, 65%); /* Tint @ 75% */
   }
 `

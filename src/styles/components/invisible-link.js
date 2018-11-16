@@ -1,7 +1,4 @@
 import {css} from 'styled-components'
-import {shade} from 'polished'
-
-import {colors} from '../config'
 
 // -------------------------------------------------------------
 // Invisible Link.
@@ -17,11 +14,11 @@ export default css`
   }
 
   a:hover {
-    color: ${colors.brand.main};
+    color: var(--color-accent);
   }
 
   a:focus,
   a:active {
-    color: ${shade(0.9, colors.brand.main)};
+    color: hsl(var(--hue-accent), 69%, 47%); /* Shade @ 90% */
   }
 `

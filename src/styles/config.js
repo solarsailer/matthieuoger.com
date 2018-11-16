@@ -23,7 +23,7 @@ export const light = {
     background: MAIN_BRAND_COLOR
   },
   page: {
-    content: 'rgb(25, 25, 25)',
+    content: 'hsl(0, 0%, 10%)',
     background: LIGHT_BACKGROUND_COLOR,
     overscroll: LIGHT_BACKGROUND_COLOR
   }

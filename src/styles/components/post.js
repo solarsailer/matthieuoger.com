@@ -1,7 +1,6 @@
 import {css} from 'styled-components'
-import {rgba, tint} from 'polished'
 
-import {colors, light, typography} from '../config'
+import {light, typography} from '../config'
 import bodyLinkStyles from './body-link'
 import specialLinkStyles from './special-link'
 
@@ -82,7 +81,7 @@ export default css`
     margin-bottom: 3rem;
 
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid hsla(0, 0%, 0%, 0.1);
 
     font-size: 1.2em;
     font-weight: normal;
@@ -100,7 +99,7 @@ export default css`
     margin-bottom: 2rem;
 
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
 
     font-size: 1.2em;
     font-weight: normal;
@@ -115,7 +114,7 @@ export default css`
     margin-top: 4rem;
     margin-bottom: 2rem;
 
-    color: rgb(50, 50, 50);
+    color: hsl(0, 0%, 20%);
 
     font-size: 1.1em;
     font-weight: 500;
@@ -130,7 +129,7 @@ export default css`
     margin-top: 3rem;
     margin-bottom: 2rem;
 
-    color: rgb(100, 100, 100);
+    color: hsl(0, 0%, 39%);
 
     font-size: 0.9em;
     font-weight: 500;
@@ -145,7 +144,7 @@ export default css`
     margin-top: 3rem;
     margin-bottom: 2rem;
 
-    color: rgb(150, 150, 150);
+    color: hsl(0, 0%, 59%);
 
     font-size: 0.8em;
     font-weight: normal;
@@ -164,7 +163,7 @@ export default css`
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid ${rgba('black', 0.1)};
+    border: 1px solid hsla(0, 0%, 0%, 0.1);
   }
 
   /* Links. */
@@ -188,7 +187,7 @@ export default css`
         width: 5px;
         height: 5px;
 
-        background: ${colors.brand.main};
+        background: var(--color-accent);
         border-radius: 50%;
       }
     }
@@ -290,7 +289,7 @@ export default css`
   /* Inline code block. */
   p code,
   li code {
-    color: ${colors.brand.main};
+    color: var(--color-accent);
 
     margin-left: 2px;
     margin-right: 2px;
@@ -300,7 +299,7 @@ export default css`
     padding-left: 6px;
     padding-right: 6px;
 
-    background: ${rgba('black', 0.09)};
+    background: hsla(0, 0%, 0%, 0.09);
 
     font-weight: bold;
   }
@@ -310,7 +309,7 @@ export default css`
   blockquote {
     position: relative;
 
-    color: rgb(50, 50, 50);
+    color: hsl(0, 0%, 20%);
 
     margin: 0;
     margin-bottom: 2rem;
@@ -345,23 +344,23 @@ export default css`
   }
 
   .twitter-tweet {
-    background: ${tint(0.15, '#4da4fa')};
-    border: 1px solid ${tint(0.25, '#4da4fa')};
+    background: hsl(var(--hue-twitter), 93%, 95%);
+    border: 1px solid hsl(var(--hue-twitter), 91%, 91%);
 
     &::before {
       content: 'Tweet';
-      color: #4da4fa;
+      color: var(--color-twitter);
       opacity: 0.55;
     }
   }
 
   .tldr {
-    background: ${tint(0.15, '#EC854C')};
-    border: 1px solid ${tint(0.25, '#EC854C')};
+    background: hsl(var(--hue-tldr), 80%, 94%);
+    border: 1px solid hsl(var(--hue-tldr), 80%, 90%);
 
     &::before {
       content: 'tl;dr';
-      color: #ec854c;
+      color: var(--color-tldr);
       opacity: 0.9;
     }
   }
@@ -369,7 +368,7 @@ export default css`
   /* HR. */
 
   hr {
-    color: ${rgba(colors.brand.main, 0.2)};
+    color: hsla(var(--hue-accent), 78%, 53%, 0.2);
 
     max-width: 80%;
     height: 1px;
@@ -405,15 +404,15 @@ export default css`
     margin-left: 2px;
     padding-left: 5px;
     padding-right: 5px;
-    background: ${colors.brand.main};
+    background: var(--color-accent);
     border: 1px solid transparent;
     border-radius: 3px;
     font-size: 1.2rem;
 
     &:hover {
-      color: ${colors.brand.main};
+      color: var(--color-accent);
       background: #eee;
-      border: 1px solid ${colors.brand.main};
+      border: 1px solid var(--color-accent);
     }
   }
 
@@ -448,7 +447,7 @@ export default css`
       position: relative;
       margin-bottom: 2rem;
       padding: 0 2rem 0;
-      border-bottom: 1px solid ${rgba('black', 0.1)};
+      border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
 
       &:last-of-type {
         margin-bottom: -2rem;
@@ -475,7 +474,7 @@ export default css`
 
         margin-left: 2rem;
         padding: 6px 6px 3px;
-        background: ${tint(0.4, colors.brand.main)};
+        background: hsl(var(--hue-accent), 77%, 81%);
         border-bottom: none;
         border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
 
@@ -484,7 +483,7 @@ export default css`
 
         &:hover {
           color: white;
-          background: ${colors.brand.main};
+          background: var(--color-accent);
         }
       }
     }

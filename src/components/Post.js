@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
-import {rgba} from 'polished'
 
 import postStyles from '../styles/components/post'
 
@@ -20,7 +19,7 @@ const Article = styled.article`
   padding: 5rem;
 
   background: white;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid hsla(0, 0%, 0%, 0.05);
   border-radius: 3px;
 
   &::before {
@@ -36,7 +35,7 @@ const Article = styled.article`
     left: 1rem;
     right: 1rem;
 
-    box-shadow: 0 20px 30px ${rgba('black', 0.1)};
+    box-shadow: 0 20px 30px hsla(0, 0%, 0%, 0.1);
   }
 
   @media (max-width: 900px) {

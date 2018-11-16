@@ -1,7 +1,4 @@
 import {css} from 'styled-components'
-import {tint, shade} from 'polished'
-
-import {colors} from '../config'
 
 // -------------------------------------------------------------
 // Body Link.
@@ -9,11 +6,11 @@ import {colors} from '../config'
 
 export default css`
   a {
-    color: ${shade(0.2, colors.brand.main)};
+    color: hsl(var(--hue-accent), 70%, 10%);
 
     padding-top: 1px;
 
-    border-bottom: 2px solid ${colors.brand.main};
+    border-bottom: 2px solid var(--color-accent);
 
     transition: all 0.175s;
 
@@ -21,19 +18,19 @@ export default css`
   }
 
   a:visited {
-    color: ${shade(0.2, colors.brand.main)};
+    color: hsl(var(--hue-accent), 70%, 10%);
   }
 
   a:hover {
-    color: ${colors.brand.main};
-    background: ${tint(0.1, colors.brand.main)};
-    border-color: ${tint(0.6, colors.brand.main)};
+    color: hsl(var(--hue-accent), 78%, 53%);
+    background: hsl(var(--hue-accent), 76%, 95%);
+    border-color: hsl(var(--hue-accent), 77%, 72%);
   }
 
   a:active,
   a:focus {
-    color: ${shade(0.9, colors.brand.main)};
-    background: ${tint(0.2, colors.brand.main)};
-    border-color: ${shade(0.9, colors.brand.main)};
+    color: hsl(var(--hue-accent), 69%, 47%);
+    background: hsl(var(--hue-accent), 76%, 90%);
+    border-color: hsl(var(--hue-accent), 69%, 47%);
   }
 `

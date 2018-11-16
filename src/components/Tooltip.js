@@ -29,7 +29,7 @@ const Tooltip = styled.div`
   padding: 0.5rem 1.5rem;
   background: ${props => (props.color ? props.color : '#333')};
   border-radius: 4px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.15);
 
   font-size: 1.25rem;
   line-height: normal;

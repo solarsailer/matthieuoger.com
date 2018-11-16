@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import {rgba, tint} from 'polished'
 import {graphql} from 'gatsby'
 
 import Layout from '../components/layouts/HomeLayout'
 import {Button} from '../components/Button'
 import SocialNavigation from '../components/SocialNavigation'
-import {colors} from '../styles/config'
 import {getWrappedIcon} from '../components/Icon'
 import avatar from '../../content/images/avatar-black-white.jpg'
 import backgroundImage from '../../content/images/background.jpg'
@@ -22,7 +20,7 @@ const HOME_BREAKPOINT = 800
 // -------------------------------------------------------------
 
 const HomeButton = styled(Button)`
-  background: ${rgba(colors.brand.main, 0.2)};
+  background: hsla(var(--hue-accent), 78%, 53%, 0.2);
 `
 
 const Container = styled.div`
@@ -98,7 +96,7 @@ const TitleContainer = styled.h1`
 `
 
 const MainTitle = styled.span`
-  color: ${colors.brand.main};
+  color: var(--color-accent);
 
   font-weight: 300;
 `
@@ -113,7 +111,7 @@ const Bio = styled.p`
   max-width: 650px;
   margin-bottom: 0;
   padding: 2rem;
-  background: ${rgba('#666', 0.05)};
+  background: hsla(0, 0%, 40%, 0.05);
   border-radius: 5px;
 
   font-size: 0.8em;
@@ -124,12 +122,12 @@ const Bio = styled.p`
   }
 
   a {
-    color: ${tint(0.75, colors.brand.main)};
+    color: hsl(var(--hue-accent), 77%, 65%);
     text-decoration: underline;
     transition: color 0.3s ease-out;
 
     &:hover {
-      color: ${colors.brand.main};
+      color: var(--color-accent);
     }
   }
 
