@@ -16,7 +16,6 @@ deploy:
   provider: pages
   skip-cleanup: true
   keep-history: true
-  committer-from-gh: true
   local-dir: public
   github-token: $GITHUB_TOKEN
   repo: $GITHUB_REPO
