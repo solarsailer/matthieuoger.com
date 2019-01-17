@@ -67,7 +67,7 @@ const FooterWrapper = ({handles}) => (
     <SocialNavigation handles={handles} />
     <Copyright>
       <a href="/">
-        © 2018 <span>Matthieu Oger</span>
+        © 2019 <span>Matthieu Oger</span>
       </a>
     </Copyright>
   </Footer>
