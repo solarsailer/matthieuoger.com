@@ -2,7 +2,7 @@ import React from 'react'
 import {Helmet} from 'react-helmet'
 import {StaticQuery, graphql} from 'gatsby'
 
-import '../../../styles/globals/manifest'
+import GlobalStyles from '../../../styles/globals/manifest'
 
 // -------------------------------------------------------------
 // Component.
@@ -23,6 +23,7 @@ const MetaWrapper = ({metadata, layout}) => {
 
   return (
     <>
+      <GlobalStyles />
       <Helmet>
         {googleFonts}
 
@@ -44,7 +45,7 @@ const MetaWrapper = ({metadata, layout}) => {
         <meta name="twitter:site" content={handles.twitter} />
         <meta name="twitter:creator" content={handles.twitter} />
         <meta name="twitter:url" content={metadata.siteUrl} />
-        <meta name="twitter:image" content={metadata.siteUrl + 'feed.png'} />
+        <meta name="twitter:image" content={metadata.siteUrl + '/feed.png'} />
         <meta name="twitter:image:alt" content={authorAndDescription} />
 
         {/* OpenGraph */}
@@ -53,7 +54,7 @@ const MetaWrapper = ({metadata, layout}) => {
         <meta property="og:site_name" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:url" content={metadata.siteUrl} />
-        <meta property="og:image" content={metadata.siteUrl + 'feed.png'} />
+        <meta property="og:image" content={metadata.siteUrl + '/feed.png'} />
         <meta property="og:image:height" content="1920" />
         <meta property="og:image:width" content="1080" />
         <meta property="og:image:type" content="image/jpg" />

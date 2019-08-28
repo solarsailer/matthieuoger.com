@@ -1,4 +1,5 @@
-import {injectGlobal} from 'styled-components'
+import React from 'react'
+import {createGlobalStyle} from 'styled-components'
 
 import normalize from './normalize'
 import theme from './theme'
@@ -7,13 +8,20 @@ import app from './app'
 
 import 'prismjs/themes/prism-tomorrow.css'
 
-// See: https://github.com/styled-components/styled-components/issues/1109
-
 // -------------------------------------------------------------
 // Manifest.
 // -------------------------------------------------------------
 
-injectGlobal`${normalize}`
-injectGlobal`${theme}`
-injectGlobal`${base}`
-injectGlobal`${app}`
+const NormalizeGlobalStyles = createGlobalStyle`${normalize}`
+const ThemeGlobalStyles = createGlobalStyle`${theme}`
+const BaseGlobalStyles = createGlobalStyle`${base}`
+const AppGlobalStyles = createGlobalStyle`${app}`
+
+export default () => (
+  <>
+    <NormalizeGlobalStyles />
+    <ThemeGlobalStyles />
+    <BaseGlobalStyles />
+    <AppGlobalStyles />
+  </>
+)
