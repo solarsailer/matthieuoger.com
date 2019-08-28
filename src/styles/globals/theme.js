@@ -1,12 +1,14 @@
 import {css} from 'styled-components'
 
+// Accent Color = #E44D2A -> HSL(11, 78%, 53%)
+
 // -------------------------------------------------------------
 // Themes.
 // -------------------------------------------------------------
 
 const lightTheme = css`
   --color-selection-foreground: hsl(0, 0%, 100%);
-  --color-selection-background: hsl(11, 78%, 53%);
+  --color-selection-background: --color-accent;
 
   --color-page-content: hsl(0, 0%, 10%);
   --color-page-background: hsl(0, 0%, 98%);
@@ -15,7 +17,7 @@ const lightTheme = css`
 
 const darkTheme = css`
   --color-selection-foreground: hsl(0, 0%, 100%);
-  --color-selection-background: hsl(11, 78%, 53%);
+  --color-selection-background: --color-accent;
 
   --color-page-content: hsl(0, 0%, 100%);
   --color-page-background: hsl(325, 13%, 18%);
