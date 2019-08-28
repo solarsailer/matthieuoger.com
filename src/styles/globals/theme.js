@@ -40,18 +40,18 @@ export default css`
   /* 2. Check user preference. */
 
   @media (prefers-color-scheme: dark) {
-    :root {
+    /* :root {
       ${darkTheme};
-    }
+    } */
   }
 
   /* 3. Then, check if the user opted-in a specific theme. */
 
   html[data-theme='light'] {
-    ${lightTheme};
+    /* ${lightTheme}; */
   }
 
   html[data-theme='dark'] {
-    ${darkTheme};
+    /* ${darkTheme}; */
   }
 `
