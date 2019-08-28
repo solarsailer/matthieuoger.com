@@ -190,7 +190,7 @@ export default ({data}) => {
             </TitleContainer>
           </Header>
           <Bio>
-            <strong>I'm a developer, designer and product manager.</strong> I
+            <strong>I'm a product manager, developer and designer.</strong> I
             co-founded <a href="https://pixelnest.io/">Pixelnest Studio</a> in
             February 2014, where we created{' '}
             <a href="http://steredenn.pixelnest.io/">Steredenn</a>. I'm also an

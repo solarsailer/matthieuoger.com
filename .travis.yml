@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - '11'
+cache: npm
+notifications:
+  email:
+    recipients:
+      - $EMAIL
+    on_success: always
+    on_failure: always
+git:
+  depth: 3
+script:
+  - yarn build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  local-dir: public
+  github-token: $GITHUB_TOKEN
+  repo: $GITHUB_REPO
+  target-branch: master
+  on:
+    branch: master

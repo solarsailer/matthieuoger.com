@@ -6,7 +6,7 @@ exports.siteMetadata = {
   title: 'Matthieu Oger',
   author: 'Matthieu Oger',
   description:
-    'I am a developer, designer and product manager from France. Co-founder of Pixelnest Studio.',
+    'I am a product manager, developer and designer from France. Co-founder of Pixelnest Studio.',
   keywords: [
     'solar',
     'sailer',
