@@ -65,7 +65,7 @@ export const DisabledButton = styled.span`
 
   padding: 1rem 2rem;
 
-  background: #ddd;
+  background: hsl(0, 0%, 87%);
   border: 2px solid transparent;
   border-radius: 5px;
 

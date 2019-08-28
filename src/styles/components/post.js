@@ -55,7 +55,7 @@ export default css`
     }
 
     .more {
-      color: #888;
+      color: hsl(0, 0%, 53%);
       margin-left: 0.5rem;
       font-size: 0.7em;
       font-weight: normal;
@@ -226,7 +226,7 @@ export default css`
     padding-top: 0;
     padding-bottom: 1rem;
 
-    background: #f6f6f6;
+    background: hsl(0, 0%, 96%);
     border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
 
     img,
@@ -239,12 +239,12 @@ export default css`
       margin-left: -2rem;
       margin-right: -2rem;
 
-      background: #f1f1f1;
+      background: hsl(0, 0%, 95%);
     }
   }
 
   figcaption {
-    color: #666;
+    color: hsl(0, 0%, 40%);
     padding: 0 2rem;
     font-family: ${typography.code.fontStack};
     font-size: 0.8em;
@@ -316,7 +316,7 @@ export default css`
 
     padding: 2rem calc(2.5rem - 1px);
 
-    background: #f1f1f1;
+    background: hsl(0, 0%, 95%);
     border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
     border: 1px solid hsl(0, 0%, 88%);
 
@@ -330,7 +330,7 @@ export default css`
       border: none;
       border-radius: 0;
 
-      background: #eaeaea;
+      background: hsl(0, 0%, 92%);
     }
 
     &::before {
@@ -411,7 +411,7 @@ export default css`
 
     &:hover {
       color: var(--color-accent);
-      background: #eee;
+      background: hsl(0, 0%, 93%);
       border: 1px solid var(--color-accent);
     }
   }
@@ -423,7 +423,7 @@ export default css`
     margin-top: 10rem;
     padding: 2rem 0;
 
-    background: #eee;
+    background: hsl(0, 0%, 93%);
     border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
 
     font-size: 0.85em;
@@ -463,7 +463,7 @@ export default css`
         margin-left: 0;
         margin-right: 0;
         padding: 1.5rem;
-        background: #ddd;
+        background: hsl(0, 0%, 87%);
         border: none;
       }
 

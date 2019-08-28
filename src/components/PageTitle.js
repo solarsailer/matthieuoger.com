@@ -25,7 +25,7 @@ const Title = styled.h1`
     flex: 1;
     height: 1px;
 
-    background: #ccc;
+    background: hsl(0, 0%, 80%);
   }
 
   &::before {

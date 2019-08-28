@@ -15,7 +15,7 @@ const MAX_WIDTH_FOOTER = 550
 // -------------------------------------------------------------
 
 const Footer = styled.footer`
-  color: #aaa;
+  color: hsl(0, 0%, 67%);
   max-width: ${MAX_WIDTH_FOOTER}px;
   margin-left: auto;
   margin-right: auto;

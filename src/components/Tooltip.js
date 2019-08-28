@@ -27,7 +27,7 @@ const Tooltip = styled.div`
 
   color: white;
   padding: 0.5rem 1.5rem;
-  background: ${props => (props.color ? props.color : '#333')};
+  background: ${props => (props.color ? props.color : 'hsl(0, 0%, 20%)')};
   border-radius: 4px;
   box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.15);
 

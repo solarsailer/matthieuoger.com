@@ -58,7 +58,7 @@ const List = styled.ul`
 `
 
 const Link = styled.a`
-  color: #aaa;
+  color: hsl(0, 0%, 67%);
   transition: all 0.12s ease-out;
 
   circle {

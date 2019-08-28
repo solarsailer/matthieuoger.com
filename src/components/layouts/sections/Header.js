@@ -34,7 +34,7 @@ const Separator = styled.hr`
 
 // Button extension.
 const MenuButton = styled(Button)`
-  color: #888;
+  color: hsl(0, 0%, 53%);
   padding: 3px 1rem 1px;
 
   background: hsla(0, 0%, 100%, 0.5);
@@ -72,7 +72,7 @@ const GlobalMenu = styled.nav`
   }
 `
 
-const HeaderIcon = (color = '#E44D2A') => {
+const HeaderIcon = (color = 'var(--color-accent)') => {
   return (
     <svg
       width="15"
@@ -100,7 +100,7 @@ const GlobalTitle = styled.h1`
   a {
     display: inline-block;
 
-    color: #888;
+    color: hsl(0, 0%, 53%);
     text-decoration: none;
 
     transition: all 0.3s ease-out;
@@ -120,7 +120,7 @@ const GlobalTitle = styled.h1`
   }
 
   path {
-    fill: #888;
+    fill: hsl(0, 0%, 53%);
 
     transition: all 0.3s ease-out;
   }

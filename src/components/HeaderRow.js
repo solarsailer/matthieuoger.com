@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Header = styled.header`
   padding: 1rem 2rem;
 
-  background: #f1f1f1;
+  background: hsl(0, 0%, 95%);
   border: 1px solid hsla(0, 0%, 0%, 0.05);
   border-radius: 3px;
 
@@ -35,7 +35,7 @@ const Header = styled.header`
 `
 
 const Text = styled.p`
-  color: #888;
+  color: hsl(0, 0%, 53%);
 
   margin-bottom: 0;
 

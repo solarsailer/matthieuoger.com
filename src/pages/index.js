@@ -106,7 +106,7 @@ const SubTitle = styled.span`
 `
 
 const Bio = styled.p`
-  color: #aaa;
+  color: hsl(0, 0%, 67%);
 
   max-width: 650px;
   margin-bottom: 0;

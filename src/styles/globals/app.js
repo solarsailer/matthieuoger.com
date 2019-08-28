@@ -35,11 +35,11 @@ export default css`
    */
 
   html[data-layout='home'] {
-    background-color: #1a1016;
+    background-color: hsl(324, 24%, 8%);
   }
 
   html[data-layout='home'] body {
-    background-color: #1a1016;
+    background-color: hsl(324, 24%, 8%);
   }
 
   /**

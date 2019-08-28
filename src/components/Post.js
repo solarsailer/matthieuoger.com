@@ -67,7 +67,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.h2`
   margin-bottom: 0;
-  color: #aaa;
+  color: hsl(0, 0%, 67%);
   font-size: 0.8em;
   font-weight: normal;
 `
@@ -85,7 +85,7 @@ const Footer = styled.footer`
 `
 
 const Date = styled.p`
-  color: #aaa;
+  color: hsl(0, 0%, 67%);
   font-size: 0.75em;
   text-align: center;
 
