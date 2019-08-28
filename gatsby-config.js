@@ -52,7 +52,7 @@ exports.plugins = [
   {
     resolve: 'gatsby-plugin-nprogress',
     options: {
-      color: '#f1c40f',
+      color: 'var(--color-accent)',
       showSpinner: false
     }
   },
