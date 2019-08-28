@@ -1,47 +1,4 @@
 // -------------------------------------------------------------
-// Constants.
-// -------------------------------------------------------------
-
-const MAIN_BRAND_COLOR = '#E44D2A'
-
-const LIGHT_BACKGROUND_COLOR = '#f9f9f9'
-const DARK_BACKGROUND_COLOR = '#352930'
-
-// -------------------------------------------------------------
-// Colors.
-// -------------------------------------------------------------
-
-export const colors = {
-  brand: {
-    main: MAIN_BRAND_COLOR
-  }
-}
-
-export const light = {
-  selection: {
-    foreground: 'white',
-    background: MAIN_BRAND_COLOR
-  },
-  page: {
-    content: 'hsl(0, 0%, 10%)',
-    background: LIGHT_BACKGROUND_COLOR,
-    overscroll: LIGHT_BACKGROUND_COLOR
-  }
-}
-
-export const dark = {
-  selection: {
-    foreground: 'white',
-    background: MAIN_BRAND_COLOR
-  },
-  page: {
-    content: 'white',
-    background: DARK_BACKGROUND_COLOR,
-    overscroll: DARK_BACKGROUND_COLOR
-  }
-}
-
-// -------------------------------------------------------------
 // Typography.
 // -------------------------------------------------------------
 

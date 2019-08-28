@@ -1,6 +1,6 @@
 import {css} from 'styled-components'
 
-import {light, typography} from '../config'
+import {typography} from '../config'
 import bodyLinkStyles from './body-link'
 import specialLinkStyles from './special-link'
 
@@ -318,7 +318,7 @@ export default css`
 
     background: #f1f1f1;
     border-radius: ${INNER_BLOCK_BORDER_RADIUS}px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid hsl(0, 0%, 88%);
 
     font-size: 0.85em;
     line-height: 1.45;
@@ -378,9 +378,9 @@ export default css`
 
     background: linear-gradient(
       to right,
-      ${light.page.background},
-      #e0e0e0,
-      ${light.page.background}
+      var(--color-page-background),
+      hsl(0, 0%, 88%),
+      var(--color-page-background)
     );
 
     border: none;

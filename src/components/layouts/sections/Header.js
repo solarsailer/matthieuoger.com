@@ -3,14 +3,12 @@ import {Link} from 'gatsby'
 import styled from 'styled-components'
 
 import {getWrappedIcon} from '../../Icon'
-import {light} from '../../../styles/config'
 import {Button} from '../../Button'
 
 // -------------------------------------------------------------
 // Constants.
 // -------------------------------------------------------------
 
-const BACKGROUND_COLOR = light.page.background
 const BREAKPOINT = 650
 
 // -------------------------------------------------------------
@@ -25,7 +23,11 @@ const Separator = styled.hr`
   height: 1px;
   margin-left: 50%;
 
-  background: linear-gradient(to right, ${BACKGROUND_COLOR}, #e0e0e0);
+  background: linear-gradient(
+    to right,
+    var(--color-page-background),
+    hsl(0, 0%, 88%)
+  );
   border-top: none;
   border-bottom: none;
 `
@@ -58,7 +60,11 @@ const GlobalMenu = styled.nav`
 
   padding: 2rem;
 
-  background: linear-gradient(to bottom, #e2e1e1, ${BACKGROUND_COLOR});
+  background: linear-gradient(
+    to bottom,
+    hsl(0, 0%, 88%),
+    var(--color-page-background)
+  );
 
   @media (max-width: ${BREAKPOINT}px) {
     flex-direction: column;
