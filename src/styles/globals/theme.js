@@ -2,6 +2,12 @@ import {css} from 'styled-components'
 
 // Accent Color = #E44D2A -> HSL(11, 78%, 53%)
 
+// Guidelines for colors:
+// - Use HSL or HSLA everywhere
+// - Only exception: black or white (and even that should be questioned…)
+
+// TODO: palette for grays and accent
+
 // -------------------------------------------------------------
 // Themes.
 // -------------------------------------------------------------
