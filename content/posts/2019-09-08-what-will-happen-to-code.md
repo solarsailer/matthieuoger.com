@@ -27,4 +27,4 @@ Hopefully, and surprisingly, programmers are probably the only one that are actu
 
 It's been a long time that I've formed this opinion in my head, and these are the reasons that I choose to not focus on programming anymore, but instead on the products at a higher level.
 
-Software engineers will probably become like blacksmiths (or similar professions): a few are highly valued for [the quality of their work, and the dedication to their craft](https://youtu.be/TD2XGwmRJi8), but the other 99% have vanished.
+Software engineers will probably become like blacksmiths (or similar professions): a few are highly valued for [the quality of their work, and the dedication to their craft](https://youtu.be/TD2XGwmRJi8), but the other 99% have vanished or been replaced by low-wage jobs.
