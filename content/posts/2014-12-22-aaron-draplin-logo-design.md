@@ -1,7 +1,6 @@
 ---
 date: "2014-12-22"
-
-title: Aaron Draplin Takes On A Logo Design Challenge
+title: "Aaron Draplin Takes On A Logo Design Challenge"
 ---
 
 <iframe width="800" height="404" src="https://www.youtube.com/embed/zOPA0NaeTBk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

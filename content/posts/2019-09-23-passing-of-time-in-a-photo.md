@@ -6,7 +6,7 @@ excerptQuote:
   quote: "I build a photograph based on time. […] I realised that Day to Night is really a new way of seeing."
 ---
 
-Stephen Wilkes in "[The Passing of Time, Caught in a Single Photo][video]":
+Stephen Wilkes in “[The Passing of Time, Caught in a Single Photo][video]”:
 
 > Einstein described time as a fabric. Think of the surface of a trampoline: it warps and stretches with gravity.
 >

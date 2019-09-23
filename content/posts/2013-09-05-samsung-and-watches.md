@@ -1,7 +1,6 @@
 ---
 date: "2013-09-05"
-
-title: Samsung And Watches
+title: "Samsung and Watches"
 ---
 
 [Ben Thompson nails it in “Shameless Samsung“](http://stratechery.com/2013/shameless-samsung/):

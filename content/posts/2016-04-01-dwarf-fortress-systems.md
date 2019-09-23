@@ -1,8 +1,6 @@
 ---
 date: "2016-04-01"
-
-title: Cats, taverns and cleaning systems
-
+title: "Cats, Taverns and Cleaning Systems"
 excerptQuote:
   name: "Tarn Adams"
   quote: "It’s funny how I have popular bugs, right? You shouldn’t have popular bugs."

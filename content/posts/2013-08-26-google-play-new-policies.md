@@ -1,8 +1,6 @@
 ---
 date: "2013-08-26"
-
-title: Google Play new policies
-
+title: "Google Play New Policies"
 excerptQuote:
   name: "Inner Active"
   quote: "So what does all this mean? It means that Google understands that while open is great, at the end of the day, users would rather have a superior experience both in terms of Google Play as a whole, and apps behavior in particular."

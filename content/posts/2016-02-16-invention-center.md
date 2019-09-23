@@ -1,8 +1,6 @@
 ---
 date: "2016-02-16"
-
-title: Invention Centers
-
+title: "Invention Centers"
 excerptQuote:
   name: "Alan Kay"
   quote: "Innovation is the process of taking something that’s already been invented and packaging it nicer. […] Problem-finding is about how to get something out of almost nothing in some new area."

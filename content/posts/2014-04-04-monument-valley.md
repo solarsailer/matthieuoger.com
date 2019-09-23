@@ -1,7 +1,6 @@
 ---
 date: "2014-04-04"
-
-title: Monument Valley
+title: "Monument Valley"
 ---
 
 ![Monument Valley][image]

@@ -1,8 +1,6 @@
 ---
 date: "2013-08-19"
-
-title: Team of One
-
+title: "Team of One"
 excerptQuote:
   name: "Snoonan"
   quote: "When you're a team of one, your I/O bandwidth is almost infinite. It's all in your brain, so you don't have to explain anything, write anything down, have meetings, draw on whiteboards, etc."

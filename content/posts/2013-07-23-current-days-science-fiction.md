@@ -1,8 +1,6 @@
 ---
 date: "2013-07-23"
-
-title: Current days science fiction
-
+title: "Current Days Science Fiction"
 excerptQuote:
   name: "John Moltz"
   quote: "You couldn’t have written this as science fiction in 1997. No one would have believed it."

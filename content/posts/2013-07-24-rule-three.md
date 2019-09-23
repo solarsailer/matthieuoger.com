@@ -1,8 +1,6 @@
 ---
 date: "2013-07-24"
-
-title: The rule of Three
-
+title: "The Rule of Three"
 excerptQuote:
   name: "Jeff Atwood"
   quote: "If I have learned anything in my programming career, it is this: building reusable software, truly reusable software, is an incredibly hard problem – right up there with naming things and cache invalidation."

@@ -1,8 +1,6 @@
 ---
 date: "2013-08-14"
-
-title: Animations, interactions, transitions
-
+title: "Animations, Interactions, Transitions"
 excerptQuote:
   name: "Pasquale D’Silva"
   quote: "It seems crazy to me that more people don’t think about interfaces with respect to the dimension of time. Motion can provide so much information!"

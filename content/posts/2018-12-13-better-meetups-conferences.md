@@ -1,6 +1,6 @@
 ---
 date: "2018-12-13"
-title: "Better meetups and conferences"
+title: "Better Meetups and Conferences"
 excerpt: "Manage the noise, get multiple mics, have fresh air somewhere, help people talk to each other and reduce the number of attendees."
 ---
 

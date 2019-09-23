@@ -1,14 +1,14 @@
 ---
 date: "2013-07-22"
 
-title: Matt Thorson on Towerfall, Ouya, game design and pricing
+title: "Towerfall, Ouya, Game Design and Pricing"
 
 excerptQuote:
   name: "Matt Thorson"
   quote: "All the arguments towards pricing lower were to cater to people's expectations, and I believe TowerFall is worth $15 if you have people to play with."
 ---
 
-The [full interview](http://www.polygon.com/2013/7/19/4535012/towerfall-ouya-matt-thorson-multiplayer-competitive-fighting-games) is really great:
+This [interview of Matt Thorson](http://www.polygon.com/2013/7/19/4535012/towerfall-ouya-matt-thorson-multiplayer-competitive-fighting-games) is really great:
 
 > "I personally don't think the Ouya's audience is big enough to support mobile pricing," he added. "All the arguments towards pricing lower were to cater to people's expectations, and I believe TowerFall is worth $15 if you have people to play with." […]
 >

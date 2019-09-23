@@ -1,8 +1,6 @@
 ---
 date: "2013-09-30"
-
-title: Paying for softwares
-
+title: "Paying for Softwares"
 excerptQuote:
   name: "Florian Kugler"
   quote: "[People] might say otherwise when asked about, but their actions speak pretty clearly: A cup of coffee is worth more than almost every app on the store. That's a hard pill to swallow, but we should let it sink in. We pour all our creativity, time, and passion into creating basically worthless products."

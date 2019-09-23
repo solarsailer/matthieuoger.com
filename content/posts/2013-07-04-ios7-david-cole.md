@@ -1,8 +1,6 @@
 ---
 date: "2013-07-04"
-
-title: Is the new Apple iOS 7 look an improvement?
-
+title: "Is the New Apple iOS 7 Look an Improvement?"
 excerptQuote:
   name: "David Cole"
   quote: "I don't think the interesting components of iOS 7 are found in the icons or the color or the type — those are relatively self-contained and thus easy to change and evolve."

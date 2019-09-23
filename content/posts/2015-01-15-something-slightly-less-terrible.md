@@ -1,8 +1,6 @@
 ---
 date: "2015-01-15"
-
-title: Something Slightly Less Terrible
-
+title: "Something Slightly Less Terrible"
 excerptQuote:
   name: "Loren Brichter"
   quote: "The more I learn, the more terrible I think programming is. I’d love to rip everything up and start over."

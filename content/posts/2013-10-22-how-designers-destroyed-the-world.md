@@ -1,14 +1,12 @@
 ---
 date: "2013-10-22"
-
-title: How Designers Destroyed The World
-
+title: "How Designers Destroyed the World"
 excerptQuote:
   name: "Mike Monteiro"
   quote: "There are professions more harmful than (industrial) design, but only a very few of them."
 ---
 
-Better late than never; I've managed to watch [How Designers Destroyed The World](https://vimeo.com/68470326) by Mike Monteiro.
+Better late than never; I've managed to watch “[How Designers Destroyed The World](https://vimeo.com/68470326)” by Mike Monteiro.
 
 It's a great talk except that I'm not fond of the tone. Though it fits well with the content, I find it a bit overdramatic. The end is also a tad lengthy, which is unfortunate.
 

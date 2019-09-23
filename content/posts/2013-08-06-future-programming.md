@@ -1,8 +1,6 @@
 ---
 date: "2013-08-06"
-
-title: The Future Of Programming
-
+title: "The Future of Programming"
 excerpt: "In the programming field, we have improved our tools, but globally, we are still doing the same thing: coding with text files. <em>That's sad</em>."
 ---
 

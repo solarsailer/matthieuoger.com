@@ -1,8 +1,6 @@
 ---
 date: "2015-04-26"
-
-title: Space Odyssey
-
+title: "Space Odyssey"
 excerpt: "I've finally convinced myself to watch “2001: A Space Odyssey”. Quick review and analysis."
 ---
 

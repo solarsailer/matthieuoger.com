@@ -1,8 +1,6 @@
 ---
 date: "2013-08-29"
-
-title: The gif “video format”
-
+title: "The Gif “Video Format”"
 excerptQuote:
   name: "Kornel"
   quote: "Animated GIF, despite having awful compression and terrible quality, is still more useful on the web than any other video format."

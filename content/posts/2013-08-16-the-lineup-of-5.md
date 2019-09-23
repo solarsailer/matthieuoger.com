@@ -1,7 +1,6 @@
 ---
 date: "2013-08-16"
-
-title: The Lineup of 5
+title: "The Lineup of 5"
 ---
 
 Apple is rumored to announce not one but two new iPhones on september 10. One of them will be the new premium iPhone (5S). The other will be the "_cheap_" one (5C).[^1]

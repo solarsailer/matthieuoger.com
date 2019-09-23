@@ -1,8 +1,6 @@
 ---
 date: "2015-10-13"
-
-title: The sad state of web app deployment
-
+title: "The Sad State of Web App Deployment"
 excerptQuote:
   name: "Eevee"
   quote: "We’ve been doing this for 20 years. We should have this by now. It should work, it should be pluggable and agnostic, and it should do everything right. […] Instead, we stack layer after layer of additional convoluted crap on top of what we’ve already got because we don’t know how to fix it."

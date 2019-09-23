@@ -1,8 +1,6 @@
 ---
 date: "2014-02-05"
-
-title: Interaction prototyping with Origami
-
+title: "Interaction Prototyping with Origami"
 excerptQuote:
   name: "Facebook"
   quote: "Origami provides a set of tools for Quartz Composer that make interaction prototyping a lot easier."

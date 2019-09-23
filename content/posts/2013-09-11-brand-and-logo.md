@@ -1,8 +1,6 @@
 ---
 date: "2013-09-11"
-
-title: Brand and logo
-
+title: "Brand and Logo"
 excerptQuote:
   name: "Oliver Reichenstein"
   quote: "This post is not about the technical quality of the logo. I am not writing about brand design, but about brand management. This is about a simple rule: Brand design follows brand management, not the other way around."

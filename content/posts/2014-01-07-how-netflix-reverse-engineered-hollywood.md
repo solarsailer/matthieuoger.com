@@ -1,8 +1,6 @@
 ---
 date: "2014-01-07"
-
-title: How Netflix Reverse Engineered Hollywood
-
+title: "How Netflix Reverse Engineered Hollywood"
 excerptQuote:
   name: "Alexis Madrigal"
   quote: "We discovered that Netflix possesses not several hundred genres, or even several thousand, but 76,897 unique ways to describe types of movies."

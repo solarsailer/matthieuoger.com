@@ -1,8 +1,6 @@
 ---
 date: "2014-06-03"
-
-title: Design detail in iOS 8 Messages
-
+title: "Design Detail in iOS 8 Messages"
 excerpt: "One of the features that I wanted the most in iOS 8 was simple: Add a “Use Last Photo Taken” button in the Messages app."
 ---
 

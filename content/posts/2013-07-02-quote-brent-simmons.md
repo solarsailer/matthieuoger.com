@@ -1,8 +1,6 @@
 ---
 date: "2013-07-02"
-
-title: Quote — Brent Simmons
-
+title: "Brent Simmons"
 excerptQuote:
   name: "Brent Simmons"
   quote: "Because efficiency makes for a better user experience, and that’s more important than anything else."
@@ -13,4 +11,4 @@ excerptQuote:
 > — [Brent Simmons](http://inessential.com/2013/07/01/netnewswire_and_syncing_speculation)
 
 
-(emphasis mine)
+(Emphasis mine)

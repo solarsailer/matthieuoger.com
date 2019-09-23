@@ -1,8 +1,6 @@
 ---
 date: "2013-07-25"
-
-title: Designer's decision
-
+title: "Designer's Decision"
 excerptQuote:
   name: "Ben Howdle"
   quote: "Passing the buck to the user to make the UX decision for you? Sounds worse when it’s put like that, huh?"

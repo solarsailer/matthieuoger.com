@@ -1,12 +1,10 @@
 ---
 date: "2015-09-18"
-
-title: What makes an indie hit?
-
+title: "What Makes an Indie Hit?"
 exceprt: "Should every game have a hook, a “gimmick”, a unique twist?"
 ---
 
-["What Makes an Indie Hit?: How to Choose the Right Design"](http://www.gamasutra.com/blogs/RyanClark/20150917/253842/What_Makes_an_Indie_Hit_How_to_Choose_the_Right_Design.php) by Ryan Clark (of [Crypt of the NecroDancer](http://necrodancer.com/)) is an interesting read:
+“[What Makes an Indie Hit?: How to Choose the Right Design](http://www.gamasutra.com/blogs/RyanClark/20150917/253842/What_Makes_an_Indie_Hit_How_to_Choose_the_Right_Design.php)” by Ryan Clark (of [Crypt of the NecroDancer](http://necrodancer.com/)) is an interesting read:
 
 > In this industry it's difficult to go far without learning from others. But from whom should we learn? I think it is wisest to study developers who have been repeatedly successful. Each time a developer creates another successful game, it becomes less and less likely that their repeated successes have been due to luck. Only a minuscule fraction of indie games break even, so what are the odds of developers like Jamie Cheng, Edmund McMillen, and Cliff Harris stringing together a number of successful games? The odds are low. There must be something other than luck at work! So perhaps these folks (and many others like them!) are the ones you should be studying and listening to.
 

@@ -1,8 +1,6 @@
 ---
 date: "2013-08-13"
-
-title: Marketers
-
+title: "Marketers"
 excerptQuote:
   name: "Rian Van Der Merwe"
   quote: "The problem with many Marketers today is that they too often make it all about the company, and not about user needs."

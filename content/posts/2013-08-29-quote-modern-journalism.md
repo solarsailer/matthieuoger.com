@@ -1,8 +1,6 @@
 ---
 date: "2013-08-29"
-
-title: Quote — Modern journalism
-
+title: "Modern Journalism"
 excerptQuote:
   name: "God"
   quote: "Modern journalism is 90% reporting what people are saying on Twitter."

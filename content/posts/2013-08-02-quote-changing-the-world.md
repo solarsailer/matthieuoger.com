@@ -1,8 +1,6 @@
 ---
 date: "2013-08-02"
-
-title: Quote — "Changing the world."
-
+title: "Changing the World…?"
 excerptQuote:
   name: "Freyr"
   quote: "Could “changing the world” be a contender the most trite, overused expression of 2013?"

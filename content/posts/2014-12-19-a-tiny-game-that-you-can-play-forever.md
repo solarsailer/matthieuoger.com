@@ -1,8 +1,6 @@
 ---
 date: "2014-12-19"
-
-title: A Tiny Game That You Can Play Forever
-
+title: "A Tiny Game That You Can Play Forever"
 excerptQuote:
   name: "Up Up Down Down"
   quote: "We then talk about the whimsical minimalism that works so well in indie games, and how to bring them to life. We talk about difficulty, complexity, and how to tune games."

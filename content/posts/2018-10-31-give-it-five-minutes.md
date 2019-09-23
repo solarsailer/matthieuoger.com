@@ -1,8 +1,6 @@
 ---
 date: "2018-10-31"
-
-title: "“Give it five minutes”"
-
+title: "“Give It Five Minutes”"
 excerptQuote:
   name: "Richard Saul Wurman"
   quote: "It’s fine to disagree, it’s fine to push back, it’s great to have strong opinions and beliefs, but give my ideas some time to set in before you’re sure you want to argue against them."

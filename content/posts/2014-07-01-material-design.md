@@ -1,8 +1,6 @@
 ---
 date: "2014-07-01"
-
-title: Material Design
-
+title: "Material Design"
 excerpt: "Material Design is the new Google's design language. It looks promising and great. There are some nice ideas, akin to iOS 7, like depth (automatically integrated by a z-axis with live shadows rendering for developers) or transitions and animations as first-class citizens."
 ---
 

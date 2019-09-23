@@ -1,8 +1,6 @@
 ---
 date: "2013-09-17"
-
-title: Patent trolls
-
+title: "Patent Trolls"
 excerpt: "I'm not against patents and inventors' rights. But there is a big difference between protecting your properties from real thieves and suing everyone without actually creating anything. If the only solution to this problem is to abolish the patents system, so be it."
 ---
 

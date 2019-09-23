@@ -1,8 +1,6 @@
 ---
 date: "2013-09-05"
-
-title: Inventing the favicon
-
+title: "Inventing the Favicon"
 excerptQuote:
   name: "Ray Sun"
   quote: "So there you go, the story of the invention of favicon.ico"

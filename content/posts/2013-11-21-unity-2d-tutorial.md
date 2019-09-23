@@ -1,8 +1,6 @@
 ---
 date: "2013-11-21"
-
-title: Pixelnest — Unity 2D tutorial
-
+title: "Unity 2D tutorial"
 excerpt: "We cooked a complete tutorial about Unity and its new 2D tools. This tutorial covers the creation of a very small game from start to finish."
 ---
 

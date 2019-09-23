@@ -1,8 +1,6 @@
 ---
 date: "2015-06-08"
-
-title: Force Touch Affordance
-
+title: "Force Touch Affordance"
 excerpt: "Force Touch is not discoverable."
 ---
 

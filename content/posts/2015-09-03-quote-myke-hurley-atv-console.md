@@ -1,8 +1,6 @@
 ---
 date: "2015-09-03"
-
-title: Quote — Myke Hurley about the new rumored Apple TV — a gaming console?
-
+title: "The New Rumored Apple TV — a Gaming Console?"
 excerptQuote:
   name: "Myke Hurley"
   quote: "If they do not show a first party gaming focused controller for the new Apple TV, I think that they are not as committed to games as they might think."

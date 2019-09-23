@@ -1,7 +1,6 @@
 ---
 date: "2013-09-16"
-
-title: Apple is future proof
+title: "Apple Is Future Proof"
 ---
 
 [The Most Forward Thinking Apple Yet](http://cannyvision.com/2013/09/12/the-most-forward-thinking-apple-yet.html) (emphasis mine):

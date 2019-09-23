@@ -1,8 +1,6 @@
 ---
 date: "2013-08-05"
-
-title: Windows Phone and WinRT
-
+title: "Windows Phone and WinRT"
 excerptQuote:
   name: "Paul Thurrott"
   quote: "Microsoft already has a mobile platform with a thriving ecosystem. It’s called Windows Phone, and I think it makes a far better choice for general purpose tablets than does Windows RT."

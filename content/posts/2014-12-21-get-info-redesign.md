@@ -1,8 +1,6 @@
 ---
 date: "2014-12-21"
-
 title: "\"Get Info\" redesign"
-
 excerptQuote:
   name: "Ramotion"
   quote: "Everyone who has ever worked on MacOS has felt this pain at least once. You select a couple of files, right click, open the menu, and tap Get Info…"

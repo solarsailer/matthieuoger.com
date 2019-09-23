@@ -1,8 +1,6 @@
 ---
 date: "2013-08-26"
-
-title: iOS 7 user tracking
-
+title: "iOS 7 User Tracking"
 excerptQuote:
   name: "Dave Verwer"
   quote: "If your solution to having uniqueIdentifier deprecated was to use the MAC address of the device in some way then you're going to have a bad time in iOS 7."

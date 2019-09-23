@@ -1,8 +1,6 @@
 ---
 date: "2013-10-18"
-
-title: You must prototype it in code
-
+title: "You Must Prototype It in Code"
 excerptQuote:
   name: "Jeff Atwood"
   quote: "The most destructive symptom of over-planning is the wrongheaded idea that being a Software Architect™ means drawing a lot of UML diagrams and handing them off to a group of developers. […] You can't architect a real world application on a whiteboard. You must prototype it in code to gather data on the performance and design implications of the choices you are making."

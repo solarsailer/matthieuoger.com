@@ -1,8 +1,6 @@
 ---
 date: "2013-08-27"
-
-title: Quote — Jonathan Blow
-
+title: "Jonathan Blow"
 excerptQuote:
   name: "Jonathan Blow"
   quote: "Advertising is effective only because so many people think “Ads don't influence me” and “Ads give me what I want for free”."

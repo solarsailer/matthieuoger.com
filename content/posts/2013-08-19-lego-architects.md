@@ -1,7 +1,6 @@
 ---
 date: "2013-08-19"
-
-title: Lego Architects
+title: "Lego Architects"
 ---
 
 [Wired](http://www.wired.com/design/2013/08/a-lego-set-with-no-instructions-for-budding-architects/):

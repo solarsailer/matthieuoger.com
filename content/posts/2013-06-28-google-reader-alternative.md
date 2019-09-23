@@ -1,8 +1,6 @@
 ---
 date: "2013-06-28"
-
-title: The search for a Google Reader alternative
-
+title: "The Search for a Google Reader Alternative"
 excerptQuote:
   name: "Rian Van Der Merwe"
   quote: "But I do feel like I now know way too much about the RSS reader landscape than I every wanted to. Thanks, Google."

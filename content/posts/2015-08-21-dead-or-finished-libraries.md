@@ -1,8 +1,6 @@
 ---
 date: "2015-08-21"
-
-title: Dead or finished libraries?
-
+title: "Dead or Finished Libraries?"
 excerptQuote:
   name: "Mark Jason Dominus"
   quote: "People seem to think that all software requires new features or frequent bug fixes. Apparently, the idea of software that doesn't get updated because it's finished is inconceivable."

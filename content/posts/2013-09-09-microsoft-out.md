@@ -1,8 +1,6 @@
 ---
 date: "2013-09-09"
-
-title: Microsoft Out
-
+title: "Microsoft Out"
 excerptQuote:
   name: "Charles Miller"
   quote: "An argument could be made that Microsoft was making the best PC software in its class. Not because it had suddenly found the ability to develop cool, innovative products, but because everyone else was dead."

@@ -1,8 +1,6 @@
 ---
 date: "2015-04-25"
-
-title: Perspectives on wearables
-
+title: "Perspectives on Wearables"
 excerpt: "I'm interested in wearables (when they are not socially awkward) because of what they might become. What they are today is just a glimpse of the potential of such devices."
 ---
 

@@ -1,8 +1,6 @@
 ---
 date: "2015-09-09"
-
-title: Quote — CGP Grey, the rule of two
-
+title: "The Rule of Two"
 excerptQuote:
   name: "CGP Grey"
   quote: "The rule of two is that two is one — and one is none."

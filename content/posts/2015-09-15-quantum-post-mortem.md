@@ -1,8 +1,6 @@
 ---
 date: "2015-09-15"
-
-title: Quantum post-mortem
-
+title: "Quantum Post-Mortem"
 excerptQuote:
   name: "Eric Zimmerman"
   quote: "My goal was that every card should feel incredibly powerful – a potential game winner in the right situation. I loved seeing my playtesters' faces grow greedy as they read the cards, astonished at how good the powers seemed to be."

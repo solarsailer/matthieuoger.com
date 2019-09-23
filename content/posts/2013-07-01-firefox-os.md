@@ -1,8 +1,6 @@
 ---
 date: "2013-07-01"
-
-title: Firefox OS
-
+title: "Firefox OS"
 excerptQuote:
   name: "Benedict Evans"
   quote: "When I hear people say how great Firefox OS is, they talk about operators, OEMs, litigation… and sometimes remember to mention users."
