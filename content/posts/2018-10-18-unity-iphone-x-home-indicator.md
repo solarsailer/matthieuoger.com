@@ -4,11 +4,11 @@ title: "Unity and iPhone X's Home Indicator"
 excerpt: "Use the `Bottom` option for \"Defer system gestures on edges\" in the `Edit → Project Settings → Player` menu of Unity to make the iPhone X's home indicator less visible and obtrusive. Don't use \"Hide home button on iPhone X\". This is not what you want for a game."
 ---
 
-<blockquote class="tldr">
-  <p>Check the <code>Bottom</code> option for "Defer system gestures on edges" in the <code>Edit → Project Settings → Player</code> menu of Unity to make the iPhone X's home indicator less visible and obtrusive in your project.</p>
+::: blockquote tldr
+Check the `Bottom` option for "Defer system gestures on edges" in the `Edit → Project Settings → Player` menu of Unity to make the iPhone X's home indicator less visible and obtrusive in your project.
 
-  <p>Don't use "Hide home button on iPhone X". This is not what you want for a game.</p>
-</blockquote>
+Don't use "Hide home button on iPhone X". This is not what you want for a game.
+:::
 
 ---
 
