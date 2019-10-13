@@ -61,8 +61,10 @@ export default css`
 
   /* Transcript. */
 
-  .transcript blockquote::before {
-    content: 'Transcript';
+  .transcript {
+    &::before {
+      content: 'Transcript';
+    }
   }
 
   /* Twitter. */
