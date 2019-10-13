@@ -59,7 +59,7 @@ exports.plugins = [
   {
     resolve: 'gatsby-transformer-remark',
     options: {
-      plugins: [{resolve: 'gatsby-remark-prismjs'}]
+      plugins: [{resolve: 'gatsby-remark-prismjs'}, 'gatsby-remark-containers']
     }
   },
   {

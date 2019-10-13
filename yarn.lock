@@ -5154,6 +5154,13 @@ gatsby-react-router-scroll@^2.1.6:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
+gatsby-remark-containers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-containers/-/gatsby-remark-containers-1.0.0.tgz#12048ecb2f278c947f643a9b034beb6d04b8e06c"
+  integrity sha512-7vLc3UgSKWtuv+8swwE5/6dwO5ylkWuOCGurx6SGzWR8hqPR3vpsW2gVDnM69zHf8d7vhNjC27oCPRSiFjKeYw==
+  dependencies:
+    remark-containers "^1.1.0"
+
 gatsby-remark-prismjs@^3.3.9:
   version "3.3.9"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.9.tgz#20eb5fdf1d5481672517058216e8e817fc43c986"
@@ -10324,6 +10331,11 @@ relay-runtime@2.0.0:
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
+
+remark-containers@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/remark-containers/-/remark-containers-1.1.1.tgz#d0fa0302de112ba127e71383caa3d07e8888eef9"
+  integrity sha512-DUmWbnAPBJO+dFh19azDYy1eVflxYltlqhE5050Vg+eL6MDBcpC2p5ns3mkhoL9Mc86hZDvMPFQpQjctFpWPpA==
 
 remark-parse@^6.0.0, remark-parse@^6.0.3:
   version "6.0.3"
