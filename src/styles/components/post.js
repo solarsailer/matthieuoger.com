@@ -365,6 +365,10 @@ export default css`
     }
   }
 
+  .transcript blockquote::before {
+    content: 'Transcript';
+  }
+
   /* HR. */
 
   hr {
