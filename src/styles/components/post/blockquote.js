@@ -46,19 +46,6 @@ export default css`
     margin-bottom: 0;
   }
 
-  /* Twitter. */
-
-  .twitter-tweet {
-    background: hsl(var(--hue-twitter), 93%, 95%);
-    border: 1px solid hsl(var(--hue-twitter), 91%, 91%);
-
-    &::before {
-      content: 'Tweet';
-      color: var(--color-twitter);
-      opacity: 0.55;
-    }
-  }
-
   /* TLDR. */
 
   .tldr {
@@ -76,5 +63,18 @@ export default css`
 
   .transcript blockquote::before {
     content: 'Transcript';
+  }
+
+  /* Twitter. */
+
+  .twitter-tweet {
+    background: hsl(var(--hue-twitter), 93%, 95%);
+    border: 1px solid hsl(var(--hue-twitter), 91%, 91%);
+
+    &::before {
+      content: 'Tweet';
+      color: var(--color-twitter);
+      opacity: 0.55;
+    }
   }
 `
