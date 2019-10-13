@@ -6,13 +6,13 @@ excerptQuote:
   quote: "It’s fine to disagree, it’s fine to push back, it’s great to have strong opinions and beliefs, but give my ideas some time to set in before you’re sure you want to argue against them."
 ---
 
+[Jason Fried](https://signalvnoise.com/posts/3124-give-it-five-minutes):
+
 > [Richard Saul Wurman] said “Man, give it five minutes.” I asked him what he meant by that? He said, it’s fine to disagree, it’s fine to push back, it’s great to have strong opinions and beliefs, but give my ideas some time to set in before you’re sure you want to argue against them. “Five minutes” represented “think”, not react. He was totally right.
 >
 > […]
 >
 > [He] has spent his career thinking about these problems. He’s given it 30 years. And I gave it just a few minutes. Now, certainly he can be wrong and I could be right, but it’s better to think deeply about something first before being so certain you’re right.
->
-> — [Jason Fried](https://signalvnoise.com/posts/3124-give-it-five-minutes)
 
 ---
 

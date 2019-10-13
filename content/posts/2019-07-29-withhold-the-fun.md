@@ -14,4 +14,4 @@ excerptQuote:
 All that matters is: does it do the thing that I needed to do, does it check all the checkboxes for compliance and _blablabla_ and how much does it cost?
 :::
 
-(Emphasis mine)
+<small>(Emphasis mine)</small>

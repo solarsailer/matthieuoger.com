@@ -6,7 +6,7 @@ excerptQuote:
   quote: "We discovered that Netflix possesses not several hundred genres, or even several thousand, but 76,897 unique ways to describe types of movies."
 ---
 
-[Alexis Madrigal on Netflix classification](http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/) (emphasis mine):
+[Alexis Madrigal on Netflix classification](http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/):
 
 > […], we discovered that Netflix possesses not several hundred genres, or even several thousand, **but 76,897 unique ways to describe types of movies**. […]
 >
@@ -15,6 +15,8 @@ excerptQuote:
 > The Netflix Quantum Theory doc spelled out ways of tagging movie endings, the "social acceptability" of lead characters, and dozens of other facets of a movie. Many values are "scalar," that is to say, they go from 1 to 5. So, every movie gets a romance rating, not just the ones labeled "romantic" in the personalized genres. Every movie's ending is rated from happy to sad, passing through ambiguous. Every plot is tagged. Lead characters' jobs are tagged. Movie locations are tagged. Everything. Everyone.
 >
 > That's the data at the base of the pyramid. It is the basis for creating all the altgenres that I scraped. Netflix's engineers took the microtags and created a syntax for the genres, much of which we were able to reproduce in our generator.
+
+<small>(Emphasis mine)</small>
 
 This article completely blew my mind. Great journalism.
 

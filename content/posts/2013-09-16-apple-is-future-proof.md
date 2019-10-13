@@ -3,9 +3,11 @@ date: "2013-09-16"
 title: "Apple Is Future Proof"
 ---
 
-[The Most Forward Thinking Apple Yet](http://cannyvision.com/2013/09/12/the-most-forward-thinking-apple-yet.html) (emphasis mine):
+“[The Most Forward Thinking Apple Yet](http://cannyvision.com/2013/09/12/the-most-forward-thinking-apple-yet.html)”:
 
 > In many ways, WWDC, and more so, the iPhone 5C and 5S represent (and had to represent) Apple's reply to the naysayers. **However, I think there was more to the announcements than what met the eye.**
+
+<small>(Emphasis mine)</small>
 
 Read the whole thing.
 
