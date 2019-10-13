@@ -1,6 +1,6 @@
 ---
 date: "2013-07-02"
-title: "Brent Simmons"
+title: "Efficiency Is Superior UX"
 excerptQuote:
   name: "Brent Simmons"
   quote: "Because efficiency makes for a better user experience, and that’s more important than anything else."
