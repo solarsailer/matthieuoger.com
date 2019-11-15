@@ -98,6 +98,7 @@ export default css`
         &:hover {
           color: white;
           background: var(--color-accent);
+          transform: scale(1.2);
         }
       }
     }
