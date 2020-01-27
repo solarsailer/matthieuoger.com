@@ -39,7 +39,7 @@ Some places I went to:
 * **Thian Hock Keng Temple**: this temple is surrounded by skyscrapers in a moody district to walk in.
 * **Gardens By The Bay**: a park near the CBD, with artificial supertrees (the skyway at the top of the tree gives a nice view around) and two domes to visit. I really love this place. It's unique. There's also a great foodcourt in the park called "Satay By The Bay".
 * **Jewel**: it's an artificial park in the center of the airport. They built a huge fountain coming from the ceiling… it's crazy and superb at the same time.
-* **Zoo**: I wouldn't recommend this. My trip and safaris in Tanzania has probably destroyed any interest I could have in a zoo.
+* **Zoo**: I wouldn't recommend this. My trip and safaris in Tanzania have probably destroyed any interest I could have in a zoo.
 * **Haw Par Villa**: it's a bit outside the city center. It was designed by the family who invented the Tiger Balm onguent. Creepy as hell[^5], but worth a visit.
 * **Botanic Gardens**: a big park loved by Singopereans and families. It's ok.
 * **Southern Ridges**: a long walk in the south of the city. I started from Kent Ridges until the Harbourfront MRT station. The section between Kent Ridges to Alexandra Arch is boring. The part after Henderson Waves (to the MRT station) is not interesting either. _But from Alexandra Arch (included) and Henderson Waves (included), it's really great._
