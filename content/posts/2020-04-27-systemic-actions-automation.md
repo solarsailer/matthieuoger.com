@@ -26,7 +26,7 @@ I maintain a personal repository with [most of my non-app scripts](https://githu
 
 I tried to put most of the settings of my apps (Alfred, iTerm2, Dash, etc.) on a cloud provider, so that I can share them between computers and have a backup (it's actually one of my selection criteria when I try a new tool — "can I sync the settings easily?"). The tools are tailored to my use, and I don't have to customize them again.
 
-I automated our servers installation so that I could nuke and reinstantiate them easily. I had a doubt about something I did? No worry, let's just start from the beginning.
+I automated and documented our servers installation so that I could nuke and reinstantiate them easily. I'm not an experienced sysadmin at all, so having this ability to restart from scratch was a godsend to me.
 
 It's not pure automation, but it falls in the same ballpark for me. **It's emptying your brain so that you can focus on what you care.** _And, bonus, it's fun to do!_
 
