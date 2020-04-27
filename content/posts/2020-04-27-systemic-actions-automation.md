@@ -14,8 +14,6 @@ Brett Terpstra in “[Judging the value of automation][article]”:
 
 **Exactly!** Avoiding mistakes is much more important than any time-saving[^1]. Automation removes the need to remember what you need to do, and simplify the sharing of knowledge. It's basically a _self-fulfilling [checklist][book]_ that can be triggered by anybody.
 
-Let me digress a bit with a few examples and principles. I'm by no mean perfect, but this is how I'm trying to improve.
-
 ---
 
 When I was developing a new website for [Pixelnest Studio](https://pixelnest.io/), the first step was setuping the project, and automating the deployment, so that I could come back 6 months later and still be able to deploy easily without reading the README or the code.
@@ -46,7 +44,7 @@ Checklists are _also cheap and easy-to-write documentation_ — for you, your fa
 
 ---
 
-In computing (and life in general), there are a few principles that I consider extremely important:
+In computing (and life in general), there are a few principles that I consider extremely important and I'm trying to apply as much as possible:
 
 - **Repeatability**: repeat a task in a predictable manner and efficiently without dreading it;
 - **Robustness**: ensure you are doing the right steps and actions all the time, constantly. Backup. Use version control and history systematically;
