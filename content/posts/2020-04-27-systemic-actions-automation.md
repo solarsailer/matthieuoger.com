@@ -42,23 +42,19 @@ It was **always more effort initially**, and we, humans, don't like effort. _But
 
 That's also a reason why I love checklists so much. **Checklists are the manual version of automation**: you write it, you duplicate it, you cross it, and you forget it.
 
-Checklists are _also cheap and easy-to-write documentation_ — for you, your family, your friends, your coworkers.
-
-You go on a trip? Write your packing checklist. Quickly scan it before leaving a place — you won't lose anything.
+Checklists are _also cheap and easy-to-write documentation_ — for you, your family, your friends, your coworkers.[^3]
 
 ---
-
-I would dare to go further.
 
 In computing (and life in general), there are a few principles that I consider extremely important:
 
 - **Repeatability**: repeat a task in a predictable manner and efficiently without dreading it;
 - **Robustness**: ensure you are doing the right steps and actions all the time, consistently;
-- **Shareability**: share information painlessly with other people, and more importantly, your future-self;[^3]
-- **Mastery**: learn your tools, the shortcuts, and the customization points. Dive in the menus, try everything. This is physical automation: you train your body to repeat stuffs quickly without thinking about it.[^4] You save time, you reduce mistakes, you get better;
-- **Documentability**: enrich your knowledge base constantly - that is vitally important. Document what you do and why.[^5] Take notes, create a task in your todo apps to not forget something important. Offload your mind and find any information in no time.[^6]
+- **Shareability**: share information painlessly with other people, and more importantly, your future-self;[^4]
+- **Mastery**: learn your tools, the shortcuts, and the customization points. Dive in the menus, try everything. This is physical automation: you train your body to repeat stuffs quickly without thinking about it.[^5] You save time, you reduce mistakes, you get better;
+- **Documentability**: enrich your knowledge base constantly - that is vitally important. Document what you do and why.[^6] Take notes, create a task in your todo apps to not forget something important. Offload your mind and find any information in no time.[^7]
 
-That's automation, although at a bigger scope than just plain computer automation and scripting. That's why I like to be organized and to create systems[^7] in my life[^8] (and not only on my computers). It's a way for me to be consistent, coherent, efficient and meticulous. To care about what I do without putting more charge on me.
+That's automation, although at a bigger scope than just plain computer automation and scripting. That's why I like to be organized and to create systems[^8] in my life[^9] (and not only on my computers). It's a way for me to be consistent, coherent, efficient and meticulous. To care about what I do without putting more charge on me.
 
 _And to be able to **lose my time** on the areas where it provides me joy._
 
@@ -68,10 +64,11 @@ _And to be able to **lose my time** on the areas where it provides me joy._
 
 [^1]: Which is still a really nice perk — we shouldn't diminish that property.
 [^2]: Don't get me wrong: it was not perfect. Some steps were still manual and I could have automated them, but there's a point where a good ol' checklist is enough and automating becomes a burden. However, if it's manual, **it needs to be documented**. Hence, generally, a checklist.
-[^3]: That can be a script, a documentation, or a process. That's why, when I find an important information, I store it ASAP in my Dropbox so I can come back to it later. That's also why I'm blogging: to keep the relevant articles I found right at my fingertips. That's, finally, why I love scripting: I don't want to memorize how I need to execute an action — it's more mistakes later, and less predictability. It's also a source of examples for future-me.
-[^4]: That's why automation-freaks enjoy [text expansion](https://textexpander.com/) so much. But it can also be optimizing your commute route, or always putting stuffs at the same place in your flat so you don't have to think to locate them.
-[^5]: This article showed that I like anecdotes. Here's another: when you have a company in France, you need to do something called "l'approbation des comptes" every year. It's boring, complex, and prone to mistakes. The first time I did it, I noted all the steps I needed to do while I was learning to do it. The next year, it — obviously — happened again, and I didn't have any clue about what I did. I remembered taking the notes, look at them, and in almost no time, was able to do it again. I could have learned once more, but this would have been a big waste a time, and a big chore. Instead, it was just a minor annoyance.
-[^6]: If I hear someone talking about a thing they like, I note it. Later, when I need to find a gift, I can look at the list and pick there. It is not always useful, nor something you can do rightaway… but people are so happy when you give them something they actually truly wanted. It's also less waste.
-[^7]: [Tim Urban](https://youtu.be/lIW5jBrrsS0?t=857):
+[^3]: You go on a trip? Write your packing checklist. Quickly scan it before leaving a place — you won't lose anything.
+[^4]: That can be a script, a documentation, or a process. That's why, when I find an important information, I store it ASAP in my Dropbox so I can come back to it later. That's also why I'm blogging: to keep the relevant articles I found right at my fingertips. That's, finally, why I love scripting: I don't want to memorize how I need to execute an action — it's more mistakes later, and less predictability. It's also a source of examples for future-me.
+[^5]: That's why automation-freaks enjoy [text expansion](https://textexpander.com/) so much. But it can also be optimizing your commute route, or always putting stuffs at the same place in your flat so you don't have to think to locate them.
+[^6]: This article showed that I like anecdotes. Here's another: when you have a company in France, you need to do something called "l'approbation des comptes" every year. It's boring, complex, and prone to mistakes. The first time I did it, I noted all the steps I needed to do while I was learning to do it. The next year, it — obviously — happened again, and I didn't have any clue about what I did. I remembered taking the notes, look at them, and in almost no time, was able to do it again. I could have learned once more, but this would have been a big waste a time, and a big chore. Instead, it was just a minor annoyance.
+[^7]: If I hear someone talking about a thing they like, I note it. Later, when I need to find a gift, I can look at the list and pick there. It is not always useful, nor something you can do rightaway… but people are so happy when you give them something they actually truly wanted. It's also less waste.
+[^8]: [Tim Urban](https://youtu.be/lIW5jBrrsS0?t=857):
   > This also just speaks to the power of habits, because, changing a habit is like overwriting your current software, and if you do it enough time, what's cool about your brain is, it rewrites it to accommodate the new behaviour. You're saying "oh, I guess we are doing this everyday now?".
-[^8]: Or as someone said: "have a reset button for my apartment". Everything has a spot, and in the mornings, when you wake up, you put everything back to its rightful place. It's always the same, it's easy to clean, it's easy to find if something's missing. **It does not preclude change, but change should be desired and aware, not the byproduct of chaos.**
+[^9]: Or as someone said: "have a reset button for my apartment". Everything has a spot, and in the mornings, when you wake up, you put everything back to its rightful place. It's always the same, it's easy to clean, it's easy to find if something's missing. **It does not preclude change, but change should be desired and aware, not the byproduct of chaos.**
