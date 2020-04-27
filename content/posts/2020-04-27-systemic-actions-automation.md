@@ -49,7 +49,7 @@ Checklists are _also cheap and easy-to-write documentation_ — for you, your fa
 In computing (and life in general), there are a few principles that I consider extremely important:
 
 - **Repeatability**: repeat a task in a predictable manner and efficiently without dreading it;
-- **Robustness**: ensure you are doing the right steps and actions all the time, consistently;
+- **Robustness**: ensure you are doing the right steps and actions all the time, consistently. Backup. Use version control and history systematically;
 - **Shareability**: share information painlessly with other people, and more importantly, your future-self;[^4]
 - **Mastery**: learn your tools, the shortcuts, and the customization points. Dive in the menus, try everything. This is physical automation: you train your body to repeat stuffs quickly without thinking about it.[^5] You save time, you reduce mistakes, you get better;
 - **Documentability**: enrich your knowledge base constantly - that is vitally important. Document what you do and why.[^6] Take notes, create a task in your todo apps to not forget something important. Offload your mind and find any information in no time.[^7]
