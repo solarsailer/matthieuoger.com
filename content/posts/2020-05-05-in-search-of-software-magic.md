@@ -6,7 +6,7 @@ excerptQuote:
   quote: "We truly believe that the tools teams use directly impact the outcome of their work. Bad tools encourage bad habits. Good tools encourage good habits."
 ---
 
-From Linear's README in “[In Search of Magic](https://linear.app/readme)”:
+From Linear's README, “[In Search of Magic](https://linear.app/readme)”:
 
 > **Software used to be magical. We were excited about the new possibilities it opened up.**
 >
