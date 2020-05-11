@@ -64,4 +64,4 @@ In the end, there's no good answer here. There are just many tradeoffs (accessib
 [^2]: For example, this website is heavier, but feels faster than [Pixelnest](https://pixelnest.io/)'s. It's slower on first and initial uncached load, but after, it becomes faster — almost instant.
 [^3]: Just imagining having to write BEM classes, put everything in big files, or repeat so much HTML would feel like going back ten years ago.
 
-  I actually did that recently, and it was not horrible. But it becomes a mess much more quickly, especially if you are working with more junior developers. You need even more discipline and rigor. It's possible for a one-man website, but it can break quickly as you add more people on a project if the experience level differs a lot.
+  I actually did that recently, and it was **not** horrible. But it becomes a mess much more quickly, especially if you are working with more junior developers. You need even more discipline and rigor. It's possible for a one-man website, but it can break quickly as you add more people on a project if the experience level differs a lot.
