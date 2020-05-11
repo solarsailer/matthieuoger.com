@@ -22,7 +22,7 @@ I really love small, hyper-optimized websites with just the necessary bits ([I r
 
 But using React made me reevaluate my tradeoffs slightly[^1].
 
-**Components** and [**declarative coding**](https://en.wikipedia.org/wiki/Declarative_programming) are such a better _programming model_. React is far from perfect, and some stuffs are way too complicated, but the basis is _right_. The foundations are _correct_.
+**Components** and [**declarative coding**](https://en.wikipedia.org/wiki/Declarative_programming) are such a better _programming model_. React _nailed that_. It's far from perfect, and some stuffs are way too complicated, but the basis is _right_. The foundations are _correct_.
 
 ---
 
@@ -49,7 +49,7 @@ Very true, unfortunately.
 
 > I can, for example, guarantee that this blog is faster than any Gatsby blog (and much love to the Gatsby team) because there is nothing that a React static site can do that will make it faster than a non-React static site.
 
-This is true. But perceptually, it's not necessarily the case nor that simple.[^2]
+This is undeniable. But perceptually, it's not necessarily the case nor that simple.[^2]
 
 <br />Finally:
 
