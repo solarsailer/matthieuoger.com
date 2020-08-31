@@ -15,7 +15,7 @@ Here it is:
 * Everyone knows that they cost a lot — of time and money — with endless legal procedures.
 * Everyone knows that it's pure bullshit and extortion, and yet, it is perfectly legal.
 
-Stupid system.
+Interesting system.
 
 ---
 
