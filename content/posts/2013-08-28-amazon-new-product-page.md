@@ -1,6 +1,6 @@
 ---
 date: "2013-08-28"
-title: "Amazon's New Product Page"
+title: "The Work of Change"
 excerptQuote:
   name: "Joshua Porter"
   quote: "So the next time you hear “People hate change” think to yourself “People don’t hate change. They hate the work of change”."
