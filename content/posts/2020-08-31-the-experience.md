@@ -26,4 +26,4 @@ Sometimes, you should do something because it makes your product [better and mor
 
 
 [article]: https://builtformars.co.uk/how-signing-up-to-notion-works/
-[delight]: http://localhost:8000/2016/03/delight/
+[delight]: https://matthieuoger.com/2016/03/delight/
