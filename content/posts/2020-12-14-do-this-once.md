@@ -6,7 +6,7 @@ excerptQuote:
   quote: "These humans don’t have a lazy bone in their bodies. What they appreciate is efficiency. _I want to design this system so I only have to do this once._"
 ---
 
-Michael Lopp in “[The Art of Leadership: Small Things, Done Well](https://www.oreilly.com/library/view/the-art-of/9781492045687/)”:
+[Michael Lopp](https://www.oreilly.com/library/view/the-art-of/9781492045687/):
 
 > I’ve heard my favorite engineers claim the reason they are productive is because they are lazy. It’s a humblebrag. These humans don’t have a lazy bone in their bodies. What they appreciate is efficiency. _I want to design this system so I only have to do this once._
 >
