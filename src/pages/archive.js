@@ -75,7 +75,7 @@ export default ({data}) => {
       <Helmet>
         <title>Archive — Matthieu Oger</title>
       </Helmet>
-      <PageTitle>Archive</PageTitle>
+      <PageTitle url="/archive/">Archive</PageTitle>
       <List>{convertAndAddHeaders(nodes)}</List>
     </Layout>
   )
