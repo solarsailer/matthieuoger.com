@@ -1,6 +1,6 @@
 ---
 date: "2021-03-24"
-title: "Notes from Evernote Early-Development"
+title: "Building the Right Product, Swiftly"
 excerptQuote:
   name: "Phil Libin"
   quote: "How fast can you do each iteration? […] We could make a product pretty good faster than I ever thought possible before. […] Very few people can articulate and have the power of imagination to envision what they actually want. […] We don't ask customers what they want, we ask customers to respond to what we are giving them. […] What is too much to build and what is just the right amount? How do we know?"
