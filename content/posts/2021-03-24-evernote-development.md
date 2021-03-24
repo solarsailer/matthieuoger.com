@@ -24,7 +24,7 @@ At Evernote […] an iteration was twenty minutes, because we would just make so
 
 And, as a consequence, the time to make a product _great_ (not just "pretty good") is also reduced.
 
-One note though: we need to be careful not to confuse "speed of iteration" with "velocity". 
+One note though: we need to be careful not to confuse "speed of iteration" with "velocity".
 
 "Iteration" is your ability to experiment and refine a feature. You can iterate a lot but just release a very few impactful features (which is good). To the contrary, you can iterate slowly and output a lof of very low value, unpolished and mediocre features.[^2]
 
@@ -42,7 +42,7 @@ If you ask users what they want, they are not gonna tell you what they want beca
 If you ask customers or prospective customers what they want, they'll tell you the stuff that they expect… and _very rarely will that actually be what they want_. [Then, he quotes Henry Ford famous line: “If I had asked people what they wanted, they would have said faster horses.”]. We don't ask customers what they want, we ask customers to respond to what we are giving them. Because then, it's much more useful: you can tell when people are confused, when they are happy, when they are satisfied and then we can decide who to ignore, which opinion to take seriously, etc.
 :::
 
-This is one of the topics I'm coming back to frequently in my job. 
+This is one of the topics I'm coming back to frequently in my job.
 
 How can you gather as much feedback as possible, while not becoming crushed by its weight or clients' expectations?
 
@@ -73,9 +73,9 @@ This reminds me of a comment made by a candidate during an interview: _“One cr
   The most adequate tool is probably a generic data-visualisation or log processing platform like Kibana or Datadog. Tools that were not conceived for this problem specifically, but instead to digest, process, present and search raw data in quantity. Which is what user feedback is: information logs, but provided by users instead of machines.
 
   See it similarly to an analytics tool: you would consult the platform everyday to have an overview of your users, how they feel about your product, and what they expect. Use that as additional data for experiments and ideas. When you look at analytics, you don't act immediately, and you cannot answer questions there. You use this trove of data to refine your hypotheses. Feedback should be seen the same way.
-  
-  Using this approach would also remove the emotion from the equation. It would allow the product manager to take a step back and look at all this knowledge objectively… like analytics. 
-  
+
+  Using this approach would also remove the emotion from the equation. It would allow the product manager to take a step back and look at all this knowledge objectively… like analytics.
+
   And for qualitative measures? Just run some real-life user tests and sessions.
 [^5]: I think there's something profoundly wrong in the B2B (less so in B2C) world, where clients expect to have answers to everything they ask or want.
 
