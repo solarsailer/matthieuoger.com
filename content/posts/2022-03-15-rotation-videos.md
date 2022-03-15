@@ -18,7 +18,7 @@ When it's active (like in the screenshot above), your device will never rotate a
 
 **This is perfect, except for one thing: videos**. Videos are the only thing you want to see in landscape, not portrait.[^1]
 
-Since most videos are consumed through YouTube, the problem is particularly egregious there. Fortunately, YouTube added a way to switch a video to landscape, even when in portrait orientation (by using the fullscreen button).
+Since tons of videos are consumed through YouTube, the problem is particularly egregious there. Fortunately, YouTube added a way to switch a video to landscape, even when in portrait orientation (by using the fullscreen button), locked or not.
 
 It's not as practical as _physically_ rotating the phone though.
 
@@ -32,7 +32,7 @@ With this, you can program an action when something happens on your phone. For e
 2. Go to the Automation tab
 3. Create 2 automations:
    1. The first one is for when some apps are opened (**disabling** the rotation lock)
-   2. The second app does the reverse, when the same apps are closed (**enabling** the rotation lock again)
+   2. The second does the reverse, when the same apps are closed (**enabling** the rotation lock again)
 4. Obviously, set it to YouTube (and any other app necessary)
 
 You should have this by the end:
@@ -45,9 +45,9 @@ _This trick is not new at all._ It was feasible since iOS 13 or 14, so why am I 
 
 <p><img src="/images/posts/2022-03-15-notification.jpg" style="max-width: 300px;" title="Notification" alt="Notification" /></p>
 
-Because of that, I could never recommend this tip to anyone. However, today [Apple released iOS 15.4](https://www.macstories.net/stories/ios-and-ipados-15-4-hands-on-with-universal-control-face-id-with-a-mask-and-more/), which finally **allows an automation to hide its notification** (deactivate the "Notify when run" toggle).
+Because of that, I could never recommend this tip to anyone. However, today [Apple released iOS 15.4](https://www.macstories.net/stories/ios-and-ipados-15-4-hands-on-with-universal-control-face-id-with-a-mask-and-more/), which finally **allows an automation to hide its notification**.
 
-<br />Now, let's hope for [a real "Lock orientation except for videos" setting](https://twitter.com/laughingquoll/status/1107930149645742080).
+<br />Now, let's hope for a real “[Lock orientation except when playing videos](https://twitter.com/laughingquoll/status/1107930149645742080)” setting.
 
 [^1]: Well, portrait videos are becoming a thing thanks to TikTok and modern social networks, but that's another matter.
 [^2]: Shortcuts, previously Workflow, was bought by Apple and integrated into the system as its native automation app for power users. It's great.
