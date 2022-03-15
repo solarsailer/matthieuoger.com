@@ -12,7 +12,7 @@ Most users are just using the portrait mode all the time, and the landscape orie
 
 That's why many users are activating the rotation lock permanently (I'm in this category). This is how it looks like:
 
-<p><img src="/images/posts/2022-03-15-lock.jpg" style="max-width: 300px;" title="Rotation lock" alt="Rotation lock" /></p>
+<p><img src="/images/posts/2022-03-15-lock.jpg" style="width: 300px;" title="Rotation lock" alt="Rotation lock" /></p>
 
 When it's active (like in the screenshot above), your device will never rotate automagically. You can stay in portrait orientation forever.
 
@@ -37,13 +37,13 @@ With this, you can program an action when something happens on your phone. For e
 
 You should have this by the end:
 
-<p><img src="/images/posts/2022-03-15-automation.jpg" style="max-width: 600px;" title="Automations" alt="Automations" /></p>
+<p><img src="/images/posts/2022-03-15-automation.jpg" title="Automations" alt="Automations" /></p>
 
 Thanks to this automation, I keep the rotation lock activated all the time, but still physically rotate my device to play videos in landscape.
 
 _This trick is not new at all._ It was feasible since iOS 13 or 14, so why am I talking about this? Until now, everytime the trigger would activate, iOS would throw an annoying notification:
 
-<p><img src="/images/posts/2022-03-15-notification.jpg" style="max-width: 300px;" title="Notification" alt="Notification" /></p>
+<p><img src="/images/posts/2022-03-15-notification.jpg" style="width: 300px;" title="Notification" alt="Notification" /></p>
 
 Because of that, I could never recommend this tip to anyone. However, today [Apple released iOS 15.4](https://www.macstories.net/stories/ios-and-ipados-15-4-hands-on-with-universal-control-face-id-with-a-mask-and-more/), which finally **allows an automation to hide its notification**.
 
