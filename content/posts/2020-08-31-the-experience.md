@@ -3,7 +3,7 @@ date: "2020-08-31"
 title: "It's the Experience"
 excerptQuote:
   name: "Peter Ramsey"
-  quote: "But the issue isn't the completion rate, it's the _experience_."
+  quote: "But the issue isn't the completion rate, it's the experience."
 ---
 
 [Peter Ramsey][article]:
