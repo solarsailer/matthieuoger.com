@@ -6,7 +6,7 @@ excerptQuote:
   quote: "Cryptocurrencies, although a seemingly interesting idea, are simply not fit for purpose. They do not work as currencies, they are grossly inefficient, and they are not meaningfully distributed in terms of trust. […] Now I just want to take the entire cryptocurrency space and throw it into the sun. I know astronomers will tell you it’s easier to throw something into the void of space than to throw it into the sun. But it’s worth the extra energy to make sure some alien doesn’t find this mental virus."
 ---
 
-Excellent interview of Nicholas Weaver by Nathan J. Robinson. The article is called “[Why This Computer Scientist Says All Cryptocurrency Should “Die in a Fire”][article]”, and, as you can guess, is not really gentle with cryptocurrencies.
+Amidst the current crypto-crisis/downfall, I found this excellent interview of Nicholas Weaver by Nathan J. Robinson. The article is called “[Why This Computer Scientist Says All Cryptocurrency Should “Die in a Fire”][article]”, and, as you can guess, is not really gentle with cryptocurrencies and the blockchain in general.
 
 The interview talks about many topics and is really interesting. Here's a few passages I enjoyed.
 
