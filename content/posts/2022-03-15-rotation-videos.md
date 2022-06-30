@@ -1,6 +1,6 @@
 ---
 date: "2022-03-15"
-title: "Pseudo-intelligent rotation lock for videos on iOS"
+title: "Pseudo-Intelligent Rotation Lock for Videos on iOS"
 excerpt: "Use a Shortcut automation to intelligently toggle the rotation lock while playing videos in some apps."
 ---
 
