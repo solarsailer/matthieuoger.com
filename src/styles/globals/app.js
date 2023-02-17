@@ -60,6 +60,8 @@ export default css`
 
   mark {
     padding: 2px 0 0;
-    background-color: hsl(56 95% 55% / 0.5);
+    background-color: hsl(54 99% 55% / 0.4);
+
+    font-weight: 500;
   }
 `
