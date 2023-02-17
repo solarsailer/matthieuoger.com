@@ -53,4 +53,13 @@ export default css`
   a:hover {
     color: hsl(var(--hue-accent), 77%, 65%); /* Tint @ 75% */
   }
+
+  /**
+   * Highlights.
+   */
+
+  mark {
+    padding: 2px 0 0;
+    background-color: hsl(56 95% 55% / 0.5);
+  }
 `
