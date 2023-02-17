@@ -16,6 +16,4 @@ excerptQuote:
 >
 > That's why we design beautiful graphs, just like we'd design a beautiful typeface. Not because we are GitHubbers, nor because we are designers, but because we are humans.
 >
-> **Life is too short to stare at ugly graphs. And yes, you should feel bad.**
-
-<small>(Emphasis mine)</small>
+> <mark>Life is too short to stare at ugly graphs. And yes, you should feel bad.</mark>

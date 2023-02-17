@@ -22,6 +22,4 @@ Thus:
 >
 > I would argue that’s how you know that you’ve made something well.
 >
-> **When you come across an article set in a superb typeface for reading, some excellent airport signage or a well designed door handle, you don’t think about it or even notice it. If anything you might just notice being happier, or simply not frustrated. That’s how you know a design is great: it _disappears_.**
-
-<small>(Emphasis mine)</small>
+> <mark>When you come across an article set in a superb typeface for reading, some excellent airport signage or a well designed door handle, you don’t think about it or even notice it. If anything you might just notice being happier, or simply not frustrated. That’s how you know a design is great: it _disappears_.</mark>
