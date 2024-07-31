@@ -1,0 +1,6 @@
+# Basic.
+baseURL = 'https://matthieuoger.com/'
+languageCode = 'en-us'
+
+# Metadata.
+title = 'Matthieu Oger'

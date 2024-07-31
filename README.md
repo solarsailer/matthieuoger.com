@@ -4,14 +4,20 @@ I am a product manager, developer and designer from France. Co-founder of [Pixel
 
 → [Read here](https://matthieuoger.com/).
 
-## Compat
+## Installation
 
-This website is using a fairly old version of Gatsby, and cannot be updated easily anymore.
-
-Before starting the app, just run:
+On macOS:
 
 ```
-export NODE_OPTIONS=--openssl-legacy-provider
+brew install just
+brew install hugo
+brew install sass/sass/sass # Dart Sass
+
+npm install
 ```
 
-This will allow the scripts to run properly.
+## Develop
+
+```
+just start
+```
