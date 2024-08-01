@@ -1,0 +1,31 @@
+{{ define "content" }}
+  <h1>
+    <a href="/archive/">Archive</a>
+  </h1>
+
+  <ul>
+    {{ $pages := where .Site.RegularPages "Type" "articles" }}
+    {{ range $pages.GroupByDate "2006" }}
+      <li>
+        <div>
+          <header><p>{{ .Key }}</p></header>
+        </div>
+      </li>
+
+      {{ range .Pages }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            <div>
+              <article>
+                <header>
+                  <h2>{{ .LinkTitle }}</h2>
+                  <p>{{ .Date.Format "02 January 2006" }}</p>
+                </header>
+              </article>
+            </div>
+          </a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}
