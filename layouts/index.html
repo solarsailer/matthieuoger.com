@@ -4,12 +4,14 @@
 {{ define "footer" }}<!-- Erase footer block. -->{{ end }}
 
 {{ define "main" }}
-  <div>
-    <div>
+  <div class="home">
+    <div class="avatar">
       <img
-        src="/static/images/avatar-black-white.jpg"
+        src="/images/site/avatar-black-white.jpg"
         title="Matthieu Oger"
         alt="Matthieu Oger"
+        width="350px"
+        height="350px"
       />
       <header>
         <h1><span>Matthieu</span> <span>Oger</span></h1>
@@ -23,7 +25,7 @@
       </p>
     </div>
 
-    <nav>
+    <nav class="main-nav">
       <ul>
         <li><a href="/about/">About</a></li>
         <li><a href="/articles/">Articles</a></li>
@@ -31,7 +33,7 @@
       </ul>
     </nav>
 
-    <nav>
+    <nav class="social-nav">
       <ul>
         {{ range (sort .Site.Data.social "order") }}
           {{ $n := replace .name " " "" }}
