@@ -9,7 +9,24 @@
     {{ partial "css.html" . }}
   </head>
   <body>
-    {{ block "main" . }}{{ end }}
+    <div class="page" id="page">
+      {{ block "header" . }}
+        {{ partial "header.html" . }}
+      {{ end }}
+
+
+      <main class="page-content" id="page_content" role="main">
+        {{ block "main" . }}
+          <div class="page-content__constraints">
+            {{ block "content" . }}{{ end }}
+          </div>
+        {{ end }}
+      </main>
+
+      {{ block "footer" . }}
+        {{ partial "footer.html" . }}
+      {{ end }}
+    </div>
 
     {{ partial "js.html" . }}
   </body>
