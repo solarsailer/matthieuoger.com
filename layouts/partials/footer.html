@@ -1,1 +1,12 @@
-<footer class="page-footer" id="page_footer">© 2024 Matthieu Oger</footer>
+<footer class="page-footer" id="page_footer">
+  <nav>
+    <ul>
+      {{ range $handles := .Site.Data.social }}
+        <li><a href="{{ .url }}">{{ .name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+  <p>
+    <a href="/">© 2024 <span>Matthieu Oger</span></a>
+  </p>
+</footer>
