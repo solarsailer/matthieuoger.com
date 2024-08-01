@@ -1,12 +1,49 @@
 {{ define "header" }}<!-- Erase header block.-->{{ end }}
+{{ define "footer" }}<!-- Erase footer block. -->{{ end }}
 
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <div>
+    <div>
+      <img
+        src="/static/images/avatar-black-white.jpg"
+        title="Matthieu Oger"
+        alt="Matthieu Oger"
+      />
+      <header>
+        <h1><span>Matthieu</span> <span>Oger</span></h1>
+      </header>
+      <p>
+        <strong>I'm a product manager, developer and designer.</strong> I
+        co-founded <a href="https://pixelnest.io/">Pixelnest Studio</a> in
+        February 2014, where we created
+        <a href="http://steredenn.pixelnest.io/">Steredenn</a>. I'm also an
+        amateur street·travel photographer.
+      </p>
+    </div>
 
-  {{ range .Pages }}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p>{{ .Summary }}</p>
-  {{ end }}
+    <nav>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/atom.xml">RSS</a></li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul>
+        {{ range (sort .Site.Data.social "order") }}
+          {{ $n := replace .name " " "" }}
+          {{ $d := .domain }}
+          {{ $h := .handle }}
+
+          {{ $display := printf "<span>%s</span>.<span>%s</span>/<span>%s</span>" $n $d $h | upper }}
+          <li>
+            <a href="{{ .url }}">
+              {{ $display | safeHTML }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
 {{ end }}
-
-{{ define "footer" }}<!-- Erase footer block. -->{{ end }}
