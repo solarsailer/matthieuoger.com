@@ -1,44 +1,58 @@
 {
   "twitter": {
+    "order": 0,
     "name": "Twitter",
-    "color": "hsl(210, 95%, 64%)",
     "domain": "com",
-    "url": "https://twitter.com/solarsailer/"
+    "handle": "solarsailer",
+    "url": "https://twitter.com/solarsailer/",
+    "color": "hsl(210, 95%, 64%)"
   },
   "github": {
+    "order": 1,
     "name": "GitHub",
-    "color": "hsl(102, 53%, 52%)",
     "domain": "com",
-    "url": "https://github.com/solarsailer/"
+    "handle": "solarsailer",
+    "url": "https://github.com/solarsailer/",
+    "color": "hsl(102, 53%, 52%)"
   },
   "dribbble": {
+    "order": 2,
     "name": "Dribbble",
-    "color": "hsl(337, 79%, 61%)",
     "domain": "com",
-    "url": "https://dribbble.com/matthieuoger/"
+    "handle": "matthieuoger",
+    "url": "https://dribbble.com/matthieuoger/",
+    "color": "hsl(337, 79%, 61%)"
   },
   "unsplash": {
+    "order": 3,
     "name": "Unsplash",
-    "color": "hsl(31, 86%, 53%)",
     "domain": "com",
-    "url": "https://unsplash.com/matthieuoger/"
+    "handle": "matthieuoger",
+    "url": "https://unsplash.com/matthieuoger/",
+    "color": "hsl(31, 86%, 53%)"
   },
   "instagram": {
+    "order": 4,
     "name": "Instagram",
-    "color": "hsl(271, 80%, 66%)",
     "domain": "com",
-    "url": "https://www.instagram.com/matthieuoger/"
+    "handle": "matthieuoger",
+    "url": "https://www.instagram.com/matthieuoger/",
+    "color": "hsl(271, 80%, 66%)"
   },
   "speakerDeck": {
+    "order": 5,
     "name": "Speaker Deck",
-    "color": "hsl(150, 50%, 40%)",
     "domain": "com",
-    "url": "https://speakerdeck.com/matthieuoger/"
+    "handle": "matthieuoger",
+    "url": "https://speakerdeck.com/matthieuoger/",
+    "color": "hsl(150, 50%, 40%)"
   },
   "linkedIn": {
+    "order": 6,
     "name": "LinkedIn",
-    "color": "hsl(201, 100%, 35%)",
     "domain": "com",
-    "url": "https://linkedin.com/in/matthieuoger/"
+    "handle": "matthieuoger",
+    "url": "https://linkedin.com/in/matthieuoger/",
+    "color": "hsl(201, 100%, 35%)"
   }
 }
