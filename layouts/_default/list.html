@@ -1,8 +1,14 @@
 {{ define "content" }}
-  <h1>{{ .Title }}</h1>
+  {{ template "_internal/pagination.html" . }}
+
+
   <ul>
-    {{ range .Pages }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ range .Paginator.Pages }}
+      <li>
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      </li>
     {{ end }}
   </ul>
+
+  {{ template "_internal/pagination.html" . }}
 {{ end }}
