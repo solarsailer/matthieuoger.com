@@ -18,6 +18,12 @@
       <main class="page-content" id="page_content" role="main">
         {{ block "main" . }}
           <div class="page-content__constraints">
+            {{ block "title" . }}
+              <h1>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h1>
+            {{ end }}
+
             {{ block "content" . }}{{ end }}
           </div>
         {{ end }}
