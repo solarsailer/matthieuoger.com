@@ -1,5 +1,5 @@
 ---
-title: Archive — Matthieu Oger
+title: Archive
 
 type: page
 layout: archive
