@@ -1,8 +1,12 @@
 start:
-  hugo server -p 8000
+	hugo server -p 8000
 
 build:
-  hugo
+	hugo
 
 deploy:
-  echo "TBD"
+	echo "TBD"
+
+clean:
+	trash public
+	trash resources
