@@ -6,6 +6,12 @@ languageCode = 'en-us'
 title = 'Matthieu Oger'
 copyright = '© 2024 **Matthieu Oger**'
 
+[permalinks]
+  [permalinks.section]
+    posts = '/articles/'
+  [permalinks.page]
+    posts = '/:year/:month/:filename/'
+
 # Pagination.
 [pagination]
   pagerSize = 9
