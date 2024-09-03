@@ -29,7 +29,7 @@ VR is ugly. VR is cumbersome. VR is like Google Glass (remember that?) in so man
 
 <figure>
   <img
-    src="/assets/posts/2016/03/17/virtual-reality.png"
+    src="virtual-reality.png"
     alt="Men and women sitting with a VR headset, Mark Zuckerberg marching among them."
     title="The future?"
   >

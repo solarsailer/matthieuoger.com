@@ -10,7 +10,7 @@ It's been a long time since my last post (more than two years, in fact). And the
 
 The rest is a bonus. However, I'm still planning to expand this website in new ways — adding a portfolio and a resume, most notably.
 
-[ ![New redesign and home page](/assets/posts/2018/07/20/reboot.jpg) ](/)
+[ ![New redesign and home page](reboot.jpg) ](/)
 
 If you want to read more about why it took so long, continue. Otherwise, you know everything. 😉
 
