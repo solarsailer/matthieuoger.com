@@ -1,6 +1,20 @@
 {{ define "content" }}
   <article>
-    <h1>{{ .Title }}</h1>
+    <header>
+      <h1>
+        <a href="{{ .RelPermalink }}" aria-current="page">{{ .Title }}</a>
+      </h1>
+      <h2>{{ .Date.Format "02 January 2006" }}</h2>
+    </header>
+
     <div>{{ .Content }}</div>
+
+    <footer>
+      <p>
+        <a href="{{ .RelPermalink }}" aria-current="page">
+          {{ .Date.Format "02 January 2006" }}
+        </a>
+      </p>
+    </footer>
   </article>
 {{ end }}
