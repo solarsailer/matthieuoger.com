@@ -22,3 +22,6 @@ copyright = '© 2024 **Matthieu Oger**'
   section = ['html']
   taxonomy = []
   term = []
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files.
