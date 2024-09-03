@@ -1,6 +1,6 @@
 {{ define "content" }}
   <ul>
-    {{ $pages := where .Site.RegularPages "Type" "articles" }}
+    {{ $pages := where .Site.RegularPages "Type" "posts" }}
     {{ range $pages.GroupByDate "2006" }}
       <li>
         <div>
