@@ -46,4 +46,4 @@ That's what I want. I don't want to be waiting for the computer for things that 
 I want it to be responsive to my input.
 :::
 
-This really is the crux of the problem. As soon as you start your actions and you have to stop because the software is not able to follow you, it's over (exhibit A: Jira, or as [John's co-host says…](/sounds/posts/2019-08-01-fast/jira.mp3)).
+This really is the crux of the problem. As soon as you start your actions and you have to stop because the software is not able to follow you, it's over (exhibit A: Jira, or as [John's co-host says…](/assets/posts/2019/08/01/jira.mp3)).
