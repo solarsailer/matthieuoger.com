@@ -1,0 +1,23 @@
+{{- with .Paginator }}
+  {{- if .HasPrev }}
+    {{- with .Prev }}
+      <a href="{{ .URL }}" aria-label="Previous" role="button">
+        ←&nbsp;Previous
+      </a>
+    {{- end }}
+  {{- else }}
+    <span>←&nbsp;Previous</span>
+  {{- end }}
+
+
+  <a href="/archive/" aria-label="Archive" role="button">Archive</a>
+
+  {{- if .HasNext }}
+    {{- with .Next }}
+      <a href="{{ .URL }}" aria-label="Next" role="button">Next&nbsp;→ </a>
+    {{- end }}
+  {{- else }}
+    <span>Next&nbsp;→</span>
+  {{- end }}
+
+{{- end }}
