@@ -29,6 +29,8 @@
           "parser": "go-template"
         }
       }
-    ]
+    ],
+    "goTemplateBracketSpacing": true,
+    "htmlWhitespaceSensitivity": "ignore"
   }
 }
