@@ -15,3 +15,10 @@ copyright = '© 2024 **Matthieu Oger**'
 # Pagination.
 [pagination]
   pagerSize = 9
+
+[outputs]
+  home = ['html', 'rss']
+  page = ['html']
+  section = ['html']
+  taxonomy = []
+  term = []
