@@ -1,3 +1,19 @@
-body {
-  background: white;
+@layer reset, theme, base, app;
+
+@layer reset {
+  @import "layers/normalize.scss";
 }
+
+@layer theme {
+  @import "layers/theme.scss";
+}
+
+@layer base {
+  @import "layers/base.scss";
+}
+
+@layer app {
+  @import "layers/app.scss";
+}
+
+// TODO: import something like 'prismjs/themes/prism-tomorrow.css' (this was for Gatsby).

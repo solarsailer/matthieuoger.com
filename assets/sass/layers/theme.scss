@@ -1,0 +1,49 @@
+// Accent Color = #E44D2A -> HSL(11, 78%, 53%).
+
+// Guidelines for colors:
+// - Use HSL or HSLA everywhere
+// - Only exception: black or white (and even that should be questioned…)
+
+// TODO: palette for grays and accent.
+
+/* 1. Light mode by default. */
+:root {
+  --hue-accent: 11;
+  --color-accent: hsl(var(--hue-accent), 78%, 53%);
+
+  --hue-twitter: 210;
+  --color-twitter: hsl(210, 95%, 64%);
+
+  --hue-tldr: 21;
+  --color-tldr: hsl(21, 81%, 61%);
+
+  --color-selection-foreground: hsl(0, 0%, 100%);
+  --color-selection-background: var(--color-accent);
+
+  --color-page-content: hsl(0, 0%, 10%);
+  --color-page-background: hsl(0, 0%, 98%);
+  --color-page-overscroll: hsl(0, 0%, 98%);
+}
+
+/* 2. Check user preference. */
+
+@media (prefers-color-scheme: dark) {
+  // :root {
+  //   --color-selection-foreground: hsl(0, 0%, 100%);
+  //   --color-selection-background: var(--color-accent);
+
+  //   --color-page-content: hsl(0, 0%, 100%);
+  //   --color-page-background: hsl(325, 13%, 18%);
+  //   --color-page-overscroll: hsl(325, 13%, 18%);
+  // }
+}
+
+/* 3. Then, check if the user opted-in a specific theme. */
+
+html[data-theme="light"] {
+  // TBD.
+}
+
+html[data-theme="dark"] {
+  // TBD.
+}

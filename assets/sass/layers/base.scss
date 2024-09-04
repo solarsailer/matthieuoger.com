@@ -1,0 +1,62 @@
+$fontDocument: Rubik, Verdana, sans-serif;
+$fontCode: "Fira Mono", monospace;
+
+/**
+ * Typography:
+ * 1. Change default typography (eg. 10px, line-height, font stack).
+ * 2. Then, set a flexible font-size on the body.
+ */
+
+html {
+  font: 62.5% / 1.5 $fontDocument; /* 1 */
+}
+
+body {
+  font-size: 1.8em; /* 2 */
+}
+
+pre,
+code {
+  /* We don't have the control on PrismJS output,
+   * so we need to force these styles with !important.
+   */
+  font-family: $fontCode !important;
+  line-height: 1.25 !important;
+}
+
+/**
+ * Full-viewport body.
+ */
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/**
+ * Colors:
+ * 1. Content.
+ * 2. Overscroll.
+ * 3. Document background.
+ * 4. Selection.
+ */
+
+html {
+  /* 1 */
+  color: var(--color-page-content);
+
+  /* 2 */
+  background: var(--color-page-overscroll);
+}
+
+body {
+  /* 3 */
+  background: var(--color-page-background);
+}
+
+::selection {
+  /* 4 */
+  color: var(--color-selection-foreground);
+  background: var(--color-selection-background);
+}
