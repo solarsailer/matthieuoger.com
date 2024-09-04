@@ -1,12 +1,26 @@
+{{- $entryPath := "sass/index.scss" -}}
+{{- $targetPath := "assets/css/main.css" }}
+
 {{- $buildOptions := dict
   "transpiler" "dartsass"
-  "targetPath" "assets/css/main.css"
+  "targetPath" $targetPath
 -}}
-{{- with resources.Get "sass/index.scss" | toCSS $buildOptions | postCSS | minify | fingerprint -}}
-  <link
-    rel="stylesheet"
-    href="{{ .RelPermalink }}"
-    integrity="{{ .Data.Integrity }}"
-    crossorigin="anonymous"
-  />
+
+{{- $postOptions := dict
+  "noMap" "true"
+-}}
+
+{{- if eq hugo.Environment "production" -}}
+  {{- with resources.Get $entryPath | toCSS $buildOptions | postCSS $postOptions | minify | fingerprint -}}
+    <link
+      rel="stylesheet"
+      href="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+      crossorigin="anonymous"
+    />
+  {{- end -}}
+{{- else -}}
+  {{- with resources.Get $entryPath | toCSS $buildOptions | postCSS $postOptions -}}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" crossorigin="anonymous" />
+  {{- end -}}
 {{- end -}}

@@ -1,7 +1,25 @@
-{{- $buildOptions := dict
-  "sourceMap" "external"
-  "targetPath" "assets/js/main.js"
--}}
-{{- with resources.Get "js/index.js" | js.Build $buildOptions | minify | fingerprint -}}
-  <script src="{{ .RelPermalink }}" defer></script>
+{{- $entryPath := "js/index.js" -}}
+{{- $targetPath := "assets/js/main.js" -}}
+
+{{- if eq hugo.Environment "production" -}}
+  {{- $buildOptions := dict
+    "minify" "true"
+    "targetPath" $targetPath
+  -}}
+
+  {{- with resources.Get $entryPath | js.Build $buildOptions | fingerprint -}}
+    <script
+      src="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+      defer
+    ></script>
+  {{- end -}}
+{{- else -}}
+  {{- $buildOptions := dict
+    "targetPath" $targetPath
+  -}}
+
+  {{- with resources.Get $entryPath | js.Build $buildOptions -}}
+    <script src="{{ .RelPermalink }}" defer></script>
+  {{- end -}}
 {{- end -}}
