@@ -1,9 +1,12 @@
-{{ $opts := dict "transpiler" "dartsass" "targetPath" "css/main.css" }}
-{{ with resources.Get "sass/index.scss" | toCSS $opts | postCSS | minify | fingerprint }}
+{{- $buildOptions := dict
+  "transpiler" "dartsass"
+  "targetPath" "assets/css/main.css"
+-}}
+{{- with resources.Get "sass/index.scss" | toCSS $buildOptions | postCSS | minify | fingerprint -}}
   <link
     rel="stylesheet"
     href="{{ .RelPermalink }}"
     integrity="{{ .Data.Integrity }}"
     crossorigin="anonymous"
   />
-{{ end }}
+{{- end -}}
