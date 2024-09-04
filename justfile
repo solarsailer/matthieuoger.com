@@ -1,12 +1,16 @@
 start:
-	hugo server -p 8000
+	@hugo server -p 8000
 
-build:
-	hugo
+build: clean
+	@hugo
+
+prod: build
+	@echo "Web Server is available at http://localhost:8000/"
+	serve --port 8000 public/
 
 deploy:
-	echo "TBD"
+	@echo "TBD"
 
 clean:
-	trash public
-	trash resources
+	rm -rf public
+	rm -rf resources
