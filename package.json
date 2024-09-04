@@ -31,6 +31,8 @@
       }
     ],
     "goTemplateBracketSpacing": true,
-    "htmlWhitespaceSensitivity": "ignore"
+    "htmlWhitespaceSensitivity": "ignore",
+    "semi": false,
+    "trailingComma": "none"
   }
 }
