@@ -12,7 +12,7 @@ The idea was originally thought by [Neven Mrgan](http://mrgan.tumblr.com/post/12
 
 <figure>
     <img
-    src="picker-tweetbot.png"
+    src="/2014/06/design-detail-ios8-messages/picker-tweetbot.png"
     alt="Use “Last Photo Taken” in the Image Picker of Tweetbot 3"
     title="Use “Last Photo Taken”"
   >
@@ -31,7 +31,7 @@ Here it is:
 
 <figure>
   <img
-    src="picker-8.png"
+    src="/2014/06/design-detail-ios8-messages/picker-8.png"
     alt="Image Picker in iOS 8 Messages app"
     title="iOS 8 Messages"
   >

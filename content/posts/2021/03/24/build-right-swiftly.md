@@ -12,15 +12,14 @@ In addition, focusing on the product management side of the interview, I wanted 
 
 ## Iterations
 
-::: blockquote transcript
-We kind of figured out what really felt like a cheat code. […]
-
-Let's say it takes 10.000 iterations to make a product great. You have to keep polishing, to keep refining and it takes around 10.000 iterations. **The whole point is: how fast can you do each iteration?**
-
-At my previous company [dealing with security software, bank, government, etc.] _it would literally take a year and a half to do an iteration_. [You were making] some software, [sell it to an entity], deploy it, [deal with pilots], have a formal feedback. If it's gonna take a year and a half to make improvements to the product and you need to make 10.000 iterations, it's **fifteen thousand years** to make a great product. You just don't have this kind of time.
-
-At Evernote […] an iteration was twenty minutes, because we would just make something — and then, if we were honest with ourselves —, we could say "does this feel better or worse than it did twenty minutes ago?". And so, by having this really fast, really tight iteration loops […] we could just move really really quickly. **We could make a product pretty good faster than I ever thought possible before.**
-:::
+> We kind of figured out what really felt like a cheat code. […]
+>
+> Let's say it takes 10.000 iterations to make a product great. You have to keep polishing, to keep refining and it takes around 10.000 iterations. **The whole point is: how fast can you do each iteration?**
+>
+> At my previous company [dealing with security software, bank, government, etc.] _it would literally take a year and a half to do an iteration_. [You were making] some software, [sell it to an entity], deploy it, [deal with pilots], have a formal feedback. If it's gonna take a year and a half to make improvements to the product and you need to make 10.000 iterations, it's **fifteen thousand years** to make a great product. You just don't have this kind of time.
+>
+> At Evernote […] an iteration was twenty minutes, because we would just make something — and then, if we were honest with ourselves —, we could say "does this feel better or worse than it did twenty minutes ago?". And so, by having this really fast, really tight iteration loops […] we could just move really really quickly. **We could make a product pretty good faster than I ever thought possible before.**
+{.transcript}
 
 And, as a consequence, the time to make a product _great_ (not just "pretty good") is also reduced.
 
@@ -34,13 +33,12 @@ See “[Stop Obsessing Over Development Velocity, Focus on This Instead][velocit
 
 ## User feedback
 
-::: blockquote transcript
-It isn't so much that we didn't listen to our users. We listened to our users very carefully but in a very specific way. We listened to how they were reacting to what we were putting in front of them. We **weren't** asking them about what they wanted. […]
-
-If you ask users what they want, they are not gonna tell you what they want because they don't know. **Very few people can articulate and have the power of imagination to envision what they actually want.**
-
-If you ask customers or prospective customers what they want, they'll tell you the stuff that they expect… and _very rarely will that actually be what they want_. [Then, he quotes Henry Ford famous line: “If I had asked people what they wanted, they would have said faster horses.”]. We don't ask customers what they want, we ask customers to respond to what we are giving them. Because then, it's much more useful: you can tell when people are confused, when they are happy, when they are satisfied and then we can decide who to ignore, which opinion to take seriously, etc.
-:::
+> It isn't so much that we didn't listen to our users. We listened to our users very carefully but in a very specific way. We listened to how they were reacting to what we were putting in front of them. We **weren't** asking them about what they wanted. […]
+>
+> If you ask users what they want, they are not gonna tell you what they want because they don't know. **Very few people can articulate and have the power of imagination to envision what they actually want.**
+>
+> If you ask customers or prospective customers what they want, they'll tell you the stuff that they expect… and _very rarely will that actually be what they want_. [Then, he quotes Henry Ford famous line: “If I had asked people what they wanted, they would have said faster horses.”]. We don't ask customers what they want, we ask customers to respond to what we are giving them. Because then, it's much more useful: you can tell when people are confused, when they are happy, when they are satisfied and then we can decide who to ignore, which opinion to take seriously, etc.
+{.transcript}
 
 This is one of the topics I'm coming back to frequently in my job.
 
@@ -54,13 +52,12 @@ See also “[Build with users][linear]” from the Linear method.
 
 ## Building the right set of functionalities
 
-::: blockquote transcript
-[About Evernote] I think we just did too much stuff. There's always this balance of “what's the right amount of focus?”.
-
-It's hard to know in the moment… you can only do that in hindsight — if you succeed, you had the right amount of focus. If you don't, then you are either doing too much stuff, and you didn't have that focus, or not enough stuff, and you weren't thinking big enough or whatever.
-
-We always struggle with that balance. What is too much to build and what is just the right amount? How do we know? […] In hindsight, I would have worked for longer on some specific things before moving on to introduce [new features].
-:::
+> [About Evernote] I think we just did too much stuff. There's always this balance of “what's the right amount of focus?”.
+>
+> It's hard to know in the moment… you can only do that in hindsight — if you succeed, you had the right amount of focus. If you don't, then you are either doing too much stuff, and you didn't have that focus, or not enough stuff, and you weren't thinking big enough or whatever.
+>
+> We always struggle with that balance. What is too much to build and what is just the right amount? How do we know? […] In hindsight, I would have worked for longer on some specific things before moving on to introduce [new features].
+{.transcript}
 
 This reminds me of a comment made by a candidate during an interview: _“One crucial part of a product manager's job is not about which features should be included, but which one should be removed or ignored”_ (paraphrasing).
 
