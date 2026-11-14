@@ -1,0 +1,51 @@
+@use "social-grid";
+
+@layer components {
+  $breakpoint-grid: 500px;
+
+  .compact-social-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li + li {
+      margin-left: 2rem;
+    }
+
+    svg {
+      display: block;
+      width: 35px;
+      height: 35px;
+    }
+
+    @media (max-width: $breakpoint-grid) {
+      @include social-grid.social-grid;
+    }
+  }
+
+  .compact-social-nav__link {
+    color: hsl(0, 0%, 67%);
+    transition: all 0.12s ease-out;
+
+    circle {
+      stroke: currentColor;
+      opacity: 0.25;
+      transition: all 0.5s ease-out;
+    }
+
+    path {
+      fill: var(--color);
+      opacity: 0.9;
+      transition: all 0.5s ease-out;
+    }
+
+    &:hover {
+      color: var(--color);
+
+      circle,
+      path {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@
             aria-label="{{ .name }}"
             style="--color: {{ .color | safeCSS }}"
           >
-            {{- partial $icon . -}}
+            {{- partial $icon . | chomp -}}
           </a>
           {{ partial "tooltip.html" . }}
         </li>

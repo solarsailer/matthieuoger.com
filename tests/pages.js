@@ -50,12 +50,34 @@ export const APPROVED_POST_EDITS = [
 // content is compared without its order.
 export const UNORDERED_PAGES = ["/articles/5/", "/articles/8/", "/articles/9/"]
 
+// Pages that are known not to look exactly like production, and why.
+// Their visual tests are expected to fail; a test that unexpectedly
+// passes is reported, so this list stays honest.
+const LIST_PARAGRAPHS = "D11: list paragraphs follow CommonMark"
+const SAME_DAY_ORDER = "D12: order of the posts of the same day"
+
+export const VISUAL_DIFFERENCES = {
+  "/2014/06/design-detail-ios8-messages/": LIST_PARAGRAPHS,
+  "/2015/09/semicolon-comma-programming/": LIST_PARAGRAPHS,
+  "/2022/03/rotation-videos/": LIST_PARAGRAPHS,
+  "/2023/06/date-formats/": LIST_PARAGRAPHS,
+  "/articles/": LIST_PARAGRAPHS + " (it displays 'date-formats' in full)",
+  "/articles/5/": SAME_DAY_ORDER,
+  "/articles/8/": SAME_DAY_ORDER,
+  "/articles/9/": SAME_DAY_ORDER,
+  "/articles/6/": "D8: one more excerpt ('excerpt' typo fixed)",
+
+  // Gatsby splits the quote in several text nodes, which changes the
+  // spacing of a few letters: one line wraps differently at this width.
+  "/articles/7/@375": "Text shaping of one quote"
+}
+
 // Lines of the outline (see extract.js) that are not compared on a page.
 export const IGNORED_LINES = {
   // D8: the 'excerpt' typo is fixed, so this post now has an excerpt.
   "/2015/09/what-makes-indie-hit/": /^meta (og|twitter):description:/,
   "/articles/6/":
-    /^ +(p|span class="read-more-hint"|"→ Read More"|"Should every game have a hook.*")$/
+    /^ +(p|span class="read-more-hint"|"→.Read.More"|"Should every game have a hook.*")$/
 }
 
 // -------------------------------------------------------------

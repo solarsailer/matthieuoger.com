@@ -1,0 +1,42 @@
+@layer components {
+  .header-row {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-row__header {
+    padding: 1rem 2rem;
+
+    background: hsl(0, 0%, 95%);
+    border: 1px solid hsla(0, 0%, 0%, 0.05);
+    border-radius: 3px;
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      position: absolute;
+      z-index: -1;
+
+      top: 2rem;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+
+      box-shadow: 0 20px 30px hsla(0, 0%, 0%, 0.1);
+    }
+  }
+
+  .header-row__text {
+    color: hsl(0, 0%, 53%);
+
+    margin-bottom: 0;
+
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    line-height: normal;
+  }
+}

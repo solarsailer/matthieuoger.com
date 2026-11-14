@@ -1,2 +1,2 @@
 // Layer order. Must be the first module loaded by index.scss.
-@layer reset, theme, base, app;
+@layer reset, theme, base, app, layout, components, content;

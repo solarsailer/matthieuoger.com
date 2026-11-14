@@ -28,6 +28,13 @@
 {{- $base := cond .absolute $page.Permalink $page.RelPermalink -}}
 {{- $content = replaceRE `(src|href)="([^"/#:]+\.[a-z0-9]+)"` (printf "$1=\"%s$2\"" $base) $content -}}
 
+{{- /*
+  3. Goldmark puts a non-breaking space before the "back" link of a footnote.
+  That link is positioned in the corner: the space only adds an empty line
+  when the footnote ends with a block (a quote).
+*/ -}}
+{{- $content = replace $content `&#160;<a href="#fnref:` `<a href="#fnref:` -}}
+
 {{- if .absolute -}}
   {{- $siteURL := strings.TrimSuffix "/" site.BaseURL -}}
   {{- $content = replaceRE `(src|href)="/` (printf "$1=\"%s/" $siteURL) $content -}}

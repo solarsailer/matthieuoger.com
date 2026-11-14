@@ -16,6 +16,9 @@
       <header class="home__header">
         <h1 class="home__title">
           <span class="home__first-name">Matthieu</span>
+          {{- /* Hair space. */ -}}
+          &#8202;
+          {{- /* */ -}}
           <span class="home__last-name">Oger</span>
         </h1>
       </header>
@@ -34,7 +37,7 @@
       <li><a class="button home-button" href="/articles/">Articles</a></li>
       <li>
         <a class="button home-button" href="/atom.xml" target="_blank">
-          {{- partial "icons/rss.svg" . -}}
+          {{- partial "icons/rss.svg" . | chomp -}}
           RSS
         </a>
       </li>
@@ -57,7 +60,7 @@
               {{- /* Same. */ -}}
               <span class="social-nav__handle">{{ .handle }}</span>
             </span>
-            <span class="social-nav__icon">{{- partial $icon . -}}</span>
+            <span class="social-nav__icon">{{- partial $icon . | chomp -}}</span>
           </a>
           {{ partial "tooltip.html" . }}
         </li>

@@ -18,11 +18,8 @@
 
   pre,
   code {
-    /* We don't have the control on PrismJS output,
-   * so we need to force these styles with !important.
-   */
-    font-family: $fontCode !important;
-    line-height: 1.25 !important;
+    font-family: $fontCode;
+    line-height: 1.25;
   }
 
   /**

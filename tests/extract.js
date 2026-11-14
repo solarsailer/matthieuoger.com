@@ -29,11 +29,15 @@ export function extractBody(selector) {
   const MEDIA = /\.(png|jpe?g|gif|svg|mp4|mp3)$/
 
   function text(value) {
-    return value
-      .replace(/[︎️]/g, "") // Emoji/text variation selectors.
-      .replace(/© \d{4}/, "© YEAR") // D9: the copyright year changes.
-      .replace(/\s+/g, " ")
-      .trim()
+    return (
+      value
+        .replace(/[\ufe0e\ufe0f]/g, "") // Emoji/text variation selectors.
+        .replace(/© \d{4}/, "© YEAR") // D9: the copyright year changes.
+        // Only plain whitespace collapses: a non-breaking or a hair space
+        // is part of the text.
+        .replace(/[ \t\n\r]+/g, " ")
+        .replace(/^ | $/g, "")
+    )
   }
 
   function url(value) {

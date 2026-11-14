@@ -1,11 +1,10 @@
 <header class="page-header" id="page_header">
   <nav class="global-menu">
     <h1 class="global-menu__title">
+      {{- /* Two non-breaking spaces after the logo, a hair space in the name. */ -}}
       <a href="/">
-        {{- partial "icons/logo.svg" . -}}
-        &nbsp;
-        <span>Matthieu</span>
-        Oger
+        {{- partial "icons/logo.svg" . | chomp -}}
+        &nbsp;&nbsp;<span>Matthieu</span>&#8202;Oger
       </a>
     </h1>
 
@@ -20,17 +19,12 @@
         </a>
       </li>
       <li>
-        <a
-          class="button menu-button"
-          href="/articles/"
-          {{ if eq .RelPermalink "/articles/" }}aria-current="page"{{ end }}
-        >
-          Articles
-        </a>
+        {{- /* Never marked as current: production does not either. */ -}}
+        <a class="button menu-button" href="/articles/">Articles</a>
       </li>
       <li>
         <a class="button menu-button" href="/atom.xml" target="_blank">
-          {{- partial "icons/rss.svg" . -}}
+          {{- partial "icons/rss.svg" . | chomp -}}
           RSS
         </a>
       </li>

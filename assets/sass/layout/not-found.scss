@@ -1,0 +1,32 @@
+@layer layout {
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .not-found__title {
+    font-size: 5em;
+    font-weight: 300;
+  }
+
+  .not-found__list {
+    display: flex;
+    padding: 2rem;
+
+    li + li {
+      margin-left: 5rem;
+    }
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+
+      li + li {
+        margin-left: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+}

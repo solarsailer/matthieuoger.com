@@ -15,6 +15,7 @@ export default defineConfig({
   snapshotPathTemplate: "{testDir}/snapshots/{arg}{ext}",
 
   fullyParallel: true,
+  retries: 1, // Web fonts come from the network: a slow load can shift a page.
   reporter: [["list"], ["html", { outputFolder: "report", open: "never" }]],
 
   expect: {

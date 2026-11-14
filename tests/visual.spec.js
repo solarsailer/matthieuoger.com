@@ -5,6 +5,7 @@ import {
   MAIN_WIDTHS,
   PAGES,
   REPRESENTATIVE_PAGES,
+  VISUAL_DIFFERENCES,
   slugify
 } from "./pages"
 
@@ -37,11 +38,20 @@ function widthsFor(url) {
 for (const url of [...new Set([...PAGES, ...REPRESENTATIVE_PAGES])]) {
   for (const width of widthsFor(url)) {
     test(`${url} at ${width}px`, async ({ page }, testInfo) => {
-      await open(page, url, width, testInfo.project.name === "baseline")
+      const isBaseline = testInfo.project.name === "baseline"
+      const difference =
+        VISUAL_DIFFERENCES[url] ?? VISUAL_DIFFERENCES[`${url}@${width}`]
+
+      test.fail(!isBaseline && Boolean(difference), difference)
+
+      await open(page, url, width, isBaseline)
 
       await expect(page).toHaveScreenshot(`${slugify(url)}-${width}.png`, {
         fullPage: true,
-        mask: [page.locator("video, iframe")]
+        mask: [
+          page.locator("video, iframe"),
+          page.locator("#page_footer > p") // D9: the copyright year changes.
+        ]
       })
     })
   }
