@@ -53,13 +53,13 @@ There are many other places I still need to do (Little India, Pulau Ubin, a few 
 [^2]: In an interesting way, I would compare the city to Montréal during the winter - you can navigate almost exclusively in man-built structure to avoid the harsh weather, but in Singapore, it will be from the heat, not the cold and snow. And all year, not just the winter.
 [^3]: It often happens that it will be **too** cold inside buildings.
 
-  It's also [probably one of the reasons](https://www.vox.com/2015/3/23/8278085/singapore-lee-kuan-yew-air-conditioning) behind the economical success of the country:
+    It's also [probably one of the reasons](https://www.vox.com/2015/3/23/8278085/singapore-lee-kuan-yew-air-conditioning) behind the economical success of the country:
 
-  > **ITV**: Anything else besides multicultural tolerance that enabled Singapore's success?
-  >
-  > **Lee Kuan Yew**: Air conditioning. Air conditioning was a most important invention for us, perhaps one of the signal inventions of history. It changed the nature of civilization by making development possible in the tropics.
-  >
-  > Without air conditioning you can work only in the cool early-morning hours or at dusk. The first thing I did upon becoming prime minister was to install air conditioners in buildings where the civil service worked. This was key to public efficiency.
+    > **ITV**: Anything else besides multicultural tolerance that enabled Singapore's success?
+    >
+    > **Lee Kuan Yew**: Air conditioning. Air conditioning was a most important invention for us, perhaps one of the signal inventions of history. It changed the nature of civilization by making development possible in the tropics.
+    >
+    > Without air conditioning you can work only in the cool early-morning hours or at dusk. The first thing I did upon becoming prime minister was to install air conditioners in buildings where the civil service worked. This was key to public efficiency.
 
 [^4]: Tipping is such a stupid custom. The sole purpose is to not pay the employees correctly by default. Include the cost of the salaries in the f* price, and boom, done. Period.
 [^5]: There's actually a Hell Museum inside, btw.

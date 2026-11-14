@@ -70,13 +70,13 @@ This reminds me of a comment made by a candidate during an interview: _“One cr
 [^3]: It's why we need to be able to deploy often, quickly, automatically, and confidently. It's also why the [_development pipeline loop_][iop] should be as short as possible, between typing the code and observing the results.
 [^4]: I've searched for many, _many_ tools to handle feedback. I didn't find one that was 100% satisfying. At this point, I'm considering there is no "right" solution to this problem.
 
-  The most adequate tool is probably a generic data-visualisation or log processing platform like Kibana or Datadog. Tools that were not conceived for this problem specifically, but instead to digest, process, present and search raw data in quantity. Which is what user feedback is: information logs, but provided by users instead of machines.
+    The most adequate tool is probably a generic data-visualisation or log processing platform like Kibana or Datadog. Tools that were not conceived for this problem specifically, but instead to digest, process, present and search raw data in quantity. Which is what user feedback is: information logs, but provided by users instead of machines.
 
-  See it similarly to an analytics tool: you would consult the platform everyday to have an overview of your users, how they feel about your product, and what they expect. Use that as additional data for experiments and ideas. When you look at analytics, you don't act immediately, and you cannot answer questions there. You use this trove of data to refine your hypotheses. Feedback should be seen the same way.
+    See it similarly to an analytics tool: you would consult the platform everyday to have an overview of your users, how they feel about your product, and what they expect. Use that as additional data for experiments and ideas. When you look at analytics, you don't act immediately, and you cannot answer questions there. You use this trove of data to refine your hypotheses. Feedback should be seen the same way.
 
-  Using this approach would also remove the emotion from the equation. It would allow the product manager to take a step back and look at all this knowledge objectively… like analytics.
+    Using this approach would also remove the emotion from the equation. It would allow the product manager to take a step back and look at all this knowledge objectively… like analytics.
 
-  And for qualitative measures? Just run some real-life user tests and sessions.
+    And for qualitative measures? Just run some real-life user tests and sessions.
 [^5]: I think there's something profoundly wrong in the B2B (less so in B2C) world, where clients expect to have answers to everything they ask or want.
 
 

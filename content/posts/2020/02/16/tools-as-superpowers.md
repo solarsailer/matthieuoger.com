@@ -27,12 +27,12 @@ Though, and [like the author](https://jonathanlefevre.com/outils/mot-productivit
 
 [^1]: Original version:
 
-  > Le sujet du _scale_ est aussi inéluctable que difficile, tant il semble peu compatible avec la notion même de service client humain, compliqué à automatiser par définition. Même les entreprises pour qui le service client n’est pas une priorité se retrouvent forcément confrontées à ce problème. Toutes doivent réfléchir à la meilleure organisation possible pour gérer efficacement ce flux incessant de demandes.
-  >
-  > […] Mais elle m’a surtout permis de prendre conscience de ce qui faisait véritablement la force du service client de Capitaine Train : son efficacité opérationnelle. Au fond, si nous arrivions à gérer 2 millions de clients avec une petite équipe de 15 personnes, c’est parce que nous étions très bien outillés.
-  >
-  > Rien n’était laissé au hasard dans la chasse au moindre clic inutile. Et si cette constante quête d’optimisation des processus est un sujet qui intéresse beaucoup d’entrepreneurs, je crois qu’elle se manifeste d’une manière encore plus criante lorsqu’on fait du service client dans une start-up en pleine croissance. […] Quand on passe ses journées à affronter le rouleau compresseur des tickets clients, on finit par vouer un culte à chaque outil capable de nous faire gagner la moindre seconde de productivité.
-  >
-  > […] Du coup, j’imaginais naïvement que tous les services clients du monde utilisaient les meilleurs outils du marché pour travailler plus efficacement. J’étais pourtant loin du compte. Nombreux sont ceux qui n’ont pas encore un bon système de prise de notes, les réflexes élémentaires pour minimiser les interruptions, ou encore une gestion saine de leurs e-mails.
+    > Le sujet du _scale_ est aussi inéluctable que difficile, tant il semble peu compatible avec la notion même de service client humain, compliqué à automatiser par définition. Même les entreprises pour qui le service client n’est pas une priorité se retrouvent forcément confrontées à ce problème. Toutes doivent réfléchir à la meilleure organisation possible pour gérer efficacement ce flux incessant de demandes.
+    >
+    > […] Mais elle m’a surtout permis de prendre conscience de ce qui faisait véritablement la force du service client de Capitaine Train : son efficacité opérationnelle. Au fond, si nous arrivions à gérer 2 millions de clients avec une petite équipe de 15 personnes, c’est parce que nous étions très bien outillés.
+    >
+    > Rien n’était laissé au hasard dans la chasse au moindre clic inutile. Et si cette constante quête d’optimisation des processus est un sujet qui intéresse beaucoup d’entrepreneurs, je crois qu’elle se manifeste d’une manière encore plus criante lorsqu’on fait du service client dans une start-up en pleine croissance. […] Quand on passe ses journées à affronter le rouleau compresseur des tickets clients, on finit par vouer un culte à chaque outil capable de nous faire gagner la moindre seconde de productivité.
+    >
+    > […] Du coup, j’imaginais naïvement que tous les services clients du monde utilisaient les meilleurs outils du marché pour travailler plus efficacement. J’étais pourtant loin du compte. Nombreux sont ceux qui n’ont pas encore un bon système de prise de notes, les réflexes élémentaires pour minimiser les interruptions, ou encore une gestion saine de leurs e-mails.
 
 [^2]: It's probably utopian, I know.

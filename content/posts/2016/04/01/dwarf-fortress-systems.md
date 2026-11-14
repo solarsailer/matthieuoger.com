@@ -27,6 +27,6 @@ The way the different systems are all interacting together is so fascinating. Es
 ---
 
 >
-I don’t even use version control. If you don’t know what that is then you’re not gonna yell at me. If you even know what version control is you’re gonna be like, ‘You don’t use version control? You don’t use source control? What is wrong with you? How can you even work?’
+> I don’t even use version control. If you don’t know what that is then you’re not gonna yell at me. If you even know what version control is you’re gonna be like, ‘You don’t use version control? You don’t use source control? What is wrong with you? How can you even work?’
 
 I'm still baffled to know that many game developers (or other developers) work without version control. It seems so dangerous, but… well.

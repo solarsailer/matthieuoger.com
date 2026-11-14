@@ -35,9 +35,9 @@ Gabriel is also quoting [another excellent article][article2], by Jacob Kaplan-M
 
 [^1]: Context.
 
-  It might be one of the words I use the most nowadays. _"Always give the context", "Start with context", "Can you give me the context again?"._
+    It might be one of the words I use the most nowadays. _"Always give the context", "Start with context", "Can you give me the context again?"._
 
-  Why? Because not having the context is like shooting in the dark. You can perform your task, but it will likely be wrong because you don't understand everything around it. If you are interested, [this book is an illuminating read][book] on this topic.
+    Why? Because not having the context is like shooting in the dark. You can perform your task, but it will likely be wrong because you don't understand everything around it. If you are interested, [this book is an illuminating read][book] on this topic.
 
 [^2]: When I explain why I do this, I often say "I'm helping _Matthieu-du-futur_". It takes only a few very short seconds now, and saves hours of frustration and guesswork later.
 

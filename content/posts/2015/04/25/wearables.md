@@ -59,10 +59,10 @@ Imagine the application in the health field: with sensors on your body, it could
 
 [^2]: Benedict Evans in “[New Questions In Mobile](http://ben-evans.com/benedictevans/2014/11/20/time-for-new-questions-in-mobile)”:
 
-  > Across all of this, and far more important, we are now well on our way to having some 3.5bn to 4bn people on earth with a smartphone. […] For the first time ever, the tech industry is selling not just to big corporations or middle-class families but to four fifths of all the adults on earth - **it is selling to people who don’t have mains electricity or running water and substitute spending on cigarettes for mobile**.
+    > Across all of this, and far more important, we are now well on our way to having some 3.5bn to 4bn people on earth with a smartphone. […] For the first time ever, the tech industry is selling not just to big corporations or middle-class families but to four fifths of all the adults on earth - **it is selling to people who don’t have mains electricity or running water and substitute spending on cigarettes for mobile**.
 
 [^3]: The watch feature is probably the less important feature of a smartwatch. It's handy like it is on a phone. But like the phone feature of a smartphone, it's not the decisive capability.
 
-  Go on people, make jokes about a watch that is only able to tell the time for a day before running out of battery. ;)
+    Go on people, make jokes about a watch that is only able to tell the time for a day before running out of battery. ;)
 
 [^4]: But that's also true for the web or an app, to be honest.

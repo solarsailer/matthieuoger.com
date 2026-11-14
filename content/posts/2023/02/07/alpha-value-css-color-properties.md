@@ -33,11 +33,11 @@ The [support][mdn-support] [is pretty good][caniuse-support] (more than 92%), so
 [^2]: I (and [others][hsl]) still recommend to use the `hsl` function instead of `rgb` or hex values. It's more powerful and as soon as you grasp how the model works, it's easier and quicker to manipulate. Especially for variables and theming purposes.
 [^3]: The old notation still works, but it's considered legacy.
 
-  The _commas are also optional_ now (and considered legacy as well).
+    The _commas are also optional_ now (and considered legacy as well).
 
-  AND there is another syntax using commas **and** an alpha value (`hsl(0, 0%, 0%, 0.5)` / `hsla(0, 0%, 0%, 0.5)`) or an alpha percentage (`hsl(0, 0%, 0%, 50%)` / `hsla(0, 0%, 0%, 50%)`).
+    AND there is another syntax using commas **and** an alpha value (`hsl(0, 0%, 0%, 0.5)` / `hsla(0, 0%, 0%, 0.5)`) or an alpha percentage (`hsl(0, 0%, 0%, 50%)` / `hsla(0, 0%, 0%, 50%)`).
 
-  Basically, you can do anything you want, but using the `/ alpha` syntax without commas and `a` suffix in the function name is the proper and preferred way. 🥴
+    Basically, you can do anything you want, but using the `/ alpha` syntax without commas and `a` suffix in the function name is the proper and preferred way. 🥴
 
 [mdn1]: http://developer.mozilla.org/en-US/docs/Web/CSS/color_value
 [mdn2]: http://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl
