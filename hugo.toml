@@ -1,10 +1,10 @@
 # Basic.
 baseURL = 'https://matthieuoger.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 
 # Metadata.
 title = 'Matthieu Oger'
-copyright = '© 2024 **Matthieu Oger**'
+copyright = '© 2026 **Matthieu Oger**'
 
 [permalinks]
   [permalinks.section]
@@ -15,6 +15,7 @@ copyright = '© 2024 **Matthieu Oger**'
 # Pagination.
 [pagination]
   pagerSize = 9
+  path = '' # Keep the historical URLs: /articles/2/, not /articles/page/2/.
 
 [outputs]
   home = ['html', 'rss']
@@ -25,3 +26,6 @@ copyright = '© 2024 **Matthieu Oger**'
 
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files.
+
+[markup.goldmark.extensions.typographer]
+  disable = true # Keep quotes and dashes as typed.

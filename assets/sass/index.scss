@@ -1,19 +1,8 @@
-@layer reset, theme, base, app;
+@use "layers/order";
 
-@layer reset {
-  @import "layers/normalize.scss";
-}
+@use "layers/normalize";
+@use "layers/theme";
+@use "layers/base";
+@use "layers/app";
 
-@layer theme {
-  @import "layers/theme.scss";
-}
-
-@layer base {
-  @import "layers/base.scss";
-}
-
-@layer app {
-  @import "layers/app.scss";
-}
-
-// TODO: import something like 'prismjs/themes/prism-tomorrow.css' (this was for Gatsby).
+// TODO: code highlighting theme (was 'prismjs/themes/prism-tomorrow.css' with Gatsby).

@@ -39,7 +39,7 @@
 
     <nav class="social-nav">
       <ul>
-        {{ range (sort .Site.Data.social "order") }}
+        {{ range (sort hugo.Data.social "order") }}
           {{ $n := replace .name " " "" }}
           {{ $d := .domain }}
           {{ $h := .handle }}

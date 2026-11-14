@@ -6,12 +6,8 @@
   "targetPath" $targetPath
 -}}
 
-{{- $postOptions := dict
-  "noMap" "true"
--}}
-
 {{- if eq hugo.Environment "production" -}}
-  {{- with resources.Get $entryPath | toCSS $buildOptions | postCSS $postOptions | minify | fingerprint -}}
+  {{- with resources.Get $entryPath | css.Sass $buildOptions | minify | fingerprint -}}
     <link
       rel="stylesheet"
       href="{{ .RelPermalink }}"
@@ -20,7 +16,7 @@
     />
   {{- end -}}
 {{- else -}}
-  {{- with resources.Get $entryPath | toCSS $buildOptions | postCSS $postOptions -}}
+  {{- with resources.Get $entryPath | css.Sass $buildOptions -}}
     <link rel="stylesheet" href="{{ .RelPermalink }}" crossorigin="anonymous" />
   {{- end -}}
 {{- end -}}

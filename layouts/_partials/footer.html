@@ -1,7 +1,7 @@
 <footer class="page-footer" id="page_footer">
   <nav>
     <ul>
-      {{ range (sort .Site.Data.social "order") }}
+      {{ range (sort hugo.Data.social "order") }}
         <li><a href="{{ .url }}">{{ .name }}</a></li>
       {{ end }}
     </ul>
