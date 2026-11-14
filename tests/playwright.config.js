@@ -29,7 +29,7 @@ export default defineConfig({
   projects: [
     {
       name: "baseline",
-      testMatch: "visual.spec.js",
+      testMatch: ["visual.spec.js", "interactions.spec.js"],
       use: { baseURL: BASELINE_URL }
     },
     {

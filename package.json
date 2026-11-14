@@ -33,5 +33,8 @@
     "htmlWhitespaceSensitivity": "ignore",
     "semi": false,
     "trailingComma": "none"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.8.0"
   }
 }

@@ -44,14 +44,17 @@
     </ul>
 
     <ul class="social-nav">
-      {{ range sort hugo.Data.social "order" }}
+      {{ range $index, $social := sort hugo.Data.social "order" }}
+        {{/* Appearance: 0 to 250ms of delay, 500 to 2000ms of duration. */}}
+        {{ $delay := mod (mul $index 97) 250 }}
+        {{ $duration := add 500 (mod (mul (add $index 1) 613) 1500) }}
         {{ $name := replace .name " " "" }}
         {{ $icon := printf "icons/%s.svg" (lower $name) }}
         <li>
           <a
             class="social-nav__link"
             href="{{ .url }}"
-            style="--color: {{ .color | safeCSS }}"
+            style="--color: {{ .color | safeCSS }}; --delay: {{ $delay }}ms; --duration: {{ $duration }}ms"
           >
             <span class="social-nav__text">
               <span>{{ $name }}</span>
