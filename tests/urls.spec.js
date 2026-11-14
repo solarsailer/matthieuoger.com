@@ -9,7 +9,8 @@ import {
   HUGO_DIR,
   HUGO_PAGES,
   PAGES,
-  POSTS_REFERENCE_COMMIT
+  POSTS_REFERENCE_COMMIT,
+  hugoUrl
 } from "./pages"
 
 // -------------------------------------------------------------
@@ -33,15 +34,17 @@ test("the baseline is available", () => {
 })
 
 test("every production page exists", () => {
-  const missing = PAGES.filter((x) => !HUGO_PAGES.includes(x))
+  const missing = PAGES.filter((x) => !HUGO_PAGES.includes(hugoUrl(x)))
 
   expect(missing).toEqual([])
 })
 
 test("no unexpected page is generated", () => {
-  // '/articles/1/' is a redirect to '/articles/' created by the paginator.
+  const expected = PAGES.map(hugoUrl)
+
+  // '/articles/p/1/' is a redirect to '/articles/' created by the paginator.
   const extra = HUGO_PAGES.filter(
-    (x) => !PAGES.includes(x) && x !== "/articles/1/"
+    (x) => !expected.includes(x) && x !== "/articles/p/1/"
   )
 
   expect(extra).toEqual([])

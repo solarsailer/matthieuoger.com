@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test"
 
+import { hugoUrl } from "./pages"
+
 // -------------------------------------------------------------
 // Interactions: same hover states and tooltips as production.
 //
@@ -93,11 +95,13 @@ const CASES = [
 const SETTLE = 2500
 
 for (const { name, url, target, width = 1280 } of CASES) {
-  test(`hover: ${name}`, async ({ page }) => {
+  test(`hover: ${name}`, async ({ page }, testInfo) => {
+    const isBaseline = testInfo.project.name === "baseline"
+
     await page.route(/google-analytics\.com/, (route) => route.abort())
 
     await page.setViewportSize({ width, height: 900 })
-    await page.goto(url, { waitUntil: "load" })
+    await page.goto(isBaseline ? url : hugoUrl(url), { waitUntil: "load" })
     await page.evaluate(() => document.fonts.ready)
     await page.waitForTimeout(url === "/" ? SETTLE : 250)
 

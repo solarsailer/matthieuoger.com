@@ -36,7 +36,7 @@ copyright = '© 2026 Matthieu Oger'
 # Pagination.
 [pagination]
   pagerSize = 9
-  path = '' # Keep the historical URLs: /articles/2/, not /articles/page/2/.
+  path = 'p' # /articles/p/2/
 
 # Feeds: /atom.xml and /feed.json.
 [mediaTypes.'application/atom+xml']

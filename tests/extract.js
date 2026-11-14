@@ -46,6 +46,9 @@ export function extractBody(selector) {
     // Feeds use absolute URLs.
     value = value.replace(/^https:\/\/matthieuoger\.com(?=\/)/, "")
 
+    // D1: numbered pages of articles moved to '/articles/p/2/'.
+    value = value.replace(/^\/articles\/p\/(\d+)/, "/articles/$1")
+
     // Footnotes: remark uses 'fn-1', Goldmark 'fn:1'.
     value = value.replace(/^#(fn|fnref)[:-]/, "#$1-")
 

@@ -6,7 +6,8 @@ import {
   HUGO_URL,
   IGNORED_LINES,
   PAGES,
-  UNORDERED_PAGES
+  UNORDERED_PAGES,
+  hugoUrl
 } from "./pages"
 
 // -------------------------------------------------------------
@@ -16,15 +17,15 @@ import {
 // The comparison is on the generated HTML, not on what scripts do with it.
 test.use({ javaScriptEnabled: false })
 
-async function extract(page, url) {
+// `name` is the production URL of the page, used to look up exceptions.
+async function extract(page, url, name) {
   await page.goto(url, { waitUntil: "domcontentloaded" })
 
-  const { pathname } = new URL(url)
-  const ignored = IGNORED_LINES[pathname]
+  const ignored = IGNORED_LINES[name]
 
   const clean = (outline) => {
     const lines = outline.split("\n").filter((x) => !ignored?.test(x))
-    if (UNORDERED_PAGES.includes(pathname)) lines.sort()
+    if (UNORDERED_PAGES.includes(name)) lines.sort()
 
     return lines.join("\n")
   }
@@ -37,8 +38,8 @@ async function extract(page, url) {
 
 for (const url of [...PAGES, "/404.html"]) {
   test(`content of ${url}`, async ({ page }) => {
-    const expected = await extract(page, BASELINE_URL + url)
-    const actual = await extract(page, HUGO_URL + url)
+    const expected = await extract(page, BASELINE_URL + url, url)
+    const actual = await extract(page, HUGO_URL + hugoUrl(url), url)
 
     expect.soft(actual.head).toBe(expected.head)
     expect.soft(actual.body).toBe(expected.body)

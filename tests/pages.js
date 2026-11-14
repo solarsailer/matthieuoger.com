@@ -138,6 +138,13 @@ export const REPRESENTATIVE_PAGES = [
 export const MAIN_WIDTHS = [1280, 375]
 export const ALL_WIDTHS = [1700, 1280, 850, 680, 560, 480, 375, 320]
 
+// D1: the numbered pages of articles moved from '/articles/2/' to
+// '/articles/p/2/'. Tests name pages by their production URL;
+// this gives the URL of the same page in the Hugo build.
+export function hugoUrl(url) {
+  return url.replace(/^\/articles\/(\d+)\/$/, "/articles/p/$1/")
+}
+
 // '/2015/09/rule-of-two/' → '2015-09-rule-of-two'.
 export function slugify(url) {
   return url.replace(/^\/|\/$/g, "").replace(/[/.]/g, "-") || "home"

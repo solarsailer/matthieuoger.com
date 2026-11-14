@@ -6,6 +6,7 @@ import {
   PAGES,
   REPRESENTATIVE_PAGES,
   VISUAL_DIFFERENCES,
+  hugoUrl,
   slugify
 } from "./pages"
 
@@ -25,7 +26,7 @@ async function open(page, url, width, isBaseline) {
   await page.route(/google-analytics\.com/, (route) => route.abort())
 
   await page.setViewportSize({ width, height: 900 })
-  await page.goto(url, { waitUntil: "load" })
+  await page.goto(isBaseline ? url : hugoUrl(url), { waitUntil: "load" })
   await page.evaluate(() => document.fonts.ready)
 
   if (isBaseline && url === "/") await page.waitForTimeout(HOME_ANIMATION)

@@ -124,10 +124,10 @@ Side effect: asset URLs change (`/images/posts/2018-10-18/x.jpg` →
   `category: meta` (the About page). Needs two custom output formats and
   templates. The current `rss` output (`/index.xml`) should go.
 - **Pagination URLs**: production is `/articles/2/` … `/articles/10/`, Hugo's
-  default is `/articles/page/2/`. Setting `pagination.path = ''` yields exactly
-  the production URLs (verified on Hugo 0.170). **Decision: keep the existing
-  format.** Hugo also emits `/articles/1/` as a redirect to `/articles/`,
-  which is harmless.
+  default is `/articles/page/2/`. **Decision: `/articles/p/2/`**
+  (`pagination.path = 'p'`). Keeping the exact production format needed an
+  empty path, which Hugo tolerates but answers with malformed pager links;
+  not worth it for pages nobody links to.
 - **Meta tags**: `layouts/partials/meta.html` is empty. Port `Meta.js` and the
   per-post overrides in `PostTemplate.js` (title, `og:`/`twitter:` title, url,
   description from `excerpt` or `excerptQuote`).
@@ -238,7 +238,7 @@ allowlist file (`tests/pages.js`) so they are explicit.
 
 | # | Deviation | Recommendation |
 |---|---|---|
-| D1 | ~~Pagination URLs change~~ | Dropped: URLs are kept (§4.3). |
+| D1 | Numbered pages of articles: `/articles/2/` becomes `/articles/p/2/` | Confirmed, without redirects: nobody links to a pager page, and their content shifts with every new post. `pagination.path = 'p'` is plain Hugo, no workaround. |
 | D2 | `/expo/` exists in production, was removed on the branch | Confirmed. |
 | D3 | Post asset URLs move into the bundle path (see below) | Confirmed: old URLs may break, no copies kept. |
 | D4 | Code token colors (Chroma vs Prism) | Confirmed; match background, padding, font and palette as closely as possible. |
