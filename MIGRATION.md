@@ -248,7 +248,8 @@ allowlist file (`tests/pages.js`) so they are explicit.
 | D8 | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed) | Confirmed. |
 | D9 | Footer copyright year: 2022 in production, **2026** here | Confirmed. Update `copyright` in `hugo.toml`. |
 | D10 | The title of the About page links to `/#` (the home page) in production; here it links to `/about/`, like the other page titles | Confirmed. |
-| D11 | List paragraphs. remark decided item by item whether an item's text is wrapped in `<p>`; Goldmark follows CommonMark and decides for the whole list. Exact parity is impossible in 4 posts (`design-detail-ios8-messages`, `semicolon-comma-programming`, `date-formats`, `rotation-videos`) | Confirmed: keep Goldmark's consistent output, no CSS to emulate the old behavior. Spacing inside those 4 lists differs slightly from production; list them as known visual differences in Phase 5. `firefox-os` was fixed by making its list tight (post edit). The content test ignores `li > p`. |
+| D11 | List paragraphs. remark decided item by item whether an item's text is wrapped in `<p>`; Goldmark follows CommonMark and decides for the whole list | Settled with two rules in `content/list.scss`, so that a list looks the same whether Markdown wraps its items in paragraphs or not: an item that is a single paragraph has no extra margin, and a nested list always has a top margin. No post edit (two were tried, then reverted). All affected posts are pixel-identical to production. The content test ignores `li > p`. |
+| D14 | The "Articles" menu button is highlighted on the articles pages. Production never did, because of a bug (`/articles` vs `/articles/`) | Confirmed. The visual tests mask that button on those pages. |
 | D13 | A quote on `/articles/7/` wraps one line differently at 375px. Gatsby splits it in several text nodes, which changes letter spacing by a fraction of a pixel | Accepted as a known visual difference; not worth reproducing. |
 | D12 | Posts published the same day (4 days, on `/articles/5/`, `/8/`, `/9/` and in the feeds) are not in production's order | Confirmed: Hugo's default order is kept, for simplicity. No URL changes. The tests compare these without order. |
 
@@ -278,10 +279,6 @@ Settled, kept for context:
   same `<link>` during the migration so pixels match. Self-hosting the woff2
   files is a follow-up, after parity.
 - **Deploy**: `just deploy` is `TBD` and Travis is dead. Out of scope here.
-
-Kept identical to production on purpose, although it looks like a bug: the
-"Articles" menu button is never highlighted (only "About" is, on its page).
-Fixing it is one line in `_partials/header.html`.
 
 ## 6. Tests
 
@@ -368,7 +365,7 @@ remains is an ordinary visual regression suite for the site.
 ## 7. Work plan
 
 Status on 2026-11-14: phases 0 to 5 are done and committed; `just test` runs
-440 tests, all passing (49 of them are the known visual differences of §5,
+440 tests, all passing (10 of them are the known visual differences of §5,
 declared as expected failures in `tests/pages.js`). Phase 6 is left, and
 waits for Matthieu to review the site.
 

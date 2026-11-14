@@ -31,6 +31,14 @@ async function open(page, url, width, isBaseline) {
   if (isBaseline && url === "/") await page.waitForTimeout(HOME_ANIMATION)
 }
 
+// D14: on the articles pages, the "Articles" menu button is highlighted.
+// It never was in production, because of a bug.
+function articlesButton(page, url) {
+  if (!url.startsWith("/articles/")) return []
+
+  return [page.locator("#page_header li:nth-child(2)")]
+}
+
 function widthsFor(url) {
   return REPRESENTATIVE_PAGES.includes(url) ? ALL_WIDTHS : MAIN_WIDTHS
 }
@@ -50,7 +58,8 @@ for (const url of [...new Set([...PAGES, ...REPRESENTATIVE_PAGES])]) {
         fullPage: true,
         mask: [
           page.locator("video, iframe"),
-          page.locator("#page_footer > p") // D9: the copyright year changes.
+          page.locator("#page_footer > p"), // D9: the copyright year changes.
+          ...articlesButton(page, url)
         ]
       })
     })

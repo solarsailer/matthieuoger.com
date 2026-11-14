@@ -107,7 +107,13 @@ for (const { name, url, target, width = 1280 } of CASES) {
     await page.waitForTimeout(500)
 
     await expect(page).toHaveScreenshot(`hover-${name}.png`, {
-      mask: [page.locator("#page_footer > p")] // D9: the copyright year.
+      mask: [
+        page.locator("#page_footer > p"), // D9: the copyright year.
+        // D14: the "Articles" menu button is now highlighted on its pages.
+        ...(url.startsWith("/articles/")
+          ? [page.locator("#page_header li:nth-child(2)")]
+          : [])
+      ]
     })
   })
 }

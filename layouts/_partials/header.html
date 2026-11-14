@@ -19,8 +19,13 @@
         </a>
       </li>
       <li>
-        {{- /* Never marked as current: production does not either. */ -}}
-        <a class="button menu-button" href="/articles/">Articles</a>
+        <a
+          class="button menu-button"
+          href="/articles/"
+          {{ if eq .RelPermalink "/articles/" }}aria-current="page"{{ end }}
+        >
+          Articles
+        </a>
       </li>
       <li>
         <a class="button menu-button" href="/atom.xml" target="_blank">

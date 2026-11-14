@@ -41,5 +41,23 @@
     li {
       margin-bottom: 1rem;
     }
+
+    /**
+     * Markdown wraps the text of an item in a paragraph or not, depending
+     * on the blank lines of the list. Both must look the same:
+     * 1. An item that is a single paragraph is a simple item.
+     * 2. A nested list is always set apart from the text above it.
+     *
+     * Footnotes are a list too, but with their own spacing.
+     */
+
+    li:not(.footnotes li) > p:only-child {
+      margin-bottom: 0; /* 1 */
+    }
+
+    li:not(.footnotes li) > ul,
+    li:not(.footnotes li) > ol {
+      margin-top: 2rem; /* 2 */
+    }
   }
 }
