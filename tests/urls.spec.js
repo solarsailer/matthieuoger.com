@@ -56,14 +56,6 @@ for (const file of ROOT_FILES) {
   })
 }
 
-test("no markdown container is left unrendered", () => {
-  const leftovers = readdirSync(HUGO_DIR, { recursive: true })
-    .filter((x) => /\.(html|xml|json)$/.test(x))
-    .filter((x) => readFileSync(join(HUGO_DIR, x), "utf8").includes(":::"))
-
-  expect(leftovers).toEqual([])
-})
-
 test("every local link and media resolves", async ({ request }) => {
   test.slow()
 

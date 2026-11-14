@@ -96,11 +96,3 @@ test("feed.json items have the same content", async ({ page }) => {
       .toBe(await outline(item.content_html))
   }
 })
-
-test("feeds only use absolute URLs", () => {
-  const relative = /(?:href|src)=\\?"(?![a-z]+:|#)[^"]*/g
-
-  for (const file of ["atom.xml", "feed.json"]) {
-    expect(read(HUGO_DIR, file).match(relative) ?? [], file).toEqual([])
-  }
-})

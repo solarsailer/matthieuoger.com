@@ -37,14 +37,14 @@ export function extractBody(selector) {
         // is part of the text.
         .replace(/[ \t\n\r]+/g, " ")
         .replace(/^ | $/g, "")
+        // D6: Goldmark writes a non-breaking space before the "back" link
+        // of a footnote.
+        .replace(/ ?\u00a0$/, "")
     )
   }
 
   function url(value) {
     if (!value) return value
-
-    // Feeds use absolute URLs.
-    value = value.replace(/^https:\/\/matthieuoger\.com(?=\/)/, "")
 
     // D1: numbered pages of articles moved to '/articles/p/2/'.
     value = value.replace(/^\/articles\/p\/(\d+)/, "/articles/$1")

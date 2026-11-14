@@ -19,7 +19,7 @@
     <updated>{{ .Date.UTC.Format "2006-01-02T15:04:05.000Z" }}</updated>
     <title>{{ .Title | transform.XMLEscape }}</title>
     <link href="{{ .Permalink }}"/>
-    <content type="html"><![CDATA[{{ partial "content.html" (dict "page" . "absolute" true) }}]]></content>
+    <content type="html"><![CDATA[{{ .Content }}]]></content>
     <author>
       <name>{{ $author | transform.XMLEscape }}</name>
       <uri>{{ $siteURL }}</uri>

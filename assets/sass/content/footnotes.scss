@@ -62,6 +62,18 @@
           font-weight: 500;
         }
 
+        /* Goldmark writes a non-breaking space before the "back" link.
+         * When a footnote ends with a quote, that space is alone on a line:
+         * the line must not take any room.
+         */
+        &:has(> blockquote + .footnote-backref) {
+          line-height: 0;
+
+          > p {
+            line-height: 1.5;
+          }
+        }
+
         blockquote {
           margin-left: 0;
           margin-right: 0;

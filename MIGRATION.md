@@ -65,25 +65,19 @@ These were checked against the real outputs, not assumed.
 ### 4.1 Markdown rendering differs from remark
 
 - **`:::` containers are not supported by Goldmark.** 17 blocks in 12 posts
-  (`::: blockquote transcript|tldr|twitter-tweet`) currently render as literal
-  text. **Decision: keep the `:::` syntax in the posts.** The output shape is
-  regular: every block opens with `<p>::: blockquote NAME\n` (once
-  `:::blockquote`, no space) and closes with `\n:::</p>`. A
-  `_partials/content.html` runs two `replaceRE` on `.Content` to emit
-  `<blockquote class="NAME">…</blockquote>`, as production does. Use that
-  partial everywhere content is rendered (single, articles list, feeds).
-  Guard: a test asserts that no `:::` survives in any built page or feed, so
-  a block the regex misses cannot ship silently.
+  (`::: blockquote transcript|tldr|twitter-tweet`). **Decision (revised):
+  rewrite them in the posts** as regular blockquotes followed by a class line,
+  which Hugo renders natively with
+  `markup.goldmark.parser.attribute.block = true`:
 
-  Alternatives, if the regex proves fragile (both need post edits, which
-  Matthieu allows here, in a dedicated commit):
-  - GitHub-style alerts, `> [!TRANSCRIPT]` on the first line of a normal
-    blockquote, mapped to a class by a `_markup/render-blockquote.html` hook.
-    Native to Hugo, portable syntax, but every line of the block needs `> `.
-  - Block attributes, a `{.transcript}` line after a normal blockquote, with
-    `markup.goldmark.parser.attribute.block = true`. Native, Hugo-specific.
+  ```
+  > Quoted text.
+  {.transcript}
+  ```
 
-  Neither was tested on this Hugo version; try on one post before converting.
+  A first version kept the `:::` syntax and converted the rendered HTML with
+  regular expressions in a partial. Matthieu rejected it: editing HTML as text
+  depends on Hugo's exact output.
 - **Typographer: disable it.** It is on by default in Hugo and would curl
   about 840 quotes and apostrophes and turn 7 `--`/`---` into dashes.
   Production keeps the text as typed, and so will Hugo:
@@ -104,18 +98,20 @@ These were checked against the real outputs, not assumed.
   `white-space`). The site CSS overrides only part of that. Port what the
   browser actually computes, not just what `post/code.js` says.
 
-### 4.2 Relative asset URLs in page bundles
+### 4.2 Files stored next to a post
 
-`migration-hugo` moved post assets into page bundles and made the references
-relative (`src="lock.jpg"`). That works on the post page but **breaks wherever
-the content is rendered at another URL**: the first three posts on `/articles/`
-and every entry of the feeds. Fix in the same `content.html` partial: rewrite
-relative `src`/`href` (no slash, no scheme, no `#`) to the page's
-`RelPermalink` (HTML) or `Permalink` (feeds). Render hooks cannot do it alone
-because half the references are raw HTML (`<img>`, `<video>`, `<a>`).
+`migration-hugo` moved post assets into page bundles and referenced them by
+name only (`src="lock.jpg"`). That works on the post page but breaks wherever
+the content is displayed at another URL: the first three posts on `/articles/`
+and every entry of the feeds.
 
-Side effect: asset URLs change (`/images/posts/2018-10-18/x.jpg` →
-`/2018/10/slug/x.jpg`). Old hotlinks to images break. See §5.
+**Decision: posts reference these files from the root of the site**
+(`/2022/03/rotation-videos/lock.jpg`), in Markdown and in raw HTML alike
+(20 references in 7 posts). Plain HTML, nothing to rewrite at build time.
+Feeds carry these root-relative URLs, as production's always did.
+
+Side effect: asset URLs differ from production
+(`/images/posts/2018-10-18/x.jpg`). See §5, D3.
 
 ### 4.3 Things Hugo does not have out of the box
 
@@ -243,7 +239,7 @@ allowlist file (`tests/pages.js`) so they are explicit.
 | D3 | Post asset URLs move into the bundle path (see below) | Confirmed: old URLs may break, no copies kept. |
 | D4 | Code token colors (Chroma vs Prism) | Confirmed; match background, padding, font and palette as closely as possible. |
 | D5 | Analytics and progress bar removed | Confirmed. |
-| D6 | Footnote ids, heading ids, extra ARIA roles | Accept. |
+| D6 | Footnote ids, heading ids, extra ARIA roles, and a non-breaking space that Goldmark writes before each footnote's "back" link | Accept. One CSS rule cancels the empty line that space creates after a quote. It can still push the last word of a footnote to a new line (seen once, on `systemic-actions-automation` at 375px). |
 | D7 | `/404/index.html` is not generated; `/404.html` is, as today | No visible change. GitHub Pages serves `/404.html` for any missing URL, in production and after the migration. Gatsby also wrote a duplicate at `/404/`; with Hugo that URL is simply missing, so it shows the same 404 page. |
 | D8 | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed) | Confirmed. |
 | D9 | Footer copyright year: 2022 in production, **2026** here | Confirmed. Update `copyright` in `hugo.toml`. |
@@ -392,7 +388,6 @@ Each phase ends with the listed specs green. Do them in order.
 - Feeds, meta and 404 first: they are pure templates with exact expected
   output in the baseline, so they turn `feeds` and half of `content` green
   early.
-- `_partials/content.html` (containers + relative URLs, §4.1, §4.2).
 - `_markup/render-codeblock.html`.
 - Templates, ported from the React components: `baseof`, `meta`, `header`
   (logo SVG, RSS icon, `aria-current`), `footer` (compact social nav with

@@ -9,7 +9,7 @@
       "id" .Permalink
       "url" .Permalink
       "title" .Title
-      "content_html" (partial "content.html" (dict "page" . "absolute" true))
+      "content_html" .Content
       "author" $author
       "date_published" (.Date.UTC.Format "2006-01-02T15:04:05.000Z")
     ) -}}

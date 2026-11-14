@@ -25,21 +25,37 @@ export const REMOVED_URLS = [
 // Posts that differ from the 'migration-hugo' branch, approved by Matthieu.
 // Each one must have been changed in a commit that only touches posts.
 export const POSTS_REFERENCE_COMMIT = "8732fa0"
+// What changed, for the record (each change is in a posts-only commit):
+// - 'excerpt' typo in what-makes-indie-hit (D8);
+// - footnotes indented by 4 spaces, one quoted paragraph prefixed with '> ';
+// - ':::' blocks rewritten as blockquotes followed by '{.class}';
+// - files of a post referenced from the root of the site.
 export const APPROVED_POST_EDITS = [
-  "content/posts/2015/09/18/what-makes-indie-hit.md", // D8: 'excerpt' typo.
-
-  // Footnotes indented by 4 spaces instead of 2, as Goldmark requires.
+  "content/posts/2013/08/27/quote-jonathan-blow.md",
+  "content/posts/2013/10/22/how-designers-destroyed-the-world.md",
+  "content/posts/2014/06/03/design-detail-ios8-messages/index.md",
   "content/posts/2015/04/25/wearables.md",
+  "content/posts/2015/09/09/rule-of-two.md",
+  "content/posts/2015/09/18/what-makes-indie-hit.md",
+  "content/posts/2015/09/27/semicolon-comma-programming/index.md",
+  "content/posts/2016/03/17/virtual-reality/index.md",
+  "content/posts/2016/04/01/dwarf-fortress-systems.md",
+  "content/posts/2018/07/20/reboot/index.md",
+  "content/posts/2018/10/18/unity-iphone-x-home-indicator/index.md",
+  "content/posts/2019/07/29/withhold-the-fun.md",
+  "content/posts/2019/08/01/fast/index.md",
+  "content/posts/2019/09/23/passing-of-time-in-a-photo.md",
+  "content/posts/2019/10/13/nice-clear-and-secure.md",
   "content/posts/2019/11/06/singapore.md",
   "content/posts/2020/02/16/tools-as-superpowers.md",
   "content/posts/2020/04/27/systemic-actions-automation.md",
   "content/posts/2020/05/11/the-component.md",
   "content/posts/2021/03/24/build-right-swiftly.md",
+  "content/posts/2022/03/15/rotation-videos/index.md",
+  "content/posts/2022/04/27/iterative-loop.md",
   "content/posts/2022/08/03/playbooks.md",
   "content/posts/2023/02/07/alpha-value-css-color-properties.md",
-
-  // Quoted paragraph prefixed with '> '.
-  "content/posts/2016/04/01/dwarf-fortress-systems.md"
+  "content/posts/2023/02/17/social-start.md"
 ]
 
 // D12: posts of the same day are not in the same order as in production
@@ -61,6 +77,11 @@ export const VISUAL_DIFFERENCES = {
   // D4: this page displays a post with code; at this width, the different
   // token colors weigh just above the tolerance.
   "/articles/@320": "D4: code colors",
+
+  // D6: Goldmark writes a non-breaking space before the "back" link of a
+  // footnote. At this width, it pushes the last word of one footnote to a
+  // new line.
+  "/2020/04/systemic-actions-automation/@375": "D6: footnote spacer",
 
   // Gatsby splits the quote in several text nodes, which changes the
   // spacing of a few letters: one line wraps differently at this width.
