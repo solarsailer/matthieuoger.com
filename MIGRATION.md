@@ -368,7 +368,7 @@ remains is an ordinary visual regression suite for the site.
 ## 7. Work plan
 
 Status on 2026-11-14: phases 0 to 5 are done and committed; `just test` runs
-440 tests, all passing (50 of them are the known visual differences of §5,
+440 tests, all passing (49 of them are the known visual differences of §5,
 declared as expected failures in `tests/pages.js`). Phase 6 is left, and
 waits for Matthieu to review the site.
 
