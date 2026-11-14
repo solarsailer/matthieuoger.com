@@ -26,18 +26,15 @@ Done means:
    can be audited. The test run (§6) diffs `content/posts` against
    `migration-hugo` and fails on any file not in the approved list in
    `tests/pages.js`. Approved so far: the `excerpt` typo fix (`c11423b`).
-2. Build dependencies: Hugo and Dart Sass. One shipped library:
-   `@floating-ui/dom`, for tooltips (Matthieu's choice), bundled by Hugo's
-   built-in `js.Build`. Nothing else.
-3. Dev dependencies: `@playwright/test` only (plus Prettier and its go-template
-   plugin, which are already there for formatting).
-4. Simple Sass: partials, nesting, a few `$breakpoint` variables, one mixin at
+2. Dependencies are exactly the list in §9. Adding one needs Matthieu's
+   approval.
+3. Simple Sass: partials, nesting, a few `$breakpoint` variables, one mixin at
    most. No functions, maps, loops, `@extend`.
-5. Minimal JS: one small ES module for the tooltips. No bundler beyond
+4. Minimal JS: one small ES module for the tooltips. No bundler beyond
    `js.Build`, which the branch already uses.
-6. Do not reproduce Gatsby bugs or noise (hashed class names, `url=` attributes
+5. Do not reproduce Gatsby bugs or noise (hashed class names, `url=` attributes
    on links, `fill="[object Object]"`, `gatsby-focus-wrapper`).
-7. Commit only when asked. Never push or deploy.
+6. Commit only when asked. Never push or deploy.
 
 ## 3. Where things stand
 
@@ -48,7 +45,7 @@ Verified on 2026-11-14 with Hugo 0.170.0 (Homebrew, non-extended), Node 26.
 | `master` | Gatsby 2.14 source. Does not build on current Node without workarounds. |
 | Production build | `github.com/solarsailer/solarsailer.github.io`, `master` @ `33723e2` (2024-01-23). In sync with `master`: 88 posts, latest is `/2023/06/date-formats/`. **This is the baseline.** |
 | `migration-hugo` | Builds (93 pages) once the CSS partial is bypassed. Layout skeletons, post bundles, `data/social.json`, Sass layer structure (`reset, theme, base, app`) exist. No component styles, no meta, no feeds, no icons, no JS. |
-| Dart Sass | Reported installed by Matthieu, but `sass` is **not on the PATH** of zsh or fish and `hugo env` does not list it (checked 2026-11-14). Resolve first: `brew install sass/sass/sass`, then `hugo env` must show a dart-sass line. |
+| Dart Sass | 1.108.2 installed, seen by `hugo env`. The branch's Sass compiles once the PostCSS pipe is removed (verified). |
 | Old Gatsby source | Kept in `gatsby/` on this branch as the porting reference. |
 
 What already matches production: all 88 post URLs (including the 7 page
@@ -57,9 +54,9 @@ bundles and `/about/`), `/archive/`, `/articles/`, the date format
 
 Decisions taken by Matthieu on 2026-11-14: Playwright, CSS layers and Sass
 structure approved; Floating UI for tooltips; keep the pagination URL format;
-`/expo/` stays removed; analytics and progress bar dropped; curly quotes
-accepted; code highlighting may differ; copyright year updated; Google Fonts
-link kept for now; deploy out of scope.
+`/expo/` stays removed; analytics and progress bar dropped; typographer
+disabled; post asset URLs may change; code highlighting may differ; copyright
+year updated; Google Fonts link kept for now; deploy out of scope.
 
 ## 4. Findings that shape the work
 
@@ -87,12 +84,10 @@ These were checked against the real outputs, not assumed.
     `markup.goldmark.parser.attribute.block = true`. Native, Hugo-specific.
 
   Neither was tested on this Hugo version; try on one post before converting.
-- **Typographer stays on** (Hugo default; Matthieu accepts curly quotes).
-  Effect on the 88 posts: straight quotes and apostrophes become curly
-  (about 840 places), and 7 `--`/`---` become en/em dashes. No ellipsis or
-  guillemet conversions occur. The content test normalizes these characters
-  before comparing; the visual test will show small text-width shifts on the
-  affected lines, which is expected (§5, D8).
+- **Typographer: disable it.** It is on by default in Hugo and would curl
+  about 840 quotes and apostrophes and turn 7 `--`/`---` into dashes.
+  Production keeps the text as typed, and so will Hugo:
+  `markup.goldmark.extensions.typographer.disable = true`.
 - **Heading ids**: Hugo adds `id` to headings, production has none. Keep the
   Hugo default; the content test ignores them.
 - **Footnotes**: same classes (`footnotes`, `footnote-ref`, `footnote-backref`),
@@ -228,26 +223,19 @@ allowlist file (`tests/pages.js`) so they are explicit.
 |---|---|---|
 | D1 | ~~Pagination URLs change~~ | Dropped: URLs are kept (§4.3). |
 | D2 | `/expo/` exists in production, was removed on the branch | Confirmed. |
-| D3 | Post asset URLs move into the bundle path (see below) | **Still open.** Default: accept. |
+| D3 | Post asset URLs move into the bundle path (see below) | Confirmed: old URLs may break, no copies kept. |
 | D4 | Code token colors (Chroma vs Prism) | Confirmed; match background, padding, font and palette as closely as possible. |
 | D5 | Analytics and progress bar removed | Confirmed. |
 | D6 | Footnote ids, heading ids, extra ARIA roles | Accept. |
 | D7 | `/404/` directory page gone, `/404.html` kept | Accept. |
-| D8 | Curly quotes and dashes from the typographer | Confirmed. |
-| D9 | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed) | Confirmed. |
-| D10 | Footer copyright year: 2022 in production, **2026** here | Confirmed. Update `copyright` in `hugo.toml`. |
+| D8 | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed) | Confirmed. |
+| D9 | Footer copyright year: 2022 in production, **2026** here | Confirmed. Update `copyright` in `hugo.toml`. |
 
-D3 in plain terms: today a post image lives at
-`/images/posts/2018-10-18/steredenn.jpg`. On the branch the files were moved
-next to their post, so the same image is served at
-`/2018/10/unity-iphone-x-home-indicator/steredenn.jpg`. The site itself is
-fine. What breaks is anything outside the site still pointing at the old
-address: another site embedding the image, a feed reader holding an old copy
-of a post, a search engine's image index. If that matters, keep a copy of the
-17 files at their old paths under `static/` (about 1 MB for the images, plus
-three videos and one mp3); the tests can then require the old URLs too.
-
-Open questions that are not deviations:
+D3 in plain terms: a post image served today at
+`/images/posts/2018-10-18/steredenn.jpg` is served at
+`/2018/10/unity-iphone-x-home-indicator/steredenn.jpg` after the migration
+(17 files). The site itself is fine; outside references to the old addresses
+break. Accepted.
 
 Settled, kept for context:
 
@@ -301,8 +289,7 @@ without the project name so both sides share the same snapshot files.
    run the same `page.evaluate` extractor over `#page`. It returns a
    normalized tree: tag names, collapsed text, `href`/`src`/`alt`/`title`,
    and `class` only for author classes inside post content (`tldr`,
-   `transcript`, `twitter-tweet`, `more`, `footnote-ref`, …). It folds
-   typographic quotes and dashes to ASCII (D8), ignores
+   `transcript`, `twitter-tweet`, `more`, `footnote-ref`, …). It ignores
    styled-components classes, comments, the tooltip DOM, heading ids, and
    maps the known differences (code wrapper, footnote ids, asset paths per
    D3). Compare `<head>` too: `title`, the `meta` name/property/content set,
@@ -323,12 +310,7 @@ without the project name so both sides share the same snapshot files.
 
    Start with a loose `maxDiffPixelRatio` to see progress, tighten to near
    zero at the end. Same browser, same fonts and same CSS values render the
-   same pixels, so near-exact is realistic on pages without code (D4). Curly
-   quotes (D8) change glyph widths and can re-wrap a line, which shifts
-   everything below it. To keep the visual test meaningful, build the Hugo
-   side for this spec with the typographer disabled
-   (`HUGO_MARKUP_GOLDMARK_EXTENSIONS_TYPOGRAPHER_DISABLE=true`); production
-   builds keep it on.
+   same pixels, so near-exact is realistic on pages without code (D4).
 5. **`interactions`**: element screenshots of hover/focus states that static
    screenshots miss: buttons, menu buttons, post recap card, body links,
    footnote back-reference, tooltip open (above, and below near the top),
@@ -349,9 +331,12 @@ remains is an ordinary visual regression suite for the site.
 Each phase ends with the listed specs green. Do them in order.
 
 **Phase 0: housekeeping**
-- Get Dart Sass visible to Hugo (§3). Remove PostCSS packages and pipe. Fix
-  the three Hugo deprecations and move templates to the current layout.
-- `hugo.toml`: `pagination.path = ''`, copyright year 2026.
+- Remove PostCSS packages and pipe. Fix the three Hugo deprecations and move
+  templates to the current layout.
+- `hugo.toml`: `pagination.path = ''`, typographer disabled, copyright year
+  2026.
+- `justfile`: `prod` calls `serve`, which is not installed; point it at
+  `tests/serve.mjs` once that exists.
 - Restructure Sass to `@use` + self-layered partials (§4.5). The build must
   work with real CSS before anything else.
 
@@ -418,3 +403,52 @@ Each phase ends with the listed specs green. Do them in order.
 | `plugins/gatsby-plugin-feeds/*` | `list.atom.xml`, `list.feed.json` on the home output |
 | `pages/404.js` | `404.html`, `layout/not-found.scss` |
 | `gatsby-node.js`, `node/markdown-creator.js` | `[permalinks]` in `hugo.toml` (done) |
+
+## 9. Dependencies
+
+Complete list, every language and every kind. Versions are what is installed
+or current on 2026-11-14.
+
+**Needed to build the site**
+
+| Dependency | Version | Kind | Role |
+|---|---|---|---|
+| Hugo | 0.170.0 (standard edition is enough) | Go binary, Homebrew | Site generator. Brings Goldmark (Markdown), Chroma (code highlighting) and esbuild (`js.Build`) built in. |
+| Dart Sass | 1.108.2 | Binary, Homebrew | Compiles `assets/sass`. Called by Hugo. |
+| Node.js + npm | 26.x | Runtime, Homebrew | Only to install the one npm library below so Hugo can bundle it. |
+| `@floating-ui/dom` | 1.8.0 | npm, shipped to browsers | Tooltip positioning. Pulls `@floating-ui/core` and `@floating-ui/utils` (same project). |
+
+**Vendored in the repository**
+
+| Dependency | Version | Role |
+|---|---|---|
+| modern-normalize | 3.0.0 | CSS reset, copied into `assets/sass/layers/normalize.scss`. |
+
+**Loaded by the browser from a third party**
+
+| Dependency | Role |
+|---|---|
+| Google Fonts | Rubik (300–900, with italics) and Fira Mono. To be self-hosted after the migration. |
+
+**Development and tests only**
+
+| Dependency | Version | Kind | Role |
+|---|---|---|---|
+| just | 1.59.0 | Binary, Homebrew | Task runner (`justfile`). |
+| `@playwright/test` | 1.65.1 | npm dev | All tests. Downloads its own Chromium (`npx playwright install chromium`). |
+| git | any | Binary | `just baseline` clones the production build. |
+| `prettier` + `prettier-plugin-go-template` | plugin 0.0.15 | npm dev, optional | Template formatting. The plugin is in `package.json` but `prettier` itself is not; add it or drop both. |
+
+**Services**
+
+| Dependency | Role |
+|---|---|
+| `github.com/solarsailer/solarsailer.github.io` @ `33723e2` | Test baseline during the migration only. |
+| GitHub Pages | Hosting (unchanged; deploy is out of scope). |
+
+**Removed by this migration**
+
+Gatsby and its 9 plugins, React, react-dom, react-helmet, react-pose,
+styled-components (and its Babel plugin), lodash, Prism, `xml`,
+`@sindresorhus/is`, gh-pages, husky, jest, webpack; PostCSS, postcss-cli and
+autoprefixer from the first Hugo attempt; `serve`; Google Analytics; Travis CI.
