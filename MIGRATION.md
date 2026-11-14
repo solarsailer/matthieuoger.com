@@ -173,8 +173,12 @@ year or two and delete the library.
   need a vendor prefix in any browser that also supports `@layer`. The one
   prefixed property in use (`-webkit-text-size-adjust`) is already written by
   hand in modern-normalize. Keeping them would cost three npm packages and
-  make Node a requirement of every CSS build. Matthieu was told and can
-  reverse this; if a prefix is ever needed, write it by hand.
+  make Node a requirement of every CSS build. Agreed with Matthieu, on one
+  condition: a one-off check in Phase 5. Run
+  `npx --yes -p postcss-cli -p postcss -p autoprefixer postcss <built css> --use autoprefixer --no-map`
+  (nothing added to `package.json`) and diff against the input. Empty diff:
+  the removal is final. Otherwise show Matthieu the added prefixes and let
+  him decide.
 - Sass `@import` is deprecated and goes away in Dart Sass 3. `index.scss`
   nests `@import` inside `@layer`, which `@use` cannot do. Simplest fix: each
   partial wraps its own rules in `@layer name { … }`, and `index.scss` is the
@@ -384,6 +388,7 @@ Each phase ends with the listed specs green. Do them in order.
 **Phase 5: convergence**
 - Run the full visual suite, fix diffs page by page, tighten thresholds.
 - Record any remaining, justified difference in the allowlist with a comment.
+- Autoprefixer one-off check (§4.5) and report the result.
 
 **Phase 6: cleanup**
 - Delete `gatsby/`, unused static files (`card-2019.jpg` if unreferenced),
