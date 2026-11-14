@@ -1,14 +1,33 @@
 {{ define "content" }}
+  {{ $pages := .Paginator.Pages }}
+
+  {{ partial "page-title.html" (dict "title" .Title "url" .RelPermalink) }}
   {{ partial "pagination.html" . }}
 
 
-  <ul>
-    {{ range .Paginator.Pages }}
-      <li>
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      </li>
+  <div class="articles">
+    {{/* The first page displays the latest posts in full. */}}
+    {{ if not .Paginator.HasPrev }}
+      <ul class="articles__posts">
+        {{ range first 3 $pages }}
+          <li>{{ partial "post.html" (dict "page" . "showTitle" true) }}</li>
+        {{ end }}
+      </ul>
+
+      {{ $pages = after 3 $pages }}
     {{ end }}
-  </ul>
 
-  {{ partial "pagination.html" . }}
+
+    <ul class="articles__recaps">
+      {{ range $pages }}
+        <li>
+          {{ partial "post-recap.html" (dict "page" . "isCompact" false) }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  {{ if gt (len .Paginator.Pages) 3 }}
+    {{ partial "pagination.html" . }}
+  {{ end }}
 {{ end }}

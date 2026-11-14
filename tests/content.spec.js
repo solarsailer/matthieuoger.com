@@ -1,7 +1,13 @@
 import { expect, test } from "@playwright/test"
 
 import { extractBody, extractHead } from "./extract"
-import { BASELINE_URL, HUGO_URL, PAGES } from "./pages"
+import {
+  BASELINE_URL,
+  HUGO_URL,
+  IGNORED_LINES,
+  PAGES,
+  UNORDERED_PAGES
+} from "./pages"
 
 // -------------------------------------------------------------
 // Content: same structure, text, links and metadata as production.
@@ -13,9 +19,19 @@ test.use({ javaScriptEnabled: false })
 async function extract(page, url) {
   await page.goto(url, { waitUntil: "domcontentloaded" })
 
+  const { pathname } = new URL(url)
+  const ignored = IGNORED_LINES[pathname]
+
+  const clean = (outline) => {
+    const lines = outline.split("\n").filter((x) => !ignored?.test(x))
+    if (UNORDERED_PAGES.includes(pathname)) lines.sort()
+
+    return lines.join("\n")
+  }
+
   return {
-    head: await page.evaluate(extractHead),
-    body: await page.evaluate(extractBody, "#page")
+    head: clean(await page.evaluate(extractHead)),
+    body: clean(await page.evaluate(extractBody, "#page"))
   }
 }
 

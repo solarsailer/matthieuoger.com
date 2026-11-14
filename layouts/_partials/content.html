@@ -1,0 +1,36 @@
+{{- /*
+  Content of a post, with two fixes that Goldmark cannot do by itself.
+  Context: (dict "page" Page "absolute" bool).
+
+  With "absolute", every URL is made absolute (for feeds).
+*/ -}}
+
+{{- $page := .page -}}
+{{- $content := $page.Content -}}
+
+{{- /*
+  1. Containers. Posts use this syntax (from remark), unknown to Goldmark:
+
+     ::: blockquote transcript
+     Text.
+     :::
+
+  It must become <blockquote class="transcript">.
+*/ -}}
+{{- $content = replaceRE `<p>::: ?blockquote ([\w-]+)\n` "<blockquote class=\"$1\">\n<p>" $content -}}
+{{- $content = replaceRE `\n:::</p>` "</p>\n</blockquote>" $content -}}
+
+{{- /*
+  2. Files stored next to a post are referenced by their name only
+  (src="photo.jpg"). That breaks when the content is displayed
+  elsewhere (list of articles, feeds), so the path of the post is added.
+*/ -}}
+{{- $base := cond .absolute $page.Permalink $page.RelPermalink -}}
+{{- $content = replaceRE `(src|href)="([^"/#:]+\.[a-z0-9]+)"` (printf "$1=\"%s$2\"" $base) $content -}}
+
+{{- if .absolute -}}
+  {{- $siteURL := strings.TrimSuffix "/" site.BaseURL -}}
+  {{- $content = replaceRE `(src|href)="/` (printf "$1=\"%s/" $siteURL) $content -}}
+{{- end -}}
+
+{{- return $content -}}

@@ -1,25 +1,22 @@
 {{ define "content" }}
-  <ul>
-    {{ $pages := where .Site.RegularPages "Type" "posts" }}
-    {{ range $pages.GroupByDate "2006" }}
+  {{ partial "page-title.html" (dict "title" .Title "url" .RelPermalink) }}
+
+
+  <ul class="archive">
+    {{ $posts := where site.RegularPages "Type" "posts" }}
+
+    {{ range $posts.GroupByDate "2006" }}
       <li>
-        <div>
-          <header><p>{{ .Key }}</p></header>
+        <div class="header-row">
+          <header class="header-row__header">
+            <p class="header-row__text">{{ .Key }}</p>
+          </header>
         </div>
       </li>
 
       {{ range .Pages }}
         <li>
-          <a href="{{ .RelPermalink }}">
-            <div>
-              <article>
-                <header>
-                  <h2>{{ .LinkTitle }}</h2>
-                  <p>{{ .Date.Format "02 January 2006" }}</p>
-                </header>
-              </article>
-            </div>
-          </a>
+          {{ partial "post-recap.html" (dict "page" . "isCompact" true) }}
         </li>
       {{ end }}
     {{ end }}

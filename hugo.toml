@@ -4,7 +4,28 @@ locale = 'en-us'
 
 # Metadata.
 title = 'Matthieu Oger'
-copyright = '© 2026 **Matthieu Oger**'
+copyright = '© 2026 Matthieu Oger'
+
+[params]
+  author = 'Matthieu Oger'
+  description = 'I am a product manager, developer and designer from France. Co-founder of Pixelnest Studio.'
+  keywords = [
+    'solar',
+    'sailer',
+    'matthieu',
+    'oger',
+    'designer',
+    'developer',
+    'product manager',
+    'technology',
+    'design',
+    'development',
+    'dev',
+    'photography',
+    'pixelnest'
+  ]
+  twitter = 'solarsailer'
+  googleFonts = 'Rubik:300,300i,400,400i,500,500i,700,700i,900,900i|Fira+Mono'
 
 [permalinks]
   [permalinks.section]
@@ -17,8 +38,22 @@ copyright = '© 2026 **Matthieu Oger**'
   pagerSize = 9
   path = '' # Keep the historical URLs: /articles/2/, not /articles/page/2/.
 
+# Feeds: /atom.xml and /feed.json.
+[mediaTypes.'application/atom+xml']
+  suffixes = ['xml']
+
+[outputFormats.atom]
+  mediaType = 'application/atom+xml'
+  baseName = 'atom'
+  isPlainText = true
+
+[outputFormats.jsonfeed]
+  mediaType = 'application/json'
+  baseName = 'feed'
+  isPlainText = true
+
 [outputs]
-  home = ['html', 'rss']
+  home = ['html', 'atom', 'jsonfeed']
   page = ['html']
   section = ['html']
   taxonomy = []
@@ -29,3 +64,6 @@ copyright = '© 2026 **Matthieu Oger**'
 
 [markup.goldmark.extensions.typographer]
   disable = true # Keep quotes and dashes as typed.
+
+[markup.highlight]
+  noClasses = false # Colors are in the stylesheet.

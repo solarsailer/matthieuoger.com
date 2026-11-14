@@ -1,0 +1,47 @@
+{{- /*
+  Context: (dict "page" Page "isCompact" bool).
+  A compact recap only has a title and a date (used by the archive).
+*/ -}}
+{{- $page := .page -}}
+{{- $excerpt := cond .isCompact nil $page.Params.excerpt -}}
+{{- $quote := cond .isCompact nil $page.Params.excerptQuote -}}
+{{- $hasNoContent := not (or $excerpt $quote) -}}
+
+{{- define "_partials/read-more.html" -}}
+  <span class="read-more-hint">→&nbsp;Read&nbsp;More</span>
+{{- end -}}
+
+<a class="post-recap" href="{{ $page.RelPermalink }}">
+  <div class="post-recap__wrapper">
+    <article class="post-recap__article">
+      <header class="post-recap__header">
+        <h2 class="post-recap__title">{{ $page.Title }}</h2>
+        <p class="post-recap__date">
+          {{ $page.Date.Format "02 January 2006" }}
+          {{ if and $hasNoContent (not .isCompact) }}
+            {{ partial "read-more.html" . }}
+          {{ end }}
+        </p>
+      </header>
+
+      {{ with $excerpt }}
+        <div class="post-recap__content">
+          <p class="post-recap__excerpt">
+            {{ . | safeHTML }}
+            {{ partial "read-more.html" . }}
+          </p>
+        </div>
+      {{ end }}
+
+      {{ with $quote }}
+        <div class="post-recap__content">
+          <p class="post-recap__excerpt">
+            {{ .name }}:
+            <em class="post-recap__quote">“{{ .quote }}”</em>
+            {{ partial "read-more.html" . }}
+          </p>
+        </div>
+      {{ end }}
+    </article>
+  </div>
+</a>

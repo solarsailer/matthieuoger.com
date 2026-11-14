@@ -16,11 +16,21 @@ function read(directory, file) {
 }
 
 function tag(xml, name) {
-  return xml.match(new RegExp(`<${name}>([^<]*)</${name}>`))?.[1]
+  return xml
+    .match(new RegExp(`<${name}>([^<]*)</${name}>`))?.[1]
+    .replace(/&apos;|&#39;/g, "'")
 }
 
 function links(xml) {
   return [...xml.matchAll(/<link ([^>]*)\/>/g)].map((x) => x[1].trim())
+}
+
+// D12: posts of the same day are not in the same order as in production.
+// Entries are compared by date, then by id.
+function byDateThenId(a, b) {
+  const date = (x) => x.updated ?? x.date_published
+
+  return date(b).localeCompare(date(a)) || a.id.localeCompare(b.id)
 }
 
 function parseAtom(xml) {
@@ -33,14 +43,16 @@ function parseAtom(xml) {
     icon: tag(header, "icon"),
     links: links(header),
     author: [tag(header, "name"), tag(header, "uri")],
-    entries: entries.map((x) => ({
-      id: tag(x, "id"),
-      updated: tag(x, "updated"),
-      title: tag(x, "title"),
-      links: links(x),
-      author: [tag(x, "name"), tag(x, "uri")],
-      hasContent: /<content type="html"><!\[CDATA\[\s*\S/.test(x)
-    }))
+    entries: entries
+      .map((x) => ({
+        id: tag(x, "id"),
+        updated: tag(x, "updated"),
+        title: tag(x, "title"),
+        links: links(x),
+        author: [tag(x, "name"), tag(x, "uri")],
+        hasContent: /<content type="html"><!\[CDATA\[\s*\S/.test(x)
+      }))
+      .sort(byDateThenId)
   }
 }
 
@@ -54,7 +66,9 @@ test("atom.xml has the same metadata and entries", () => {
 test("feed.json has the same metadata and items", () => {
   const withoutContent = (feed) => ({
     ...feed,
-    items: feed.items.map(({ content_html, ...item }) => item)
+    items: feed.items
+      .map(({ content_html, ...item }) => item)
+      .sort(byDateThenId)
   })
 
   const expected = JSON.parse(read(BASELINE_DIR, "feed.json"))
@@ -84,7 +98,7 @@ test("feed.json items have the same content", async ({ page }) => {
 })
 
 test("feeds only use absolute URLs", () => {
-  const relative = /(?:href|src)=\\?"(?!https?:|mailto:|#)[^"]*/g
+  const relative = /(?:href|src)=\\?"(?![a-z]+:|#)[^"]*/g
 
   for (const file of ["atom.xml", "feed.json"]) {
     expect(read(HUGO_DIR, file).match(relative) ?? [], file).toEqual([])

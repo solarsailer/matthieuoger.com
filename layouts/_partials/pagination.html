@@ -1,23 +1,27 @@
+{{- /*
+  Pager URLs are built by hand: with an empty 'pagination.path',
+  Hugo's own (.Prev.URL, .Next.URL) contain a double slash.
+*/ -}}
+{{- $first := .Paginator.First.URL -}}
+
 {{- with .Paginator -}}
-  {{- if .HasPrev -}}
-    {{- with .Prev -}}
-      <a href="{{ .URL }}" aria-label="Previous" role="button">
+  <div class="pagination">
+    {{- if .HasPrev -}}
+      <a class="button pagination__button" href="{{ $first }}{{ if gt .Prev.PageNumber 1 }}{{ .Prev.PageNumber }}/{{ end }}">
         ←&nbsp;Previous
       </a>
+    {{- else -}}
+      <span class="pagination__button is-disabled">←&nbsp;Previous</span>
     {{- end -}}
-  {{- else -}}
-    <span>←&nbsp;Previous</span>
-  {{- end -}}
 
+    <a class="button pagination__button" href="/archive/">Archive</a>
 
-  <a href="/archive/" aria-label="Archive" role="button">Archive</a>
-
-  {{- if .HasNext -}}
-    {{- with .Next -}}
-      <a href="{{ .URL }}" aria-label="Next" role="button">Next&nbsp;→</a>
+    {{- if .HasNext -}}
+      <a class="button pagination__button" href="{{ $first }}{{ .Next.PageNumber }}/">
+        Next&nbsp;→
+      </a>
+    {{- else -}}
+      <span class="pagination__button is-disabled">Next&nbsp;→</span>
     {{- end -}}
-  {{- else -}}
-    <span>Next&nbsp;→</span>
-  {{- end -}}
-
+  </div>
 {{- end -}}

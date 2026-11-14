@@ -31,6 +31,7 @@ export function extractBody(selector) {
   function text(value) {
     return value
       .replace(/[︎️]/g, "") // Emoji/text variation selectors.
+      .replace(/© \d{4}/, "© YEAR") // D9: the copyright year changes.
       .replace(/\s+/g, " ")
       .trim()
   }
@@ -38,17 +39,26 @@ export function extractBody(selector) {
   function url(value) {
     if (!value) return value
 
+    // Feeds use absolute URLs.
+    value = value.replace(/^https:\/\/matthieuoger\.com(?=\/)/, "")
+
     // Footnotes: remark uses 'fn-1', Goldmark 'fn:1'.
     value = value.replace(/^#(fn|fnref)[:-]/, "#$1-")
 
+    // D10: Gatsby links the title of 'About' to '/#' (the home page).
+    // Hugo links it to the page itself, like the other page titles.
+    if (value === "/#") return location.pathname
+
     // D3: post assets moved next to their post.
     // '/images/posts/2018-10-18/a.jpg', '/images/posts/2014-06-03-a.png'
-    // and 'a.jpg' are all compared as 'a.jpg'.
+    // and 'a.jpg' are all compared as 'a.jpg'. Gatsby also adds a hash
+    // to the files it bundles ('avatar-<hash>.jpg').
     if (MEDIA.test(value) && !/^https?:/.test(value)) {
       return value
         .split("/")
         .pop()
         .replace(/^\d{4}-\d{2}-\d{2}-/, "")
+        .replace(/-[0-9a-f]{32}\./, ".")
     }
 
     // '/articles/2' and '/articles/2/' are the same page.
@@ -85,6 +95,12 @@ export function extractBody(selector) {
     return [tag, ...attributes].join(" ")
   }
 
+  // D6: remark puts the "back" link of a footnote after its text,
+  // Goldmark inside. Same link, different place: not compared.
+  function isFootnoteBackLink(element) {
+    return element.classList.contains("footnote-backref")
+  }
+
   function isTooltip(element) {
     return (
       element.classList.contains("tooltip") ||
@@ -94,30 +110,52 @@ export function extractBody(selector) {
 
   function isTransparent(element) {
     const tag = element.tagName.toLowerCase()
+
+    // D11: remark decided item by item whether the text of a list item is
+    // wrapped in a paragraph, Goldmark (CommonMark) decides list by list.
+    if (tag === "p" && element.parentElement.tagName === "LI") return true
+
     if (!TRANSPARENT_TAGS.includes(tag)) return false
 
     return !AUTHOR_CLASSES.some((x) => element.classList.contains(x))
+  }
+
+  // Consecutive pieces of text are merged: how a sentence is split
+  // into text nodes and <span> is an implementation detail.
+  let pending = null
+
+  function flush(lines) {
+    if (!pending) return
+
+    const value = text(pending.value)
+    if (value) lines.push("  ".repeat(pending.depth) + JSON.stringify(value))
+
+    pending = null
   }
 
   function walk(node, depth, lines) {
     const indent = "  ".repeat(depth)
 
     if (node.nodeType === Node.TEXT_NODE) {
-      const value = text(node.textContent)
-      if (value) lines.push(indent + JSON.stringify(value))
+      if (pending && pending.depth !== depth) flush(lines)
+
+      pending ??= { depth, value: "" }
+      pending.value += node.textContent
       return
     }
 
     if (node.nodeType !== Node.ELEMENT_NODE) return
 
     const tag = node.tagName.toLowerCase()
-    if (SKIPPED_TAGS.includes(tag) || isTooltip(node)) return
+    if (SKIPPED_TAGS.includes(tag)) return
+    if (isTooltip(node) || isFootnoteBackLink(node)) return
 
     if (isTransparent(node)) {
       for (const child of node.childNodes) walk(child, depth, lines)
       return
     }
 
+    flush(lines)
     lines.push(indent + describe(node))
 
     // Code blocks: the highlighters produce different tokens,
@@ -131,6 +169,7 @@ export function extractBody(selector) {
     if (tag === "svg") return
 
     for (const child of node.childNodes) walk(child, depth + 1, lines)
+    flush(lines)
   }
 
   const lines = []
@@ -138,6 +177,7 @@ export function extractBody(selector) {
 
   if (root) {
     for (const child of root.childNodes) walk(child, 0, lines)
+    flush(lines)
   }
 
   return lines.join("\n")

@@ -26,8 +26,37 @@ export const REMOVED_URLS = [
 // Each one must have been changed in a commit that only touches posts.
 export const POSTS_REFERENCE_COMMIT = "8732fa0"
 export const APPROVED_POST_EDITS = [
-  "content/posts/2015/09/18/what-makes-indie-hit.md" // D8: 'excerpt' typo.
+  "content/posts/2015/09/18/what-makes-indie-hit.md", // D8: 'excerpt' typo.
+
+  // Footnotes indented by 4 spaces instead of 2, as Goldmark requires.
+  "content/posts/2015/04/25/wearables.md",
+  "content/posts/2019/11/06/singapore.md",
+  "content/posts/2020/02/16/tools-as-superpowers.md",
+  "content/posts/2020/04/27/systemic-actions-automation.md",
+  "content/posts/2020/05/11/the-component.md",
+  "content/posts/2021/03/24/build-right-swiftly.md",
+  "content/posts/2022/08/03/playbooks.md",
+  "content/posts/2023/02/07/alpha-value-css-color-properties.md",
+
+  // List made tight (no blank line between items).
+  "content/posts/2013/07/01/firefox-os.md",
+
+  // Quoted paragraph prefixed with '> '.
+  "content/posts/2016/04/01/dwarf-fortress-systems.md"
 ]
+
+// D12: posts of the same day are not in the same order as in production
+// (Hugo's default order is kept, for simplicity). On these pages, the
+// content is compared without its order.
+export const UNORDERED_PAGES = ["/articles/5/", "/articles/8/", "/articles/9/"]
+
+// Lines of the outline (see extract.js) that are not compared on a page.
+export const IGNORED_LINES = {
+  // D8: the 'excerpt' typo is fixed, so this post now has an excerpt.
+  "/2015/09/what-makes-indie-hit/": /^meta (og|twitter):description:/,
+  "/articles/6/":
+    /^ +(p|span class="read-more-hint"|"→ Read More"|"Should every game have a hook.*")$/
+}
 
 // -------------------------------------------------------------
 // Pages.

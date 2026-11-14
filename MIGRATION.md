@@ -241,6 +241,23 @@ allowlist file (`tests/pages.js`) so they are explicit.
 | D7 | `/404/index.html` is not generated; `/404.html` is, as today | No visible change. GitHub Pages serves `/404.html` for any missing URL, in production and after the migration. Gatsby also wrote a duplicate at `/404/`; with Hugo that URL is simply missing, so it shows the same 404 page. |
 | D8 | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed) | Confirmed. |
 | D9 | Footer copyright year: 2022 in production, **2026** here | Confirmed. Update `copyright` in `hugo.toml`. |
+| D10 | The title of the About page links to `/#` (the home page) in production; here it links to `/about/`, like the other page titles | Confirmed. |
+| D11 | List paragraphs. remark decided item by item whether an item's text is wrapped in `<p>`; Goldmark follows CommonMark and decides for the whole list. Exact parity is impossible in 4 posts (`design-detail-ios8-messages`, `semicolon-comma-programming`, `date-formats`, `rotation-videos`) | Confirmed: keep Goldmark's consistent output, no CSS to emulate the old behavior. Spacing inside those 4 lists differs slightly from production; list them as known visual differences in Phase 5. `firefox-os` was fixed by making its list tight (post edit). The content test ignores `li > p`. |
+| D12 | Posts published the same day (4 days, on `/articles/5/`, `/8/`, `/9/` and in the feeds) are not in production's order | Confirmed: Hugo's default order is kept, for simplicity. No URL changes. The tests compare these without order. |
+
+**Post edits, approved and committed alone (`Adapt 9 posts to Goldmark's
+stricter Markdown`).** Goldmark is stricter than remark on two constructs.
+Without these edits, 9 posts render wrongly (footnote text spills into the
+article body):
+
+- Footnote continuation lines are indented by 2 spaces; Goldmark needs 4.
+  26 lines in 8 posts (`wearables`, `singapore`, `tools-as-superpowers`,
+  `systemic-actions-automation`, `the-component`, `build-right-swiftly`,
+  `playbooks`, `alpha-value-css-color-properties`). Whitespace only.
+- `dwarf-fortress-systems`: a quote paragraph relies on lazy continuation
+  after an empty `>` line; it needs its own `> ` prefix.
+
+With them, the URL, content and feed specs all pass (120/120).
 
 D3 in plain terms: a post image served today at
 `/images/posts/2018-10-18/steredenn.jpg` is served at

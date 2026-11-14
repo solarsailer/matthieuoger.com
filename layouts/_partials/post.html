@@ -1,0 +1,27 @@
+{{- /* Context: (dict "page" Page "showTitle" bool). */ -}}
+{{- $page := .page -}}
+{{- $date := $page.Date.Format "02 January 2006" -}}
+
+<div class="post">
+  <article class="post__article">
+    {{ if .showTitle }}
+      <header class="post__header">
+        <h1 class="post__title">
+          <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+        </h1>
+        <h2 class="post__subtitle">{{ $date }}</h2>
+      </header>
+    {{ end }}
+
+
+    <div class="post__content content">
+      {{ partial "content.html" (dict "page" $page "absolute" false) | safeHTML }}
+    </div>
+
+    <footer class="post__footer">
+      <p class="post__date">
+        <a href="{{ $page.RelPermalink }}">{{ $date }}</a>
+      </p>
+    </footer>
+  </article>
+</div>

@@ -1,57 +1,67 @@
 {{ define "html" }}data-layout="home"{{ end }}
 
-{{ define "header" }}<!-- Erase header block.-->{{ end }}
-{{ define "footer" }}<!-- Erase footer block. -->{{ end }}
+{{ define "header" }}<!-- No header on the home page. -->{{ end }}
+{{ define "footer" }}<!-- No footer on the home page. -->{{ end }}
 
 {{ define "main" }}
   <div class="home">
-    <div class="avatar">
+    <div class="home__avatar">
       <img
         src="/assets/images/site/avatar-black-white.jpg"
         title="Matthieu Oger"
         alt="Matthieu Oger"
-        width="350px"
-        height="350px"
+        width="350"
+        height="350"
       />
-      <header>
-        <h1>
-          <span>Matthieu</span>
-          <span>Oger</span>
+      <header class="home__header">
+        <h1 class="home__title">
+          <span class="home__first-name">Matthieu</span>
+          <span class="home__last-name">Oger</span>
         </h1>
       </header>
-      <p>
+      <p class="home__bio">
         <strong>I'm a product manager, developer and designer.</strong>
         I co-founded
         <a href="https://pixelnest.io/">Pixelnest Studio</a>
         in February 2014, where we created
-        <a href="http://steredenn.pixelnest.io/">Steredenn</a>
-        . I'm also an amateur street·travel photographer.
+        <a href="http://steredenn.pixelnest.io/">Steredenn</a>. I'm also an
+        amateur street·travel photographer.
       </p>
     </div>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/articles/">Articles</a></li>
-        <li><a href="/atom.xml">RSS</a></li>
-      </ul>
-    </nav>
+    <ul class="home__nav">
+      <li><a class="button home-button" href="/about/">About</a></li>
+      <li><a class="button home-button" href="/articles/">Articles</a></li>
+      <li>
+        <a class="button home-button" href="/atom.xml" target="_blank">
+          {{- partial "icons/rss.svg" . -}}
+          RSS
+        </a>
+      </li>
+    </ul>
 
-    <nav class="social-nav">
-      <ul>
-        {{ range (sort hugo.Data.social "order") }}
-          {{ $n := replace .name " " "" }}
-          {{ $d := .domain }}
-          {{ $h := .handle }}
-
-          {{ $display := printf "<span>%s</span>.<span>%s</span>/<span>%s</span>" $n $d $h | upper }}
-          <li>
-            <a href="{{ .url }}">
-              {{ $display | safeHTML }}
-            </a>
-          </li>
-        {{ end }}
-      </ul>
-    </nav>
+    <ul class="social-nav">
+      {{ range sort hugo.Data.social "order" }}
+        {{ $name := replace .name " " "" }}
+        {{ $icon := printf "icons/%s.svg" (lower $name) }}
+        <li>
+          <a
+            class="social-nav__link"
+            href="{{ .url }}"
+            style="--color: {{ .color | safeCSS }}"
+          >
+            <span class="social-nav__text">
+              <span>{{ $name }}</span>
+              {{- /* No whitespace: it reads as one address. */ -}}
+              <span class="social-nav__domain">.{{ .domain }}/</span>
+              {{- /* Same. */ -}}
+              <span class="social-nav__handle">{{ .handle }}</span>
+            </span>
+            <span class="social-nav__icon">{{- partial $icon . -}}</span>
+          </a>
+          {{ partial "tooltip.html" . }}
+        </li>
+      {{ end }}
+    </ul>
   </div>
 {{ end }}
