@@ -140,7 +140,7 @@ Side effect: asset URLs change (`/images/posts/2018-10-18/x.jpg` →
 | Tooltips on social icons | `Tooltip.js` (measures and positions in JS) | **Floating UI** (`@floating-ui/dom`). See note below. |
 | Social items fade/slide in on the home page | `react-pose`, random delay 0–250 ms, duration 500–2000 ms | CSS `@keyframes`, per-item `--delay`/`--duration` set inline by the template from fixed, index-based values (builds must be deterministic). Honor `prefers-reduced-motion`. |
 | Active menu button | Gatsby `activeClassName` | `aria-current="page"` set at build time, styled instead of `.selected`. Exact match only, as today. |
-| Page-load progress bar | `gatsby-plugin-nprogress` | Drop. No client-side routing anymore. |
+| Progress bar during in-site navigation | `gatsby-plugin-nprogress` (shown while Gatsby's client-side router loads the next page) | Drop. Navigation is plain page loads now; the browser shows its own progress. |
 | Google Analytics `UA-41853457-1` | plugin | Drop. Universal Analytics stopped processing in 2023. |
 
 Tooltip note. Decision: Floating UI. One module, `assets/js/index.js`:
@@ -167,7 +167,14 @@ year or two and delete the library.
 ### 4.5 Build chain
 
 - Remove `postcss`, `postcss-cli`, `autoprefixer` and the `postCSS` pipe in
-  `css.html`. Nothing in this CSS needs prefixing.
+  `css.html`. They were on `migration-hugo` only to run Autoprefixer, and
+  Autoprefixer has nothing to add here: the site's CSS is flexbox, grid,
+  transitions, transforms, gradients and custom properties, none of which
+  need a vendor prefix in any browser that also supports `@layer`. The one
+  prefixed property in use (`-webkit-text-size-adjust`) is already written by
+  hand in modern-normalize. Keeping them would cost three npm packages and
+  make Node a requirement of every CSS build. Matthieu was told and can
+  reverse this; if a prefix is ever needed, write it by hand.
 - Sass `@import` is deprecated and goes away in Dart Sass 3. `index.scss`
   nests `@import` inside `@layer`, which `@use` cannot do. Simplest fix: each
   partial wraps its own rules in `@layer name { … }`, and `index.scss` is the
@@ -227,7 +234,7 @@ allowlist file (`tests/pages.js`) so they are explicit.
 | D4 | Code token colors (Chroma vs Prism) | Confirmed; match background, padding, font and palette as closely as possible. |
 | D5 | Analytics and progress bar removed | Confirmed. |
 | D6 | Footnote ids, heading ids, extra ARIA roles | Accept. |
-| D7 | `/404/` directory page gone, `/404.html` kept | Accept. |
+| D7 | `/404/index.html` is not generated; `/404.html` is, as today | No visible change. GitHub Pages serves `/404.html` for any missing URL, in production and after the migration. Gatsby also wrote a duplicate at `/404/`; with Hugo that URL is simply missing, so it shows the same 404 page. |
 | D8 | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed) | Confirmed. |
 | D9 | Footer copyright year: 2022 in production, **2026** here | Confirmed. Update `copyright` in `hugo.toml`. |
 
@@ -331,8 +338,8 @@ remains is an ordinary visual regression suite for the site.
 Each phase ends with the listed specs green. Do them in order.
 
 **Phase 0: housekeeping**
-- Remove PostCSS packages and pipe. Fix the three Hugo deprecations and move
-  templates to the current layout.
+- Remove PostCSS packages and pipe. Add `prettier` as a dev dependency. Fix
+  the three Hugo deprecations and move templates to the current layout.
 - `hugo.toml`: `pagination.path = ''`, typographer disabled, copyright year
   2026.
 - `justfile`: `prod` calls `serve`, which is not installed; point it at
@@ -437,7 +444,8 @@ or current on 2026-11-14.
 | just | 1.59.0 | Binary, Homebrew | Task runner (`justfile`). |
 | `@playwright/test` | 1.65.1 | npm dev | All tests. Downloads its own Chromium (`npx playwright install chromium`). |
 | git | any | Binary | `just baseline` clones the production build. |
-| `prettier` + `prettier-plugin-go-template` | plugin 0.0.15 | npm dev, optional | Template formatting. The plugin is in `package.json` but `prettier` itself is not; add it or drop both. |
+| `prettier` | 3.x (latest) | npm dev | Formatting. Missing from `package.json` today; add it. |
+| `prettier-plugin-go-template` | 0.0.15 | npm dev | Lets Prettier format Hugo templates. Already configured. |
 
 **Services**
 
