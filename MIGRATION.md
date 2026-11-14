@@ -1,7 +1,8 @@
 # Gatsby → Hugo migration plan
 
 Branch: `migration-hugo-parity` (created from `migration-hugo` @ `8732fa0`).
-Written 2026-11-14 as a handoff. Read it top to bottom before touching anything.
+Written 2026-11-14 as a handoff, revised the same day after Matthieu's review.
+Read it top to bottom before touching anything.
 
 ## 1. Goal
 
@@ -19,17 +20,21 @@ Done means:
 
 ## 2. Hard rules
 
-1. **Never edit anything under `content/posts/`.** Posts are human-written.
-   `git diff --exit-code migration-hugo -- content/posts` must stay empty; it is
-   part of the test run (§6). If a post seems to need a change, stop and ask
-   Matthieu.
-2. Runtime dependencies: Hugo and Dart Sass. Nothing else.
+1. **Do not edit anything under `content/posts/` without Matthieu's approval.**
+   Posts are human-written. If a post seems to need a change, stop and ask.
+   An approved edit goes in **its own commit that touches only posts**, so it
+   can be audited. The test run (§6) diffs `content/posts` against
+   `migration-hugo` and fails on any file not in the approved list in
+   `tests/pages.js`. Approved so far: the `excerpt` typo fix (`c11423b`).
+2. Build dependencies: Hugo and Dart Sass. One shipped library:
+   `@floating-ui/dom`, for tooltips (Matthieu's choice), bundled by Hugo's
+   built-in `js.Build`. Nothing else.
 3. Dev dependencies: `@playwright/test` only (plus Prettier and its go-template
    plugin, which are already there for formatting).
 4. Simple Sass: partials, nesting, a few `$breakpoint` variables, one mixin at
    most. No functions, maps, loops, `@extend`.
-5. Minimal JS: one small ES module, no bundler. If it ever grows to several
-   files, use native modules with an import map.
+5. Minimal JS: one small ES module for the tooltips. No bundler beyond
+   `js.Build`, which the branch already uses.
 6. Do not reproduce Gatsby bugs or noise (hashed class names, `url=` attributes
    on links, `fill="[object Object]"`, `gatsby-focus-wrapper`).
 7. Commit only when asked. Never push or deploy.
@@ -43,12 +48,18 @@ Verified on 2026-11-14 with Hugo 0.170.0 (Homebrew, non-extended), Node 26.
 | `master` | Gatsby 2.14 source. Does not build on current Node without workarounds. |
 | Production build | `github.com/solarsailer/solarsailer.github.io`, `master` @ `33723e2` (2024-01-23). In sync with `master`: 88 posts, latest is `/2023/06/date-formats/`. **This is the baseline.** |
 | `migration-hugo` | Builds (93 pages) once the CSS partial is bypassed. Layout skeletons, post bundles, `data/social.json`, Sass layer structure (`reset, theme, base, app`) exist. No component styles, no meta, no feeds, no icons, no JS. |
-| Dart Sass | **Not installed** on this machine: `brew install sass/sass/sass`. |
+| Dart Sass | Reported installed by Matthieu, but `sass` is **not on the PATH** of zsh or fish and `hugo env` does not list it (checked 2026-11-14). Resolve first: `brew install sass/sass/sass`, then `hugo env` must show a dart-sass line. |
 | Old Gatsby source | Kept in `gatsby/` on this branch as the porting reference. |
 
 What already matches production: all 88 post URLs (including the 7 page
 bundles and `/about/`), `/archive/`, `/articles/`, the date format
 (`02 January 2006`), the pager size (9, giving 10 pages).
+
+Decisions taken by Matthieu on 2026-11-14: Playwright, CSS layers and Sass
+structure approved; Floating UI for tooltips; keep the pagination URL format;
+`/expo/` stays removed; analytics and progress bar dropped; curly quotes
+accepted; code highlighting may differ; copyright year updated; Google Fonts
+link kept for now; deploy out of scope.
 
 ## 4. Findings that shape the work
 
@@ -58,17 +69,32 @@ These were checked against the real outputs, not assumed.
 
 - **`:::` containers are not supported by Goldmark.** 17 blocks in 12 posts
   (`::: blockquote transcript|tldr|twitter-tweet`) currently render as literal
-  text. The output shape is regular: every block opens with
-  `<p>::: blockquote NAME\n` (once `:::blockquote`, no space) and closes with
-  `\n:::</p>`. Fix without touching posts: a `_partials/content.html` that runs
-  two `replaceRE` on `.Content` to emit `<blockquote class="NAME">…</blockquote>`,
-  as production does. Use that partial everywhere content is rendered (single,
-  articles list, feeds).
-- **Typographer is on by default** and rewrites `"` and `'` into curly
-  entities. Production keeps them straight. Set
-  `markup.goldmark.extensions.typographer.disable = true`.
-- **Heading ids**: Hugo adds `id` to headings, production has none. Set
-  `markup.goldmark.parser.autoHeadingID = false` for parity.
+  text. **Decision: keep the `:::` syntax in the posts.** The output shape is
+  regular: every block opens with `<p>::: blockquote NAME\n` (once
+  `:::blockquote`, no space) and closes with `\n:::</p>`. A
+  `_partials/content.html` runs two `replaceRE` on `.Content` to emit
+  `<blockquote class="NAME">…</blockquote>`, as production does. Use that
+  partial everywhere content is rendered (single, articles list, feeds).
+  Guard: a test asserts that no `:::` survives in any built page or feed, so
+  a block the regex misses cannot ship silently.
+
+  Alternatives, if the regex proves fragile (both need post edits, which
+  Matthieu allows here, in a dedicated commit):
+  - GitHub-style alerts, `> [!TRANSCRIPT]` on the first line of a normal
+    blockquote, mapped to a class by a `_markup/render-blockquote.html` hook.
+    Native to Hugo, portable syntax, but every line of the block needs `> `.
+  - Block attributes, a `{.transcript}` line after a normal blockquote, with
+    `markup.goldmark.parser.attribute.block = true`. Native, Hugo-specific.
+
+  Neither was tested on this Hugo version; try on one post before converting.
+- **Typographer stays on** (Hugo default; Matthieu accepts curly quotes).
+  Effect on the 88 posts: straight quotes and apostrophes become curly
+  (about 840 places), and 7 `--`/`---` become en/em dashes. No ellipsis or
+  guillemet conversions occur. The content test normalizes these characters
+  before comparing; the visual test will show small text-width shifts on the
+  affected lines, which is expected (§5, D8).
+- **Heading ids**: Hugo adds `id` to headings, production has none. Keep the
+  Hugo default; the content test ignores them.
 - **Footnotes**: same classes (`footnotes`, `footnote-ref`, `footnote-backref`),
   different ids (`fn:1` vs `fn-1`) and extra `role` attributes. Accept; the
   content test normalizes ids.
@@ -102,8 +128,11 @@ Side effect: asset URLs change (`/images/posts/2018-10-18/x.jpg` →
   1.0 at `/feed.json`, both linked from `<head>`, both excluding
   `category: meta` (the About page). Needs two custom output formats and
   templates. The current `rss` output (`/index.xml`) should go.
-- **Pagination URLs**: production is `/articles/2/` … `/articles/10/`, Hugo is
-  `/articles/page/2/`. See §5.
+- **Pagination URLs**: production is `/articles/2/` … `/articles/10/`, Hugo's
+  default is `/articles/page/2/`. Setting `pagination.path = ''` yields exactly
+  the production URLs (verified on Hugo 0.170). **Decision: keep the existing
+  format.** Hugo also emits `/articles/1/` as a redirect to `/articles/`,
+  which is harmless.
 - **Meta tags**: `layouts/partials/meta.html` is empty. Port `Meta.js` and the
   per-post overrides in `PostTemplate.js` (title, `og:`/`twitter:` title, url,
   description from `excerpt` or `excerptQuote`).
@@ -113,19 +142,32 @@ Side effect: asset URLs change (`/images/posts/2018-10-18/x.jpg` →
 
 | Behavior | Source | Hugo approach |
 |---|---|---|
-| Tooltips on social icons | `Tooltip.js` (measures and positions in JS) | Native `popover` + CSS anchor positioning (`position-try-fallbacks: flip-block` replaces the "show below if near the top" logic). See note below. |
+| Tooltips on social icons | `Tooltip.js` (measures and positions in JS) | **Floating UI** (`@floating-ui/dom`). See note below. |
 | Social items fade/slide in on the home page | `react-pose`, random delay 0–250 ms, duration 500–2000 ms | CSS `@keyframes`, per-item `--delay`/`--duration` set inline by the template from fixed, index-based values (builds must be deterministic). Honor `prefers-reduced-motion`. |
 | Active menu button | Gatsby `activeClassName` | `aria-current="page"` set at build time, styled instead of `.selected`. Exact match only, as today. |
 | Page-load progress bar | `gatsby-plugin-nprogress` | Drop. No client-side routing anymore. |
 | Google Analytics `UA-41853457-1` | plugin | Drop. Universal Analytics stopped processing in 2023. |
 
-Popover note: the Popover API is click- or script-triggered. Hover needs either
-the `interestfor` attribute (interest invokers) or a few lines of JS
-(`pointerenter`/`focus` → `showPopover()`, `pointerleave`/`blur` →
-`hidePopover()`). Check current browser support for `interestfor` and for
-anchor positioning before choosing; if `interestfor` is not in all three
-engines, ship the ~15-line JS module. That module is then the only JS on the
-site.
+Tooltip note. Decision: Floating UI. One module, `assets/js/index.js`:
+
+- markup: each social link is followed by a `<div class="tooltip" role="tooltip">`
+  rendered by the template, hidden by default, linked with `aria-describedby`;
+- `pointerenter`/`focus` show it, `pointerleave`/`blur` hide it (toggle a
+  class, keep the existing opacity/translate transition);
+- position with `computePosition(link, tooltip, {placement: 'top', middleware:
+  [offset(20), flip(), shift({padding: 8})]})`. `flip()` replaces the old
+  "show below when closer than 100px to the top" rule;
+- import `@floating-ui/dom` from `node_modules`; `js.Build` bundles and
+  minifies it into the single script. No import map needed.
+
+The native Popover API is not required with this approach. Add
+`popover="manual"` only if a tooltip ends up clipped by an ancestor.
+
+For the record, the dependency-free route is CSS anchor positioning. It
+reached all engines only in January 2026 (Firefox 147; Safari 26 in September
+2025), so older Safari and Firefox would get misplaced tooltips. Hover
+triggering needs JS either way: `interestfor` is Chromium-only. Revisit in a
+year or two and delete the library.
 
 ### 4.5 Build chain
 
@@ -177,34 +219,42 @@ assets/sass/
 Class names: production's are hashed, so pick readable ones in the style
 already used on the branch (`page-header`, `page-content__constraints`).
 
-## 5. Accepted deviations (need Matthieu's confirmation)
+## 5. Accepted deviations
 
-Each has a recommended default. The tests encode them in one allowlist file so
-they are explicit.
+Confirmed by Matthieu unless marked otherwise. The tests encode them in one
+allowlist file (`tests/pages.js`) so they are explicit.
 
 | # | Deviation | Recommendation |
 |---|---|---|
-| D1 | `/articles/N/` becomes `/articles/page/N/` | Accept, and add `aliases` so the old URLs redirect. Low-value URLs. |
-| D2 | `/expo/` exists in production, was removed on the branch | Accept removal (it was a temporary page). |
-| D3 | Post asset URLs move into the bundle path | Accept. Optionally keep `static/images/posts/` copies if old hotlinks matter. |
-| D4 | Code token colors (Chroma vs Prism) | Accept; match background, padding, font and palette as closely as possible. |
-| D5 | Analytics and progress bar removed | Accept. |
-| D6 | Footnote ids, heading-free ids, extra ARIA roles | Accept. |
+| D1 | ~~Pagination URLs change~~ | Dropped: URLs are kept (§4.3). |
+| D2 | `/expo/` exists in production, was removed on the branch | Confirmed. |
+| D3 | Post asset URLs move into the bundle path (see below) | **Still open.** Default: accept. |
+| D4 | Code token colors (Chroma vs Prism) | Confirmed; match background, padding, font and palette as closely as possible. |
+| D5 | Analytics and progress bar removed | Confirmed. |
+| D6 | Footnote ids, heading ids, extra ARIA roles | Accept. |
 | D7 | `/404/` directory page gone, `/404.html` kept | Accept. |
+| D8 | Curly quotes and dashes from the typographer | Confirmed. |
+| D9 | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed) | Confirmed. |
+| D10 | Footer copyright year: 2022 in production, **2026** here | Confirmed. Update `copyright` in `hugo.toml`. |
+
+D3 in plain terms: today a post image lives at
+`/images/posts/2018-10-18/steredenn.jpg`. On the branch the files were moved
+next to their post, so the same image is served at
+`/2018/10/unity-iphone-x-home-indicator/steredenn.jpg`. The site itself is
+fine. What breaks is anything outside the site still pointing at the old
+address: another site embedding the image, a feed reader holding an old copy
+of a post, a search engine's image index. If that matters, keep a copy of the
+17 files at their old paths under `static/` (about 1 MB for the images, plus
+three videos and one mp3); the tests can then require the old URLs too.
 
 Open questions that are not deviations:
 
-- **Q1 front matter typo**: `2015/09/18/what-makes-indie-hit.md` has
-  `exceprt:` instead of `excerpt:`, so that post shows no excerpt today.
-  Parity says leave it. Matthieu to fix by hand if wanted.
-- **Q2 fonts**: production loads Rubik and Fira Mono from Google Fonts. Keep
-  the same `<link>` during the migration so pixels match. Self-hosting the
-  woff2 files is a good follow-up (no third-party request), after parity.
-- **Q3 deploy**: `just deploy` is `TBD` and Travis is dead. Out of scope here;
-  decide between pushing `public/` to `solarsailer.github.io` as before or a
-  GitHub Pages Action.
-- **Q4 copyright year**: production says 2022, `hugo.toml` says 2024. Tests
-  will flag it; pick one.
+Settled, kept for context:
+
+- **Fonts**: production loads Rubik and Fira Mono from Google Fonts. Keep the
+  same `<link>` during the migration so pixels match. Self-hosting the woff2
+  files is a follow-up, after parity.
+- **Deploy**: `just deploy` is `TBD` and Travis is dead. Out of scope here.
 
 ## 6. Tests
 
@@ -245,13 +295,14 @@ without the project name so both sides share the same snapshot files.
 ### 6.2 Specs
 
 1. **`urls`**: every `index.html` in the baseline has a counterpart in
-   `public/`, minus the allowlist; aliases of D1 redirect; `sitemap.xml`,
-   `atom.xml`, `feed.json`, `404.html`, `CNAME`, favicons exist.
+   `public/`, minus the allowlist; `sitemap.xml`, `atom.xml`, `feed.json`,
+   `404.html`, `CNAME`, favicons exist; no `:::` in any built page or feed.
 2. **`content`**: for each page, load both sides with JavaScript disabled and
    run the same `page.evaluate` extractor over `#page`. It returns a
    normalized tree: tag names, collapsed text, `href`/`src`/`alt`/`title`,
    and `class` only for author classes inside post content (`tldr`,
-   `transcript`, `twitter-tweet`, `more`, `footnote-ref`, …). It ignores
+   `transcript`, `twitter-tweet`, `more`, `footnote-ref`, …). It folds
+   typographic quotes and dashes to ASCII (D8), ignores
    styled-components classes, comments, the tooltip DOM, heading ids, and
    maps the known differences (code wrapper, footnote ids, asset paths per
    D3). Compare `<head>` too: `title`, the `meta` name/property/content set,
@@ -272,7 +323,12 @@ without the project name so both sides share the same snapshot files.
 
    Start with a loose `maxDiffPixelRatio` to see progress, tighten to near
    zero at the end. Same browser, same fonts and same CSS values render the
-   same pixels, so near-exact is realistic outside D4.
+   same pixels, so near-exact is realistic on pages without code (D4). Curly
+   quotes (D8) change glyph widths and can re-wrap a line, which shifts
+   everything below it. To keep the visual test meaningful, build the Hugo
+   side for this spec with the typographer disabled
+   (`HUGO_MARKUP_GOLDMARK_EXTENSIONS_TYPOGRAPHER_DISABLE=true`); production
+   builds keep it on.
 5. **`interactions`**: element screenshots of hover/focus states that static
    screenshots miss: buttons, menu buttons, post recap card, body links,
    footnote back-reference, tooltip open (above, and below near the top),
@@ -293,8 +349,9 @@ remains is an ordinary visual regression suite for the site.
 Each phase ends with the listed specs green. Do them in order.
 
 **Phase 0: housekeeping**
-- Install Dart Sass. Remove PostCSS packages and pipe. Fix the three Hugo
-  deprecations and move templates to the current layout.
+- Get Dart Sass visible to Hugo (§3). Remove PostCSS packages and pipe. Fix
+  the three Hugo deprecations and move templates to the current layout.
+- `hugo.toml`: `pagination.path = ''`, copyright year 2026.
 - Restructure Sass to `@use` + self-layered partials (§4.5). The build must
   work with real CSS before anything else.
 
@@ -303,9 +360,12 @@ Each phase ends with the listed specs green. Do them in order.
 - Write `urls`, `content`, `feeds`; they fail. Generate baseline screenshots.
 
 **Phase 2: markup parity** → `urls`, `content`, `feeds` green
-- `hugo.toml`: typographer off, heading ids off, Chroma classes, output
-  formats for Atom and JSON Feed, drop `rss`, params for author, description,
+- `hugo.toml`: Chroma classes, output formats for Atom (`/atom.xml`) and
+  JSON Feed (`/feed.json`), drop `rss`, params for author, description,
   keywords, handles (from `gatsby-config.js`).
+- Feeds, meta and 404 first: they are pure templates with exact expected
+  output in the baseline, so they turn `feeds` and half of `content` green
+  early.
 - `_partials/content.html` (containers + relative URLs, §4.1, §4.2).
 - `_markup/render-codeblock.html`.
 - Templates, ported from the React components: `baseof`, `meta`, `header`
@@ -318,7 +378,6 @@ Each phase ends with the listed specs green. Do them in order.
 - Icons: one SVG partial per icon under `_partials/icons/`, taken from
   `Icon.js`; color through `currentColor` / a `--color` custom property set
   inline from `data/social.json`.
-- Aliases for D1.
 
 **Phase 3: styles** → `visual` converging
 - Port file by file following the map in §4.6, source of truth being
@@ -327,7 +386,7 @@ Each phase ends with the listed specs green. Do them in order.
 - Chroma palette in `content/code.scss`.
 
 **Phase 4: behavior** → `interactions` green
-- Tooltip (popover + anchor positioning, hover trigger per §4.4).
+- Tooltip with Floating UI (§4.4): `npm i @floating-ui/dom`.
 - Home social nav entrance animation.
 
 **Phase 5: convergence**
