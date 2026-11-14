@@ -38,6 +38,9 @@ export const APPROVED_POST_EDITS = [
   "content/posts/2022/08/03/playbooks.md",
   "content/posts/2023/02/07/alpha-value-css-color-properties.md",
 
+  // Blank line before the nested lists, to keep the gap above them.
+  "content/posts/2023/06/09/date-formats.md",
+
   // List made tight (no blank line between items).
   "content/posts/2013/07/01/firefox-os.md",
 
