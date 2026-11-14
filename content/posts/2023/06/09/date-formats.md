@@ -10,19 +10,14 @@ Displaying a date is extremely common in digital products, but using a *clear fo
 
 Here are just a few examples of what is possible:
 - `DD-MM-YYYY` → "06-04-2022"
-
   - Format commonly used in European countries (or its variant `DD/MM/YYYY`)
 - `MM-DD-YYYY` → "04-06-2022"
-
   - Format used by the US, which puts the month first, while the European version puts it second 😵‍💫
 - `YYYY-MM-DD` → "2022-04-06"
-
   - As defined in the [ISO 8601][iso] standard
 - `DD Month YYYY` → "06 April 2022"
-
   - Display the month in text
 - `DD Mon YYYY` → "06 Apr 2022"
-
   - Shorter variant of the previous example
 - [And many, many, many more…][dates]
 
@@ -39,7 +34,6 @@ For technical, compact and/or dense data, I use the ISO 8601 version: `YYYY-MM-D
 Why?
 - This is the only format that can be sorted alphabetically, which is handy for file explorers or data tables
 - There is **only one way** to read it: the year first, then the month and finally the day
-
   - When using the most common alternatives `DD-MM-YYYY` or `MM-DD-YYYY`, you cannot tell if the month or the day is first, except by looking at the current language of the app (and you can still be wrong if you cannot distinguish if it's British or American English)
 - The `-` symbol works everywhere, while `/` can be refused by some (old) filesystems
 
