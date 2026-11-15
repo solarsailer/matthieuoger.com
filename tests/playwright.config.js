@@ -1,4 +1,4 @@
-import { defineConfig } from "@playwright/test"
+import { defineConfig, devices } from "@playwright/test"
 
 import { BASELINE_URL, HUGO_URL } from "./pages"
 
@@ -35,6 +35,19 @@ export default defineConfig({
     {
       name: "hugo",
       use: { baseURL: HUGO_URL }
+    },
+
+    // Behavior of the tooltips in the other browser engines
+    // (`just test-browsers`; needs `npx playwright install firefox webkit`).
+    {
+      name: "firefox",
+      testMatch: "tooltips.spec.js",
+      use: { ...devices["Desktop Firefox"], baseURL: HUGO_URL }
+    },
+    {
+      name: "webkit",
+      testMatch: "tooltips.spec.js",
+      use: { ...devices["Desktop Safari"], baseURL: HUGO_URL }
     }
   ],
 

@@ -2,8 +2,9 @@
 // Tooltips.
 //
 // A tooltip is the popover that follows a link (see tooltip.html).
-// It is displayed above the link when the link is hovered or focused.
-// The browser handles the rest (top layer, see tooltip.scss for the look).
+// It is displayed above the link while the link is hovered with a mouse,
+// or focused with the keyboard. The browser handles the rest (top layer);
+// see tooltip.scss for the look and the animation.
 // -------------------------------------------------------------
 
 // Distance between the center of the link and the tooltip
@@ -16,11 +17,16 @@ const TOP_LIMIT = 100
 // Minimal distance with the edges of the screen.
 const MARGIN = 8
 
-function show(link, tooltip) {
-  tooltip.showPopover()
+function isOpen(tooltip) {
+  return tooltip.matches(":popover-open")
+}
 
+function place(link, tooltip) {
   const target = link.getBoundingClientRect()
-  const { width, height } = tooltip.getBoundingClientRect()
+
+  // The size, without the animation (which moves the tooltip).
+  const width = tooltip.offsetWidth
+  const height = tooltip.offsetHeight
 
   const isBelow = target.top < TOP_LIMIT
   const gap = DISTANCE - target.height / 2
@@ -38,19 +44,58 @@ function show(link, tooltip) {
   tooltip.dataset.placement = isBelow ? "bottom" : "top"
 }
 
+function show(link, tooltip) {
+  // Opening an open popover is an error.
+  if (!isOpen(tooltip)) tooltip.showPopover()
+
+  place(link, tooltip)
+}
+
 function hide(tooltip) {
-  tooltip.hidePopover()
+  if (isOpen(tooltip)) tooltip.hidePopover()
+}
+
+function connect(link, tooltip) {
+  // A tooltip stays as long as one of the two reasons to show it remains.
+  const isHovered = () => link.matches(":hover")
+  const isFocused = () => link.matches(":focus-visible")
+
+  link.addEventListener("pointerenter", (event) => {
+    // A finger does not hover: a tap follows the link right away.
+    if (event.pointerType !== "touch") show(link, tooltip)
+  })
+
+  link.addEventListener("pointerleave", () => {
+    if (!isFocused()) hide(tooltip)
+  })
+
+  link.addEventListener("focus", () => {
+    if (isFocused()) show(link, tooltip)
+  })
+
+  link.addEventListener("blur", () => {
+    if (!isHovered()) hide(tooltip)
+  })
 }
 
 // Without the Popover API (browsers older than 2024), no tooltip.
 if ("popover" in HTMLElement.prototype) {
-  for (const tooltip of document.querySelectorAll(".tooltip")) {
-    const link = tooltip.previousElementSibling
+  const tooltips = [...document.querySelectorAll(".tooltip")]
 
-    link.addEventListener("pointerenter", () => show(link, tooltip))
-    link.addEventListener("focus", () => show(link, tooltip))
-
-    link.addEventListener("pointerleave", () => hide(tooltip))
-    link.addEventListener("blur", () => hide(tooltip))
+  for (const tooltip of tooltips) {
+    connect(tooltip.previousElementSibling, tooltip)
   }
+
+  const hideAll = () => tooltips.forEach(hide)
+
+  // A tooltip must be dismissable without moving the pointer or the focus.
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") hideAll()
+  })
+
+  // Its position is computed once: it is wrong after a resize.
+  window.addEventListener("resize", hideAll)
+
+  // Nothing must be left open in a page restored from the history.
+  window.addEventListener("pagehide", hideAll)
 }

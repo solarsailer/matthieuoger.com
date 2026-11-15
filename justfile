@@ -15,6 +15,10 @@ prod: build
 test *args: build
 	npx playwright test -c tests --project=hugo {{args}}
 
+# Run the tooltip tests in Firefox and Safari's engine as well.
+test-browsers: build
+	npx playwright test -c tests --project=hugo --project=firefox --project=webkit tooltips.spec.js
+
 # Fetch the production build and record the reference screenshots.
 baseline:
 	rm -rf tests/.baseline tests/snapshots

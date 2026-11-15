@@ -52,6 +52,10 @@
         transform: translateY(0);
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 
   /* On the home page, tooltips are for the icons-only layout (small screens). */

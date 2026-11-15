@@ -54,6 +54,7 @@
           <a
             class="social-nav__link"
             href="{{ .url }}"
+            aria-label="{{ .name }}"
             style="--color: {{ .color | safeCSS }}; --delay: {{ $delay }}ms; --duration: {{ $duration }}ms"
           >
             <span class="social-nav__text">
