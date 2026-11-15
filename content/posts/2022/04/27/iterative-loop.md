@@ -8,7 +8,7 @@ excerptQuote:
 
 [Cole Wehrle][podcast]:
 
-> [!transcript]
+> [!TRANSCRIPT]
 > To make games, **you have to walk through something called the iterative loop.**
 >
 > 1. You have to have an idea,

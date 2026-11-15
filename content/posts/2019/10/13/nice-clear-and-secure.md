@@ -8,7 +8,7 @@ excerptQuote:
 
 [Federico Viticci][ep]:
 
-> [!transcript]
+> [!TRANSCRIPT]
 > So security, obviously, and authentication, these are complicated topics, and they are complicated to engineer, they are complicated to explain. But I think, for security to be effective, and maybe this sounds a little too simplistic but bear with me.
 >
 > **For security to be effective, it needs to be used, and for good security practices to be used, they need to be nice, they need to be elegant, they need to be clear.**

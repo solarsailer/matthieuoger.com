@@ -40,7 +40,7 @@ As an aparté, but similarly, Craig also wrote this sentence that I like a lot i
 
 Related to this topic, [John Siracusa](https://overcast.fm/+R7DVyEUt0/1:37:42) in [episode #337 of ATP](https://atp.fm/episodes/337):
 
-> [!transcript]
+> [!TRANSCRIPT]
 > That's what I want. I don't want to be waiting for the computer for things that I shouldn't have to be waiting for the computer for. For small interactive things. That involves, like, it's not saying "oh yes, eliminate animations because it takes too long". I just want everything to be interactive… all the time.
 >
 > I want it to be responsive to my input.

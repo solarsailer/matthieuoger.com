@@ -6,7 +6,7 @@ excerptQuote:
   quote: "Advertising is effective only because so many people think “Ads don't influence me” and “Ads give me what I want for free”."
 ---
 
-> [!tweet]
+> [!TWEET]
 > Advertising is effective *only* because so many people think “Ads don't influence me” and “Ads give me what I want for free”.
 >
 > — Jonathan Blow ([@Jonathan_Blow](https://twitter.com/Jonathan_Blow/status/372077731531350017))

@@ -8,7 +8,7 @@ excerptQuote:
 
 [Kevin Systrom][article]:
 
-> [!transcript]
+> [!TRANSCRIPT]
 > […] I want to point out that when we launched Instagram, it was a filter app first for everyone. Most people didn’t even know that there was a network behind it. It was a filter app. _My intention was always for it to be a social app, and I was bummed when everyone talked about it as a filter app._
 >
 > But <mark>what I realized in there is that the best networks are first to utility, and then they piggyback on that utility, and they become a network</mark>. I think Facebook’s actually a great example of this. It may not be so clear, but _it was clearly just a directory at the beginning_. It was about finding people, communicating with them. And then it became the social network that it became once they added the news feed and all this other stuff.

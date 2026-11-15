@@ -8,7 +8,7 @@ excerptQuote:
 
 [Jonathan Lefèvre](https://medium.com/@djo/service-client-et-outils-de-productivité-lalignement-des-passions-a4a59216d6a7) (loosely translated from French[^1]):
 
-> [!transcript]
+> [!TRANSCRIPT]
 > The topic of _scale_ is as inevitable as it is hard, and seems so at odds with the human customer service idea, difficult to automate just by its own definition. Even the enterprises for which customer service is not a priority can find themselves confronted to the exact same problem. All of them must think about the best organization possible to handle efficiently the endless influx of requests and questions.
 >
 > […] But this has mostly allowed me to realize what was truly making the strength of the customer service at Capitaine Train: its operational efficiency. In the end, if we could manage 2 millions of customers with a small team of 15 people, it was because we were extremely well equipped.
