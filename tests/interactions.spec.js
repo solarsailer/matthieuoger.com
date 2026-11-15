@@ -1,12 +1,8 @@
 import { expect, test } from "@playwright/test"
 
-import { hugoUrl } from "./pages"
-
 // -------------------------------------------------------------
-// Interactions: same hover states and tooltips as production.
-//
-// Like visual.spec.js, references are recorded from the Gatsby build.
-// Selectors only use what both builds have in common (ids and tags).
+// Interactions: hover states and tooltips look like their reference
+// screenshot (recorded with `just snapshots`, like visual.spec.js).
 // -------------------------------------------------------------
 
 const POST = "/2018/10/unity-iphone-x-home-indicator/"
@@ -28,13 +24,17 @@ const CASES = [
   { name: "post-date", url: POST, target: "#page_content article footer a" },
 
   // Lists.
-  { name: "page-title", url: "/articles/2/", target: "#page_content h1 a" },
+  { name: "page-title", url: "/articles/p/2/", target: "#page_content h1 a" },
   {
     name: "pagination",
-    url: "/articles/2/",
+    url: "/articles/p/2/",
     target: "#page_content h1 + div a"
   },
-  { name: "post-recap", url: "/articles/2/", target: "#page_content ul li a" },
+  {
+    name: "post-recap",
+    url: "/articles/p/2/",
+    target: "#page_content ul li a"
+  },
   { name: "archive-recap", url: "/archive/", target: "#page_content ul li a" },
 
   // Footer, with its tooltips.
@@ -91,33 +91,19 @@ const CASES = [
   }
 ]
 
-// Time for scripted animations and tooltips to settle.
-const SETTLE = 2500
-
 for (const { name, url, target, width = 1280 } of CASES) {
-  test(`hover: ${name}`, async ({ page }, testInfo) => {
-    const isBaseline = testInfo.project.name === "baseline"
-
-    await page.route(/google-analytics\.com/, (route) => route.abort())
-
+  test(`hover: ${name}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 })
-    await page.goto(isBaseline ? url : hugoUrl(url), { waitUntil: "load" })
+    await page.goto(url, { waitUntil: "load" })
     await page.evaluate(() => document.fonts.ready)
-    await page.waitForTimeout(url === "/" ? SETTLE : 250)
 
     const element = page.locator(target).first()
     await element.scrollIntoViewIfNeeded()
     await element.hover()
-    await page.waitForTimeout(500)
 
-    await expect(page).toHaveScreenshot(`hover-${name}.png`, {
-      mask: [
-        page.locator("#page_footer > p"), // D9: the copyright year.
-        // D14: the "Articles" menu button is now highlighted on its pages.
-        ...(url.startsWith("/articles/")
-          ? [page.locator("#page_header li:nth-child(2)")]
-          : [])
-      ]
-    })
+    // Time for the tooltip to be placed.
+    await page.waitForTimeout(250)
+
+    await expect(page).toHaveScreenshot(`hover-${name}.png`)
   })
 }

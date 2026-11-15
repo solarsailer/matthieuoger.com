@@ -70,7 +70,6 @@ public
 yarn-error.log
 
 # Tests.
-/tests/.baseline
 /tests/snapshots
 /tests/results
 /tests/report

@@ -72,3 +72,15 @@ just prod     # Production build, served locally
 just format   # Format templates, styles, scripts and tests
 just test     # Build and run the tests
 ```
+
+## Tests
+
+The tests compare each page with a reference screenshot. These are not in the repository: record them before a change, from a state of the site that is known to be good.
+
+```
+just snapshots       # Record the reference screenshots
+just test            # Build, then compare (report in tests/report/)
+just test-browsers   # Tooltips in Firefox and Safari's engine too
+```
+
+`just test-browsers` needs `npx playwright install firefox webkit` once.

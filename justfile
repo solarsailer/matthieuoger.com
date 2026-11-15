@@ -1,7 +1,3 @@
-# Production build, used as the reference for the tests during the migration.
-baseline_repo := "https://github.com/solarsailer/solarsailer.github.io.git"
-baseline_commit := "33723e2d8fc7c8339ff337ab25457f58dfe56661"
-
 start:
 	@hugo server -p 8000
 
@@ -11,21 +7,19 @@ build: clean
 prod: build
 	@node tests/serve.mjs public 8000
 
-# Run the tests against the Hugo build. Example: just test content.spec.js
+# Build the site and run the tests. Example: just test feeds.spec.js
 test *args: build
-	npx playwright test -c tests --project=hugo {{args}}
+	npx playwright test -c tests --project=chromium {{args}}
 
 # Run the tooltip tests in Firefox and Safari's engine as well.
 test-browsers: build
-	npx playwright test -c tests --project=hugo --project=firefox --project=webkit tooltips.spec.js
+	npx playwright test -c tests tooltips.spec.js
 
-# Fetch the production build and record the reference screenshots.
-baseline:
-	rm -rf tests/.baseline tests/snapshots
-	git clone --quiet {{baseline_repo}} tests/.baseline
-	git -C tests/.baseline checkout --quiet {{baseline_commit}}
-	rm -rf tests/.baseline/.git
-	npx playwright test -c tests --project=baseline --update-snapshots
+# Record the reference screenshots from the current state of the site.
+# Do it before a change, on a state that is known to be good.
+snapshots: build
+	rm -rf tests/snapshots
+	npx playwright test -c tests --project=chromium visual.spec.js interactions.spec.js --update-snapshots
 
 # Generate the colors of code blocks from one of Hugo's styles
 # (list: https://xyproto.github.io/splash/docs/). Example: just code-theme github

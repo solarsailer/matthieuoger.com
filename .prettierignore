@@ -1,13 +1,9 @@
 # Build output and test artifacts.
 public
 resources
-tests/.baseline
 tests/snapshots
 tests/results
 tests/report
-
-# Old site, kept for reference.
-gatsby
 
 # Posts are written by hand.
 content
