@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test"
 
+import { open } from "./pages"
+
 // -------------------------------------------------------------
 // Interactions: hover states and tooltips look like their reference
 // screenshot (recorded with `just snapshots`, like visual.spec.js).
@@ -93,16 +95,17 @@ const CASES = [
 
 for (const { name, url, target, width = 1280 } of CASES) {
   test(`hover: ${name}`, async ({ page }) => {
-    await page.setViewportSize({ width, height: 900 })
-    await page.goto(url, { waitUntil: "load" })
-    await page.evaluate(() => document.fonts.ready)
+    await open(page, url, width)
+
+    // On the home page, links appear one after the other (up to 2.25s).
+    if (url === "/") await page.waitForTimeout(2500)
 
     const element = page.locator(target).first()
     await element.scrollIntoViewIfNeeded()
     await element.hover()
 
-    // Time for the tooltip to be placed.
-    await page.waitForTimeout(250)
+    // Time for the tooltip to be placed, and for the hover state to settle.
+    await page.waitForTimeout(500)
 
     await expect(page).toHaveScreenshot(`hover-${name}.png`)
   })

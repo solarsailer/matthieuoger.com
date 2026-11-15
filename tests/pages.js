@@ -67,6 +67,20 @@ export const REPRESENTATIVE_PAGES = [
 export const MAIN_WIDTHS = [1280, 375]
 export const ALL_WIDTHS = [1700, 1280, 850, 680, 560, 480, 375, 320]
 
+// Opens a page and waits until it is ready for a screenshot: fonts come
+// from the network (Google Fonts) and are only requested once the page
+// is laid out, so "loaded" is not enough.
+export async function open(page, url, width) {
+  await page.setViewportSize({ width, height: 900 })
+  await page.goto(url, { waitUntil: "load" })
+
+  await page.waitForFunction(
+    () =>
+      document.fonts.status === "loaded" &&
+      [...document.fonts].some((font) => font.status === "loaded")
+  )
+}
+
 // '/2015/09/rule-of-two/' → '2015-09-rule-of-two'.
 export function slugify(url) {
   return url.replace(/^\/|\/$/g, "").replace(/[/.]/g, "-") || "home"

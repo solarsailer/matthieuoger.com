@@ -5,6 +5,7 @@ import {
   MAIN_WIDTHS,
   PAGES,
   REPRESENTATIVE_PAGES,
+  open,
   slugify
 } from "./pages"
 
@@ -22,9 +23,7 @@ function widthsFor(url) {
 for (const url of [...new Set([...PAGES, ...REPRESENTATIVE_PAGES])]) {
   for (const width of widthsFor(url)) {
     test(`${url} at ${width}px`, async ({ page }) => {
-      await page.setViewportSize({ width, height: 900 })
-      await page.goto(url, { waitUntil: "load" })
-      await page.evaluate(() => document.fonts.ready)
+      await open(page, url, width)
 
       await expect(page).toHaveScreenshot(`${slugify(url)}-${width}.png`, {
         fullPage: true,
