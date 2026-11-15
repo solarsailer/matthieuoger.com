@@ -12,5 +12,8 @@ gatsby
 # Posts are written by hand.
 content
 
+# Generated (see `just code-theme`).
+assets/sass/layers/code-theme.scss
+
 # Templates are formatted by gotmplfmt (see `just format`).
 layouts

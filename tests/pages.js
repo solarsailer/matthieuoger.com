@@ -74,9 +74,11 @@ export const VISUAL_DIFFERENCES = {
   "/articles/9/": SAME_DAY_ORDER,
   "/articles/6/": "D8: one more excerpt ('excerpt' typo fixed)",
 
-  // D4: this page displays a post with code; at this width, the different
-  // token colors weigh just above the tolerance.
-  "/articles/@320": "D4: code colors",
+  // D4: code blocks have their own theme (Catppuccin Latte, light),
+  // production's was dark.
+  "/2015/09/semicolon-comma-programming/": "D4: theme of code blocks",
+  "/2023/02/alpha-value-css-color-properties/": "D4: theme of code blocks",
+  "/articles/": "D4: theme of code blocks (it displays a post with code)",
 
   // D15: the author line of this tweet is reworded; it wraps differently
   // on narrow screens.

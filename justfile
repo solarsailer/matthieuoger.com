@@ -27,6 +27,11 @@ baseline:
 	rm -rf tests/.baseline/.git
 	npx playwright test -c tests --project=baseline --update-snapshots
 
+# Generate the colors of code blocks from one of Hugo's styles
+# (list: https://xyproto.github.io/splash/docs/). Example: just code-theme github
+code-theme style="catppuccin-latte":
+	@{ echo "@layer vendor {"; hugo gen chromastyles --style={{style}}; echo "}"; } > assets/sass/layers/code-theme.scss
+
 # Format the code: templates with gotmplfmt (tabs, the Go convention),
 # everything else with Prettier (two spaces).
 format:

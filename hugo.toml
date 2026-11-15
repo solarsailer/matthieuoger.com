@@ -5,6 +5,11 @@ locale = 'en-us'
 # Metadata.
 title = 'Matthieu Oger'
 
+# Version of Hugo this site is built and tested with.
+# An older one prints a warning.
+[module.hugoVersion]
+  min = '0.170.0'
+
 [params]
   author = 'Matthieu Oger'
   description = 'I am a product manager, developer and designer from France. Co-founder of Pixelnest Studio.'

@@ -132,6 +132,10 @@ test("atom.xml is well-formed and has the required elements", async ({
       error: document.querySelector("parsererror")?.textContent ?? null,
       root: feed.localName,
       namespace: feed.namespaceURI,
+      // An id or a date must not contain any whitespace.
+      spaced: [...document.querySelectorAll("id, updated, uri, icon")].filter(
+        (x) => /\s/.test(x.textContent)
+      ).length,
       // RFC 4287: a feed and its entries must have an id, a title and a date.
       feed: ["id", "title", "updated"].filter((x) => !has(feed, x)),
       entries: entries.filter(
@@ -146,6 +150,7 @@ test("atom.xml is well-formed and has the required elements", async ({
     error: null,
     root: "feed",
     namespace: "http://www.w3.org/2005/Atom",
+    spaced: 0,
     feed: [],
     entries: 0,
     count: JSON.parse(read(HUGO_DIR, "feed.json")).items.length
