@@ -26,12 +26,9 @@ npx playwright install chromium
 
 ## Writing
 
-Posts are Markdown files in `content/posts/<year>/<month>/<day>/`. A post with
-files (images, videos…) is a folder: the text is in `index.md`, the files next
-to it. They are named without a path, in links and images alike.
+Posts are Markdown files in `content/posts/<year>/<month>/<day>/`. A post with files (images, videos…) is a folder: the text is in `index.md`, the files next to it. They are named without a path, in links and images alike.
 
-A quote can have a kind, shown as a small label above it. Kinds: `TRANSCRIPT`,
-`TLDR`, `TWEET`.
+A quote can have a kind, shown as a small label above it. Kinds: `TRANSCRIPT`, `TLDR`, `TWEET`.
 
 ```
 > [!TRANSCRIPT]
@@ -56,8 +53,7 @@ Using the home indicator ([download video](action.mp4)).
 {{< /video >}}
 ```
 
-Code blocks are colored with one of Hugo's themes: `just code-theme <name>`
-changes it.
+Code blocks are colored with one of Hugo's themes: `just code-theme <name>` changes it.
 
 ## Formatting
 

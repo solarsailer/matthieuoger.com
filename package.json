@@ -17,6 +17,7 @@
   "prettier": {
     "htmlWhitespaceSensitivity": "ignore",
     "semi": false,
-    "trailingComma": "none"
+    "trailingComma": "none",
+    "proseWrap": "never"
   }
 }
