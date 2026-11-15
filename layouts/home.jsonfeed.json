@@ -23,7 +23,7 @@
   "icon" (printf "%s/feed.png" $siteURL)
   "favicon" (printf "%s/favicon.ico" $siteURL)
   "home_page_url" $siteURL
-  "feed_url" (printf "%s/feed.json" $siteURL)
+  "feed_url" (site.Home.OutputFormats.Get "jsonfeed").Permalink
   "items" $items
   | jsonify (dict "indent" "  " "noHTMLEscape" true)
 -}}

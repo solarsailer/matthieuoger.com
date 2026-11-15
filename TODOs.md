@@ -75,14 +75,6 @@ announces the whole card as one long link.
 The usual alternative: the link is on the title only, and CSS extends its
 clickable area to the whole card.
 
-### Feed links from Hugo's output formats
-
-The `<link rel="alternate">` of the feeds, and the RSS button of the menus,
-write `/atom.xml` and `/feed.json` by hand. Hugo's documentation gets these
-URLs from the output formats instead
-(`site.Home.OutputFormats.Get "atom"`), so that they cannot drift from the
-configuration.
-
 ### Dark mode
 
 `layers/theme.scss` already has the structure for it (commented out): colors
@@ -90,4 +82,4 @@ are variables, with a place for the values of a dark theme, following the
 preference of the visitor (`prefers-color-scheme`) or a choice stored on
 `<html data-theme>`. What is missing: the dark values, the many grays written
 directly in components, and a dark theme for code blocks (Catppuccin has
-matching ones: Frappé, Macchiato, Mocha).
+matching ones: Latte for light, Frappé (in use), Macchiato and Mocha for dark).

@@ -36,8 +36,12 @@
 <link rel="shortcut icon" href="/favicon.ico?v=0010" />
 <link rel="mask-icon" href="/favicon.svg?v=0011" color="#E44D2A" />
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml" />
-<link rel="alternate" type="application/json" href="/feed.json" />
+{{- /* The feeds: their addresses come from the configuration (hugo.toml). */}}
+{{ range slice "atom" "jsonfeed" -}}
+	{{ with site.Home.OutputFormats.Get . -}}
+		<link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .RelPermalink }}" />
+	{{ end -}}
+{{ end -}}
 
 <meta name="author" content="{{ $author }}" />
 <meta name="description" content="{{ $description }}" />

@@ -6,7 +6,7 @@
 	<updated>{{ site.Lastmod.UTC.Format "2006-01-02T15:04:05.000Z" }}</updated>
 	<title>{{ site.Title | transform.XMLEscape }}</title>
 	<icon>{{ $siteURL }}/feed.png</icon>
-	<link href="{{ $siteURL }}/atom.xml" rel="self"/>
+	<link href="{{ (site.Home.OutputFormats.Get "atom").Permalink }}" rel="self"/>
 	<link href="{{ $siteURL }}"/>
 	<author>
 		<name>{{ $author | transform.XMLEscape }}</name>

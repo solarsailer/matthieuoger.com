@@ -36,7 +36,7 @@
 		<li><a class="button home-button" href="/about/">About</a></li>
 		<li><a class="button home-button" href="/articles/">Articles</a></li>
 		<li>
-			<a class="button home-button" href="/atom.xml" target="_blank">
+			<a class="button home-button" href="{{ (site.Home.OutputFormats.Get "atom").RelPermalink }}" target="_blank">
 				{{- partial "icons/rss.svg" . | chomp -}}
 				RSS
 			</a>

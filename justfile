@@ -29,7 +29,7 @@ baseline:
 
 # Generate the colors of code blocks from one of Hugo's styles
 # (list: https://xyproto.github.io/splash/docs/). Example: just code-theme github
-code-theme style="catppuccin-latte":
+code-theme style="catppuccin-frappe":
 	@{ echo "@layer vendor {"; hugo gen chromastyles --style={{style}}; echo "}"; } > assets/sass/layers/code-theme.scss
 
 # Format the code: templates with gotmplfmt (tabs, the Go convention),
