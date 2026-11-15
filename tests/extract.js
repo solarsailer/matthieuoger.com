@@ -88,7 +88,7 @@ export function extractBody(selector) {
     const attributes = []
 
     // A quoted tweet has the class 'tweet' (kind of the quote in Markdown);
-    // production, and raw embeds, use 'twitter-tweet'.
+    // production uses 'twitter-tweet'.
     const classList = [...element.classList].map((x) =>
       x === "tweet" ? "twitter-tweet" : x
     )

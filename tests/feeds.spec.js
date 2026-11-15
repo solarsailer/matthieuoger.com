@@ -4,7 +4,7 @@ import { join } from "node:path"
 import { expect, test } from "@playwright/test"
 
 import { extractBody } from "./extract"
-import { BASELINE_DIR, HUGO_DIR } from "./pages"
+import { BASELINE_DIR, HUGO_DIR, REWRITTEN_PAGES, flatten } from "./pages"
 
 // -------------------------------------------------------------
 // Feeds: same entries, same ids. Otherwise feed readers
@@ -83,17 +83,20 @@ test("feed.json items have the same content", async ({ page }) => {
   const expected = JSON.parse(read(BASELINE_DIR, "feed.json"))
   const actual = JSON.parse(read(HUGO_DIR, "feed.json"))
 
-  const outline = async (html) => {
+  const outline = async (html, id) => {
     await page.setContent(`<main>${html}</main>`)
-    return page.evaluate(extractBody, "main")
+    const result = await page.evaluate(extractBody, "main")
+
+    const isRewritten = REWRITTEN_PAGES.some((x) => id.endsWith(x))
+    return isRewritten ? flatten(result) : result
   }
 
   for (const item of expected.items) {
     const match = actual.items.find((x) => x.id === item.id)
 
     expect
-      .soft(await outline(match?.content_html ?? ""), item.id)
-      .toBe(await outline(item.content_html))
+      .soft(await outline(match?.content_html ?? "", item.id), item.id)
+      .toBe(await outline(item.content_html, item.id))
   }
 })
 

@@ -72,9 +72,8 @@
       font-size: 0.8em;
     }
 
-    /* In Twitter embed, disable the icon. */
-    .tweet,
-    .twitter-tweet {
+    /* In a quoted tweet, disable the icon. */
+    .tweet {
       a[href*="twitter.com"] {
         margin-left: 0;
 

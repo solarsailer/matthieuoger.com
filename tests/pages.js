@@ -29,8 +29,10 @@ export const POSTS_REFERENCE_COMMIT = "8732fa0"
 // - 'excerpt' typo in what-makes-indie-hit (D8);
 // - footnotes indented by 4 spaces, one quoted paragraph prefixed with '> ';
 // - ':::' blocks rewritten as quotes starting with '> [!kind]';
-// - raw <figure>, <video> and sized <img> replaced by shortcodes.
+// - raw <figure>, <video> and sized <img> replaced by shortcodes;
+// - embedded tweets rewritten as quotes (D15).
 export const APPROVED_POST_EDITS = [
+  "content/posts/2013/07/01/firefox-os.md",
   "content/posts/2013/08/27/quote-jonathan-blow.md",
   "content/posts/2013/10/22/how-designers-destroyed-the-world.md",
   "content/posts/2014/06/03/design-detail-ios8-messages/index.md",
@@ -84,6 +86,22 @@ export const VISUAL_DIFFERENCES = {
   // Gatsby splits the quote in several text nodes, which changes the
   // spacing of a few letters: one line wraps differently at this width.
   "/articles/7/@375": "Text shaping of one quote"
+}
+
+// D15: embedded tweets are now quotes written in Markdown. Same text and
+// links, but the author line is its own paragraph. On these pages, the
+// outline is compared without its paragraphs and its nesting.
+export const REWRITTEN_PAGES = [
+  "/2013/07/firefox-os/",
+  "/2016/03/virtual-reality/"
+]
+
+export function flatten(outline) {
+  return outline
+    .split("\n")
+    .map((x) => x.trim())
+    .filter((x) => x !== "p")
+    .join("\n")
 }
 
 // Lines of the outline (see extract.js) that are not compared on a page.

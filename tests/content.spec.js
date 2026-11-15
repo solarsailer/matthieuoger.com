@@ -6,7 +6,9 @@ import {
   HUGO_URL,
   IGNORED_LINES,
   PAGES,
+  REWRITTEN_PAGES,
   UNORDERED_PAGES,
+  flatten,
   hugoUrl
 } from "./pages"
 
@@ -27,7 +29,8 @@ async function extract(page, url, name) {
     const lines = outline.split("\n").filter((x) => !ignored?.test(x))
     if (UNORDERED_PAGES.includes(name)) lines.sort()
 
-    return lines.join("\n")
+    const result = lines.join("\n")
+    return REWRITTEN_PAGES.includes(name) ? flatten(result) : result
   }
 
   return {
