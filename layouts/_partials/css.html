@@ -2,21 +2,21 @@
 {{- $targetPath := "assets/css/main.css" }}
 
 {{- $buildOptions := dict
-  "transpiler" "dartsass"
-  "targetPath" $targetPath
+	"transpiler" "dartsass"
+	"targetPath" $targetPath
 -}}
 
 {{- if eq hugo.Environment "production" -}}
-  {{- with resources.Get $entryPath | css.Sass $buildOptions | minify | fingerprint -}}
-    <link
-      rel="stylesheet"
-      href="{{ .RelPermalink }}"
-      integrity="{{ .Data.Integrity }}"
-      crossorigin="anonymous"
-    />
-  {{- end -}}
+	{{- with resources.Get $entryPath | css.Sass $buildOptions | minify | fingerprint -}}
+		<link
+			rel="stylesheet"
+			href="{{ .RelPermalink }}"
+			integrity="{{ .Data.Integrity }}"
+			crossorigin="anonymous"
+		/>
+	{{- end -}}
 {{- else -}}
-  {{- with resources.Get $entryPath | css.Sass $buildOptions -}}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" crossorigin="anonymous" />
-  {{- end -}}
+	{{- with resources.Get $entryPath | css.Sass $buildOptions -}}
+		<link rel="stylesheet" href="{{ .RelPermalink }}" crossorigin="anonymous" />
+	{{- end -}}
 {{- end -}}

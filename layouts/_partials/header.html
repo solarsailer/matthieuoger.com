@@ -1,40 +1,40 @@
 <header class="page-header" id="page_header">
-  <nav class="global-menu">
-    <h1 class="global-menu__title">
-      {{- /* Two non-breaking spaces after the logo, a hair space in the name. */ -}}
-      <a href="/">
-        {{- partial "icons/logo.svg" . | chomp -}}
-        &nbsp;&nbsp;<span>Matthieu</span>&#8202;Oger
-      </a>
-    </h1>
+	<nav class="global-menu">
+		<h1 class="global-menu__title">
+			{{- /* Two non-breaking spaces after the logo, a hair space in the name. */ -}}
+			<a href="/">
+				{{- partial "icons/logo.svg" . | chomp -}}
+				&nbsp;&nbsp;<span>Matthieu</span>&#8202;Oger
+			</a>
+		</h1>
 
-    <ul class="global-menu__list">
-      <li>
-        <a
-          class="button menu-button"
-          href="/about/"
-          {{ if eq .RelPermalink "/about/" }}aria-current="page"{{ end }}
-        >
-          About
-        </a>
-      </li>
-      <li>
-        <a
-          class="button menu-button"
-          href="/articles/"
-          {{ if eq .RelPermalink "/articles/" }}aria-current="page"{{ end }}
-        >
-          Articles
-        </a>
-      </li>
-      <li>
-        <a class="button menu-button" href="/atom.xml" target="_blank">
-          {{- partial "icons/rss.svg" . | chomp -}}
-          RSS
-        </a>
-      </li>
-    </ul>
-  </nav>
+		<ul class="global-menu__list">
+			<li>
+				<a
+					class="button menu-button"
+					href="/about/"
+					{{ if eq .RelPermalink "/about/" }}aria-current="page"{{ end }}
+				>
+					About
+				</a>
+			</li>
+			<li>
+				<a
+					class="button menu-button"
+					href="/articles/"
+					{{ if eq .RelPermalink "/articles/" }}aria-current="page"{{ end }}
+				>
+					Articles
+				</a>
+			</li>
+			<li>
+				<a class="button menu-button" href="/atom.xml" target="_blank">
+					{{- partial "icons/rss.svg" . | chomp -}}
+					RSS
+				</a>
+			</li>
+		</ul>
+	</nav>
 
-  <hr class="page-header__separator" />
+	<hr class="page-header__separator" />
 </header>

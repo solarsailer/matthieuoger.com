@@ -1,22 +1,22 @@
 {{- with .Paginator -}}
-  <div class="pagination">
-    {{- if .HasPrev -}}
-      <a class="button pagination__button" href="{{ .Prev.URL }}">
-        ←&nbsp;Previous
-      </a>
-    {{- else -}}
-      <span class="pagination__button is-disabled">←&nbsp;Previous</span>
-    {{- end -}}
+	<div class="pagination">
+		{{- if .HasPrev -}}
+			<a class="button pagination__button" href="{{ .Prev.URL }}">
+				←&nbsp;Previous
+			</a>
+		{{- else -}}
+			<span class="pagination__button is-disabled">←&nbsp;Previous</span>
+		{{- end -}}
 
 
-    <a class="button pagination__button" href="/archive/">Archive</a>
+		<a class="button pagination__button" href="/archive/">Archive</a>
 
-    {{- if .HasNext -}}
-      <a class="button pagination__button" href="{{ .Next.URL }}">
-        Next&nbsp;→
-      </a>
-    {{- else -}}
-      <span class="pagination__button is-disabled">Next&nbsp;→</span>
-    {{- end -}}
-  </div>
+		{{- if .HasNext -}}
+			<a class="button pagination__button" href="{{ .Next.URL }}">
+				Next&nbsp;→
+			</a>
+		{{- else -}}
+			<span class="pagination__button is-disabled">Next&nbsp;→</span>
+		{{- end -}}
+	</div>
 {{- end -}}

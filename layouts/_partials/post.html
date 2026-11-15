@@ -4,25 +4,25 @@
 
 
 <div class="post">
-  <article class="post__article">
-    {{ if .showTitle }}
-      <header class="post__header">
-        <h1 class="post__title">
-          <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
-        </h1>
-        <h2 class="post__subtitle">{{ $date }}</h2>
-      </header>
-    {{ end }}
+	<article class="post__article">
+		{{ if .showTitle }}
+			<header class="post__header">
+				<h1 class="post__title">
+					<a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+				</h1>
+				<h2 class="post__subtitle">{{ $date }}</h2>
+			</header>
+		{{ end }}
 
 
-    <div class="post__content content">
-      {{ $page.Content }}
-    </div>
+		<div class="post__content content">
+			{{ $page.Content }}
+		</div>
 
-    <footer class="post__footer">
-      <p class="post__date">
-        <a href="{{ $page.RelPermalink }}">{{ $date }}</a>
-      </p>
-    </footer>
-  </article>
+		<footer class="post__footer">
+			<p class="post__date">
+				<a href="{{ $page.RelPermalink }}">{{ $date }}</a>
+			</p>
+		</footer>
+	</article>
 </div>

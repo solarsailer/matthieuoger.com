@@ -12,13 +12,5 @@ gatsby
 # Posts are written by hand.
 content
 
-# Templates whose output depends on their exact whitespace (text glued to
-# an icon or to another word), or that the Go template plugin cannot parse.
-# They are formatted by hand; the tests compare their output with production.
-layouts/_markup
-layouts/_shortcodes
-layouts/_partials/header.html
-layouts/home.html
-layouts/_partials/icons
-layouts/home.atom.xml
-layouts/home.jsonfeed.json
+# Templates are formatted by gotmplfmt (see `just format`).
+layouts

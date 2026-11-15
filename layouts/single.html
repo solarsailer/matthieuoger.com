@@ -1,8 +1,8 @@
 {{ define "content" }}
-  {{ if .Params.showPageTitle }}
-    {{ partial "page-title.html" (dict "title" .Title "url" .RelPermalink) }}
-    {{ partial "post.html" (dict "page" . "showTitle" false) }}
-  {{ else }}
-    {{ partial "post.html" (dict "page" . "showTitle" true) }}
-  {{ end }}
+{{ if .Params.showPageTitle }}
+	{{ partial "page-title.html" (dict "title" .Title "url" .RelPermalink) }}
+	{{ partial "post.html" (dict "page" . "showTitle" false) }}
+{{ else }}
+	{{ partial "post.html" (dict "page" . "showTitle" true) }}
+{{ end }}
 {{ end }}

@@ -1,24 +1,24 @@
 <footer class="page-footer" id="page_footer">
-  <nav>
-    <ul class="compact-social-nav">
-      {{ range sort hugo.Data.social "order" }}
-        {{ $icon := printf "icons/%s-line.svg" (replace .name " " "" | lower) }}
-        <li>
-          <a
-            class="compact-social-nav__link"
-            href="{{ .url }}"
-            aria-label="{{ .name }}"
-            style="--color: {{ .color | safeCSS }}"
-          >
-            {{- partial $icon . | chomp -}}
-          </a>
-          {{ partial "tooltip.html" . }}
-        </li>
-      {{ end }}
-    </ul>
-  </nav>
+	<nav>
+		<ul class="compact-social-nav">
+			{{ range sort hugo.Data.social "order" }}
+				{{ $icon := printf "icons/%s-line.svg" (replace .name " " "" | lower) }}
+				<li>
+					<a
+						class="compact-social-nav__link"
+						href="{{ .url }}"
+						aria-label="{{ .name }}"
+						style="--color: {{ .color | safeCSS }}"
+					>
+						{{- partial $icon . | chomp -}}
+					</a>
+					{{ partial "tooltip.html" . }}
+				</li>
+			{{ end }}
+		</ul>
+	</nav>
 
-  <p class="page-footer__copyright">
-    <a href="/">© {{ now.Year }} {{ site.Params.author }}</a>
-  </p>
+	<p class="page-footer__copyright">
+		<a href="/">© {{ now.Year }} {{ site.Params.author }}</a>
+	</p>
 </footer>

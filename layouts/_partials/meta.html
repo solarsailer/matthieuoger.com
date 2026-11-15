@@ -11,20 +11,20 @@
 {{- $metaDescription := $description -}}
 
 {{- if eq .Kind "404" -}}
-  {{- $title = printf "Not Found — %s" $author -}}
+	{{- $title = printf "Not Found — %s" $author -}}
 {{- else if and .IsPage (eq .Type "posts") -}}
-  {{- $title = printf "%s — %s" .Title $author -}}
-  {{- $metaTitle = $title -}}
-  {{- $metaURL = .Permalink -}}
+	{{- $title = printf "%s — %s" .Title $author -}}
+	{{- $metaTitle = $title -}}
+	{{- $metaURL = .Permalink -}}
 
-  {{- with .Params.excerptQuote -}}
-    {{- $metaDescription = printf "%s: “%s”" .name .quote -}}
-  {{- end -}}
-  {{- with .Params.excerpt -}}
-    {{- $metaDescription = . -}}
-  {{- end -}}
+	{{- with .Params.excerptQuote -}}
+		{{- $metaDescription = printf "%s: “%s”" .name .quote -}}
+	{{- end -}}
+	{{- with .Params.excerpt -}}
+		{{- $metaDescription = . -}}
+	{{- end -}}
 {{- else if not .IsHome -}}
-  {{- $title = printf "%s — %s" .Title $author -}}
+	{{- $title = printf "%s — %s" .Title $author -}}
 {{- end -}}
 
 

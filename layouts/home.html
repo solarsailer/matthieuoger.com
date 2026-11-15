@@ -4,71 +4,71 @@
 {{ define "footer" }}<!-- No footer on the home page. -->{{ end }}
 
 {{ define "main" }}
-  <div class="home">
-    <div class="home__avatar">
-      <img
-        src="/assets/images/site/avatar-black-white.jpg"
-        title="Matthieu Oger"
-        alt="Matthieu Oger"
-        width="350"
-        height="350"
-      />
-      <header class="home__header">
-        <h1 class="home__title">
-          <span class="home__first-name">Matthieu</span>
-          {{- /* Hair space. */ -}}
-          &#8202;
-          {{- /* */ -}}
-          <span class="home__last-name">Oger</span>
-        </h1>
-      </header>
-      <p class="home__bio">
-        <strong>I'm a product manager, developer and designer.</strong>
-        I co-founded
-        <a href="https://pixelnest.io/">Pixelnest Studio</a>
-        in February 2014, where we created
-        <a href="http://steredenn.pixelnest.io/">Steredenn</a>. I'm also an
-        amateur street·travel photographer.
-      </p>
-    </div>
+<div class="home">
+	<div class="home__avatar">
+		<img
+			src="/assets/images/site/avatar-black-white.jpg"
+			title="Matthieu Oger"
+			alt="Matthieu Oger"
+			width="350"
+			height="350"
+		/>
+		<header class="home__header">
+			<h1 class="home__title">
+				<span class="home__first-name">Matthieu</span>
+				{{- /* Hair space. */ -}}
+				&#8202;
+				{{- /* */ -}}
+				<span class="home__last-name">Oger</span>
+			</h1>
+		</header>
+		<p class="home__bio">
+			<strong>I'm a product manager, developer and designer.</strong>
+			I co-founded
+			<a href="https://pixelnest.io/">Pixelnest Studio</a>
+			in February 2014, where we created
+			<a href="http://steredenn.pixelnest.io/">Steredenn</a>. I'm also an
+			amateur street·travel photographer.
+		</p>
+	</div>
 
-    <ul class="home__nav">
-      <li><a class="button home-button" href="/about/">About</a></li>
-      <li><a class="button home-button" href="/articles/">Articles</a></li>
-      <li>
-        <a class="button home-button" href="/atom.xml" target="_blank">
-          {{- partial "icons/rss.svg" . | chomp -}}
-          RSS
-        </a>
-      </li>
-    </ul>
+	<ul class="home__nav">
+		<li><a class="button home-button" href="/about/">About</a></li>
+		<li><a class="button home-button" href="/articles/">Articles</a></li>
+		<li>
+			<a class="button home-button" href="/atom.xml" target="_blank">
+				{{- partial "icons/rss.svg" . | chomp -}}
+				RSS
+			</a>
+		</li>
+	</ul>
 
-    <ul class="social-nav">
-      {{ range $index, $social := sort hugo.Data.social "order" }}
-        {{/* Appearance: 0 to 250ms of delay, 500 to 2000ms of duration. */}}
-        {{ $delay := mod (mul $index 97) 250 }}
-        {{ $duration := add 500 (mod (mul (add $index 1) 613) 1500) }}
-        {{ $name := replace .name " " "" }}
-        {{ $icon := printf "icons/%s.svg" (lower $name) }}
-        <li>
-          <a
-            class="social-nav__link"
-            href="{{ .url }}"
-            aria-label="{{ .name }}"
-            style="--color: {{ .color | safeCSS }}; --delay: {{ $delay }}ms; --duration: {{ $duration }}ms"
-          >
-            <span class="social-nav__text">
-              <span>{{ $name }}</span>
-              {{- /* No whitespace: it reads as one address. */ -}}
-              <span class="social-nav__domain">.{{ .domain }}/</span>
-              {{- /* Same. */ -}}
-              <span class="social-nav__handle">{{ .handle }}</span>
-            </span>
-            <span class="social-nav__icon">{{- partial $icon . | chomp -}}</span>
-          </a>
-          {{ partial "tooltip.html" . }}
-        </li>
-      {{ end }}
-    </ul>
-  </div>
+	<ul class="social-nav">
+		{{ range $index, $social := sort hugo.Data.social "order" }}
+			{{/* Appearance: 0 to 250ms of delay, 500 to 2000ms of duration. */}}
+			{{ $delay := mod (mul $index 97) 250 }}
+			{{ $duration := add 500 (mod (mul (add $index 1) 613) 1500) }}
+			{{ $name := replace .name " " "" }}
+			{{ $icon := printf "icons/%s.svg" (lower $name) }}
+			<li>
+				<a
+					class="social-nav__link"
+					href="{{ .url }}"
+					aria-label="{{ .name }}"
+					style="--color: {{ .color | safeCSS }}; --delay: {{ $delay }}ms; --duration: {{ $duration }}ms"
+				>
+					<span class="social-nav__text">
+						<span>{{ $name }}</span>
+						{{- /* No whitespace: it reads as one address. */ -}}
+						<span class="social-nav__domain">.{{ .domain }}/</span>
+						{{- /* Same. */ -}}
+						<span class="social-nav__handle">{{ .handle }}</span>
+					</span>
+					<span class="social-nav__icon">{{- partial $icon . | chomp -}}</span>
+				</a>
+				{{ partial "tooltip.html" . }}
+			</li>
+		{{ end }}
+	</ul>
+</div>
 {{ end }}

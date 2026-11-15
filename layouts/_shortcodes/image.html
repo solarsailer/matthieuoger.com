@@ -11,25 +11,25 @@
 
 {{- $src := .Get "src" -}}
 {{- with .Page.Resources.Get $src -}}
-  {{- $src = .RelPermalink -}}
+	{{- $src = .RelPermalink -}}
 {{- end -}}
 
 {{- $caption := strings.TrimSpace .Inner -}}
 
 {{- define "_partials/shortcodes/image-tag.html" -}}
-  <img
-    src="{{ .src }}"
-    {{- with .shortcode.Get "alt" }} alt="{{ . }}"{{ end }}
-    {{- with .shortcode.Get "title" }} title="{{ . }}"{{ end }}
-    {{- with .shortcode.Get "width" }} style="width: {{ . }}px"{{ end }}
-  />
+<img
+	src="{{ .src }}"
+	{{- with .shortcode.Get "alt" }} alt="{{ . }}"{{ end }}
+	{{- with .shortcode.Get "title" }} title="{{ . }}"{{ end }}
+	{{- with .shortcode.Get "width" }} style="width: {{ . }}px"{{ end }}
+/>
 {{- end -}}
 
 {{- if $caption -}}
-  <figure>
-    {{ partial "shortcodes/image-tag.html" (dict "src" $src "shortcode" .) }}
-    <figcaption>{{ $caption | .Page.RenderString }}</figcaption>
-  </figure>
+	<figure>
+		{{ partial "shortcodes/image-tag.html" (dict "src" $src "shortcode" .) }}
+		<figcaption>{{ $caption | .Page.RenderString }}</figcaption>
+	</figure>
 {{- else -}}
-  <p>{{ partial "shortcodes/image-tag.html" (dict "src" $src "shortcode" .) }}</p>
+	<p>{{ partial "shortcodes/image-tag.html" (dict "src" $src "shortcode" .) }}</p>
 {{- end -}}
