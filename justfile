@@ -23,6 +23,10 @@ baseline:
 	rm -rf tests/.baseline/.git
 	npx playwright test -c tests --project=baseline --update-snapshots
 
+# Format the code with Prettier (see .prettierignore for what is left out).
+format:
+	npx prettier --write .
+
 deploy:
 	@echo "TBD"
 

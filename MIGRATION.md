@@ -40,20 +40,20 @@ Done means:
 
 Verified on 2026-11-14 with Hugo 0.170.0 (Homebrew, non-extended), Node 26.
 
-| Thing | State |
-|---|---|
-| `master` | Gatsby 2.14 source. Does not build on current Node without workarounds. |
-| Production build | `github.com/solarsailer/solarsailer.github.io`, `master` @ `33723e2` (2024-01-23). In sync with `master`: 88 posts, latest is `/2023/06/date-formats/`. **This is the baseline.** |
-| `migration-hugo` | Builds (93 pages) once the CSS partial is bypassed. Layout skeletons, post bundles, `data/social.json`, Sass layer structure (`reset, theme, base, app`) exist. No component styles, no meta, no feeds, no icons, no JS. |
-| Dart Sass | 1.108.2 installed, seen by `hugo env`. The branch's Sass compiles once the PostCSS pipe is removed (verified). |
-| Old Gatsby source | Kept in `gatsby/` on this branch as the porting reference. |
+| Thing             | State                                                                                                                                                                                                                    |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `master`          | Gatsby 2.14 source. Does not build on current Node without workarounds.                                                                                                                                                  |
+| Production build  | `github.com/solarsailer/solarsailer.github.io`, `master` @ `33723e2` (2024-01-23). In sync with `master`: 88 posts, latest is `/2023/06/date-formats/`. **This is the baseline.**                                        |
+| `migration-hugo`  | Builds (93 pages) once the CSS partial is bypassed. Layout skeletons, post bundles, `data/social.json`, Sass layer structure (`reset, theme, base, app`) exist. No component styles, no meta, no feeds, no icons, no JS. |
+| Dart Sass         | 1.108.2 installed, seen by `hugo env`. The branch's Sass compiles once the PostCSS pipe is removed (verified).                                                                                                           |
+| Old Gatsby source | Kept in `gatsby/` on this branch as the porting reference.                                                                                                                                                               |
 
 What already matches production: all 88 post URLs (including the 7 page
 bundles and `/about/`), `/archive/`, `/articles/`, the date format
 (`02 January 2006`), the pager size (9, giving 10 pages).
 
 Decisions taken by Matthieu on 2026-11-14: Playwright, CSS layers and Sass
-structure approved; Floating UI for tooltips; keep the pagination URL format;
+structure approved; native popovers for tooltips; numbered pages at `/articles/p/N/`;
 `/expo/` stays removed; analytics and progress bar dropped; typographer
 disabled; post asset URLs may change; code highlighting may differ; copyright
 year updated; Google Fonts link kept for now; deploy out of scope.
@@ -81,6 +81,7 @@ These were checked against the real outputs, not assumed.
   Rejected on the way: converting the rendered HTML with regular expressions
   (depends on Hugo's exact output), and a `{.class}` line after the quote
   (works without a template, but reads poorly).
+
 - **Typographer: disable it.** It is on by default in Hugo and would curl
   about 840 quotes and apostrophes and turn 7 `--`/`---` into dashes.
   Production keeps the text as typed, and so will Hugo:
@@ -139,13 +140,13 @@ Side effect: asset URLs differ from production
 
 ### 4.4 JS-driven behavior in production
 
-| Behavior | Source | Hugo approach |
-|---|---|---|
-| Tooltips on social icons | `Tooltip.js` (measures and positions in JS) | **Floating UI** (`@floating-ui/dom`). See note below. |
-| Social items fade/slide in on the home page | `react-pose`, random delay 0–250 ms, duration 500–2000 ms | CSS `@keyframes`, per-item `--delay`/`--duration` set inline by the template from fixed, index-based values (builds must be deterministic). Honor `prefers-reduced-motion`. |
-| Active menu button | Gatsby `activeClassName` | `aria-current="page"` set at build time, styled instead of `.selected`. Exact match only, as today. |
-| Progress bar during in-site navigation | `gatsby-plugin-nprogress` (shown while Gatsby's client-side router loads the next page) | Drop. Navigation is plain page loads now; the browser shows its own progress. |
-| Google Analytics `UA-41853457-1` | plugin | Drop. Universal Analytics stopped processing in 2023. |
+| Behavior                                    | Source                                                                                  | Hugo approach                                                                                                                                                               |
+| ------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tooltips on social icons                    | `Tooltip.js` (measures and positions in JS)                                             | Native popover. See note below.                                                                                                                       |
+| Social items fade/slide in on the home page | `react-pose`, random delay 0–250 ms, duration 500–2000 ms                               | CSS `@keyframes`, per-item `--delay`/`--duration` set inline by the template from fixed, index-based values (builds must be deterministic). Honor `prefers-reduced-motion`. |
+| Active menu button                          | Gatsby `activeClassName`                                                                | `aria-current="page"` set at build time, styled instead of `.selected`. Exact match only, as today.                                                                         |
+| Progress bar during in-site navigation      | `gatsby-plugin-nprogress` (shown while Gatsby's client-side router loads the next page) | Drop. Navigation is plain page loads now; the browser shows its own progress.                                                                                               |
+| Google Analytics `UA-41853457-1`            | plugin                                                                                  | Drop. Universal Analytics stopped processing in 2023.                                                                                                                       |
 
 Tooltip note. **Final decision: native Popover API, no library.** Each
 tooltip is a `popover="manual"` element; `assets/js/index.js` (about 40 lines)
@@ -177,6 +178,7 @@ only since January 2026).
   All three target Firefox versions older than 91 (and the long-dead Opera
   engine), which do not support `@layer` and so cannot display this
   stylesheet at all.
+
 - Sass `@import` is deprecated and goes away in Dart Sass 3. `index.scss`
   nests `@import` inside `@layer`, which `@use` cannot do. Simplest fix: each
   partial wraps its own rules in `@layer name { … }`, and `index.scss` is the
@@ -184,8 +186,7 @@ only since January 2026).
 - Hugo deprecations seen in the build: `languageCode` → `locale`,
   `.Site.Data` → `hugo.Data`, `toCSS` → `css.Sass`. Also move to the current
   template layout (`layouts/_partials`, `layouts/_markup`, no `_default`).
-- `normalize`: `master` uses normalize.css 5, the branch uses modern-normalize
-  3. Keep modern-normalize; if the visual tests show it fighting the port
+- `normalize`: `master` uses normalize.css 5, the branch uses modern-normalize 3. Keep modern-normalize; if the visual tests show it fighting the port
   (heading sizes, `hr`, `line-height`, `strong`), add the missing declarations
   to `base` rather than switching back.
 
@@ -228,23 +229,23 @@ already used on the branch (`page-header`, `page-content__constraints`).
 Confirmed by Matthieu unless marked otherwise. The tests encode them in one
 allowlist file (`tests/pages.js`) so they are explicit.
 
-| # | Deviation | Recommendation |
-|---|---|---|
-| D1 | Numbered pages of articles: `/articles/2/` becomes `/articles/p/2/` | Confirmed, without redirects: nobody links to a pager page, and their content shifts with every new post. `pagination.path = 'p'` is plain Hugo, no workaround. |
-| D2 | `/expo/` exists in production, was removed on the branch | Confirmed. |
-| D3 | Post asset URLs move into the bundle path (see below) | Confirmed: old URLs may break, no copies kept. |
-| D4 | Code token colors (Chroma vs Prism) | Confirmed; match background, padding, font and palette as closely as possible. |
-| D5 | Analytics and progress bar removed | Confirmed. |
-| D6 | Footnote ids, heading ids, extra ARIA roles, and a non-breaking space that Goldmark writes before each footnote's "back" link | Accept. One CSS rule cancels the empty line that space creates after a quote. It can still push the last word of a footnote to a new line (seen once, on `systemic-actions-automation` at 375px). |
-| D7 | `/404/index.html` is not generated; `/404.html` is, as today | No visible change. GitHub Pages serves `/404.html` for any missing URL, in production and after the migration. Gatsby also wrote a duplicate at `/404/`; with Hugo that URL is simply missing, so it shows the same 404 page. |
-| D8 | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed) | Confirmed. |
-| D9 | Footer copyright year: 2022 in production, **2026** here | Confirmed. Update `copyright` in `hugo.toml`. |
-| D10 | The title of the About page links to `/#` (the home page) in production; here it links to `/about/`, like the other page titles | Confirmed. |
-| D11 | List paragraphs. remark decided item by item whether an item's text is wrapped in `<p>`; Goldmark follows CommonMark and decides for the whole list | Settled with two rules in `content/list.scss`, so that a list looks the same whether Markdown wraps its items in paragraphs or not: an item that is a single paragraph has no extra margin, and a nested list always has a top margin. No post edit (two were tried, then reverted). All affected posts are pixel-identical to production. The content test ignores `li > p`. |
-| D15 | The four embedded tweets (`firefox-os`, `virtual-reality`) are quotes written in Markdown (`> [!TWEET]`) instead of Twitter's embed markup | Confirmed. Same text and links, and the pages are pixel-identical to production. Only the markup differs: the author line is its own paragraph. |
-| D14 | The "Articles" menu button is highlighted on the articles pages. Production never did, because of a bug (`/articles` vs `/articles/`) | Confirmed. The visual tests mask that button on those pages. |
-| D13 | A quote on `/articles/7/` wraps one line differently at 375px. Gatsby splits it in several text nodes, which changes letter spacing by a fraction of a pixel | Accepted as a known visual difference; not worth reproducing. |
-| D12 | Posts published the same day (4 days, on `/articles/5/`, `/8/`, `/9/` and in the feeds) are not in production's order | Confirmed: Hugo's default order is kept, for simplicity. No URL changes. The tests compare these without order. |
+| #   | Deviation                                                                                                                                                    | Recommendation                                                                                                                                                                                                                                                                                                                                                                |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| D1  | Numbered pages of articles: `/articles/2/` becomes `/articles/p/2/`                                                                                          | Confirmed, without redirects: nobody links to a pager page, and their content shifts with every new post. `pagination.path = 'p'` is plain Hugo, no workaround.                                                                                                                                                                                                               |
+| D2  | `/expo/` exists in production, was removed on the branch                                                                                                     | Confirmed.                                                                                                                                                                                                                                                                                                                                                                    |
+| D3  | Post asset URLs move into the bundle path (see below)                                                                                                        | Confirmed: old URLs may break, no copies kept.                                                                                                                                                                                                                                                                                                                                |
+| D4  | Code token colors (Chroma vs Prism)                                                                                                                          | Confirmed; match background, padding, font and palette as closely as possible.                                                                                                                                                                                                                                                                                                |
+| D5  | Analytics and progress bar removed                                                                                                                           | Confirmed.                                                                                                                                                                                                                                                                                                                                                                    |
+| D6  | Footnote ids, heading ids, extra ARIA roles, and a non-breaking space that Goldmark writes before each footnote's "back" link                                | Accept. One CSS rule cancels the empty line that space creates after a quote. It can still push the last word of a footnote to a new line (seen once, on `systemic-actions-automation` at 375px).                                                                                                                                                                             |
+| D7  | `/404/index.html` is not generated; `/404.html` is, as today                                                                                                 | No visible change. GitHub Pages serves `/404.html` for any missing URL, in production and after the migration. Gatsby also wrote a duplicate at `/404/`; with Hugo that URL is simply missing, so it shows the same 404 page.                                                                                                                                                 |
+| D8  | `/2015/09/what-makes-indie-hit/` now shows its excerpt on list pages and in meta description (typo fixed)                                                    | Confirmed.                                                                                                                                                                                                                                                                                                                                                                    |
+| D9  | Footer copyright year: 2022 in production, **2026** here                                                                                                     | Confirmed. Update `copyright` in `hugo.toml`.                                                                                                                                                                                                                                                                                                                                 |
+| D10 | The title of the About page links to `/#` (the home page) in production; here it links to `/about/`, like the other page titles                              | Confirmed.                                                                                                                                                                                                                                                                                                                                                                    |
+| D11 | List paragraphs. remark decided item by item whether an item's text is wrapped in `<p>`; Goldmark follows CommonMark and decides for the whole list          | Settled with two rules in `content/list.scss`, so that a list looks the same whether Markdown wraps its items in paragraphs or not: an item that is a single paragraph has no extra margin, and a nested list always has a top margin. No post edit (two were tried, then reverted). All affected posts are pixel-identical to production. The content test ignores `li > p`. |
+| D15 | The four embedded tweets (`firefox-os`, `virtual-reality`) are quotes written in Markdown (`> [!TWEET]`) instead of Twitter's embed markup                   | Confirmed. Same text and links, and the pages are pixel-identical to production. Only the markup differs: the author line is its own paragraph.                                                                                                                                                                                                                               |
+| D14 | The "Articles" menu button is highlighted on the articles pages. Production never did, because of a bug (`/articles` vs `/articles/`)                        | Confirmed. The visual tests mask that button on those pages.                                                                                                                                                                                                                                                                                                                  |
+| D13 | A quote on `/articles/7/` wraps one line differently at 375px. Gatsby splits it in several text nodes, which changes letter spacing by a fraction of a pixel | Accepted as a known visual difference; not worth reproducing.                                                                                                                                                                                                                                                                                                                 |
+| D12 | Posts published the same day (4 days, on `/articles/5/`, `/8/`, `/9/` and in the feeds) are not in production's order                                        | Confirmed: Hugo's default order is kept, for simplicity. No URL changes. The tests compare these without order.                                                                                                                                                                                                                                                               |
 
 **Post edits, approved and committed alone (`Adapt 9 posts to Goldmark's
 stricter Markdown`).** Goldmark is stricter than remark on two constructs.
@@ -340,6 +341,7 @@ without the project name so both sides share the same snapshot files.
    Start with a loose `maxDiffPixelRatio` to see progress, tighten to near
    zero at the end. Same browser, same fonts and same CSS values render the
    same pixels, so near-exact is realistic on pages without code (D4).
+
 5. **`interactions`**: element screenshots of hover/focus states that static
    screenshots miss: buttons, menu buttons, post recap card, body links,
    footnote back-reference, tooltip open (above, and below near the top),
@@ -365,20 +367,22 @@ waits for Matthieu to review the site.
 Each phase ends with the listed specs green. Do them in order.
 
 **Phase 0: housekeeping**
+
 - Remove PostCSS packages and pipe. Add `prettier` as a dev dependency. Fix
   the three Hugo deprecations and move templates to the current layout.
-- `hugo.toml`: `pagination.path = ''`, typographer disabled, copyright year
-  2026.
+- `hugo.toml`: `pagination.path = ''`, typographer disabled, copyright year 2026.
 - `justfile`: `prod` calls `serve`, which is not installed; point it at
   `tests/serve.mjs` once that exists.
 - Restructure Sass to `@use` + self-layered partials (§4.5). The build must
   work with real CSS before anything else.
 
 **Phase 1: test harness** (§6)
+
 - `serve.mjs`, config, `pages.js`, `just baseline`, `just test`.
 - Write `urls`, `content`, `feeds`; they fail. Generate baseline screenshots.
 
 **Phase 2: markup parity** → `urls`, `content`, `feeds` green
+
 - `hugo.toml`: Chroma classes, output formats for Atom (`/atom.xml`) and
   JSON Feed (`/feed.json`), drop `rss`, params for author, description,
   keywords, handles (from `gatsby-config.js`).
@@ -398,21 +402,25 @@ Each phase ends with the listed specs green. Do them in order.
   inline from `data/social.json`.
 
 **Phase 3: styles** → `visual` converging
+
 - Port file by file following the map in §4.6, source of truth being
   `gatsby/src/**` plus `prism-tomorrow.css` for code. Keep values verbatim
   (hsl, rem, breakpoints). Order: layout → components → content.
 - Chroma palette in `content/code.scss`.
 
 **Phase 4: behavior** → `interactions` green
-- Tooltip with Floating UI (§4.4): `npm i @floating-ui/dom`.
+
+- Tooltip with the Popover API (§4.4).
 - Home social nav entrance animation.
 
 **Phase 5: convergence**
+
 - Run the full visual suite, fix diffs page by page, tighten thresholds.
 - Record any remaining, justified difference in the allowlist with a comment.
 - Autoprefixer one-off check (§4.5) and report the result.
 
 **Phase 6: cleanup**
+
 - Delete `gatsby/`, unused static files (`card-2019.jpg` if unreferenced),
   update `README.md`, archetypes, `justfile`.
 - Switch tests to self-baseline (§6.3).
@@ -420,23 +428,23 @@ Each phase ends with the listed specs green. Do them in order.
 
 ## 8. Reference: source → target map
 
-| Gatsby source (`gatsby/src/…`) | Hugo target |
-|---|---|
-| `components/layouts/sections/Meta.js`, `templates/PostTemplate.js` (Helmet) | `_partials/meta.html` |
-| `components/layouts/sections/Header.js` | `_partials/header.html`, `layout/header.scss`, `components/button.scss` |
-| `components/layouts/sections/Footer.js`, `CompactSocialNavigation.js` | `_partials/footer.html`, `layout/footer.scss`, `components/compact-social-nav.scss` |
-| `components/layouts/sections/Page.js` | `baseof.html`, `layout/page.scss` |
-| `pages/index.js`, `SocialNavigation.js`, `MountedAnimator.js` | `home.html`, `layout/home.scss`, `components/social-nav.scss` |
-| `templates/PaginationTemplate.js`, `PaginationController.js` | articles list template, `_partials/pagination.html`, `components/pagination.scss` |
-| `pages/archive.js`, `HeaderRow.js` | archive template, `components/header-row.scss` |
-| `Post.js`, `PageTitle.js`, `PostRecap.js` | `single.html`, `_partials/post.html`, `_partials/post-recap.html`, matching scss |
-| `Tooltip.js` | `_partials/tooltip.html`, `components/tooltip.scss`, `assets/js/index.js` |
-| `Icon.js` | `_partials/icons/*.svg` |
-| `styles/components/post/*.js`, `post.js` | `content/*.scss` |
-| `styles/components/grid-social-nav.js` | shared rules in the two social nav partials |
-| `plugins/gatsby-plugin-feeds/*` | `list.atom.xml`, `list.feed.json` on the home output |
-| `pages/404.js` | `404.html`, `layout/not-found.scss` |
-| `gatsby-node.js`, `node/markdown-creator.js` | `[permalinks]` in `hugo.toml` (done) |
+| Gatsby source (`gatsby/src/…`)                                              | Hugo target                                                                         |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `components/layouts/sections/Meta.js`, `templates/PostTemplate.js` (Helmet) | `_partials/meta.html`                                                               |
+| `components/layouts/sections/Header.js`                                     | `_partials/header.html`, `layout/header.scss`, `components/button.scss`             |
+| `components/layouts/sections/Footer.js`, `CompactSocialNavigation.js`       | `_partials/footer.html`, `layout/footer.scss`, `components/compact-social-nav.scss` |
+| `components/layouts/sections/Page.js`                                       | `baseof.html`, `layout/page.scss`                                                   |
+| `pages/index.js`, `SocialNavigation.js`, `MountedAnimator.js`               | `home.html`, `layout/home.scss`, `components/social-nav.scss`                       |
+| `templates/PaginationTemplate.js`, `PaginationController.js`                | articles list template, `_partials/pagination.html`, `components/pagination.scss`   |
+| `pages/archive.js`, `HeaderRow.js`                                          | archive template, `components/header-row.scss`                                      |
+| `Post.js`, `PageTitle.js`, `PostRecap.js`                                   | `single.html`, `_partials/post.html`, `_partials/post-recap.html`, matching scss    |
+| `Tooltip.js`                                                                | `_partials/tooltip.html`, `components/tooltip.scss`, `assets/js/index.js`           |
+| `Icon.js`                                                                   | `_partials/icons/*.svg`                                                             |
+| `styles/components/post/*.js`, `post.js`                                    | `content/*.scss`                                                                    |
+| `styles/components/grid-social-nav.js`                                      | shared rules in the two social nav partials                                         |
+| `plugins/gatsby-plugin-feeds/*`                                             | `list.atom.xml`, `list.feed.json` on the home output                                |
+| `pages/404.js`                                                              | `404.html`, `layout/not-found.scss`                                                 |
+| `gatsby-node.js`, `node/markdown-creator.js`                                | `[permalinks]` in `hugo.toml` (done)                                                |
 
 ## 9. Dependencies
 
@@ -445,39 +453,39 @@ or current on 2026-11-14.
 
 **Needed to build the site**
 
-| Dependency | Version | Kind | Role |
-|---|---|---|---|
-| Hugo | 0.170.0 (standard edition is enough) | Go binary, Homebrew | Site generator. Brings Goldmark (Markdown), Chroma (code highlighting) and esbuild (`js.Build`) built in. |
-| Dart Sass | 1.108.2 | Binary, Homebrew | Compiles `assets/sass`. Called by Hugo. |
+| Dependency | Version                              | Kind                | Role                                                                                                      |
+| ---------- | ------------------------------------ | ------------------- | --------------------------------------------------------------------------------------------------------- |
+| Hugo       | 0.170.0 (standard edition is enough) | Go binary, Homebrew | Site generator. Brings Goldmark (Markdown), Chroma (code highlighting) and esbuild (`js.Build`) built in. |
+| Dart Sass  | 1.108.2                              | Binary, Homebrew    | Compiles `assets/sass`. Called by Hugo.                                                                   |
 
 **Vendored in the repository**
 
-| Dependency | Version | Role |
-|---|---|---|
-| modern-normalize | 3.0.0 | CSS reset, copied into `assets/sass/layers/normalize.scss`. |
+| Dependency       | Version | Role                                                        |
+| ---------------- | ------- | ----------------------------------------------------------- |
+| modern-normalize | 3.0.0   | CSS reset, copied into `assets/sass/layers/normalize.scss`. |
 
 **Loaded by the browser from a third party**
 
-| Dependency | Role |
-|---|---|
+| Dependency   | Role                                                                                |
+| ------------ | ----------------------------------------------------------------------------------- |
 | Google Fonts | Rubik (300–900, with italics) and Fira Mono. To be self-hosted after the migration. |
 
 **Development and tests only**
 
-| Dependency | Version | Kind | Role |
-|---|---|---|---|
-| just | 1.59.0 | Binary, Homebrew | Task runner (`justfile`). |
-| `@playwright/test` | 1.65.1 | npm dev | All tests. Downloads its own Chromium (`npx playwright install chromium`). |
-| git | any | Binary | `just baseline` clones the production build. |
-| `prettier` | 3.x (latest) | npm dev | Formatting. Missing from `package.json` today; add it. |
-| `prettier-plugin-go-template` | 0.0.15 | npm dev | Lets Prettier format Hugo templates. Already configured. |
+| Dependency                    | Version      | Kind             | Role                                                                       |
+| ----------------------------- | ------------ | ---------------- | -------------------------------------------------------------------------- |
+| just                          | 1.59.0       | Binary, Homebrew | Task runner (`justfile`).                                                  |
+| `@playwright/test`            | 1.65.1       | npm dev          | All tests. Downloads its own Chromium (`npx playwright install chromium`). |
+| git                           | any          | Binary           | `just baseline` clones the production build.                               |
+| `prettier`                    | 3.x (latest) | npm dev          | Formatting. Missing from `package.json` today; add it.                     |
+| `prettier-plugin-go-template` | 0.0.15       | npm dev          | Lets Prettier format Hugo templates. Already configured.                   |
 
 **Services**
 
-| Dependency | Role |
-|---|---|
-| `github.com/solarsailer/solarsailer.github.io` @ `33723e2` | Test baseline during the migration only. |
-| GitHub Pages | Hosting (unchanged; deploy is out of scope). |
+| Dependency                                                 | Role                                         |
+| ---------------------------------------------------------- | -------------------------------------------- |
+| `github.com/solarsailer/solarsailer.github.io` @ `33723e2` | Test baseline during the migration only.     |
+| GitHub Pages                                               | Hosting (unchanged; deploy is out of scope). |
 
 **Removed by this migration**
 

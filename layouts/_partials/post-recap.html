@@ -1,7 +1,8 @@
 {{- /*
   Context: (dict "page" Page "isCompact" bool).
   A compact recap only has a title and a date (used by the archive).
-*/ -}}
+  */
+-}}
 {{- $page := .page -}}
 {{- $excerpt := cond .isCompact nil $page.Params.excerpt -}}
 {{- $quote := cond .isCompact nil $page.Params.excerptQuote -}}
@@ -10,6 +11,7 @@
 {{- define "_partials/read-more.html" -}}
   <span class="read-more-hint">→&nbsp;Read&nbsp;More</span>
 {{- end -}}
+
 
 <a class="post-recap" href="{{ $page.RelPermalink }}">
   <div class="post-recap__wrapper">
