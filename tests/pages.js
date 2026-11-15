@@ -78,6 +78,15 @@ export const VISUAL_DIFFERENCES = {
   // token colors weigh just above the tolerance.
   "/articles/@320": "D4: code colors",
 
+  // D15: the author line of this tweet is reworded; it wraps differently
+  // on narrow screens.
+  ...Object.fromEntries(
+    [320, 375, 480, 560, 680].map((width) => [
+      `/2013/08/quote-jonathan-blow/@${width}`,
+      "D15: author line of a tweet"
+    ])
+  ),
+
   // D6: Goldmark writes a non-breaking space before the "back" link of a
   // footnote. At this width, it pushes the last word of one footnote to a
   // new line.
@@ -108,6 +117,9 @@ export function flatten(outline) {
 export const IGNORED_LINES = {
   // D8: the 'excerpt' typo is fixed, so this post now has an excerpt.
   "/2015/09/what-makes-indie-hit/": /^meta (og|twitter):description:/,
+  // D15: the author line of this tweet now links the date, not the handle.
+  "/2013/08/quote-jonathan-blow/":
+    /^ *("— Jonathan Blow \(.*|"@Jonathan_Blow"|"\)"|"August 26, 2013"|a href="https:\/\/twitter\.com\/Jonathan_Blow\/status\/\d+")$/,
   "/articles/6/":
     /^ +(p|span class="read-more-hint"|"→.Read.More"|"Should every game have a hook.*")$/
 }

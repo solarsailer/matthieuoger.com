@@ -1,10 +1,9 @@
-import { computePosition, offset, shift } from "@floating-ui/dom"
-
 // -------------------------------------------------------------
 // Tooltips.
 //
-// A tooltip is the element that follows a link (see tooltip.html).
+// A tooltip is the popover that follows a link (see tooltip.html).
 // It is displayed above the link when the link is hovered or focused.
+// The browser handles the rest (top layer, see tooltip.scss for the look).
 // -------------------------------------------------------------
 
 // Distance between the center of the link and the tooltip
@@ -14,45 +13,44 @@ const DISTANCE = 20
 // Too close to the top of the screen, the tooltip is displayed below.
 const TOP_LIMIT = 100
 
-async function show(link, tooltip) {
-  const isNearTop = link.getBoundingClientRect().top < TOP_LIMIT
-  const placement = isNearTop ? "bottom" : "top"
+// Minimal distance with the edges of the screen.
+const MARGIN = 8
 
-  // The tooltip must be displayed to be measured.
-  tooltip.classList.add("is-visible")
+function show(link, tooltip) {
+  tooltip.showPopover()
 
-  const { x, y } = await computePosition(link, tooltip, {
-    placement,
-    middleware: [
-      offset(({ rects }) => DISTANCE - rects.reference.height / 2),
-      shift({ padding: 8 })
-    ]
-  })
+  const target = link.getBoundingClientRect()
+  const { width, height } = tooltip.getBoundingClientRect()
 
-  tooltip.dataset.placement = placement
-  tooltip.style.left = `${x}px`
-  tooltip.style.top = `${y}px`
+  const isBelow = target.top < TOP_LIMIT
+  const gap = DISTANCE - target.height / 2
 
-  tooltip.classList.add("is-opened")
+  // Centered on the link, but always inside the screen.
+  const center = target.left + target.width / 2 - width / 2
+  const maximum = document.documentElement.clientWidth - width - MARGIN
+  const left = Math.max(MARGIN, Math.min(center, maximum))
+
+  const top = isBelow ? target.bottom + gap : target.top - height - gap
+
+  // The tooltip is positioned in the page: it follows the link on scroll.
+  tooltip.style.left = `${left + window.scrollX}px`
+  tooltip.style.top = `${top + window.scrollY}px`
+  tooltip.dataset.placement = isBelow ? "bottom" : "top"
 }
 
 function hide(tooltip) {
-  tooltip.classList.remove("is-opened")
+  tooltip.hidePopover()
 }
 
-for (const tooltip of document.querySelectorAll(".tooltip")) {
-  const link = tooltip.previousElementSibling
+// Without the Popover API (browsers older than 2024), no tooltip.
+if ("popover" in HTMLElement.prototype) {
+  for (const tooltip of document.querySelectorAll(".tooltip")) {
+    const link = tooltip.previousElementSibling
 
-  link.addEventListener("pointerenter", () => show(link, tooltip))
-  link.addEventListener("focus", () => show(link, tooltip))
+    link.addEventListener("pointerenter", () => show(link, tooltip))
+    link.addEventListener("focus", () => show(link, tooltip))
 
-  link.addEventListener("pointerleave", () => hide(tooltip))
-  link.addEventListener("blur", () => hide(tooltip))
-
-  // Once faded out, the tooltip is removed from the layout.
-  tooltip.addEventListener("transitionend", () => {
-    if (!tooltip.classList.contains("is-opened")) {
-      tooltip.classList.remove("is-visible")
-    }
-  })
+    link.addEventListener("pointerleave", () => hide(tooltip))
+    link.addEventListener("blur", () => hide(tooltip))
+  }
 }

@@ -1,21 +1,19 @@
 @layer components {
   /**
    * Tooltip: label of the link that precedes it.
-   * Displayed and positioned by index.js.
+   * It is a popover, opened and positioned by index.js.
    */
 
-  /* The tooltip is positioned (and sized) relatively to its list item. */
-  li:has(> .tooltip) {
-    position: relative;
-  }
-
   .tooltip {
-    display: none;
-
-    z-index: 999;
+    /* Reset the default look and position of a popover. */
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: auto;
+    margin: 0;
+    border: 0;
+    overflow: visible;
+
+    /* One word per line ("Speaker Deck" is on two lines). */
+    width: min-content;
 
     color: white;
     padding: 0.5rem 1.5rem;
@@ -28,30 +26,37 @@
     text-transform: uppercase;
     text-align: center;
 
-    opacity: 0;
-    transform: translateY(0);
-    transition: all 0.225s ease-in;
-    transition-property: opacity, transform;
-
     pointer-events: none;
 
-    &.is-visible {
-      display: block;
-    }
+    /* Closed: transparent, at its place. */
+    opacity: 0;
+    transform: translateY(0);
 
-    &.is-opened {
+    /* 'display' and 'overlay' keep the tooltip visible while it fades out. */
+    transition: all 0.225s ease-in;
+    transition-property: opacity, transform, display, overlay;
+    transition-behavior: allow-discrete;
+
+    /* Opened: visible, a bit further from the link. */
+    &:popover-open {
       opacity: 1;
       transform: translateY(-10px);
 
       &[data-placement="bottom"] {
         transform: translateY(10px);
       }
+
+      /* Where the opening starts from. */
+      @starting-style {
+        opacity: 0;
+        transform: translateY(0);
+      }
     }
   }
 
   /* On the home page, tooltips are for the icons-only layout (small screens). */
   @media (min-width: 800px) {
-    .social-nav .tooltip.is-visible {
+    .social-nav .tooltip:popover-open {
       display: none;
     }
   }

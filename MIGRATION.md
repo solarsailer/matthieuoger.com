@@ -147,26 +147,14 @@ Side effect: asset URLs differ from production
 | Progress bar during in-site navigation | `gatsby-plugin-nprogress` (shown while Gatsby's client-side router loads the next page) | Drop. Navigation is plain page loads now; the browser shows its own progress. |
 | Google Analytics `UA-41853457-1` | plugin | Drop. Universal Analytics stopped processing in 2023. |
 
-Tooltip note. Decision: Floating UI. One module, `assets/js/index.js`:
-
-- markup: each social link is followed by a `<div class="tooltip" role="tooltip">`
-  rendered by the template, hidden by default, linked with `aria-describedby`;
-- `pointerenter`/`focus` show it, `pointerleave`/`blur` hide it (toggle a
-  class, keep the existing opacity/translate transition);
-- position with `computePosition(link, tooltip, {placement: 'top', middleware:
-  [offset(20), flip(), shift({padding: 8})]})`. `flip()` replaces the old
-  "show below when closer than 100px to the top" rule;
-- import `@floating-ui/dom` from `node_modules`; `js.Build` bundles and
-  minifies it into the single script. No import map needed.
-
-The native Popover API is not required with this approach. Add
-`popover="manual"` only if a tooltip ends up clipped by an ancestor.
-
-For the record, the dependency-free route is CSS anchor positioning. It
-reached all engines only in January 2026 (Firefox 147; Safari 26 in September
-2025), so older Safari and Firefox would get misplaced tooltips. Hover
-triggering needs JS either way: `interestfor` is Chromium-only. Revisit in a
-year or two and delete the library.
+Tooltip note. **Final decision: native Popover API, no library.** Each
+tooltip is a `popover="manual"` element; `assets/js/index.js` (about 40 lines)
+opens it on hover and focus and positions it under or above its link. The
+fade is pure CSS (`@starting-style`, `transition-behavior: allow-discrete`).
+Browsers without the Popover API show no tooltip. Floating UI was used for a
+while, then removed: 12.5 KB for seven tooltips. CSS anchor positioning would
+remove the positioning code too, once it is widely available (all engines
+only since January 2026).
 
 ### 4.5 Build chain
 
@@ -461,8 +449,6 @@ or current on 2026-11-14.
 |---|---|---|---|
 | Hugo | 0.170.0 (standard edition is enough) | Go binary, Homebrew | Site generator. Brings Goldmark (Markdown), Chroma (code highlighting) and esbuild (`js.Build`) built in. |
 | Dart Sass | 1.108.2 | Binary, Homebrew | Compiles `assets/sass`. Called by Hugo. |
-| Node.js + npm | 26.x | Runtime, Homebrew | Only to install the one npm library below so Hugo can bundle it. |
-| `@floating-ui/dom` | 1.8.0 | npm, shipped to browsers | Tooltip positioning. Pulls `@floating-ui/core` and `@floating-ui/utils` (same project). |
 
 **Vendored in the repository**
 

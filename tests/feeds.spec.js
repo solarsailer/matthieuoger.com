@@ -4,7 +4,13 @@ import { join } from "node:path"
 import { expect, test } from "@playwright/test"
 
 import { extractBody } from "./extract"
-import { BASELINE_DIR, HUGO_DIR, REWRITTEN_PAGES, flatten } from "./pages"
+import {
+  BASELINE_DIR,
+  HUGO_DIR,
+  IGNORED_LINES,
+  REWRITTEN_PAGES,
+  flatten
+} from "./pages"
 
 // -------------------------------------------------------------
 // Feeds: same entries, same ids. Otherwise feed readers
@@ -85,10 +91,15 @@ test("feed.json items have the same content", async ({ page }) => {
 
   const outline = async (html, id) => {
     await page.setContent(`<main>${html}</main>`)
-    const result = await page.evaluate(extractBody, "main")
+    const name = new URL(id).pathname
+    const ignored = IGNORED_LINES[name]
 
-    const isRewritten = REWRITTEN_PAGES.some((x) => id.endsWith(x))
-    return isRewritten ? flatten(result) : result
+    const result = (await page.evaluate(extractBody, "main"))
+      .split("\n")
+      .filter((x) => !ignored?.test(x))
+      .join("\n")
+
+    return REWRITTEN_PAGES.includes(name) ? flatten(result) : result
   }
 
   for (const item of expected.items) {

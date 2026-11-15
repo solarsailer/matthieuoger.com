@@ -4,7 +4,6 @@ locale = 'en-us'
 
 # Metadata.
 title = 'Matthieu Oger'
-copyright = '© 2026 Matthieu Oger'
 
 [params]
   author = 'Matthieu Oger'
