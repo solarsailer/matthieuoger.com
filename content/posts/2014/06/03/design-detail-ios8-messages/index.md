@@ -10,14 +10,9 @@ One of the features that I wanted the most in iOS 8 was simple: add a _“Use La
 
 The idea was originally thought by [Neven Mrgan](http://mrgan.tumblr.com/post/12808983893/tweetbot-adds-last-photo-taken-feature) and later adopted by a lot of apps (Tweetbot, Slack, Droplr, etc.).
 
-<figure>
-    <img
-    src="/2014/06/design-detail-ios8-messages/picker-tweetbot.png"
-    alt="Use “Last Photo Taken” in the Image Picker of Tweetbot 3"
-    title="Use “Last Photo Taken”"
-  >
-  <figcaption>Example: the Image Picker from Tweetbot 3.</figcaption>
-</figure>
+{{< image src="picker-tweetbot.png" alt="Use “Last Photo Taken” in the Image Picker of Tweetbot 3" title="Use “Last Photo Taken”" >}}
+Example: the Image Picker from Tweetbot 3.
+{{< /image >}}
 
 But it was still missing in the one place where it would definitely shine: Messages.
 
@@ -29,14 +24,9 @@ The way it was added is brilliant. It's so simple that I don't know why it hasn'
 
 Here it is:
 
-<figure>
-  <img
-    src="/2014/06/design-detail-ios8-messages/picker-8.png"
-    alt="Image Picker in iOS 8 Messages app"
-    title="iOS 8 Messages"
-  >
-  <figcaption>It's not a button. It's a grid of three (or more) images.</figcaption>
-</figure>
+{{< image src="picker-8.png" alt="Image Picker in iOS 8 Messages app" title="iOS 8 Messages" >}}
+It's not a button. It's a grid of three (or more) images.
+{{< /image >}}
 
 It solves three problems:
 

@@ -26,5 +26,5 @@ When I talk about that with some of my friends, they think that I'm excessively 
 
 I will conclude with a quote from the talk:
 
+> [!transcript]
 > There are professions more harmful than (industrial) design, **but only a very few of them.**
-{.transcript}

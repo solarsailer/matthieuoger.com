@@ -8,6 +8,7 @@ excerptQuote:
 
 [Jonathan Lefèvre](https://medium.com/@djo/service-client-et-outils-de-productivité-lalignement-des-passions-a4a59216d6a7) (loosely translated from French[^1]):
 
+> [!transcript]
 > The topic of _scale_ is as inevitable as it is hard, and seems so at odds with the human customer service idea, difficult to automate just by its own definition. Even the enterprises for which customer service is not a priority can find themselves confronted to the exact same problem. All of them must think about the best organization possible to handle efficiently the endless influx of requests and questions.
 >
 > […] But this has mostly allowed me to realize what was truly making the strength of the customer service at Capitaine Train: its operational efficiency. In the end, if we could manage 2 millions of customers with a small team of 15 people, it was because we were extremely well equipped.
@@ -15,7 +16,6 @@ excerptQuote:
 > Nothing was left to chance in the hunt for the lesser and useless click. And if this constant quest for the optimization of the processes is a topic that interests many entrepreneurs, I think that it manifests itself in an even more glaring way when you do customer service management of a start-up in hyper growth. […] When you spend days fighting the steamroller of client requests, you inevitably finish to devote a cult to any tool able to make you gain the smallest second of productivity.
 >
 > […] So, I imagined naively that any customer service in the world would use the best tools in the market to work more efficiently. I was far from the mark. Numerous were those that didn't have a good system to manage notes and documentation, the basic and elementary reflexes to minimize interruptions, or just a sane way of handling emails.
-{.transcript}
 
 In general, adding _more_ people and asking them to work _more_ is not the right way to solve a problem — I would even say it will create the opposite effect in the long-run.
 

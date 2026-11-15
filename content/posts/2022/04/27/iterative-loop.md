@@ -8,6 +8,7 @@ excerptQuote:
 
 [Cole Wehrle][podcast]:
 
+> [!transcript]
 > To make games, **you have to walk through something called the iterative loop.**
 >
 > 1. You have to have an idea,
@@ -21,7 +22,6 @@ excerptQuote:
 > Any designer will have to run around this iterative loop thousand of times before a game is completed.
 >
 > […] **Figure out ways to move, to make that loop smaller.** And to run though it more efficiently. Or you'll burn yourself out.
-{.transcript}
 
 <small>(Slightly edited for readability)</small>
 

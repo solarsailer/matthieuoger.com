@@ -27,14 +27,9 @@ VR is pretty boring for games, its main application right now. Yes, the immersio
 
 VR is ugly. VR is cumbersome. VR is like Google Glass (remember that?) in so many ways.
 
-<figure>
-  <img
-    src="/2016/03/virtual-reality/virtual-reality.png"
-    alt="Men and women sitting with a VR headset, Mark Zuckerberg marching among them."
-    title="The future?"
-  >
-  <figcaption>The future? Really?</figcaption>
-</figure>
+{{< image src="virtual-reality.png" alt="Men and women sitting with a VR headset, Mark Zuckerberg marching among them." title="The future?" >}}
+The future? Really?
+{{< /image >}}
 
 If you're at home, it might be fine, although that wearing another thing on your head is not that comfy. I already wear glasses, I really don't want to add something more on my head, I assure you. Especially if it means that I might hit a wall someway.[^2]
 
