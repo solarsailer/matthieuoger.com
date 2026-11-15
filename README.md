@@ -24,6 +24,15 @@ npx playwright install chromium
 
 `~/go/bin` must be in your `PATH`.
 
+## Formatting
+
+`just format` formats everything:
+
+- Templates (`layouts/`) with [gotmplfmt](https://github.com/gohugoio/gotmplfmt). They are indented with tabs: it is the convention of Go, and the tool has no setting for it.
+- Styles, scripts and tests with [Prettier](https://prettier.io/), indented with two spaces.
+
+Posts are never formatted.
+
 ## Develop
 
 ```

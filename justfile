@@ -27,7 +27,8 @@ baseline:
 	rm -rf tests/.baseline/.git
 	npx playwright test -c tests --project=baseline --update-snapshots
 
-# Format the code: templates with gotmplfmt, everything else with Prettier.
+# Format the code: templates with gotmplfmt (tabs, the Go convention),
+# everything else with Prettier (two spaces).
 format:
 	gotmplfmt -w layouts
 	npx prettier --write .
