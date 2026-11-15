@@ -10,7 +10,10 @@ Mozilla and Telefónica have announced a phone running Firefox OS this morning -
 
 Mozilla, as usual, promotes the open nature of its OS along with the fact that it is powered by web technologies:
 
-<blockquote class="twitter-tweet"><p><a href="https://twitter.com/search?q=%23FirefoxOS&amp;src=hash">#FirefoxOS</a> arrives this month in select markets! Celebrate the 1st smartphone powered completely by Web technologies! <a href="http://t.co/Mio0f4zctj">http://t.co/Mio0f4zctj</a></p>&mdash; Firefox (@firefox) <a href="https://twitter.com/firefox/statuses/351641840728023040">July 1, 2013</a></blockquote>
+> [!TWEET]
+> [#FirefoxOS](https://twitter.com/search?q=%23FirefoxOS&src=hash) arrives this month in select markets! Celebrate the 1st smartphone powered completely by Web technologies! [http://t.co/Mio0f4zctj](http://t.co/Mio0f4zctj)
+>
+> — Firefox (@firefox) [July 1, 2013](https://twitter.com/firefox/statuses/351641840728023040)
 
 I honestly don't get it:
 
@@ -24,8 +27,14 @@ I would like to be wrong, but I don't expect much and I don't see the value of F
 
 I agree with [Benedict Evans](http://ben-evans.com/):
 
-<blockquote class="twitter-tweet"><p>When I hear people say how great Firefox OS is, they talk about operators, OEMs, litigation... and sometimes remember to mention users</p>&mdash; Benedict Evans (@BenedictEvans) <a href="https://twitter.com/BenedictEvans/statuses/351646258856857600">July 1, 2013</a></blockquote>
+> [!TWEET]
+> When I hear people say how great Firefox OS is, they talk about operators, OEMs, litigation... and sometimes remember to mention users
+>
+> — Benedict Evans (@BenedictEvans) [July 1, 2013](https://twitter.com/BenedictEvans/statuses/351646258856857600)
 
 And:
 
-<blockquote class="twitter-tweet"><p>Everyone agrees that the web is the future and apps are a dead end. The only people who disagree are the actual, you know, users.</p>&mdash; Benedict Evans (@BenedictEvans) <a href="https://twitter.com/BenedictEvans/statuses/351646755818975232">July 1, 2013</a></blockquote>
+> [!TWEET]
+> Everyone agrees that the web is the future and apps are a dead end. The only people who disagree are the actual, you know, users.
+>
+> — Benedict Evans (@BenedictEvans) [July 1, 2013](https://twitter.com/BenedictEvans/statuses/351646755818975232)

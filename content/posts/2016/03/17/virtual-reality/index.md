@@ -43,7 +43,10 @@ VR is not completely useless. There's some fields where virtual reality might be
 
 Unfortunately, right now, people imagine that VR will be used to handle and manipulate softwares, computers or playing games. That's absurd.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Using VR to work on scenes in the Unity Editor: <a href="https://twitter.com/timoni">@timoni</a>&#39;s demo on-stage at <a href="https://twitter.com/hashtag/GDC16?src=hash">#GDC16</a>: <a href="https://t.co/tbUmVAemBU">https://t.co/tbUmVAemBU</a> <a href="https://twitter.com/hashtag/unity3d?src=hash">#unity3d</a> <a href="https://t.co/T1EH8MsLWb">pic.twitter.com/T1EH8MsLWb</a></p>&mdash; Ben Pitt (@robotduck) <a href="https://twitter.com/robotduck/status/709810463886934016">March 15, 2016</a></blockquote>
+> [!TWEET]
+> Using VR to work on scenes in the Unity Editor: [@timoni](https://twitter.com/timoni)'s demo on-stage at [#GDC16](https://twitter.com/hashtag/GDC16?src=hash): [https://t.co/tbUmVAemBU](https://t.co/tbUmVAemBU) [#unity3d](https://twitter.com/hashtag/unity3d?src=hash) [pic.twitter.com/T1EH8MsLWb](https://t.co/T1EH8MsLWb)
+>
+> — Ben Pitt (@robotduck) [March 15, 2016](https://twitter.com/robotduck/status/709810463886934016)
 
 Seriously? Who would do that? What the point? Who in their right mind thought it was a good idea!?
 
