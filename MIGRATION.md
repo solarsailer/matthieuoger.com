@@ -69,7 +69,7 @@ These were checked against the real outputs, not assumed.
   Obsidian and GitHub use:
 
   ```
-  > [!transcript]
+  > [!TRANSCRIPT]
   > Quoted text.
   ```
 
