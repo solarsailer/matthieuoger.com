@@ -64,20 +64,23 @@ These were checked against the real outputs, not assumed.
 
 ### 4.1 Markdown rendering differs from remark
 
-- **`:::` containers are not supported by Goldmark.** 17 blocks in 12 posts
-  (`::: blockquote transcript|tldr|twitter-tweet`). **Decision (revised):
-  rewrite them in the posts** as regular blockquotes followed by a class line,
-  which Hugo renders natively with
-  `markup.goldmark.parser.attribute.block = true`:
+- **`:::` containers are not supported by Goldmark.** 17 blocks in 12 posts.
+  **Decision (final): rewrite them in the posts as callouts**, the syntax
+  Obsidian and GitHub use:
 
   ```
+  > [!transcript]
   > Quoted text.
-  {.transcript}
   ```
 
-  A first version kept the `:::` syntax and converted the rendered HTML with
-  regular expressions in a partial. Matthieu rejected it: editing HTML as text
-  depends on Hugo's exact output.
+  `_markup/render-blockquote.html` turns the kind into the class of the
+  `<blockquote>`. Kinds: `transcript`, `tldr`, `tweet`. Hugo accepts any
+  word as a kind, but no hyphen (verified on 0.170), hence `tweet` rather
+  than `twitter-tweet`; the stylesheet treats both alike.
+
+  Rejected on the way: converting the rendered HTML with regular expressions
+  (depends on Hugo's exact output), and a `{.class}` line after the quote
+  (works without a template, but reads poorly).
 - **Typographer: disable it.** It is on by default in Hugo and would curl
   about 840 quotes and apostrophes and turn 7 `--`/`---` into dashes.
   Production keeps the text as typed, and so will Hugo:
@@ -100,15 +103,20 @@ These were checked against the real outputs, not assumed.
 
 ### 4.2 Files stored next to a post
 
-`migration-hugo` moved post assets into page bundles and referenced them by
-name only (`src="lock.jpg"`). That works on the post page but breaks wherever
-the content is displayed at another URL: the first three posts on `/articles/`
-and every entry of the feeds.
+Posts name the files of their bundle without a path (`lock.jpg`). The content
+of a post is also displayed on `/articles/` and in the feeds, so every
+reference must be resolved to the real URL at build time. Hugo's way:
 
-**Decision: posts reference these files from the root of the site**
-(`/2022/03/rotation-videos/lock.jpg`), in Markdown and in raw HTML alike
-(20 references in 7 posts). Plain HTML, nothing to rewrite at build time.
-Feeds carry these root-relative URLs, as production's always did.
+- Markdown images: built-in image hook
+  (`markup.goldmark.renderHooks.image.useEmbedded = 'always'`).
+- Markdown links: `_markup/render-link.html`. The built-in link hook does the
+  same but rejects URL schemes such as `shortcuts://` (one post uses it).
+- What Markdown cannot express: shortcodes. `image` (a width, or a caption in
+  a `<figure>`) and `video` (Hugo has none for local files).
+
+No raw `<img>`, `<video>` or `<figure>` is left in the posts. A first version
+rewrote relative URLs in the rendered HTML; a second wrote root-relative URLs
+in the posts. Both were dropped.
 
 Side effect: asset URLs differ from production
 (`/images/posts/2018-10-18/x.jpg`). See §5, D3.
