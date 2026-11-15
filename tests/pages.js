@@ -28,8 +28,8 @@ export const POSTS_REFERENCE_COMMIT = "8732fa0"
 // What changed, for the record (each change is in a posts-only commit):
 // - 'excerpt' typo in what-makes-indie-hit (D8);
 // - footnotes indented by 4 spaces, one quoted paragraph prefixed with '> ';
-// - ':::' blocks rewritten as blockquotes followed by '{.class}';
-// - files of a post referenced from the root of the site.
+// - ':::' blocks rewritten as quotes starting with '> [!kind]';
+// - raw <figure>, <video> and sized <img> replaced by shortcodes.
 export const APPROVED_POST_EDITS = [
   "content/posts/2013/08/27/quote-jonathan-blow.md",
   "content/posts/2013/10/22/how-designers-destroyed-the-world.md",
@@ -37,10 +37,8 @@ export const APPROVED_POST_EDITS = [
   "content/posts/2015/04/25/wearables.md",
   "content/posts/2015/09/09/rule-of-two.md",
   "content/posts/2015/09/18/what-makes-indie-hit.md",
-  "content/posts/2015/09/27/semicolon-comma-programming/index.md",
   "content/posts/2016/03/17/virtual-reality/index.md",
   "content/posts/2016/04/01/dwarf-fortress-systems.md",
-  "content/posts/2018/07/20/reboot/index.md",
   "content/posts/2018/10/18/unity-iphone-x-home-indicator/index.md",
   "content/posts/2019/07/29/withhold-the-fun.md",
   "content/posts/2019/08/01/fast/index.md",

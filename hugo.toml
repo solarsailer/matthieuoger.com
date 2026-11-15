@@ -62,8 +62,11 @@ copyright = '© 2026 Matthieu Oger'
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files.
 
-[markup.goldmark.parser.attribute]
-  block = true # A '{.class}' line after a block (used by quotes: '{.transcript}').
+# An image written in Markdown can name a file stored next to the post
+# ('photo.jpg'): Hugo resolves it to its real URL.
+# Links do the same with layouts/_markup/render-link.html.
+[markup.goldmark.renderHooks.image]
+  useEmbedded = 'always'
 
 [markup.goldmark.extensions.typographer]
   disable = true # Keep quotes and dashes as typed.

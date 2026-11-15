@@ -46,6 +46,9 @@ export function extractBody(selector) {
   function url(value) {
     if (!value) return value
 
+    // '%c3%a9' and '%C3%A9' are the same escape.
+    value = value.replace(/%[0-9a-f]{2}/gi, (x) => x.toUpperCase())
+
     // D1: numbered pages of articles moved to '/articles/p/2/'.
     value = value.replace(/^\/articles\/p\/(\d+)/, "/articles/$1")
 
@@ -84,7 +87,13 @@ export function extractBody(selector) {
     const tag = element.tagName.toLowerCase()
     const attributes = []
 
-    const classes = AUTHOR_CLASSES.filter((x) => element.classList.contains(x))
+    // A quoted tweet has the class 'tweet' (kind of the quote in Markdown);
+    // production, and raw embeds, use 'twitter-tweet'.
+    const classList = [...element.classList].map((x) =>
+      x === "tweet" ? "twitter-tweet" : x
+    )
+
+    const classes = AUTHOR_CLASSES.filter((x) => classList.includes(x))
     if (classes.length) attributes.push(`class="${classes.join(" ")}"`)
 
     for (const name of ["href", "src"]) {

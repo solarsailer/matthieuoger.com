@@ -73,6 +73,7 @@
     }
 
     /* In Twitter embed, disable the icon. */
+    .tweet,
     .twitter-tweet {
       a[href*="twitter.com"] {
         margin-left: 0;
