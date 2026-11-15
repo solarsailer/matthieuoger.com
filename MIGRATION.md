@@ -472,14 +472,13 @@ or current on 2026-11-14.
 
 **Development and tests only**
 
-| Dependency                    | Version      | Kind                               | Role                                                                                                                                          |
-| ----------------------------- | ------------ | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| just                          | 1.59.0       | Binary, Homebrew                   | Task runner (`justfile`).                                                                                                                     |
-| `@playwright/test`            | 1.65.1       | npm dev                            | All tests. Downloads its own Chromium (`npx playwright install chromium`).                                                                    |
-| git                           | any          | Binary                             | `just baseline` clones the production build.                                                                                                  |
-| `prettier`                    | 3.x (latest) | npm dev                            | Formatting. Missing from `package.json` today; add it.                                                                                        |
-| `prettier-plugin-go-template` | 0.0.15       | npm dev                            | Lets Prettier format Hugo templates. Already configured.                                                                                      |
-| gotmplfmt                     | 0.5.0        | Go binary, `go install` (needs Go) | Formats the Hugo templates. From the Hugo team. Indents with tabs, and only touches indentation, so the output of the templates is unchanged. |
+| Dependency         | Version      | Kind                               | Role                                                                                                                                          |
+| ------------------ | ------------ | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| just               | 1.59.0       | Binary, Homebrew                   | Task runner (`justfile`).                                                                                                                     |
+| `@playwright/test` | 1.65.1       | npm dev                            | All tests. Downloads its own Chromium (`npx playwright install chromium`).                                                                    |
+| git                | any          | Binary                             | `just baseline` clones the production build.                                                                                                  |
+| `prettier`         | 3.x (latest) | npm dev                            | Formatting. Missing from `package.json` today; add it.                                                                                        |
+| gotmplfmt          | 0.5.0        | Go binary, `go install` (needs Go) | Formats the Hugo templates. From the Hugo team. Indents with tabs, and only touches indentation, so the output of the templates is unchanged. |
 
 **Services**
 

@@ -12,24 +12,9 @@
   "scripts": {},
   "devDependencies": {
     "@playwright/test": "^1.65.1",
-    "prettier": "^3.10.1",
-    "prettier-plugin-go-template": "^0.0.15"
+    "prettier": "^3.10.1"
   },
   "prettier": {
-    "plugins": [
-      "prettier-plugin-go-template"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "*.html"
-        ],
-        "options": {
-          "parser": "go-template"
-        }
-      }
-    ],
-    "goTemplateBracketSpacing": true,
     "htmlWhitespaceSensitivity": "ignore",
     "semi": false,
     "trailingComma": "none"
