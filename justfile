@@ -36,7 +36,6 @@ format:
 	npx prettier --write .
 
 # Publish the site on matthieuoger.com (asks for a confirmation).
-[confirm("Publish the site to matthieuoger.com?")]
 deploy: build
 	#!/usr/bin/env bash
 	set -euo pipefail
@@ -72,6 +71,36 @@ deploy: build
 			exit 1
 		fi
 	done
+
+	# Hugo leaves some posts out of a build without a word: say which ones,
+	# one line per post with every reason ("draft, dated in the future").
+	unpublished() {
+		hugo list "$1" | tail -n +2 | cut -d, -f1 | sed "s/$/|$2/"
+	}
+
+	skipped=$(
+		{
+			unpublished drafts "draft"
+			unpublished future "dated in the future"
+			unpublished expired "expired"
+		} | awk -F'|' '
+			!($1 in reasons) { order[++count] = $1 }
+			{ reasons[$1] = ($1 in reasons ? reasons[$1] ", " : "") $2 }
+			END { for (i = 1; i <= count; i++) print "  - " order[i] " (" reasons[order[i]] ")" }
+		'
+	)
+
+	if [ -n "$skipped" ]; then
+		echo "Not published:"
+		echo "$skipped"
+		echo
+	fi
+
+	read -r -p "Publish the site to matthieuoger.com? [y/N] " answer
+	if [ "$answer" != "y" ] && [ "$answer" != "Y" ]; then
+		echo "Nothing was published."
+		exit 0
+	fi
 
 	revision=$(git rev-parse --short HEAD)
 	checkout=$(mktemp -d)
