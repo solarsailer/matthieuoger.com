@@ -12,7 +12,7 @@ title = 'Matthieu Oger'
 
 [params]
   author = 'Matthieu Oger'
-  description = 'I am a product manager, developer and designer from France. Co-founder of Pixelnest Studio.'
+  description = 'I am a technology generalist, product manager, and designer from France. Original co-founder of Pixelnest Studio. Photographer on the side.'
   keywords = [
     'solar',
     'sailer',
@@ -22,10 +22,12 @@ title = 'Matthieu Oger'
     'developer',
     'product manager',
     'technology',
+    'technology generalist',
     'design',
     'development',
     'dev',
     'photography',
+    'photographer',
     'pixelnest'
   ]
   twitter = 'solarsailer'

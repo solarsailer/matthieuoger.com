@@ -1,50 +1,58 @@
 ---
 date: "1988-10-03"
 title: "About"
-excerpt: "I'm a product manager, developer and designer. I co-founded Pixelnest Studio in February 2014, where we created Steredenn."
+excerpt: "I'm a technology generalist, product manager, and designer. I originally co-founded Pixelnest Studio in February 2014, where we created Steredenn. Photographer on the side."
 
 category: "meta"
 url: "/about/"
 showPageTitle: true
 ---
 
-I am Matthieu Oger, a _product manager_, _developer_ and _designer_ from France.
+**I am Matthieu Oger, a _technology generalist_, _product manager_, and _designer_ from France.** I practice photography as a hobby.
 
-I co-founded [Pixelnest Studio][pixelnest] in February 2014 with [Damien Mayance][dmayance]. We crafted some delightful apps, websites and games. Our most famous product is [Steredenn](http://steredenn.pixelnest.io) — an award-winning shmup/roguelike. We decided to put the company in hibernation at the end of 2018. [_It was time to move on._](https://pixelnest.io/2018/11/the-beginning-and-the-end/)
+## History
 
-**I'm now focusing solely on product management, leading teams design and build better softwares.**
+I started my professional life as a developer in Rennes, for a small startup which was building analytics for the then-nascent mobile app scene.
 
-I recently worked for [Shift Technology](https://www.shift-technology.com), a Parisian startup using AI to solve complex automation problems in the insurance industry. My current company is [The Explorers](https://theexplorers.com), another Parisian startup which is creating an inventory of the planet in super high definition — _”know better to protect better”_.
+I co-founded [Pixelnest Studio][pixelnest] in February 2014 with [Damien Mayance][dmayance]. We crafted some delightful apps, websites and games. Our most famous product is [Steredenn](https://steredenn.pixelnest.io) — an award-winning shmup/roguelike. We decided to put the company in hibernation at the end of 2018. [_It was time to move on._](https://pixelnest.io/2018/11/the-beginning-and-the-end/)[^1]
 
-This place is a way to express my thoughts and opinions on a broad range of subjects, including technology, design, photography and development.
+I then focused mainly on product management, leading teams to design and build better software. In 2019, I worked for [Shift Technology](https://www.shift-technology.com), a Parisian startup using pre-LLM AI to solve complex automation problems in the insurance industry. Then in 2021, I joined [The Explorers](https://theexplorers.com), another startup which was creating an inventory of the planet in super high definition, as head of product and digital.
 
-These opinions are mine, not those of my companies.
+I went back to engineering (mostly infrastructure, R&D and cybersecurity) in 2023 as deputy CIO for a small but well-established company.
 
 ## Contact
 
 You can…
 
-* Read my ramblings on [Twitter](https://twitter.com/solarsailer/)
-* Discover my photos on [Instagram](https://www.instagram.com/matthieuoger/)
 * Look at my code on [GitHub](https://github.com/solarsailer/)
-* Check some designs on [Dribbble](https://dribbble.com/matthieuoger/)
-* Download some of my free high-res photos on [Unsplash](https://unsplash.com/matthieuoger/)
 * Watch my talks on [Speaker Deck](https://speakerdeck.com/matthieuoger/)
 * And join my professional© network™ on [LinkedIn](https://linkedin.com/in/matthieuoger/)
 
-**If you want to contact me directly, use [Twitter](https://twitter.com/solarsailer/).**
+Previously, you could also…[^2]
+
+* Read my ramblings on [Twitter/X](https://twitter.com/solarsailer/)
+* Discover my photos on [Instagram](https://www.instagram.com/matthieuoger/)
+* Check some designs on [Dribbble](https://dribbble.com/matthieuoger/)
+* And download some of my free high-res photos on [Unsplash](https://unsplash.com/matthieuoger/)
 
 ## About this blog
 
-I built this blog with [Gatsby][gatsby]. The code and design are purely mine, except for some icons (Twitter, GitHub, Dribbble and Instagram). These are made by Daniel Bruce, from his [Entypo][entypo] set.
+This place is a way to express my thoughts and opinions on a broad range of subjects, including technology, design, photography and development.
 
-The layout is particularly optimized for mobiles and high density screens (read: retina displays).
+These opinions are mine, not those of my companies.
 
-If you want to follow me with your favorite feed reader, use this [Atom feed](/atom.xml) or this [JSON Feed](/feed.json). You can also subscribe to the [@matthieuogercom](http://twitter.com/matthieuogercom) Twitter account.
+If you want to follow me with your favorite feed reader, use this [Atom feed](/atom.xml) or this [JSON Feed](/feed.json).
+
+## Technical
+
+This blog was originally built with [Gatsby][gatsby]. I migrated it to [Hugo][hugo] in 2026. Some icons (Twitter, GitHub, Dribbble and Instagram) are made by Daniel Bruce, from his [Entypo][entypo] set.
 
 
 [pixelnest]: https://pixelnest.io/
 [dmayance]: https://dmayance.com/
+[hugo]: https://gohugo.io
 [gatsby]: https://www.gatsbyjs.org/
-[github]: http://github.com/
-[entypo]: http://entypo.com/
+[entypo]: https://entypo.com/
+
+[^1]: [Damien][dmayance] relaunched it in 2023. Check what he's doing [here][pixelnest].
+[^2]: But I either don't use them anymore (Twitter/X, Instagram, Dribbble), or no longer have the energy to update them (Unsplash). I have a bit of nostalgia for those services, hence this section. They will probably be removed at some point.
