@@ -18,8 +18,7 @@ brew install go
 go install github.com/gohugoio/gotmplfmt@v0.5.0
 
 # Formatter for the rest, and the test runner with its browser.
-npm install
-npx playwright install chromium
+just setup
 ```
 
 `~/go/bin` must be in your `PATH`.
@@ -84,4 +83,4 @@ just test            # Build, then compare (report in tests/report/)
 just test-browsers   # Tooltips in Firefox and Safari's engine too
 ```
 
-`just test-browsers` needs `npx playwright install firefox webkit` once.
+`just test-browsers` needs `node_modules/.bin/playwright install firefox webkit` once.

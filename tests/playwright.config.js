@@ -26,7 +26,7 @@ export default defineConfig({
     { name: "chromium" },
 
     // Behavior of the tooltips in the other browser engines
-    // (`just test-browsers`; needs `npx playwright install firefox webkit`).
+    // (`just test-browsers`; needs `node_modules/.bin/playwright install firefox webkit`).
     {
       name: "firefox",
       testMatch: "tooltips.spec.js",
