@@ -57,6 +57,13 @@ deploy: build
 		exit 1
 	fi
 
+	# What is published must be on GitHub too, not only on this machine.
+	git fetch --quiet origin master
+	if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/master)" ]; then
+		echo "'master' differs from 'origin/master': push (or pull) first." >&2
+		exit 1
+	fi
+
 	# The build must look like the site: publishing an empty or partial
 	# folder would delete the site, and without CNAME the domain is lost.
 	for file in index.html atom.xml feed.json CNAME; do
