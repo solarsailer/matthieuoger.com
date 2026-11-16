@@ -36,12 +36,13 @@ format:
 	npx prettier --write .
 
 # Publish the site on matthieuoger.com (asks for a confirmation).
-#
-# The site is built, then committed to the repository that GitHub Pages serves.
 [confirm("Publish the site to matthieuoger.com?")]
 deploy: build
 	#!/usr/bin/env bash
 	set -euo pipefail
+
+	# The build (public/) is committed to the repository that GitHub Pages
+	# serves, on top of its history: one commit per publication.
 
 	# What is published must match a commit of this repository.
 	if [ -n "$(git status --porcelain)" ]; then
