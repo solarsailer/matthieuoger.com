@@ -1,0 +1,149 @@
+@layer layout {
+  $breakpoint: 800px;
+
+  .home {
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 4rem 2rem;
+
+    background: url("/assets/images/site/background.jpg") bottom center;
+    background-size: cover;
+  }
+
+  /**
+   * Avatar.
+   */
+
+  .home__avatar {
+    margin-bottom: 10rem;
+    text-align: center;
+
+    img {
+      width: 350px;
+      height: 350px;
+      border-radius: 100%;
+      margin-bottom: 4.5rem;
+    }
+
+    @media (max-width: $breakpoint) {
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 400px) {
+      img {
+        max-width: 85%;
+        height: auto;
+      }
+    }
+  }
+
+  .home__header {
+    padding: 0 2rem;
+
+    @media (max-width: 600px) {
+      font-size: 0.85em;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 0.7em;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 0.55em;
+    }
+
+    @media (max-width: 300px) {
+      font-size: 0.5em;
+      padding: 0 1rem;
+    }
+  }
+
+  .home__title {
+    margin-bottom: 2rem;
+
+    font-size: 3.25em;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .home__first-name {
+    color: var(--color-accent);
+
+    font-weight: 300;
+  }
+
+  .home__last-name {
+    font-weight: bold;
+  }
+
+  .home__bio {
+    color: hsl(0, 0%, 67%);
+
+    max-width: 650px;
+    margin-bottom: 0;
+    padding: 2rem;
+    background: hsla(0, 0%, 40%, 0.05);
+    border-radius: 5px;
+
+    font-size: 0.8em;
+    font-style: normal;
+
+    strong {
+      font-weight: 500;
+    }
+
+    a {
+      color: hsl(var(--hue-accent), 77%, 65%);
+      text-decoration: underline;
+      transition: color 0.3s ease-out;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+
+    @media (max-width: 750px) {
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /**
+   * Navigation.
+   */
+
+  .home__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 3rem;
+
+    line-height: normal;
+
+    li {
+      margin: 0 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: $breakpoint) {
+      display: block;
+      width: 400px;
+
+      li {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+  }
+}

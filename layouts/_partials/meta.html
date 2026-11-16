@@ -1,0 +1,69 @@
+{{- $author := site.Params.author -}}
+{{- $description := site.Params.description -}}
+{{- $siteURL := strings.TrimSuffix "/" site.BaseURL -}}
+{{- $image := printf "%s/feed.png" $siteURL -}}
+{{- $imageAlt := printf "%s — %s" $author $description -}}
+
+{{- /* Defaults, for every page that is not a post. */ -}}
+{{- $title := $author -}}
+{{- $metaTitle := $author -}}
+{{- $metaURL := $siteURL -}}
+{{- $metaDescription := $description -}}
+
+{{- if eq .Kind "404" -}}
+	{{- $title = printf "Not Found — %s" $author -}}
+{{- else if and .IsPage (eq .Type "posts") -}}
+	{{- $title = printf "%s — %s" .Title $author -}}
+	{{- $metaTitle = $title -}}
+	{{- $metaURL = .Permalink -}}
+
+	{{- with .Params.excerptQuote -}}
+		{{- $metaDescription = printf "%s: “%s”" .name .quote -}}
+	{{- end -}}
+	{{- with .Params.excerpt -}}
+		{{- $metaDescription = . -}}
+	{{- end -}}
+{{- else if not .IsHome -}}
+	{{- $title = printf "%s — %s" .Title $author -}}
+{{- end -}}
+
+
+<title>{{ $title }}</title>
+
+{{- $fonts := printf "https://fonts.googleapis.com/css?family=%s" site.Params.googleFonts }}
+<link rel="stylesheet" {{ printf "href=%q" $fonts | safeHTMLAttr }} />
+
+<link rel="shortcut icon" href="/favicon.ico?v=0010" />
+<link rel="mask-icon" href="/favicon.svg?v=0011" color="#E44D2A" />
+
+{{- /* The feeds: their addresses come from the configuration (hugo.toml). */}}
+{{ range slice "atom" "jsonfeed" -}}
+	{{ with site.Home.OutputFormats.Get . -}}
+		<link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .RelPermalink }}" />
+	{{ end -}}
+{{ end -}}
+
+<meta name="author" content="{{ $author }}" />
+<meta name="description" content="{{ $description }}" />
+<meta name="keywords" content="{{ delimit site.Params.keywords ", " }}" />
+
+<meta name="twitter:title" content="{{ $metaTitle }}" />
+<meta name="twitter:description" content="{{ $metaDescription }}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{ site.Params.twitter }}" />
+<meta name="twitter:creator" content="{{ site.Params.twitter }}" />
+<meta name="twitter:url" content="{{ $metaURL }}" />
+<meta name="twitter:image" content="{{ $image }}" />
+<meta name="twitter:image:alt" content="{{ $imageAlt }}" />
+
+<meta property="og:locale" content="en" />
+<meta property="og:title" content="{{ $metaTitle }}" />
+<meta property="og:site_name" content="{{ site.Title }}" />
+<meta property="og:description" content="{{ $metaDescription }}" />
+<meta property="og:url" content="{{ $metaURL }}" />
+<meta property="og:image" content="{{ $image }}" />
+<meta property="og:image:height" content="1920" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:type" content="image/jpg" />
+<meta property="og:image:alt" content="{{ $imageAlt }}" />
+<meta property="og:type" content="website" />

@@ -1,0 +1,50 @@
+@layer components {
+  $border: hsla(0, 0%, 0%, 0.1);
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 400px) {
+      font-size: 0.8em;
+
+      /* Bigger buttons on mobiles. */
+      .pagination__button {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+    }
+  }
+
+  .pagination__button {
+    display: inline-block;
+    width: 150px;
+    padding: 4px 1rem 2px;
+    border-radius: 0;
+
+    font-size: 0.8em;
+
+    &:first-child {
+      border-right: 2px solid $border;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-left: 2px solid $border;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &.is-disabled {
+      background: hsl(0, 0%, 87%);
+      border: 2px solid transparent;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      opacity: 0.5;
+    }
+  }
+}

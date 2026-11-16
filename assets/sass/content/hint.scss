@@ -1,0 +1,26 @@
+@layer content {
+  /**
+   * Hint: small label above a block ("Quote", "Code", "Footnotes"…).
+   * Each block sets its own text (content) on ::before.
+   */
+
+  .content blockquote::before,
+  .content .highlight::before,
+  .content .footnotes::before {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  /* Default color; some blocks have their own (tl;dr, tweet). */
+  :where(.content) blockquote::before,
+  :where(.content) .highlight::before,
+  :where(.content) .footnotes::before {
+    color: black;
+    opacity: 0.35;
+  }
+}

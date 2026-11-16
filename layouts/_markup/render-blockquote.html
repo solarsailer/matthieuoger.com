@@ -1,0 +1,11 @@
+{{- /*
+  A quote can declare its kind on its first line:
+
+  > [!TRANSCRIPT]
+  > Text.
+
+  The kind becomes the class of the <blockquote> (transcript, tldr, tweet).
+*/ -}}
+<blockquote{{ if eq .Type "alert" }} class="{{ .AlertType }}"{{ end }}>
+	{{ .Text }}
+</blockquote>

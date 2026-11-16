@@ -1,0 +1,133 @@
+@use "social-grid";
+
+@layer components {
+  $breakpoint-inline: 1600px;
+  $breakpoint-icons-only: 800px;
+  $breakpoint-grid: 525px;
+
+  .social-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-bottom: 0;
+
+    font-size: 0.7em;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: normal;
+
+    li {
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: $breakpoint-inline) {
+      li {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+    }
+
+    @media (max-width: $breakpoint-icons-only) {
+      li {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+      }
+
+      .social-nav__text {
+        display: none;
+      }
+
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    @media (max-width: $breakpoint-grid) {
+      @include social-grid.social-grid;
+    }
+  }
+
+  .social-nav__link {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    /* Each link appears with its own rhythm (set by the template). */
+    animation:
+      social-nav-slide var(--duration) cubic-bezier(0.34, 1.56, 0.64, 1)
+        var(--delay) backwards,
+      social-nav-fade var(--duration) linear var(--delay) backwards;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+
+    .social-nav__text span,
+    .social-nav__icon {
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: white;
+
+      .social-nav__text span,
+      .social-nav__icon {
+        opacity: 1;
+      }
+
+      .social-nav__text .social-nav__domain {
+        opacity: 0.25;
+      }
+    }
+
+    @media (max-width: $breakpoint-inline) {
+      display: flex;
+      align-items: center;
+
+      .social-nav__text {
+        margin-bottom: 0;
+        margin-left: 1rem;
+      }
+
+      .social-nav__icon {
+        order: -1;
+      }
+    }
+  }
+
+  @keyframes social-nav-slide {
+    from {
+      transform: translateY(10px);
+    }
+  }
+
+  @keyframes social-nav-fade {
+    from {
+      opacity: 0;
+    }
+  }
+
+  .social-nav__text {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-nav__handle {
+    color: var(--color);
+  }
+
+  .social-nav__icon {
+    display: block;
+
+    path {
+      fill: var(--color);
+    }
+  }
+}

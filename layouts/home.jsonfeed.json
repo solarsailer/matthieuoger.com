@@ -1,0 +1,29 @@
+{{- $siteURL := strings.TrimSuffix "/" site.BaseURL -}}
+{{- $author := dict "name" site.Params.author "url" $siteURL -}}
+{{- $posts := where site.RegularPages "Type" "posts" -}}
+
+{{- $items := slice -}}
+{{- range $posts -}}
+  {{- if ne .Params.category "meta" -}}
+    {{- $items = $items | append (dict
+      "id" .Permalink
+      "url" .Permalink
+      "title" .Title
+      "content_html" .Content
+      "author" $author
+      "date_published" (.Date.UTC.Format "2006-01-02T15:04:05.000Z")
+    ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- dict
+  "version" "https://jsonfeed.org/version/1"
+  "title" site.Title
+  "description" site.Params.description
+  "icon" (printf "%s/feed.png" $siteURL)
+  "favicon" (printf "%s/favicon.ico" $siteURL)
+  "home_page_url" $siteURL
+  "feed_url" (site.Home.OutputFormats.Get "jsonfeed").Permalink
+  "items" $items
+  | jsonify (dict "indent" "  " "noHTMLEscape" true)
+-}}

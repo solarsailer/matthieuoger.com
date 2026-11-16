@@ -1,0 +1,50 @@
+---
+date: "1988-10-03"
+title: "About"
+excerpt: "I'm a product manager, developer and designer. I co-founded Pixelnest Studio in February 2014, where we created Steredenn."
+
+category: "meta"
+url: "/about/"
+showPageTitle: true
+---
+
+I am Matthieu Oger, a _product manager_, _developer_ and _designer_ from France.
+
+I co-founded [Pixelnest Studio][pixelnest] in February 2014 with [Damien Mayance][dmayance]. We crafted some delightful apps, websites and games. Our most famous product is [Steredenn](http://steredenn.pixelnest.io) — an award-winning shmup/roguelike. We decided to put the company in hibernation at the end of 2018. [_It was time to move on._](https://pixelnest.io/2018/11/the-beginning-and-the-end/)
+
+**I'm now focusing solely on product management, leading teams design and build better softwares.**
+
+I recently worked for [Shift Technology](https://www.shift-technology.com), a Parisian startup using AI to solve complex automation problems in the insurance industry. My current company is [The Explorers](https://theexplorers.com), another Parisian startup which is creating an inventory of the planet in super high definition — _”know better to protect better”_.
+
+This place is a way to express my thoughts and opinions on a broad range of subjects, including technology, design, photography and development.
+
+These opinions are mine, not those of my companies.
+
+## Contact
+
+You can…
+
+* Read my ramblings on [Twitter](https://twitter.com/solarsailer/)
+* Discover my photos on [Instagram](https://www.instagram.com/matthieuoger/)
+* Look at my code on [GitHub](https://github.com/solarsailer/)
+* Check some designs on [Dribbble](https://dribbble.com/matthieuoger/)
+* Download some of my free high-res photos on [Unsplash](https://unsplash.com/matthieuoger/)
+* Watch my talks on [Speaker Deck](https://speakerdeck.com/matthieuoger/)
+* And join my professional© network™ on [LinkedIn](https://linkedin.com/in/matthieuoger/)
+
+**If you want to contact me directly, use [Twitter](https://twitter.com/solarsailer/).**
+
+## About this blog
+
+I built this blog with [Gatsby][gatsby]. The code and design are purely mine, except for some icons (Twitter, GitHub, Dribbble and Instagram). These are made by Daniel Bruce, from his [Entypo][entypo] set.
+
+The layout is particularly optimized for mobiles and high density screens (read: retina displays).
+
+If you want to follow me with your favorite feed reader, use this [Atom feed](/atom.xml) or this [JSON Feed](/feed.json). You can also subscribe to the [@matthieuogercom](http://twitter.com/matthieuogercom) Twitter account.
+
+
+[pixelnest]: https://pixelnest.io/
+[dmayance]: https://dmayance.com/
+[gatsby]: https://www.gatsbyjs.org/
+[github]: http://github.com/
+[entypo]: http://entypo.com/

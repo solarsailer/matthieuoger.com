@@ -1,0 +1,58 @@
+{
+  "twitter": {
+    "order": 0,
+    "name": "Twitter",
+    "domain": "com",
+    "handle": "solarsailer",
+    "url": "https://twitter.com/solarsailer/",
+    "color": "hsl(210, 95%, 64%)"
+  },
+  "github": {
+    "order": 1,
+    "name": "GitHub",
+    "domain": "com",
+    "handle": "solarsailer",
+    "url": "https://github.com/solarsailer/",
+    "color": "hsl(102, 53%, 52%)"
+  },
+  "dribbble": {
+    "order": 2,
+    "name": "Dribbble",
+    "domain": "com",
+    "handle": "matthieuoger",
+    "url": "https://dribbble.com/matthieuoger/",
+    "color": "hsl(337, 79%, 61%)"
+  },
+  "unsplash": {
+    "order": 3,
+    "name": "Unsplash",
+    "domain": "com",
+    "handle": "matthieuoger",
+    "url": "https://unsplash.com/matthieuoger/",
+    "color": "hsl(31, 86%, 53%)"
+  },
+  "instagram": {
+    "order": 4,
+    "name": "Instagram",
+    "domain": "com",
+    "handle": "matthieuoger",
+    "url": "https://www.instagram.com/matthieuoger/",
+    "color": "hsl(271, 80%, 66%)"
+  },
+  "speakerDeck": {
+    "order": 5,
+    "name": "Speaker Deck",
+    "domain": "com",
+    "handle": "matthieuoger",
+    "url": "https://speakerdeck.com/matthieuoger/",
+    "color": "hsl(150, 50%, 40%)"
+  },
+  "linkedIn": {
+    "order": 6,
+    "name": "LinkedIn",
+    "domain": "com",
+    "handle": "matthieuoger",
+    "url": "https://linkedin.com/in/matthieuoger/",
+    "color": "hsl(201, 100%, 35%)"
+  }
+}

@@ -1,0 +1,30 @@
+{{- $siteURL := strings.TrimSuffix "/" site.BaseURL -}}
+{{- $author := site.Params.author -}}
+{{- $posts := where site.RegularPages "Type" "posts" -}}
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>{{ $siteURL }}</id>
+	<updated>{{ site.Lastmod.UTC.Format "2006-01-02T15:04:05.000Z" }}</updated>
+	<title>{{ site.Title | transform.XMLEscape }}</title>
+	<icon>{{ $siteURL }}/feed.png</icon>
+	<link href="{{ (site.Home.OutputFormats.Get "atom").Permalink }}" rel="self"/>
+	<link href="{{ $siteURL }}"/>
+	<author>
+		<name>{{ $author | transform.XMLEscape }}</name>
+		<uri>{{ $siteURL }}</uri>
+	</author>
+	{{- range $posts }}
+		{{- if ne .Params.category "meta" }}
+			<entry>
+				<id>{{ .Permalink }}</id>
+				<updated>{{ .Date.UTC.Format "2006-01-02T15:04:05.000Z" }}</updated>
+				<title>{{ .Title | transform.XMLEscape }}</title>
+				<link href="{{ .Permalink }}"/>
+				<content type="html"><![CDATA[{{ .Content }}]]></content>
+				<author>
+					<name>{{ $author | transform.XMLEscape }}</name>
+					<uri>{{ $siteURL }}</uri>
+				</author>
+			</entry>
+		{{- end }}
+	{{- end }}
+</feed>

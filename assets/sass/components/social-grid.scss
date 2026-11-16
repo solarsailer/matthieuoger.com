@@ -1,0 +1,23 @@
+// Small layout for the social navigations: a 3-column grid of icons.
+// Written for 7 icons: the last one is centered on its row.
+@mixin social-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 35px);
+  row-gap: 1rem;
+  column-gap: 2rem;
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  li,
+  li + li {
+    margin: 0;
+  }
+
+  li:nth-child(7) {
+    grid-column: 2;
+  }
+}

@@ -1,0 +1,11 @@
+{{- /*
+  A link can name a file stored next to the post ('recording.mp3'):
+  it is resolved to the real URL of the file. Other links are left as written
+  (Hugo's built-in version of this hook rejects schemes like 'shortcuts://').
+*/ -}}
+{{- $url := .Destination -}}
+{{- with .Page.Resources.Get .Destination -}}
+	{{- $url = .RelPermalink -}}
+{{- end -}}
+<a href="{{ $url | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
+{{- /* No trailing newline: it would add a space after the link. */ -}}

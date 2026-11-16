@@ -61,6 +61,15 @@ typings/
 # dotenv environment variables file
 .env
 
+# Hugo.
+resources
+/.hugo_build.lock
+
 .cache/
 public
 yarn-error.log
+
+# Tests.
+/tests/snapshots
+/tests/results
+/tests/report

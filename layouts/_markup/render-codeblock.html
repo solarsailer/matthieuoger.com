@@ -1,0 +1,3 @@
+{{- /* Every code block gets the same wrapper, with or without a language. */ -}}
+{{- $result := transform.HighlightCodeBlock . -}}
+{{- $result.Wrapped -}}

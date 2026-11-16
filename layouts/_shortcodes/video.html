@@ -1,0 +1,26 @@
+{{- /*
+  Video stored next to the post, with its caption.
+
+  {{< video src="demo.mp4" width="320" height="480" >}}
+  Caption, in Markdown.
+  {{< /video >}}
+*/ -}}
+
+{{- $src := .Get "src" -}}
+{{- with .Page.Resources.Get $src -}}
+	{{- $src = .RelPermalink -}}
+{{- end -}}
+
+<figure>
+	<video
+		src="{{ $src }}"
+		{{- with .Get "width" }} width="{{ . }}"{{ end }}
+		{{- with .Get "height" }} height="{{ . }}"{{ end }}
+		controls
+		muted
+		loop
+	>
+		Your browser doesn't support videos. You can download it below.
+	</video>
+	<figcaption>{{ strings.TrimSpace .Inner | .Page.RenderString }}</figcaption>
+</figure>

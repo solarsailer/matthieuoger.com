@@ -1,0 +1,79 @@
+# Basic.
+baseURL = 'https://matthieuoger.com/'
+locale = 'en-us'
+
+# Metadata.
+title = 'Matthieu Oger'
+
+# Version of Hugo this site is built and tested with.
+# An older one prints a warning.
+[module.hugoVersion]
+  min = '0.170.0'
+
+[params]
+  author = 'Matthieu Oger'
+  description = 'I am a product manager, developer and designer from France. Co-founder of Pixelnest Studio.'
+  keywords = [
+    'solar',
+    'sailer',
+    'matthieu',
+    'oger',
+    'designer',
+    'developer',
+    'product manager',
+    'technology',
+    'design',
+    'development',
+    'dev',
+    'photography',
+    'pixelnest'
+  ]
+  twitter = 'solarsailer'
+  googleFonts = 'Rubik:300,300i,400,400i,500,500i,700,700i,900,900i|Fira+Mono'
+
+[permalinks]
+  [permalinks.section]
+    posts = '/articles/'
+  [permalinks.page]
+    posts = '/:year/:month/:filename/'
+
+# Pagination.
+[pagination]
+  pagerSize = 9
+  path = 'p' # /articles/p/2/
+
+# Feeds: /atom.xml and /feed.json.
+[mediaTypes.'application/atom+xml']
+  suffixes = ['xml']
+
+[outputFormats.atom]
+  mediaType = 'application/atom+xml'
+  baseName = 'atom'
+  isPlainText = true
+
+[outputFormats.jsonfeed]
+  mediaType = 'application/json'
+  baseName = 'feed'
+  isPlainText = true
+
+[outputs]
+  home = ['html', 'atom', 'jsonfeed']
+  page = ['html']
+  section = ['html']
+  taxonomy = []
+  term = []
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files.
+
+# An image written in Markdown can name a file stored next to the post
+# ('photo.jpg'): Hugo resolves it to its real URL.
+# Links do the same with layouts/_markup/render-link.html.
+[markup.goldmark.renderHooks.image]
+  useEmbedded = 'always'
+
+[markup.goldmark.extensions.typographer]
+  disable = true # Keep quotes and dashes as typed.
+
+[markup.highlight]
+  noClasses = false # Colors are in the stylesheet.
