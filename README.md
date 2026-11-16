@@ -71,6 +71,7 @@ just start    # Development server, with live reload
 just prod     # Production build, served locally
 just format   # Format templates, styles, scripts and tests
 just test     # Build and run the tests
+just deploy   # Build and publish (asks for a confirmation)
 ```
 
 ## Tests

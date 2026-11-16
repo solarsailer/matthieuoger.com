@@ -5,7 +5,7 @@
 ### Publish
 
 - [ ] Push the branch (full history) and merge it into `master`.
-- [ ] Deploy: `just deploy` is a placeholder. Push the build to `solarsailer.github.io` as before, or use a GitHub Pages action.
+- [ ] Deploy with `just deploy`, once the branch is merged. It has never been run: read the diff of the first publication in `solarsailer.github.io` (the files of the Gatsby build are deleted).
 - [ ] Validate both feeds once published: the Atom feed with the W3C validator (by its URL), the JSON feed with https://validator.jsonfeed.org/.
 - [ ] Try the tooltips by hand in Firefox (`just test-browsers` runs their tests in the three engines; Firefox could not be run when they were written).
 
