@@ -44,11 +44,27 @@ deploy: build
 	# The build (public/) is committed to the repository that GitHub Pages
 	# serves, on top of its history: one commit per publication.
 
+	# Only the main branch is published.
+	branch=$(git rev-parse --abbrev-ref HEAD)
+	if [ "$branch" != "master" ]; then
+		echo "On branch '$branch': the site is published from 'master'." >&2
+		exit 1
+	fi
+
 	# What is published must match a commit of this repository.
 	if [ -n "$(git status --porcelain)" ]; then
 		echo "Uncommitted changes: commit or stash them first." >&2
 		exit 1
 	fi
+
+	# The build must look like the site: publishing an empty or partial
+	# folder would delete the site, and without CNAME the domain is lost.
+	for file in index.html atom.xml feed.json CNAME; do
+		if [ ! -s "public/$file" ]; then
+			echo "public/$file is missing or empty: nothing was published." >&2
+			exit 1
+		fi
+	done
 
 	revision=$(git rev-parse --short HEAD)
 	checkout=$(mktemp -d)
