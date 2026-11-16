@@ -11,7 +11,7 @@
 
 ### Later
 
-- [ ] Host the fonts (Rubik, Fira Mono) instead of loading them from Google Fonts.
+- [ ] Host the fonts (Rubik, Fira Mono) instead of loading them from Google Fonts. No more third-party request, and the screenshot tests stop depending on the network.
 - [ ] Tooltips: when CSS anchor positioning is supported widely enough (in every engine since January 2026 only), it can replace the positioning code of `assets/js/index.js`.
 
 ## To consider
@@ -40,4 +40,4 @@ The usual alternative: the link is on the title only, and CSS extends its clicka
 
 ### Dark mode
 
-`layers/theme.scss` already has the structure for it (commented out): colors are variables, with a place for the values of a dark theme, following the preference of the visitor (`prefers-color-scheme`) or a choice stored on `<html data-theme>`. What is missing: the dark values, the many grays written directly in components, and a dark theme for code blocks (Catppuccin has matching ones: Latte for light, Frappé (in use), Macchiato and Mocha for dark).
+`layers/theme.scss` already has the structure for it (commented out): colors are variables, with a place for the values of a dark theme, following the preference of the visitor (`prefers-color-scheme`) or a choice stored on `<html data-theme>`. What is missing: the dark values, and the many grays written directly in components. Code blocks are already dark in both cases (Catppuccin Frappé); Catppuccin Latte is the matching light theme, if the light mode should get light code blocks.
